@@ -74,7 +74,7 @@
 			<img width="975" height="469" alt="image" src="https://github.com/user-attachments/assets/759b11ea-c297-4d74-a166-dce2a3cd2576" />
 			</p>
 			<p>
-				Based on the email content, I took note of the email address used to send the phishing email and that is<b><u> agriffin@bpakcaging.xyz</u></b>. Aside from that, I noticed that there’s also a typosquatting, which is a red flag already to me. Instead of using the word, “<u>packaging</u>”, the attacker used a misspelled word, and that is “<u>packaging</u>”, which serves as a primary indicator of deceptive infrastructure.
+				Based on the email content, I took note of the email address used to send the phishing email and that is<b><u> agriffin@bpakcaging.xyz</u></b>. Aside from that, I noticed that there’s also a typosquatting, which is a red flag already to me. Instead of using the word, “<u>packaging</u>”, the attacker used a misspelled word, and that is “<u>pakcaging</u>”, which serves as a primary indicator of deceptive infrastructure.
 				</p>
 			<p>
 				After that, I downloaded the <b>Invoice.zip</b> and extract using the terminal or command-line interface (CLI), at the same time, input the password, which is the <b>Invoice2023!</b> that has been provided inside the email content. After the file unzipped, it appeared as <b>Invoice_20230103.lnk</b>.
