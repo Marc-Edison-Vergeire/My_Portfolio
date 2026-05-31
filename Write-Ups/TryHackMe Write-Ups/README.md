@@ -209,7 +209,7 @@
 	<img width="975" height="149" alt="image" src="https://github.com/user-attachments/assets/f5c09541-b7da-4327-8195-1788538297a3" />
 </p>
 <p>
-	In order to identify what was the password of the exfiltrated file, I invstigated using Wireshark through the input of <b>sq3.exe</b>.
+	In order to identify what was the password of the exfiltrated file, I investigated using Wireshark through the input of <b>sq3.exe</b>.
 </p>
 <p>
 	<img width="975" height="392" alt="image" src="https://github.com/user-attachments/assets/ba94a09c-cf99-4f5b-a498-5fd0a2f1a480" />
