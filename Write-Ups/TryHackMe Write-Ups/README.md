@@ -295,6 +295,7 @@
 	<img width="975" height="609" alt="image" src="https://github.com/user-attachments/assets/77ff5d70-d961-45cd-b9d3-284e04548717" />
 </p>
 
+<br>
 <h3>MITRE ATT&CK</h3>
 <ul>
 	<li><b>Phishing:</b> Malicious Attachment (T1566.001)</li>
@@ -304,12 +305,12 @@
 	<li><b>Exfiltration Over Alternative Protocol:</b> DNS Tunneling (T1048.003)</li>
 </ul>
 
+<br>
 <h3>Indicators of Compromise (IoC)</h3>
 <p>
 	During the investigation, the following technical indicators were identified and extracted to facilitate enterprise-wide blocklisting, threat hunting, and perimeter containment:
 </p>
 
-<br>
 <h4>Network & Infrastructure Indicators</h4>
 	<ul>
 		<li><b>Phishing Sender Address:</b> agriffin@bpakcaging.xyz</li>
@@ -322,21 +323,25 @@
 	<ul>
 		<li><b>Malicious Loader File:</b> Invoice_20230103.lnk</li>
 		<li><b>Masquerade Binary:</b> sq3.exe</li>
-		<li><b>Targeted Financial Credential Repositories:</b></li>			 				
-	<p>Windows Sticky Notes Database</p>
+		<li><b>Targeted Financial Credential Repositories:</b>
+			<ul>
+				<li><b>Windows Sticky Notes Database</b></li>
+														
+				C:\Users\j.westcott\AppData\Local\Packages\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\LocalState\plum.sqlite
+			
+<li><b>KeePass Password Vault</b></li>
+		</li>			 				
 	
-		C:\Users\j.westcott\AppData\Local\Packages\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\LocalState\plum.sqlite
-
-<p>KeePass Password Vault</p>
-
-	protected_data.kdbx 
+	protected_data.kdbx 		
 </ul>
 
+<br>
 <h3>Lesson Learned</h3>
 <p>
 	This incident underscores the critical necessity of a defense-in-depth security posture, beginning with continuous user awareness training to mitigate sophisticated, targeted phishing vectors. From a technical perspective, the investigation highlights the importance of implementing robust Endpoint Detection and Response (EDR) telemetry to catch "Living off the Land" techniques, such as administrative tool masquerading and unauthorized PowerShell execution. Finally, this compromise demonstrates that standard network perimeters are insufficient without proactive protocol auditing; implementing strict DNS monitoring and behavioral analysis is paramount to identifying and blocking covert data exfiltration channels before assets leave the enterprise boundary.
 </p>
 
+<br>
 <h3>Recommendations</h3>
 <p>
 	To comprehensively mitigate the architectural vulnerabilities exploited during this intrusion, the enterprise must immediately execute a multi-layered defense-in-depth remediation strategy across email, endpoint, and network boundaries. 
@@ -351,6 +356,7 @@
 	Finally, to eliminate covert exfiltration vectors, the security team must deploy behavioral network analysis rules capable of detecting high-frequency DNS tunneling, while restricting local workstations from querying public nameservers directly, forcing all outbound internal requests through a secure, monitored DNS proxy.
 </p>
 
+<br>
 <h3>References & Acknowledgement</h3>
 <p>
 	This incident response case study was conducted using <b>Boogeyman 1</b>, an educational environment provided by the <b>TryHackMe platform</b>. All logs, artifacts, and network captures analyzed herein originate from their defensive security training curriculum. This controlled simulation was completed to enhance tactical awareness, technical knowledge, and practical skills that can be directly applied to protect enterprise environments. 
