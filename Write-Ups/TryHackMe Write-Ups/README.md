@@ -276,7 +276,7 @@
 	</ul>
 
 <p>
-	I opened the <b>artefacts</b> folder and found the <b>protected_data.kdbx</b>, then opened it.
+	I opened the <b>artefacts</b> folder and found the <b>protected_data.kdbx</b>, then run it.
 </p>
 </p>
 <p>
