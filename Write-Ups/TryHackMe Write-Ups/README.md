@@ -283,7 +283,7 @@
 	<img width="975" height="366" alt="image" src="https://github.com/user-attachments/assets/cec64c0f-a6ed-4d92-98d9-8b8b145957e8" />
 </p>
 <p>
-	The KeePass banner appeared and asked for the Master Password (<b>%p9^3!lL^Mz47E2GaT^y</b>, which I acquired earlier), then input those.
+	The KeePass banner appeared and asked for the Master Password (<b>%p9^3!lL^Mz47E2GaT^y</b>, which I acquired earlier), then I input those.
 </p>
 <p>
 	<img width="825" height="409" alt="image" src="https://github.com/user-attachments/assets/37c0c255-9677-4869-aeb7-501d5312c673" />
