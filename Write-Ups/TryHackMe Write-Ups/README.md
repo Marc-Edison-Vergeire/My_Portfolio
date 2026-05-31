@@ -92,9 +92,9 @@
 			<p>
 			<img width="975" height="444" alt="image" src="https://github.com/user-attachments/assets/c03b92d4-5fb7-4e73-a86c-ff4ac9c98c16" />
 			</p>
-<li><b></b></li>
-   <li><b></b></li>
- </ul>
+		<li><b>Phase 2:</b> Host Execution & Artifact Forensic Analysis</li>
+   		<li><b>Phase 3:</b></li>
+ 	</ul>
 
 
 
