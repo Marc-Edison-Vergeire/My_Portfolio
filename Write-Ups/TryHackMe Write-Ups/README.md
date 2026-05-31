@@ -289,7 +289,7 @@
 	<img width="825" height="409" alt="image" src="https://github.com/user-attachments/assets/37c0c255-9677-4869-aeb7-501d5312c673" />
 </p>
 <p>
-	Now, I investigated the application to find the Account Number, thus, I selected the <b>Card Number</b> if the sensitive information would appear, and so it did.
+	I investigated the application to find the Account Number, thus, I selected the <b>Card Number</b> if the sensitive information would appear, and so it did.
 </p>
 <p>
 	<img width="975" height="609" alt="image" src="https://github.com/user-attachments/assets/77ff5d70-d961-45cd-b9d3-284e04548717" />
