@@ -218,9 +218,6 @@
 	<img width="975" height="711" alt="image" src="https://github.com/user-attachments/assets/8d661885-d21b-4d1e-8057-826a74a3e9bc" />
 </p>
 <p>
-	<img width="975" height="392" alt="image" src="https://github.com/user-attachments/assets/c82aa41a-ac20-4f9c-b9cf-efe49e0d9187" />
-</p>
-<p>
 	I analyzed the sequential TCP streams, shifting from stream 749 to stream 750, to isolate the raw data payloads transmitted during the session. The payload stream revealed a massive array of decimal values, which were extracted for forensic decoding.
 </p>
 <p>
