@@ -7,7 +7,7 @@
 		This incident response case study documents the end-to-end investigation of a targeted phishing campaign that led to the compromise of a finance workstation within a logistics enterprise.
 	</p>
 	<p>
-		The attack initiated via a sophisticated email lure utilizing typosquatted infrastructure to deliver a weaponized Windows shortcut (<b>.lnk</b>) file. Upon execution, the payload initiated a hidden PowerShell download cradle to establish command-and-control (C2) communication. Host log analysis revealed that the adversary successfully engaged in defense evasion by deploying a masqueraded database utility (sq3.exe) to harvest unencrypted user credentials from local Windows Sticky Notes.
+		The attack initiated via a sophisticated email lure utilizing typosquatted infrastructure to deliver a weaponized Windows shortcut (<b>.lnk</b>) file. Upon execution, the payload initiated a hidden PowerShell download cradle to establish command-and-control (C2) communication. Host log analysis revealed that the adversary successfully engaged in defense evasion by deploying a masqueraded database utility (<b>sq3.exe</b>) to harvest unencrypted user credentials from local Windows Sticky Notes.
 	</p>
 	<p>
 		Furthermore, the attacker located an enterprise password vault (<b>protected_data.kdbx</b>) and exfiltrated the sensitive asset using hex-encoded DNS tunneling. By cross-correlating endpoint JSON logs with network packet captures, the complete intrusion timeline was reconstructed, the C2 server infrastructure was mapped, and the exfiltrated password database was forensically recovered and decrypted.
@@ -22,10 +22,10 @@
 <br>
 <h3>Scenario</h3>
 	<p>
-		A finance employee at a logistics firm received a highly targeted follow-up email regarding an unpaid invoice from a known packaging business partner. Unbeknownst to the employee, this was a sophisticated phishing attack containing a weaponized attachment that compromised the host or workstation upon execution.
+		A finance employee at a logistics firm received a highly targeted follow-up email regarding an unpaid invoice from a known packaging business partner. Unbeknownst to the employee, this was a sophisticated phishing attack containiing a weaponized attachment that compromised the host or workstation upon execution.
 	</p>
 	<p>
-		As the responding SOC Analyst, I flagged the anomalous execution of the attachment, correlating it with corresponding phishing reports submitted by other personnel within the finance division. Threat intelligence and TTP mapping indicate that the initial delivery mechanisms align directly with an emerging threat group actively targeting the logistics sector.
+		As the responding SOC Analyst, I flagged the anomalous execution of the attachment, correlating it with corresponding phishing reports submitted by other personnel within the finance division. Threat intelligence and TTP (Tactics, Techniques and Procedures) mapping indicate that the initial delivery mechanisms align directly with an emerging threat group actively targeting the logistics sector.
 	</p>
 
 <br>
