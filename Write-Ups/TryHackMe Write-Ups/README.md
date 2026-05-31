@@ -310,8 +310,8 @@
 <p>
 	During the investigation, the following technical indicators were identified and extracted to facilitate enterprise-wide blocklisting, threat hunting, and perimeter containment:
 </p>
-
-<h4>Network & Infrastructure Indicators</h4>
+<ul>
+<li><h4>Network & Infrastructure Indicators</h4></li>
 	<ul>
 		<li><b>Phishing Sender Address:</b> agriffin@bpakcaging.xyz</li>
 		<li><b>Command & Control (C2) / Payload Hosting Domain:</b> files.bpakcaging.xyz</li>
@@ -319,7 +319,7 @@
 		<li><b>Exfiltration Destination IP Address:</b> 167.71.211.113</li>
 	</ul>
 
-<h4>Host & File Indicators</h4>
+<li><h4>Host & File Indicators</h4></li>
 	<ul>
 		<li><b>Malicious Loader File:</b> Invoice_20230103.lnk</li>
 		<li><b>Masquerade Binary:</b> sq3.exe</li>
@@ -333,6 +333,7 @@
 		</li>			 				
 	
 	protected_data.kdbx 		
+</ul>
 </ul>
 
 <br>
