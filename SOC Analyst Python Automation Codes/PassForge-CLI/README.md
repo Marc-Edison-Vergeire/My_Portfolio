@@ -17,13 +17,13 @@
   <li><b>Zero Supply Chain Vulnerabilities:</b> Built entirely using Python's internal standard library framework. It requires zero external packages (no pip install), eliminating software inventory tracking overhead and third-party code tampering risks.</li>
   <li><b>Strict Privacy Boundary Enforcement:</b> Because the utility runs 100% locally on the host terminal, high-value infrastructure passwords, database strings, and service account tokens are never exposed to the public internet or external web server logs.</li>
   <li><b>Proactive Security Alerting:</b> The script includes built-in compliance warnings. If a user attempts to generate a password beneath the modern industry standard baseline (less than 12 characters), the engine prints a prominent security alert warning them of reduced brute-force resistance.</li>
+</ul>
 
 <h2>Step-by-Step Guide</h2>
 <h3>Pre-requisites</h3>
   <ul>
     <li><b>Python 3.x:</b> Ensure Python 3 is installed and configured correctly on your local terminal environment variable path.</li>
   </ul>
-</ul>
 
   <h3>Installation Setup</h3>
   <ul>
