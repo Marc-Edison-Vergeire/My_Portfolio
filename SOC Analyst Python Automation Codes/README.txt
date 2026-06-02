@@ -1,0 +1,2 @@
+<h1>Phishing Engine with Email Authentication Tool</h1>
+<p>A zero-dependency, automated security orchestration and threat intelligence utility built to ingest raw email headers and body text (MIME data), extract indicators of compromise (IoCs), validate core email authentication frameworks, and cross-reference extracted assets against the VirusTotal API v3 endpoint in real time.</p
