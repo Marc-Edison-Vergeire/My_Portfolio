@@ -1,6 +1,10 @@
 <h1>Phishing Engine with Email Authentication Tool</h1>
 <p>A zero-dependency, automated security orchestration and threat intelligence utility built to ingest raw email headers and body text (MIME data), extract indicators of compromise (IoCs), validate core email authentication frameworks, and cross-reference extracted assets against the VirusTotal API v3 endpoint in real time.</p>
 
+<h2>Execution Preview</h2>
+<img width="941" height="652" alt="image" src="https://github.com/user-attachments/assets/394d7d42-2b97-4f91-88aa-6edf3f4dab09" />
+
+
 <h2>Objective</h2>
 <p>The primary goal of this project is to eliminate manual overhead and alert fatigue in Security Operations Centers (SOCs) by automating the initial triage phase of suspicious email analysis. This tool safely processes raw email source data to confirm sender authenticity and uncover malicious infrastructure in under two seconds—completely bypassing the need to open or execute untrusted files within a traditional, vulnerable mail client or browser context.</p>
 
