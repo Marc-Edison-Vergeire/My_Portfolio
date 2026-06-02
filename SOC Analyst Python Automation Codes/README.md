@@ -57,22 +57,3 @@
   <li><b>Combats Cognitive Alert Fatigue:</b> Instead of executing multiple separate workflows—such as manually cross-referencing domains on external intelligence sites, reading raw header files line-by-line, and scanning text for behavioral triggers—the analyst receives a single, unified, cleanly formatted command-line dashboard.</li>
   <li><b>Enables Contextual Intelligence Triage:</b> The tool isolates Unrated (<b>❔</b>) resources. This signals to the analyst that a link is completely new and unrecognized globally—a primary characteristic of Newly Registered Domains (NRDs) commonly utilized in sophisticated, highly targeted advanced persistent threat (APT) campaigns. This visibility helps analysts shift their focus toward deeper sandbox analysis when automated tools return an ambiguous rating.</li>
 </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
