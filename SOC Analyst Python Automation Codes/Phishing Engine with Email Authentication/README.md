@@ -4,13 +4,12 @@
 <h2>Execution Preview</h2>
 <img width="941" height="652" alt="image" src="https://github.com/user-attachments/assets/394d7d42-2b97-4f91-88aa-6edf3f4dab09" />
 
-
-<h2>Objective</h2>
-<p>The primary goal of this project is to eliminate manual overhead and alert fatigue in Security Operations Centers (SOCs) by automating the initial triage phase of suspicious email analysis. This tool safely processes raw email source data to confirm sender authenticity and uncover malicious infrastructure in under two seconds—completely bypassing the need to open or execute untrusted files within a traditional, vulnerable mail client or browser context.</p>
-
 <h2>Executive Summary</h2>
 <p>In modern enterprise environments, phishing remains the number one initial access vector for threat actors. Tier-1 security analysts face significant alert fatigue, frequently spending 10 to 15 minutes per reported email manually parsing text files, interpreting raw headers, and copy-pasting indicators into threat intelligence platforms.</p>
 <p>The <b>Phishing Engine with Email Authentication Tool</b> serves as a lightweight, <b>"SOAR-lite"</b> (Security Orchestration, Automation, and Response) pipeline. It bridges the gap between raw data collection and defensive action, bringing immediate clarity to an incident ticket without requiring expensive enterprise licensing.</p>
+
+<h2>Objective</h2>
+<p>The primary goal of this project is to eliminate manual overhead and alert fatigue in Security Operations Centers (SOCs) by automating the initial triage phase of suspicious email analysis. This tool safely processes raw email source data to confirm sender authenticity and uncover malicious infrastructure in under two seconds—completely bypassing the need to open or execute untrusted files within a traditional, vulnerable mail client or browser context.</p>
 
 <h2>How It Works</h2>
 <p>The engine executes its automated defensive assessment through a sequential four-tier pipeline:
