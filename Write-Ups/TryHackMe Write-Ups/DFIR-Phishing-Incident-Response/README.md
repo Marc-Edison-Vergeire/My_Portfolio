@@ -22,10 +22,10 @@
 <br>
 <h3>Scenario</h3>
 	<p>
-		A finance employee at a logistics firm received a highly targeted follow-up email regarding an unpaid invoice from a known packaging business partner. Unbeknownst to the employee, this was a sophisticated phishing attack containiing a weaponized attachment that compromised the host or workstation upon execution.
+		A finance employee at a logistics firm received a highly targeted follow-up email regarding an unpaid invoice from a known packaging business partner. Unbeknownst to the employee, this was a sophisticated phishing attack containing a weaponized attachment that compromised the host or workstation upon execution.
 	</p>
 	<p>
-		As the responding SOC Analyst, I flagged the anomalous execution of the attachment, correlating it with corresponding phishing reports submitted by other personnel within the finance division. Threat intelligence and TTP (Tactics, Techniques and Procedures) mapping indicate that the initial delivery mechanisms align directly with an emerging threat group actively targeting the logistics sector.
+		As the responding SOC Analyst, I flagged the anomalous execution of the attachment, correlating it with corresponding phishing reports submitted by other personnel within the finance division. Threat intelligence and TTP (Tactics, Techniques, and Procedures) mapping indicate that the initial delivery mechanisms align directly with an emerging threat group actively targeting the logistics sector.
 	</p>
 
 <br>
@@ -52,7 +52,7 @@
 <br>
 <h3>Artifacts</h3>
 	<ul>
-		<li><b>dump.eml</b> (Copy from the phishing email)</li>
+		<li><b>dump[.]eml</b> (Copy from the phishing email)</li>
 		<li><b>powershell.json </b>(Powershell Logs from the finance employee’s host or workstation)</li>
 		<li><b>capture.pcapng </b>(Packet capture from the same workstation)</li>
 	</ul>
@@ -74,7 +74,7 @@
 			<img width="975" height="469" alt="image" src="https://github.com/user-attachments/assets/759b11ea-c297-4d74-a166-dce2a3cd2576" />
 			</p>
 			<p>
-				Based on the email content, I took note of the email address used to send the phishing email and that is<b><u> agriffin@bpakcaging.xyz</u></b>. Aside from that, I noticed that there’s also a typosquatting, which is a red flag already to me. Instead of using the word, “<u>packaging</u>”, the attacker used a misspelled word, and that is “<u>pakcaging</u>”, which serves as a primary indicator of deceptive infrastructure.
+				Based on the email content, I took note of the email address used to send the phishing email and that is<b><u> agriffin@bpakcaging[.]xyz</u></b>. Aside from that, I noticed that there’s also a typosquatting, which is a red flag already to me. Instead of using the word, “<u>packaging</u>”, the attacker used a misspelled word, and that is “<u>pakcaging</u>”, which serves as a primary indicator of deceptive infrastructure.
 				</p>
 			<p>
 				After that, I downloaded the <b>Invoice.zip</b> and extract using the terminal or command-line interface (CLI), at the same time, input the password, which is the <b>Invoice2023!</b> that has been provided inside the email content. After the file unzipped, it appeared as <b>Invoice_20230103.lnk</b>.
@@ -144,16 +144,16 @@
 				<img width="975" height="49" alt="image" src="https://github.com/user-attachments/assets/190ecbfd-def7-4cec-af9c-67e11eb49f35" />
 			</p>
 			<p>
-				Based on on the result, the domains used by the attacker for file hosting and command-and-control (C2) are <b>cdn.bpakcaging.xyz</b> and <b>files.bpakcaging.xyz</b>. Aside from that, I found out that the name of the enumeration tool downloaded by the attacker is <b>Seatbelt</b>.
+				Based on the result, the domains used by the attacker for file hosting and command-and-control (C2) are <b>cdn[.]bpakcaging[.]xyz</b> and <b>files[.]bpakcaging[.]xyz</b>. Aside from that, I found out that the name of the enumeration tool downloaded by the attacker is <b>Seatbelt</b>.
 			</p>
 			<p>
 			<img width="975" height="373" alt="image" src="https://github.com/user-attachments/assets/63d9f37b-a6ce-4007-ab2a-fbd55012d017" />
 			</p>
 			<p>
-				Using the same command, I added grep to help me to locate the full file path easily, which accessed by the attacker using the downloaded <b>sq3.exe</b> binary, a legitimate command-line tool used to view and manage database files. The full file path is 
+				Using the same command, I added grep to help me to locate the full file path easily, which accessed by the attacker using the downloaded <b>sq3[.]exe</b> binary, a legitimate command-line tool used to view and manage database files. The full file path is 
 			</p>
 	
-   		C:\\Users\\j.westcott\\AppData\\Local\\Packages\\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\\LocalState\\plum.sqlite.
+   		C:\\Users\\j[.]westcott\\AppData\\Local\\Packages\\Microsoft[.]MicrosoftStickyNotes_8wekyb3d8bbwe\\LocalState\\plum[.]sqlite.
 
 <p>
 	Another thing is that, <b>Microsoft Sticky Notes</b> is the software that uses the file.
@@ -162,7 +162,7 @@
 	<img width="975" height="172" alt="image" src="https://github.com/user-attachments/assets/2859b222-7287-4b31-bdf4-03a8cda05ea8" />
 </p>
 <p>
-	The name of the exfiltrated file by the attacker was <b>protected_data.kdbx</b>. 
+	The name of the exfiltrated file by the attacker was <b>protected_data[.]kdbx</b>. 
 </p>
 <p>
 	<img width="975" height="172" alt="image" src="https://github.com/user-attachments/assets/5e0f449a-e7e7-430d-8143-c96a62d92fdb" />
@@ -185,10 +185,10 @@
 
 <br>
 <p>
-	Based on the PowerShell logs investigation, I now have seen the full impact of the attack, such as the threat actor was able to read and exfiltrate two potentially sensitive files <b>(protected_data.kdbx & plum.sqlite)</b>, and the domains and ports used for network activity were discovered <b>(cdn.bpakcaging.xyz:8080</b> and <b>files.bpakcaging.xyz)</b>, which also includes the tool used by the threat actor for exfiltration.
+	Based on the PowerShell logs investigation, I now have seen the full impact of the attack, such as the threat actor was able to read and exfiltrate two potentially sensitive files <b>(protected_data[.]kdbx & plum[.]sqlite)</b>, and the domains and ports used for network activity were discovered <b>(cdn[.]bpakcaging[.]xyz[:]8080</b> and <b>files[.]bpakcaging[.]xyz)</b>, which also includes the tool used by the threat actor for exfiltration.
 </p>
 <p>
-	I utilized the packet capture <b>(capture.pcapng)</b> and opened it with Wireshark. By searching for <b>sq3.exe</b>, I investigated on what software was used by the attacker to host its presumed file or payload server through the input of <b>files.bpakcaging.xyz</b> on the search bar. I found out that the attacker was using <b>Python</b>.
+	I utilized the packet capture <b>(capture[.]pcapng)</b> and opened it with Wireshark. By searching for <b>sq3[.]exe</b>, I investigated on what software was used by the attacker to host its presumed file or payload server through the input of <b>files[.]bpakcaging[.]xyz</b> on the search bar. I found out that the attacker was using <b>Python</b>.
 </p>
 <p>
 	<img width="975" height="254" alt="image" src="https://github.com/user-attachments/assets/0af0ba53-9e4f-46d5-9cb7-d03838e8e178" />
@@ -242,7 +242,7 @@
 	Command:
 </p>
 
-	tshark –r capture.pcapng –Y “ip.dst==167.71.211.113 and dns” –T fields –e dns.qry.name | grep –E ‘[A-F0-9]+.bpakcaging.xyz $’ | cut –d’-‘ –f1 | tr –d ‘\n’ | xxd –p –r > protected_data.kdbx
+	tshark –r capture.pcapng –Y “ip.dst==167[.]71[.]211[.]113 and dns” –T fields –e dns[.]qry[.]name | grep –E ‘[A-F0-9]+[.]bpakcaging[.]xyz $’ | cut –d’-‘ –f1 | tr –d ‘\n’ | xxd –p –r > protected_data[.]kdbx
 
 <p>
 	<img width="975" height="141" alt="image" src="https://github.com/user-attachments/assets/1e77a6bb-330c-4caf-9424-776857ff6a9d" />
@@ -253,11 +253,11 @@
 <p>
 	Here is the breakdown of what each part does:
 	<ul>
-		<li><b>tshark -r capture.pcapng -Y "ip.dst==167.71.211.113 and dns" -T fields -e dns.qry.name</b></li>
+		<li><b>tshark -r capture[.]pcapng -Y "ip.dst==167[.]71[.]211[.]113 and dns" -T fields -e dns[.]qry[.]name</b></li>
 			<p>
 				This command extracts the requested domain names from a network capture.
 			</p>
-		<li><b>grep -E '[A-F0-9]+.bpakcaging. xyz $ '</b></li>
+		<li><b>grep -E '[A-F0-9]+[.]bpakcaging[.]xyz $ '</b></li>
 			<p>
 				This command filters the list to ensure it only processes the attacker’s specific data-carrying domains.	
 			</p>
@@ -269,14 +269,14 @@
 			<p>
 				This command merges all the separate lines into one single, continuous string.
 			</p>
-		<li><b>xxd -p -r > protected_data.kdbx</b></li>
+		<li><b>xxd -p -r > protected_data[.]kdbx</b></li>
 			<p>
 				This command converts the giant hex string back into its original binary file format.
 			</p>
 	</ul>
 
 <p>
-	I opened the <b>artefacts</b> folder and found the <b>protected_data.kdbx</b>, then run it.
+	I opened the <b>artefacts</b> folder and found the <b>protected_data[.]kdbx</b>, then run it.
 </p>
 </p>
 <p>
@@ -313,26 +313,26 @@
 <ul>
 <li><h4>Network & Infrastructure Indicators</h4></li>
 	<ul>
-		<li><b>Phishing Sender Address:</b> agriffin@bpakcaging.xyz</li>
-		<li><b>Command & Control (C2) / Payload Hosting Domain:</b> files.bpakcaging.xyz</li>
-		<li><b>Content Delivery Network (CDN) Domain:</b> cdn.bpakcaging.xyz</li>
-		<li><b>Exfiltration Destination IP Address:</b> 167.71.211.113</li>
+		<li><b>Phishing Sender Address:</b> agriffin@bpakcaging[.]xyz</li>
+		<li><b>Command & Control (C2) / Payload Hosting Domain:</b> files[.]bpakcaging[.]xyz</li>
+		<li><b>Content Delivery Network (CDN) Domain:</b> cdn[.]bpakcaging[.]xyz</li>
+		<li><b>Exfiltration Destination IP Address:</b> 167[.]71[.]211[.]113</li>
 	</ul>
 
 <li><h4>Host & File Indicators</h4></li>
 	<ul>
-		<li><b>Malicious Loader File:</b> Invoice_20230103.lnk</li>
-		<li><b>Masquerade Binary:</b> sq3.exe</li>
+		<li><b>Malicious Loader File:</b> Invoice_20230103[.]lnk</li>
+		<li><b>Masquerade Binary:</b> sq3[.]exe</li>
 		<li><b>Targeted Financial Credential Repositories:</b>
 			<ul>
 				<li><b>Windows Sticky Notes Database</b></li>
 														
-				C:\Users\j.westcott\AppData\Local\Packages\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\LocalState\plum.sqlite
+				C:\Users\j[.]westcott\AppData\Local\Packages\Microsoft[.]MicrosoftStickyNotes_8wekyb3d8bbwe\LocalState\plum[.]sqlite
 			
 <li><b>KeePass Password Vault</b></li>
 		</li>			 				
 	
-	protected_data.kdbx 		
+	protected_data[.]kdbx 		
 </ul>
 </ul>
 
