@@ -191,7 +191,7 @@
 <br>
 <h3>Indicators of Compromise (IoCs)</h3>
 <ul>
-  <li>Attacker Email Address: westaylor23@outlook[.]com</li>
+  <li><b>Attacker Email Address:</b>   westaylor23@outlook[.]com</li>
   <li><b>Target Email Address: </b>maxine[.]beck@quicklogisticsorg[.]onmicrosoft[.]com</li>
   <li><b>First-Stage Weaponized Attachment: </b>Resume_WesleyTaylor[.]doc</li>
   <li><b>Stage-2 Script Payload URL: </b>https[:]//files[.]boogeymanisback[.]lol/aa2a9c53cbb80416d3b47d85538d9971/update[.]png</li>
