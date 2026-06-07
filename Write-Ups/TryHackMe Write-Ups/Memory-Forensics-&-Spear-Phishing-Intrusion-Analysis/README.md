@@ -218,10 +218,3 @@
 <br>
 <h3>References & Acknowledgement</h3>
 <p>This incident response case study was conducted using <b>Boogeyman 2</b>, an advanced defensive capstone environment provided by the <b>TryHackMe</b> platform. All volatile memory dumps, endpoint logs, phishing artifacts, and network captures analyzed throughout this investigation originate directly from their specialized security training curriculum. This controlled simulation was completed to enhance tactical threat-hunting awareness, deepen technical proficiency in volatile memory forensics, and cultivate practical incident response skills that can be directly applied to protecting and hardening enterprise environments against sophisticated persistent threats.</p>
-
-
-
-
-
-
-
