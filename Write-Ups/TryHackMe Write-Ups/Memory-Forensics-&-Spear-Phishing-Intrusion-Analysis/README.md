@@ -186,6 +186,7 @@
     <li>Encrypted Channel (<b>T1573</b>)</li>
   </ul>
 </ul>
+</u>
 
 <br>
 <h3>Indicators of Compromise (IoCs)</h3>
