@@ -51,7 +51,7 @@
 <p><img width="975" height="375" alt="image" src="https://github.com/user-attachments/assets/d5f949ef-f6c8-4ca0-b8b7-bbf01b6823b4" /></p>
 <p>Based from the content, the email was used to send the phishing email was <b>westaylor23@outlook[.]com</b>, and the email of the victim employee was <b>maxine[.]beck@quicklogisticsorg[.]onmicrosoft[.]com</b>.</p>
 
-<p>The attached file at the bottom of the email content, the name of the attached malicious document was <b>Resume_WesleyTaylor[.]doc<b/>.</p>
+<p>The attached file at the bottom of the email content, the name of the attached malicious document was <b>Resume_WesleyTaylor[.]doc</b>.</p>
 <p><img width="975" height="380" alt="image" src="https://github.com/user-attachments/assets/15d4fa8d-55a5-41d9-96f3-b9c2ea0851b7" />
 </p>
 <p>I downloaded the malicious attachment to investigate.</p>
