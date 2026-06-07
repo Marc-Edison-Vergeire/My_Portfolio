@@ -159,7 +159,7 @@
 <ul>
   <li><b>Initial Access</b></li>
   <ul>
-    <li>Phishing: Spear-phishing Attachment (<b>T1566.001</b>) </li>
+    <li>Phishing: Spear-phishing Attachment (T1566.001) </li>
   </ul>
   <li><b>Execution</b></li>
   <ul>
