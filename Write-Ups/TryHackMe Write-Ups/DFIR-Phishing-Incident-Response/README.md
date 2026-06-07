@@ -50,7 +50,7 @@
 	</ul>
 
 <br>
-<h3>Artifacts</h3>
+<h3>Artifacts Analyzed</h3>
 	<ul>
 		<li><b>dump[.]eml</b> (Copy from the phishing email)</li>
 		<li><b>powershell.json </b>(Powershell Logs from the finance employee’s host or workstation)</li>
