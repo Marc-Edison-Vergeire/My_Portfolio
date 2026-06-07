@@ -39,7 +39,7 @@
 	</ul>
 
 <br>
-<h3>Tool Used</h3>
+<h3>Tool Utilized</h3>
 	<ul>
 		<li><b>Thunderbird</b> (free and open-source cross-platform email client)</li>
 		<li><b>mha.azurewebsites.net</b> (Online email analyzer)</li>
