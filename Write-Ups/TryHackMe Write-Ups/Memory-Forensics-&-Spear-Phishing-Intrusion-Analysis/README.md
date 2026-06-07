@@ -118,17 +118,104 @@
 
     olevba  Resume_WeslyTaylor[.]doc
 
+<p><img width="975" height="424" alt="image" src="https://github.com/user-attachments/assets/853ff06c-cbf2-4419-9f82-0ab6789be483" />
+</p>
+<p>Now, there are two types of syntax commands that I used to identify the PID of the malicious process used to establish the C2 connection, which is <b>6216</b>, and those are:</p>
 
+    vol  -f  WKSTN-2961[.]raw  windows.netscan  &  vol  -f  WKSTN-2961[.]raw  windows.pstree  |  grep  “4260” (which I used)
 
+<p><img width="975" height="171" alt="image" src="https://github.com/user-attachments/assets/38165616-5287-446e-9158-e4b074fda7bd" />
+</p>
+<p>Furthermore, I investigated the full file path of the malicious process used to establish the C2 connection the finding is <b>C:\Windows\Tasks\updater[.]exe</b> by using this syntax command:</p>
 
+    vol -f WKSTN-2961.raw windows.dlllist | grep updater[.]exe
 
+<p><img width="975" height="275" alt="image" src="https://github.com/user-attachments/assets/1a9b6169-46c6-416f-96e9-e5668e655f56" />
+</p>
+<p>Aside from that, the IP address and port of the C2 connection initiated by the malicious binary is <b>128[.]199[.]95[.]189[:]8080</b> because I used the syntax command:</p>
 
+    vol -f WKSTN-2961[.]raw windows.netscan | grep updater[.]exe
 
+<p><img width="975" height="252" alt="image" src="https://github.com/user-attachments/assets/70b31644-5aa5-491d-b9ec-6e56c8c36006" />
+</p>
 
+<br>
+<h3>Phase 5: Artifact Locating & Persistence Hunting</h3>
+<p>I executed a syntax command, in order to find the full file path of the malicious email attachment based on the memory dump, and that is:</p>
 
+    vol -f WKSTN-2961.raw windows.filescan | grep Resume_WesleyTaylor
 
+<p><img width="975" height="48" alt="image" src="https://github.com/user-attachments/assets/0209a724-4858-44f1-badc-7c97dbded77d" />
+</p>
+<p>Lastly, the attacker implanted a scheduled task right after establishing the C2 callback, in order to maintain persistent access. Thus, I executed a syntax command to find out:</p>
 
+    strings WKSTN-2961[.]raw | grep schtasks
 
+<p><img width="975" height="401" alt="image" src="https://github.com/user-attachments/assets/8ad0ce23-b4c0-495a-9c36-cf49ce8be9eb" />
+</p>
+
+<br>
+<h2>MITRE ATT&CK</h2>
+<ul>
+  <li><b>Initial Access</b></li>
+  <ul>
+    <li>Phishing: Spear-phishing Attachment (<b>T1566.001</b>) </li>
+  </ul>
+  <li><b>Execution</b></li>
+  <ul>
+    <li>Command and Scripting Interpreter: Visual Basic (<b>T1059.005</b>)</li>
+    <li>Exploitation for Client Execution (<b>T1203</b>)</li>
+  </ul>
+  <li><b>Persistence</b></li>
+  <ul>
+    <li>Scheduled Task/Job: Scheduled Task (<b>T1053.005</b>)</li>
+  </ul>
+  <li><b>Defense Evasion</b></li>
+  <ul>
+    <li>Obfuscated Files or Information (<b>T1027</b>)</li>
+    <li>Masquerading: Match Legitimate Name or Location (<b>T1036.005</b>)</li>
+  </ul>
+  <li><b>Discovery</b></li>
+  <ul>
+    <li>System Information Discovery (<b>T1082</b>)</li>
+    <li>File and Directory Discovery (<b>T1083</b>)</li>
+  </ul>
+  <li><b>Command and Control</b></li>
+  <ul>
+    <li>Application Layer Protocol: Web Protocols (<b>T1071.001</b>)</li>
+    <li>Encrypted Channel (<b>T1573</b>)</li>
+  </ul>
+</ul>
+
+<br>
+<h3>Indicators of Compromise (IoCs)</h3>
+<ul>
+  <li><b>Attacker Email Address: </b>westaylor23@outlook[.]com</li>
+  <li><b>Target Email Address: </b>maxine[.]beck@quicklogisticsorg[.]onmicrosoft[.]com</li>
+  <li><b>First-Stage Weaponized Attachment: </b>Resume_WesleyTaylor[.]doc</li>
+  <li><b>Stage-2 Script Payload URL: </b>https[:]//files[.]boogeymanisback[.]lol/aa2a9c53cbb80416d3b47d85538d9971/update[.]png</li>
+  <li><b>Stage-2 Script File Path: </b>C[:]\ProgramData\update[.]js</li>
+  <li><b>Stage-3 Binary Payload URL: </b>https[:]//files[.]boogeymanisback[.]lol/aa2a9c53cbb80416d3b47d85538d9971/update[.]exe</li>
+  <li><b>Malicious Backdoor File Path: </b>C[:]\Windows\Tasks\updater[.]exe</li>
+  <li><b>Command and Control (C2) Socket Configuration: </b>128[.]199[.]95[.]189[:]8080</li>
+  <li><b>Unauthorized Execution Engine (Process ID 4260): </b>wscript[.]exe</li>
+  <li><b>Active Implant Process Tree Target (Process ID 6216): </b>updater[.]exe</li>
+</ul>
+
+<br>
+<h3>Lesson Learned</h3>
+<p>As a SOC Analyst, this incident highlights the critical importance of a multi-layered defensive posture, underscoring that human targets remain a preferred initial access vector for advanced persistent threats. By successfully analyzing the attack lifecycle—from the initial spear-phishing email and weaponized macro down to the volatile memory execution and persistence mechanisms—I validated that timely host isolation and rapid memory acquisition are essential for limiting an adversary's operational window. Moving forward, the organization must implement stricter email filtering policies to block external untrusted attachments, restrict administrative utilities like Windows Script Host (<b>wscript.exe</b>) from executing out of public directories like <b>C:\ProgramData</b>, and establish behavior-based detection engineering rules to continuously monitor for unauthorized scheduled task modifications. Ultimately, case reinforces that robust logging, active threat hunting across volatile memory spaces, and immediate containment playbooks are the cornerstones of minimizing impact and maintaining organizational resilience against sophisticated endpoint compromises.</p>
+
+<br>
+<h3>Recommendations</h3>
+<p>To effectively mitigate the risk of future spear-phishing intrusions and harden our endpoint defenses against sophisticated persistent threats, it is highly recommended that the organization implement immediate technical controls and architectural enhancements. </p>
+<p>First, the security team should deploy strict application control policies to disable or severely restrict administrative script interpreters, specifically preventing <b>wscript.exe</b> from executing untrusted scripts out of non-standard, user-writable directories such as <b>C:\ProgramData</b> and <b>C:\Users\Public</b>. </p>
+<p>Second, endpoint monitoring configurations must be updated within the Endpoint Detection and Response (EDR) and SIEM systems to establish real-time behavioral alerts for anomalous parent-child process relationships—such as Microsoft Word spawning scripting hosts or network utilities—and to flags any unauthorized creations or modifications of Scheduled Tasks via <b>schtasks.exe</b>. </p>
+<p>Finally, the organization should enhance email security gateways by implementing robust attachment sandboxing and enforcing Domain-based Message Authentication, Reporting, and Conformance (DMARC) policies, alongside providing regular, targeted threat-awareness training for high-risk departments like Human Resources to ensure suspicious external applications are flagged before execution.</p>
+
+<br>
+<h3>References & Acknowledgement</h3>
+<p>This incident response case study was conducted using <b>Boogeyman 2</b>, an advanced defensive capstone environment provided by the <b>TryHackMe</b> platform. All volatile memory dumps, endpoint logs, phishing artifacts, and network captures analyzed throughout this investigation originate directly from their specialized security training curriculum. This controlled simulation was completed to enhance tactical threat-hunting awareness, deepen technical proficiency in volatile memory forensics, and cultivate practical incident response skills that can be directly applied to protecting and hardening enterprise enterprise environments against sophisticated persistent threats.</p>
 
 
 
