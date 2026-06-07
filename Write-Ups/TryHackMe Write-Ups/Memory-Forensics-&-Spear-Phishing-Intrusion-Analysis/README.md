@@ -88,17 +88,35 @@
 
 <br>
 <h3>Phase 3: Volatility Memory Forensics & Process Triage</h3>
+<p>Upon further investigation, I utilized the Olevba command against the malicious attachment, thus, the URL is used to download the stage 2 payload based on the document’s macro is <b>https[:]//files[.]boogeymanisback[.]lol/aa2a9c53cbb80416d3b47d85538d9971/update[.]png</b></p>
+<p><img width="814" height="339" alt="image" src="https://github.com/user-attachments/assets/35d6e1e4-3862-4863-a0da-8f2b88d76fc1" />
+</p>
+<p><img width="975" height="892" alt="image" src="https://github.com/user-attachments/assets/80b38e8b-9a7a-4266-9f15-93905a5e40f4" />
+</p>
+<p>Based on this result, the name of the process that executed the newly downloaded stage 2 payload is <b>wscript[.]exe</b>. At the same time, the full file path of the malicious stage 2 payload is <b>C[:]\ProgramData\update[.]js</b>.</p>
+<p><img width="890" height="627" alt="image" src="https://github.com/user-attachments/assets/62696abe-cd6f-452a-880b-9ca3c652a705" />
+</p>
+<p>I identified the PID of the process that executed the stage 2 payload (<b>wscript[.]exe</b>) and utilized the Volatility by entering the syntax command:</p>
 
+    vol  -f  WKSTN-2961.raw  windows.pslist
 
+<p><img width="975" height="439" alt="image" src="https://github.com/user-attachments/assets/b54cccb4-117b-406e-9782-d551e4b9cda0" />
+</p>
+<p>In order for me to spot the PID easier and faster, I added the command,  <b>| grep “wscript[.]exe”</b>. Therefore, the PID is <b>4260</b>.</p>
+<p><img width="975" height="303" alt="image" src="https://github.com/user-attachments/assets/45404d3d-18f1-4465-bd39-e757b096ea21" />
+</p>
 
+<br>
+<h3>Phase 4: Network Analysis & Infrastructure Mapping</h3>
+<p>This time, I identified what is the parent PID of the process that executed the stage 2 payload and that is <b>1124</b>, by using the syntax command:</p>
 
+    vol  -f  WKSTN-2961.raw  windows.pstree  |  grep  "4260"
 
+<p><img width="975" height="228" alt="image" src="https://github.com/user-attachments/assets/cfd788cd-2172-4f38-b588-e63e18f5bed6" />
+</p>
+<p>I investigated about the URL used to download the malicious binary executed by the stage 2 payload and that is <b>https[:]//files[.]boogeymanisback[.]lol/aa2a9c53cbb80416d3b47d85538d9971/update[.]exe</b>, I entered the syntax command again:</p>
 
-
-
-
-
-
+    olevba  Resume_WeslyTaylor[.]doc
 
 
 
