@@ -27,11 +27,93 @@
 <br>
 <h2>Tools Utilized</h2>
 <ul>
-  <li><b></b></li>
-  <li><b></b></li>
-  <li><b></b></li>
-  <li><b></b></li>
+  <li><b>Volatility:</b> An open-source advanced memory forensics framework used to analyze and extract critical digital artifacts, trace anomalous process trees, and uncover hidden implants from volatile memory (RAM) samples.</li>
+  <li><b>Olevba: </b>A specialized script-analysis tool utilized to automatically parse, extract, and analyze embedded Visual Basic for Applications (VBA) macros within the weaponized Microsoft Office document to decode the initial execution payload.</li>
+  <li><b>Evolution Mail: </b>A Linux-based email client and information management framework utilized to safely inspect raw email headers, body content, and attached artifacts to isolate the initial spear-phishing vector without risking accidental execution.</li>
+  <li><b>Virustotal: </b>A cloud-based threat intelligence platform used to aggregate scanning data from dozens of antivirus engines and datasets to validate extracted file hashes, cross-reference external C2 IP addresses, and identify known advanced persistent threat (APT) campaign indicators.</li>
 </ul>
+
+<br>
+<h2>Artifacts Analyzed</h2>
+<ul>
+  <li><b>Resume - Application for Junior IT Analyst Role[.]eml (Phishing Email): </b>A copy of the raw phishing email used to target the Human Resources department. It was inspected to extract sender transport headers, source IP addresses, and the specific delivery context used by the adversary.</li>
+  <li><b>Resume_WesleyTaylor[.]doc (Weaponized Resume Attachment): </b>The malicious resume submitted by the threat actor, which contained the embedded, deobfuscated VBA macro code responsible for initiating the first-stage download and executing the initial workstation compromise.</li>
+  <li><b>WKSTN-2961[.]raw (Volatile Memory Dump): </b>A complete, raw memory capture of the victim's workstation acquired immediately following the alert. This artifact served as the primary source for memory forensics, allowing the extraction of active network connections, process trees, and in-memory implants.</li>
+</ul>
+
+<br>
+<h2>Findings</h2>
+<h3>Phase 1: Initial Triage and Phishing Analysic</h3>
+<p>Following an alert flagging anomalous endpoint execution on an employee's workstation, I deployed automated containment playbooks to execute an enterprise-wide search. The specific message ID was successfully located within the employee's mailbox, allowing the direct export of the raw <b>.eml</b> file to investigate the initial access vector. In this case, I utilized Evolution Mail to parse and open the EML file from the phishing email, just to see the content of the email.</p>
+<p><img width="975" height="568" alt="image" src="https://github.com/user-attachments/assets/3ab39c6c-89a1-4f51-85af-02b318ec99b8" /></p>
+<p><img width="975" height="514" alt="image" src="https://github.com/user-attachments/assets/a7f3dcc0-fb83-46bf-8229-add3ecbc0d16" /></p>
+<p><img width="975" height="620" alt="image" src="https://github.com/user-attachments/assets/2a208a05-696b-4ba5-8a03-8e7f84f8ff13" /></p>
+<p><img width="975" height="375" alt="image" src="https://github.com/user-attachments/assets/d5f949ef-f6c8-4ca0-b8b7-bbf01b6823b4" /></p>
+<p>Based from the content, the email was used to send the phishing email was <b>westaylor23@outlook[.]com</b>, and the email of the victim employee was <b>maxine[.[beck@quicklogisticsorg[.]onmicrosoft[.]com</b>.</p>
+
+<p>The attached file at the bottom of the email content, the name of the attached malicious document was <b>Resume_WesleyTaylor[.]doc<b/>.</p>
+<p><img width="975" height="380" alt="image" src="https://github.com/user-attachments/assets/15d4fa8d-55a5-41d9-96f3-b9c2ea0851b7" />
+</p>
+<p>I downloaded the malicious attachment to investigate.</p>
+<p><img width="975" height="390" alt="image" src="https://github.com/user-attachments/assets/cb6fc9eb-6cad-4e16-886d-cb265d60075f" />
+</p>
+<p><img width="975" height="475" alt="image" src="https://github.com/user-attachments/assets/f9e2cb46-460c-4c80-9ccf-4cc5b9d63864" />
+</p>
+<p><img width="975" height="513" alt="image" src="https://github.com/user-attachments/assets/0d9fc52f-41fd-4142-af09-a6729d415ba1" />
+</p>
+<p><img width="964" height="489" alt="image" src="https://github.com/user-attachments/assets/78a762ad-651a-448c-93f7-864bb7c6d9e2" />
+</p>
+
+<br>
+<h3>Phase 2: Static Malware Analysis & Threat Intelligence</h3>
+<p>I investigated what is the MD5 hash of the malicious attachment by opening a terminal in the Artefact folder</p>
+<p><img width="975" height="752" alt="image" src="https://github.com/user-attachments/assets/f0cac0e8-6fb7-4ad9-baec-bf9ee974fca8" />
+</p>
+<p>Inside the terminal, I typed the two commands to get the hash value of the malicious attachment, such as:</p>
+
+    ls  & md5sum  Resume_WesleyTaylor[.]doc
+
+<p><img width="975" height="246" alt="image" src="https://github.com/user-attachments/assets/a36a9fc7-3ea9-4560-a345-6561044e7af8" />
+</p>
+<p><img width="975" height="276" alt="image" src="https://github.com/user-attachments/assets/fca77255-01f3-4235-bda4-0ac787e6969e" />
+</p>
+<p><img width="974" height="320" alt="image" src="https://github.com/user-attachments/assets/5972095a-3f01-456a-b3af-2539ee44841d" />
+</p>
+<p>I copied the hash value and input in Virustotal to analyze and  gathered more information about the file.</p>
+<p><img width="975" height="394" alt="image" src="https://github.com/user-attachments/assets/cf519b90-a95d-4d17-b622-210d68c2333e" />
+</p>
+<p>Based from the result, 39/62 security vendors flagged this file as malicious. There are a lot of details I found from the details, relations, behavior, and community.</p>
+<p><img width="975" height="175" alt="image" src="https://github.com/user-attachments/assets/341bac60-e6c3-45ad-99e5-13a07187a00c" />
+</p>
+
+<br>
+<h3>Phase 3: Volatility Memory Forensics & Process Triage</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
