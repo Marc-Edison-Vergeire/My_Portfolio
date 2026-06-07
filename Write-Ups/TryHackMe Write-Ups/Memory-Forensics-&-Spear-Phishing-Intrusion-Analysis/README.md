@@ -43,13 +43,13 @@
 
 <br>
 <h2>Findings</h2>
-<h3>Phase 1: Initial Triage and Phishing Analysic</h3>
+<h3>Phase 1: Initial Triage and Phishing Analysis</h3>
 <p>Following an alert flagging anomalous endpoint execution on an employee's workstation, I deployed automated containment playbooks to execute an enterprise-wide search. The specific message ID was successfully located within the employee's mailbox, allowing the direct export of the raw <b>.eml</b> file to investigate the initial access vector. In this case, I utilized Evolution Mail to parse and open the EML file from the phishing email, just to see the content of the email.</p>
 <p><img width="975" height="568" alt="image" src="https://github.com/user-attachments/assets/3ab39c6c-89a1-4f51-85af-02b318ec99b8" /></p>
 <p><img width="975" height="514" alt="image" src="https://github.com/user-attachments/assets/a7f3dcc0-fb83-46bf-8229-add3ecbc0d16" /></p>
 <p><img width="975" height="620" alt="image" src="https://github.com/user-attachments/assets/2a208a05-696b-4ba5-8a03-8e7f84f8ff13" /></p>
 <p><img width="975" height="375" alt="image" src="https://github.com/user-attachments/assets/d5f949ef-f6c8-4ca0-b8b7-bbf01b6823b4" /></p>
-<p>Based from the content, the email was used to send the phishing email was <b>westaylor23@outlook[.]com</b>, and the email of the victim employee was <b>maxine[.[beck@quicklogisticsorg[.]onmicrosoft[.]com</b>.</p>
+<p>Based from the content, the email was used to send the phishing email was <b>westaylor23@outlook[.]com</b>, and the email of the victim employee was <b>maxine[.]beck@quicklogisticsorg[.]onmicrosoft[.]com</b>.</p>
 
 <p>The attached file at the bottom of the email content, the name of the attached malicious document was <b>Resume_WesleyTaylor[.]doc<b/>.</p>
 <p><img width="975" height="380" alt="image" src="https://github.com/user-attachments/assets/15d4fa8d-55a5-41d9-96f3-b9c2ea0851b7" />
@@ -82,7 +82,7 @@
 <p>I copied the hash value and input in Virustotal to analyze and  gathered more information about the file.</p>
 <p><img width="975" height="394" alt="image" src="https://github.com/user-attachments/assets/cf519b90-a95d-4d17-b622-210d68c2333e" />
 </p>
-<p>Based from the result, 39/62 security vendors flagged this file as malicious. There are a lot of details I found from the details, relations, behavior, and community.</p>
+<p>The resulting MD5 hash was queried against VirusTotal, returning a malicious detection ratio of 39/62. Vendor classifications confirmed the file acted as a malicious macro downloader associated with targeted spear-phishing campaigns.</p>
 <p><img width="975" height="175" alt="image" src="https://github.com/user-attachments/assets/341bac60-e6c3-45ad-99e5-13a07187a00c" />
 </p>
 
@@ -116,7 +116,7 @@
 </p>
 <p>I investigated about the URL used to download the malicious binary executed by the stage 2 payload and that is <b>https[:]//files[.]boogeymanisback[.]lol/aa2a9c53cbb80416d3b47d85538d9971/update[.]exe</b>, I entered the syntax command again:</p>
 
-    olevba  Resume_WeslyTaylor[.]doc
+    olevba  Resume_WesleyTaylor[.]doc
 
 <p><img width="975" height="424" alt="image" src="https://github.com/user-attachments/assets/853ff06c-cbf2-4419-9f82-0ab6789be483" />
 </p>
@@ -204,7 +204,8 @@
 
 <br>
 <h3>Lesson Learned</h3>
-<p>As a SOC Analyst, this incident highlights the critical importance of a multi-layered defensive posture, underscoring that human targets remain a preferred initial access vector for advanced persistent threats. By successfully analyzing the attack lifecycle—from the initial spear-phishing email and weaponized macro down to the volatile memory execution and persistence mechanisms—I validated that timely host isolation and rapid memory acquisition are essential for limiting an adversary's operational window. Moving forward, the organization must implement stricter email filtering policies to block external untrusted attachments, restrict administrative utilities like Windows Script Host (<b>wscript.exe</b>) from executing out of public directories like <b>C:\ProgramData</b>, and establish behavior-based detection engineering rules to continuously monitor for unauthorized scheduled task modifications. Ultimately, case reinforces that robust logging, active threat hunting across volatile memory spaces, and immediate containment playbooks are the cornerstones of minimizing impact and maintaining organizational resilience against sophisticated endpoint compromises.</p>
+<p>This incident highlights the critical importance of a multi-layered defensive posture, underscoring that human targets remain a preferred initial access vector for advanced persistent threats. By successfully analyzing the attack lifecycle—from the initial spear-phishing email and weaponized macro down to the volatile memory execution and persistence mechanisms—it is validated that timely host isolation and rapid memory acquisition are essential for limiting an adversary's operational window.</p>
+<p>Moving forward, the organization must implement stricter email filtering policies to block external untrusted attachments, restrict administrative utilities like Windows Script Host (<b>wscript.exe</b>) from executing out of public directories like <b>C:\ProgramData</b>, and establish behavior-based detection engineering rules to continuously monitor for unauthorized scheduled task modifications. Ultimately, this case reinforces that robust logging, active threat hunting across volatile memory spaces, and immediate containment playbooks are the cornerstones of minimizing impact and maintaining organizational resilience against sophisticated endpoint compromises.</p>
 
 <br>
 <h3>Recommendations</h3>
@@ -215,7 +216,7 @@
 
 <br>
 <h3>References & Acknowledgement</h3>
-<p>This incident response case study was conducted using <b>Boogeyman 2</b>, an advanced defensive capstone environment provided by the <b>TryHackMe</b> platform. All volatile memory dumps, endpoint logs, phishing artifacts, and network captures analyzed throughout this investigation originate directly from their specialized security training curriculum. This controlled simulation was completed to enhance tactical threat-hunting awareness, deepen technical proficiency in volatile memory forensics, and cultivate practical incident response skills that can be directly applied to protecting and hardening enterprise enterprise environments against sophisticated persistent threats.</p>
+<p>This incident response case study was conducted using <b>Boogeyman 2</b>, an advanced defensive capstone environment provided by the <b>TryHackMe</b> platform. All volatile memory dumps, endpoint logs, phishing artifacts, and network captures analyzed throughout this investigation originate directly from their specialized security training curriculum. This controlled simulation was completed to enhance tactical threat-hunting awareness, deepen technical proficiency in volatile memory forensics, and cultivate practical incident response skills that can be directly applied to protecting and hardening enterprise environments against sophisticated persistent threats.</p>
 
 
 
