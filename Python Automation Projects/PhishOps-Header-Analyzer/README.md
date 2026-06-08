@@ -33,19 +33,18 @@
 
 <h3>Installation Setup</h3>
 <ol>
-  <li>Clone the Repository:</li>
+  <li>Clone the Repository</li>
   
-    git clone [https://github.com/YOUR_USERNAME/PhishOps-Mail-Header-Analyzer.git](https://github.com/YOUR_USERNAME/PhishOps-Mail-Header-Analyzer.git)cd PhishOps-Mail-Header-Analyzer
   <li>Initialize the Workspace Environment:<br>
   Run the application once to build the text pipeline wrapper automatically:</li>
 
-    python analyzer.py
+    python mha.py
 
 <p><b>NOTE:</b> If <b>email_input.txt</b> is missing from the directory, the engine will gracefully catch the exception, create the target file automatically, and pause execution.</p>
   <li>Stage and Ingest the Payload:<br> Open the newly generated <b>email_input.txt file</b>, paste the complete raw text headers extracted from your suspicious email asset, and save the document.</li>
   <li>Execute the mail header analysis engine:</li>
 
-    python analyzer.py
+    python mha.py
 </ol>
 
 <br>
