@@ -150,7 +150,7 @@ def render_mha_report(analyzer):
     remains = analyzer.get_remaining_headers()
 
     print("=" * 140)
-    print(f" {BOLD}{'MAIL HEADER ANALYZER (MHA) - COMPLETE REPORT':^136}{RESET} ")
+    print(f" {BOLD}{'PHISHOPS MAIL HEADER ANALYZER (MHA) - COMPLETE REPORT':^136}{RESET} ")
     print("=" * 140)
     
     print(f"\n{BOLD}[+] SUMMARY / ENVELOPE METADATA{RESET}")
