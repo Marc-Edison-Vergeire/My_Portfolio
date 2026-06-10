@@ -44,13 +44,13 @@
 <br>
 <h2>Findings</h2>
 <h3>Phase 1: Initial Triage & Execution Tracking</h3>
-<p>Upon receiving the phishing email report, I, as a SOC Analyst, investigated the workstation of the CEO. During this activity, I discovered the email attachment in the downloads folder of the victim.</p>
+<p>Upon receiving the phishing email report, I, as a SOC Analyst, investigated the workstation of the CEO. During this activity, I discovered the email attachment in the downloads folder.</p>
 <p><img width="975" height="188" alt="image" src="https://github.com/user-attachments/assets/92c2987f-6c7f-444a-b387-7ba077a7b531" />
 </p>
 <p>In addition, I also observed a file inside the ISO payload, as shown in the image below.</p>
 <p><img width="975" height="367" alt="image" src="https://github.com/user-attachments/assets/4f16be2e-d460-4887-92c6-97709cd2412c" />
 </p>
-<p>Lastly, the incident occurred between <b>August 29 and August 30, 2023</b>. Given the initial findings, I am tasked to analyze, investigate, and assess the impact of the compromise.</p>
+<p>The incident occurred between <b>August 29 and August 30, 2023</b>. Given the initial findings, I am tasked to analyze, investigate, and assess the impact of the compromise.</p>
 <p>
 I opened the Elastic and presumed that the incident occurred between <b>August 29</b> and <b>August 30, 2023</b>.
 </p>
@@ -78,6 +78,7 @@ I opened the Elastic and presumed that the incident occurred between <b>August 2
 <p><img width="975" height="362" alt="image" src="https://github.com/user-attachments/assets/c1b787bd-6358-46de-b19b-069e13d8e8f7" />
 </p>
 
+<br>
 <h3>Phase 2: Persistence & Command-and-Control (C2) Establishment</h3>
 <p>Now, based on my investigation, the execution of the implanted file inside the machine has initiated a potential command-and-control (<b>C2</b>) connection, and found out that the IP is <b>165.232.170.151</b> and the port number is <b>80</b>.</p>
 <p><img width="975" height="362" alt="image" src="https://github.com/user-attachments/assets/d3645b82-7cfc-4cb6-84aa-fcd227b487f4" />
@@ -86,6 +87,7 @@ I opened the Elastic and presumed that the incident occurred between <b>August 2
 <p><img width="975" height="362" alt="image" src="https://github.com/user-attachments/assets/0f96fd74-aa8f-4b9e-90a4-23091bd0056c" />
 </p>
 
+<br>
 <h3>Phase 3: Privilege Escalation & Credential Harvesting</h3>
 <p>Having a high privilege machine access, the attacker attempted to dump the credentials inside the machine. By entering <b>*github*</b> command inside the search bar, I investigated further and the GitHub link used by the attacker to download a tool for credential dumping is:</p>
 
@@ -95,6 +97,7 @@ I opened the Elastic and presumed that the incident occurred between <b>August 2
 </p>
 <p>After the attacker successfully dumping the credentials inside the machine of the CEO, I identified that the attacker used the credentials to gain access to another machine (lateral movement). I investigated and found out that the username is <b>itadmin</b> with the hash value of <b>F84769D250EB95EB2D7D8B4A1C5613F2</b> of the new credential pair by using and filtering the previous result, which is the <b>mimikatz</b>, combined with the CEO’s name.</p>
 
+<br>
 <h3>Phase 4: Lateral Movement & Network Enumeration</h3>
 <p>Since the attacker used the new username, which is <b>itadmin</b>, I assumed that the attacker gained access in one of the workstation in the IT department, and maybe attempted to enumerate accessible file shares. I filtered “<b>IT</b> AND <b>Files</b> ” to investigate and analyze if my assumptions are correct. So, I found out that the name of the file accessed by the attacker from a remote share is <b>IT_Automation.ps1</b>.</p>
 <p><img width="975" height="350" alt="image" src="https://github.com/user-attachments/assets/86a083d7-a24d-4d12-ad1e-bafb466f2b1f" />
@@ -109,6 +112,7 @@ I opened the Elastic and presumed that the incident occurred between <b>August 2
 <p><img width="975" height="349" alt="image" src="https://github.com/user-attachments/assets/b997bdb9-c131-40a6-9bf3-993bd77cf89b" />
 </p>
 
+<br>
 <h3>Phase 5: Domain Compromise & Ransomware Staging</h3>
 <p>After that, the attacker then dumped the hashes into this second machine. I investigated and found out that the username and hash of the newly dumped credentials are <b>administrator</b>with the hash of <b> 00f80f2538dcb54e7adc715c0e7091ec</b>. I filtered the search bar with <b>mimikatz</b> because it was shown earlier in this result.</p>
 <p><img width="975" height="349" alt="image" src="https://github.com/user-attachments/assets/e0e5c770-ab40-412b-91b7-af06240a578d" />
