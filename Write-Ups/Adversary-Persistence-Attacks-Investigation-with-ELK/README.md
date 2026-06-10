@@ -83,17 +83,45 @@ I opened the Elastic and presumed that the incident occurred between <b>August 2
 <p><img width="975" height="362" alt="image" src="https://github.com/user-attachments/assets/d3645b82-7cfc-4cb6-84aa-fcd227b487f4" />
 </p>
 <p>After I identified the IP address and the port number of the destination, the attacker has discovered that the current access is a local administrator. In addition, the name of the process used by the attacker to execute a UAC bypass is <b>fodhelper</b>.</p>
+<p><img width="975" height="362" alt="image" src="https://github.com/user-attachments/assets/0f96fd74-aa8f-4b9e-90a4-23091bd0056c" />
+</p>
 
+<h3>Phase 3: Privilege Escalation & Credential Harvesting</h3>
+<p>Having a high privilege machine access, the attacker attempted to dump the credentials inside the machine. By entering <b>*github*</b> command inside the search bar, I investigated further and the GitHub link used by the attacker to download a tool for credential dumping is:</p>
 
+    https://github.com/gentilkiwi/mimikatz/releases/download/2.2.0-20220919/mimikatz_trunk.zip
 
+<p><img width="975" height="357" alt="image" src="https://github.com/user-attachments/assets/aa597971-bd32-4d46-804d-23a11fe9c42e" />
+</p>
+<p>After the attacker successfully dumping the credentials inside the machine of the CEO, I identified that the attacker used the credentials to gain access to another machine (lateral movement). I investigated and found out that the username is <b>itadmin</b> with the hash value of <b>F84769D250EB95EB2D7D8B4A1C5613F2</b> of the new credential pair by using and filtering the previous result, which is the <b>mimikatz</b>, combined with the CEO’s name.</p>
 
+<h3>Phase 4: Lateral Movement & Network Enumeration</h3>
+<p>Since the attacker used the new username, which is <b>itadmin</b>, I assumed that the attacker gained access in one of the workstation in the IT department, and maybe attempted to enumerate accessible file shares. I filtered “<b>IT</b> AND <b>Files</b> ” to investigate and analyze if my assumptions are correct. So, I found out that the name of the file accessed by the attacker from a remote share is <b>IT_Automation.ps1</b>.</p>
+<p><img width="975" height="350" alt="image" src="https://github.com/user-attachments/assets/86a083d7-a24d-4d12-ad1e-bafb466f2b1f" />
+</p>
+<p>After getting the contents of the remote file, the attacker used the new credentials to move laterally. I input <b>*credential*</b> command in the search bar, in order to produce the potential credentials that I need to investigate through analyzing the command-lines. The new credentials is <b>QUICKLOGISTICS\allan.smith</b> with the password or <b>Tr!ckyP@ssw0rd987</b>.</p>
+<p><img width="975" height="350" alt="image" src="https://github.com/user-attachments/assets/ba7358bc-5c0d-4df3-9f50-c36e6c32b821" />
+</p>
+<p>Using the same result, I analyzed and found out that the hostname of the attacker’s lab machine used for its lateral movement attempt is <b>WKSTN-1327</b>.</p>
+<p><img width="975" height="350" alt="image" src="https://github.com/user-attachments/assets/d50d6a88-5bcc-4a46-98a5-4d1a667bea45" />
+</p>
+<p>Using the malicious command executed by the attacker from the first machine (<b>host.hostname: WKSTN-1327</b>) to move laterally, I investigated and found out that the parent process name of the malicious command executed on the second compromised machine is <b>wsmprovhost.exe</b>. In addition for filtering the command <b>host.hostname: WKSTN-1327</b> in the search bar, I added another command, which is the <b>winlog.event_id: 1</b>, because it is the process of creation events from the second machine involved in the lateral movement.</p>
+<p><img width="975" height="349" alt="image" src="https://github.com/user-attachments/assets/b997bdb9-c131-40a6-9bf3-993bd77cf89b" />
+</p>
 
+<h3>Phase 5: Domain Compromise & Ransomware Staging</h3>
+<p>After that, the attacker then dumped the hashes into this second machine. I investigated and found out that the username and hash of the newly dumped credentials are <b>administrator</b>with the hash of <b> 00f80f2538dcb54e7adc715c0e7091ec</b>. I filtered the search bar with <b>mimikatz</b> because it was shown earlier in this result.</p>
+<p><img width="975" height="349" alt="image" src="https://github.com/user-attachments/assets/e0e5c770-ab40-412b-91b7-af06240a578d" />
+</p>
+<p>After gaining access to the domain controller, the attacker attempted to dump the hashes via a DCSync attack. Aside from the administrator account, the account the attacker dumped is <b>backupda</b>.</p>
+<p><img width="975" height="350" alt="image" src="https://github.com/user-attachments/assets/5b80b3ad-c0a7-4cb4-bdac-29a81d53dee3" />
+</p>
+<p>Lastly, after dumping the hashes, the attacker attempted to download another remote file to execute ransomware. Based on my investigation, I entered “<b>*ransom* AND user.name: Administrator</b>” and found out that the link used by the attacker to download the ransomware binary is:</p>
 
+        http://ff.sillytechninja.io/ransomboogey.exe
 
-
-
-
-
+<p><img width="975" height="351" alt="image" src="https://github.com/user-attachments/assets/26aeaec7-92ae-431e-b47b-b2ca59c04993" />
+</p>
 
 
 <br>
