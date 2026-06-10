@@ -43,6 +43,58 @@
 
 <br>
 <h2>Findings</h2>
+<h3>Phase 1: Initial Triage & Execution Tracking</h3>
+<p>Upon receiving the phishing email report, I, as a SOC Analyst, investigated the workstation of the CEO. During this activity, I discovered the email attachment in the downloads folder of the victim.</p>
+<p><img width="975" height="188" alt="image" src="https://github.com/user-attachments/assets/92c2987f-6c7f-444a-b387-7ba077a7b531" />
+</p>
+<p>In addition, I also observed a file inside the ISO payload, as shown in the image below.</p>
+<p><img width="975" height="367" alt="image" src="https://github.com/user-attachments/assets/4f16be2e-d460-4887-92c6-97709cd2412c" />
+</p>
+<p>Lastly, the incident occurred between <b>August 29 and August 30, 2023</b>. Given the initial findings, I am tasked to analyze, investigate, and assess the impact of the compromise.</p>
+<p>
+I opened the Elastic and presumed that the incident occurred between <b>August 29</b> and <b>August 30, 2023</b>.
+</p>
+<p><img width="975" height="349" alt="image" src="https://github.com/user-attachments/assets/2decce5e-946c-4f03-9bb5-c06c966c7285" />
+</p>
+<p>I input the name of the email attachment (<b>*ProjectFinancialSummary_Q3.pdf*</b>) from the downloads folder of the victim in the free text search bar of Elastic, and it showed up; however, I need to investigate the PID of the process that executed the initial stage 1 payload. I filtered the available process IDs, such as <b>process.parent.id</b>, <b>process.command_line</b> and <b>process.pid</b> to make it more easier.</p>
+<p><img width="975" height="348" alt="image" src="https://github.com/user-attachments/assets/5f818119-216a-466a-996a-5e6678f1003e" />
+</p>
+<p>As a result, the PID of the process is <b>6392</b>.</p>
+<p><img width="975" height="350" alt="image" src="https://github.com/user-attachments/assets/21da3037-c184-4863-bd36-a9034633c9ba" />
+</p>
+<p>Further investigation, the stage 1 payload attempted to implant a file to another location, so, I located the full command-line value of this execution by entering the “<b>mshta.exe</b>” command in the search bar, and found out that the command-line was:</p>
+
+    C:\Windows\System32\xcopy.exe" /s /i /e /h D:\review.dat C:\Users\EVAN~1.HUT\AppData\Local\Temp\review.dat
+
+<p><img width="975" height="349" alt="image" src="https://github.com/user-attachments/assets/166aa9ec-6ecd-4e6a-9d50-bf808a8a6e49" />
+</p>
+<p>I analyzed and filter in the search bar using “<b>review.dat</b>” to investigate if the implanted file was eventually used and executed by the stage 1 payload, and found out that the full command-line value of the execution was:</p>
+
+    C:\Windows\System32\rundll32.exe" D:\review.dat,DllRegisterServer
+
+<p><img width="975" height="348" alt="image" src="https://github.com/user-attachments/assets/1456c987-f61f-482d-99d4-053e13d06092" />
+</p>
+<p>Based from the previous result, I noticed that the stage 1 payload established a persistence mechanism. The name of the scheduled task created by the malicious script is <b>Review</b>.</p>
+<p><img width="975" height="362" alt="image" src="https://github.com/user-attachments/assets/c1b787bd-6358-46de-b19b-069e13d8e8f7" />
+</p>
+
+<h3>Phase 2: Persistence & Command-and-Control (C2) Establishment</h3>
+<p>Now, based on my investigation, the execution of the implanted file inside the machine has initiated a potential command-and-control (<b>C2</b>) connection, and found out that the IP is <b>165.232.170.151</b> and the port number is <b>80</b>.</p>
+<p><img width="975" height="362" alt="image" src="https://github.com/user-attachments/assets/d3645b82-7cfc-4cb6-84aa-fcd227b487f4" />
+</p>
+<p>After I identified the IP address and the port number of the destination, the attacker has discovered that the current access is a local administrator. In addition, the name of the process used by the attacker to execute a UAC bypass is <b>fodhelper</b>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <br>
 <h2>MITRE ATT&CK Mapping</h2>
