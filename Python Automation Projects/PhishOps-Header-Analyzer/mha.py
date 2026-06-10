@@ -130,19 +130,18 @@ class MHAEngine:
                     remains[key] = [" ".join(v.split()) for v in values]
         return dict(sorted(remains.items()))
 
+def bold_text(text):
+    """Helper function to bold text dynamically without polluting code strings."""
+    return f"\033[1m{text}\033[0m"
+
 def print_full_value(key, values):
-    # Applies bold logic strictly to the parameter key fields
-    first_prefix = f" \033[1m{key:<38}\033[0m | "
+    first_prefix = f" {key:<38} | "
     empty_prefix = f" {'':<38} | "
     for val_idx, val in enumerate(values):
         prefix = first_prefix if val_idx == 0 else empty_prefix
         print(f"{prefix}{val}")
 
 def render_mha_report(analyzer):
-    # Native Terminal Bold Escapes (1m = Start Bold, 0m = Reset formatting)
-    BOLD = "\033[1m"
-    RESET = "\033[0m"
-
     meta = analyzer.get_basic_metadata()
     auth = analyzer.parse_authentication_results()
     hops = analyzer.parse_hops_timeline()
@@ -150,20 +149,20 @@ def render_mha_report(analyzer):
     remains = analyzer.get_remaining_headers()
 
     print("=" * 140)
-    print(f" {BOLD}{'PHISHOPS MAIL HEADER ANALYZER (MHA) - COMPLETE REPORT':^136}{RESET} ")
+    print(f" {bold_text('PHISHOPS MAIL HEADER ANALYZER (MHA) - COMPLETE REPORT'):^146} ")
     print("=" * 140)
     
-    print(f"\n{BOLD}[+] SUMMARY / ENVELOPE METADATA{RESET}")
+    print(f"\n{bold_text('[+] SUMMARY / ENVELOPE METADATA')}")
     print("-" * 60)
     for k, v in meta.items():
-        print(f" {BOLD}{k:<15}{RESET}: {v}")
+        print(f" {k:<15}: {v}")
 
-    print(f"\n{BOLD}[+] SECURITY GATEKEEPER ANALYSIS{RESET}")
+    print(f"\n{bold_text('[+] SECURITY GATEKEEPER ANALYSIS')}")
     print("-" * 60)
     for protocol in ['spf', 'dkim', 'dmarc']:
         status = auth[protocol]
         alert = " [!] FAIL / EXPLOIT RISK" if status == "FAIL" else ""
-        print(f" {BOLD}{protocol.upper():<10}{RESET}: {status}{alert}")
+        print(f" {protocol.upper():<10}: {status}{alert}")
         
     from_header = meta['From']
     return_path_raw = meta['Return-Path']
@@ -172,13 +171,13 @@ def render_mha_report(analyzer):
         if return_path_raw and "@" in return_path_raw:
             return_domain = return_path_raw.split('@')[-1].replace('>', '').strip()
             if from_domain.lower() != return_domain.lower():
-                print(f"\n{BOLD}[CRITICAL WARNING] Mismatched Domains Detected!{RESET}")
+                print(f"\n{bold_text('[CRITICAL WARNING] Mismatched Domains Detected!')}")
                 print(f"   -> Visible Sender Claims Domain: {from_domain}")
                 print(f"   -> Actual Return/Bounce Path : {return_domain}")
 
-    print(f"\n{BOLD}[+] SERVER ROUTING HOP TIMELINE (Standard Mail Gateways){RESET}")
+    print(f"\n{bold_text('[+] SERVER ROUTING HOP TIMELINE (Standard Mail Gateways)')}")
     print("-" * 140)
-    print(f"{BOLD}{'HOP':<5} | {'SUBMITTING HOST (FROM)':<45} | {'RECEIVING HOST (BY)':<40} | {'DELAY':<10} | {'TIMESTAMP'}{RESET}")
+    print(f"{'HOP':<5} | {'SUBMITTING HOST (FROM)':<45} | {'RECEIVING HOST (BY)':<40} | {'DELAY':<10} | {'TIMESTAMP'}")
     print("-" * 140)
     for hop in hops:
         delay_str = f"+{hop['delay_sec']}s" if hop['delay_sec'] > 0 else "0s"
@@ -186,16 +185,16 @@ def render_mha_report(analyzer):
     print("-" * 140)
 
     for cat_name, content in categories.items():
-        print(f"\n{BOLD}[+] Category Matrix: {cat_name}{RESET}")
+        print(f"\n{bold_text('[+] Category Matrix: ' + cat_name)}")
         print("=" * 140)
-        print(f"{BOLD}{'HEADER KEY':<38} | {'VALUE(S) EXTRACTED'}{RESET}")
+        print(f"{'HEADER KEY':<38} | {'VALUE(S) EXTRACTED'}")
         print("-" * 140)
         for key, values in content.items():
             print_full_value(key, values)
         print("=" * 140)
 
     if remains:
-        print(f"\n{BOLD}[+] ADDITIONAL UNCLASSIFIED HEADERS{RESET}")
+        print(f"\n{bold_text('[+] ADDITIONAL UNCLASSIFIED HEADERS')}")
         print("=" * 140)
         for key, values in remains.items():
             print_full_value(key, values)
