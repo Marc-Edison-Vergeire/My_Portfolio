@@ -135,10 +135,11 @@ def bold_text(text):
     return f"\033[1m{text}\033[0m"
 
 def print_full_value(key, values):
-    first_prefix = f" {key:<38} | "
-    empty_prefix = f" {'':<38} | "
+    # Dynamically injects bold tags strictly inside the left header layout block
+    bold_key = bold_text(f"{key:<28}")
+    empty_prefix = f" {'':<28} | "
     for val_idx, val in enumerate(values):
-        prefix = first_prefix if val_idx == 0 else empty_prefix
+        prefix = f" {bold_key} | " if val_idx == 0 else empty_prefix
         print(f"{prefix}{val}")
 
 def render_mha_report(analyzer):
@@ -148,21 +149,22 @@ def render_mha_report(analyzer):
     categories = analyzer.get_specific_categories()
     remains = analyzer.get_remaining_headers()
 
-    print("=" * 140)
-    print(f" {bold_text('PHISHOPS MAIL HEADER ANALYZER (MHA) - COMPLETE REPORT'):^146} ")
-    print("=" * 140)
+    LINE_LEN = 78
+    print("=" * LINE_LEN)
+    print(f" {bold_text('PHISHOPS MAIL HEADER ANALYZER - COMPLETE REPORT'):^{LINE_LEN + 8}} ")
+    print("=" * LINE_LEN)
     
     print(f"\n{bold_text('[+] SUMMARY / ENVELOPE METADATA')}")
-    print("-" * 60)
+    print("-" * 40)
     for k, v in meta.items():
-        print(f" {k:<15}: {v}")
+        print(f" {bold_text(f'{k:<15}')}: {v}")
 
     print(f"\n{bold_text('[+] SECURITY GATEKEEPER ANALYSIS')}")
-    print("-" * 60)
+    print("-" * 40)
     for protocol in ['spf', 'dkim', 'dmarc']:
         status = auth[protocol]
         alert = " [!] FAIL / EXPLOIT RISK" if status == "FAIL" else ""
-        print(f" {protocol.upper():<10}: {status}{alert}")
+        print(f" {bold_text(f'{protocol.upper():<10}')}: {status}{alert}")
         
     from_header = meta['From']
     return_path_raw = meta['Return-Path']
@@ -175,30 +177,32 @@ def render_mha_report(analyzer):
                 print(f"   -> Visible Sender Claims Domain: {from_domain}")
                 print(f"   -> Actual Return/Bounce Path : {return_domain}")
 
-    print(f"\n{bold_text('[+] SERVER ROUTING HOP TIMELINE (Standard Mail Gateways)')}")
-    print("-" * 140)
-    print(f"{'HOP':<5} | {'SUBMITTING HOST (FROM)':<45} | {'RECEIVING HOST (BY)':<40} | {'DELAY':<10} | {'TIMESTAMP'}")
-    print("-" * 140)
+    print(f"\n{bold_text('[+] SERVER ROUTING HOP TIMELINE')}")
+    print("-" * LINE_LEN)
+    print(f"{bold_text('HOP'):<11} | {bold_text('SUBMITTING (FROM)'):<33} | {bold_text('RECEIVING (BY)'):<33} | {bold_text('DELAY')}")
+    print("-" * LINE_LEN)
     for hop in hops:
         delay_str = f"+{hop['delay_sec']}s" if hop['delay_sec'] > 0 else "0s"
-        print(f"{hop['hop']:<5} | {hop['from']:<45} | {hop['by']:<40} | {delay_str:<10} | {hop['time']}")
-    print("-" * 140)
+        from_host = (hop['from'][:22] + "...") if len(hop['from']) > 25 else hop['from']
+        by_host = (hop['by'][:22] + "...") if len(hop['by']) > 25 else hop['by']
+        print(f"{hop['hop']:<3} | {from_host:<25} | {by_host:<25} | {delay_str:<6}")
+    print("-" * LINE_LEN)
 
     for cat_name, content in categories.items():
         print(f"\n{bold_text('[+] Category Matrix: ' + cat_name)}")
-        print("=" * 140)
-        print(f"{'HEADER KEY':<38} | {'VALUE(S) EXTRACTED'}")
-        print("-" * 140)
+        print("=" * LINE_LEN)
+        print(f"{bold_text('HEADER KEY'):<36} | {bold_text('VALUE(S) EXTRACTED')}")
+        print("-" * LINE_LEN)
         for key, values in content.items():
             print_full_value(key, values)
-        print("=" * 140)
+        print("=" * LINE_LEN)
 
     if remains:
         print(f"\n{bold_text('[+] ADDITIONAL UNCLASSIFIED HEADERS')}")
-        print("=" * 140)
+        print("=" * LINE_LEN)
         for key, values in remains.items():
             print_full_value(key, values)
-        print("=" * 140)
+        print("=" * LINE_LEN)
 
 if __name__ == "__main__":
     INPUT_FILE = "email_input.txt"
