@@ -64,7 +64,7 @@
     <li><b>165.232.170.151 (Malicious IPv4 Address): </b>Identified as the external command-and-control (C2) server infrastructure utilized by the adversary for outbound beaconing and remote command execution over port 80.</li>
     <li><b>ff.sillytechninja.io (Malicious Domain): </b>The external host domain used by the threat actor to stage and distribute the final-stage ransomware payload (<b>ransomboogey.exe</b>).</li>
   </ul>
-  
+  <br>
   <li><b>Host & File Indicators</b></li>
   <ul>
     <li><b>ProjectFinancialSummary_Q3.pdf (Malicious Attachment Name): </b>The masqueraded initial access payload packaged inside a rogue ISO container used to lure the executive into triggering the infection chain.</li>
