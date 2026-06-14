@@ -81,7 +81,7 @@ Although initial inspection of James's confiscated machine yielded no immediate 
 <p>Now, I gathered more detail that the <b>Administrator</b> account created on this machine is on <b>2021-03-17</b> at <b>14:58:48</b>.</p>
 <p><img width="975" height="607" alt="image" src="https://github.com/user-attachments/assets/1446ec28-9567-456a-8e01-02462556f38f" />
 </p>
-<p>Using the same result, the RID (User ID) associated with the <b>Administrator</b> account is <b><500/b>.</p>
+<p>Using the same result, the RID (User ID) associated with the <b>Administrator</b> account is <b>500</b>.</p>
 <p><img width="975" height="537" alt="image" src="https://github.com/user-attachments/assets/b616eb42-c4cc-4324-84f5-8a6d4ed80c22" />
 </p>
 <p>Based on my analysis, I found out that there are seven (7) user accounts were observed on this machine.</p>
