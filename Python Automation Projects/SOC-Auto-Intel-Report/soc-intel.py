@@ -8,8 +8,8 @@ from urllib.parse import urlparse
 # ==========================================
 # CONFIGURATION & API KEYS
 # ==========================================
-URLSCAN_API_KEY = "019e8819-090c-765e-94ea-72f59ba7ab22"
-VIRUSTOTAL_API_KEY = "f4786ae4d1cf33e451d040b9441d9a7682ca83ec69efb6d4f5cd6d2372fbf1a9"
+URLSCAN_API_KEY = "YOUR API KEY HERE"
+VIRUSTOTAL_API_KEY = "YOUR API KEY HERE"
 
 HEADERS_VT = {
     "accept": "application/json",
