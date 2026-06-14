@@ -27,7 +27,7 @@ Although initial inspection of James's confiscated machine yielded no immediate 
 </ul>
 
 <br>
-<h2>tools Utilized</h2>
+<h2>Tools Utilized</h2>
 <ul>
   <li><b>Eric Zimmerman's Registry Explorer (GUI): </b>Leveraged as the primary forensic powerhouse to parse, search, and navigate raw, offline registry hives while automatically processing associated transaction logs to ensure data completeness.</li>
   <li><b>Built-in Hex Viewer & Data Interpreter: </b>Utilized directly within the Registry Explorer architecture to decode raw binary payloads, translate <b>ROT13</b>-encoded application strings, and interpret complex Windows 64-bit FILETIME timestamps.</li>
