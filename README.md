@@ -1,4 +1,4 @@
-<h1>SOC Analyst Portfolio</h1>
+<h1>SOC Analyst Portfolio 🧑‍💻</h1>
 
 <p>Welcome to my cybersecurity portfolio! I am an aspiring Security Operations Center (SOC) Analyst and dedicated defensive security enthusiast. This repository serves as a centralized showcase of my technical capabilities, hands-on labs, and continuous learning journey in security monitoring, incident response, and threat detection.</p>
 
