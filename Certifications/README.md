@@ -8,15 +8,15 @@ Continuous learning is core to my philosophy as a defensive security professiona
 
 ## 🛡️ Defensive Security & SOC Certifications
 
-### 🔹 Certified Defensive Security Analyst (CDSA) | *Hack The Box*
+### 🔹 Certified Defensive Security Analyst (CDSA) | *Hack The Box* (Soon...)
 * **Focus:** Rigorous, hands-on security analysis, advanced SOC operations, and live incident response.
 * **Key Skills Validated:** Security monitoring, traffic analysis, endpoint forensics, log analysis, and malware triage.
 
-### 🔹 Blue Team Level 1 (BTL1) | *Security Blue Team*
+### 🔹 Blue Team Level 1 (BTL1) | *Security Blue Team* (Soon...)
 * **Focus:** Practical, 24-hour incident response examination simulating a live network breach.
 * **Key Skills Validated:** Phishing analysis, digital forensics, SIEM utilization (Splunk/Elastic), and incident reporting.
 
-### 🔹 CyberSecurity Analyst (CySA+) | *CompTIA*
+### 🔹 CyberSecurity Analyst (CySA+) | *CompTIA* (Soon...)
 * **Focus:** Behavioral analytics and technical threat intelligence utilization.
 * **Key Skills Validated:** Threat detection, vulnerability management, regulatory compliance, and incident response frameworks.
 
@@ -24,11 +24,12 @@ Continuous learning is core to my philosophy as a defensive security professiona
 
 ## 🛠️ Platform & Core Security Certifications
 
-### 🔹 Splunk Core Certified User / Power User | *Splunk*
+### 🔹 Splunk Core Certified User / Power User | *Splunk* (Soon...)
 * **Focus:** Enterprise-level log aggregation, data searching, and visualization.
 * **Key Skills Validated:** Writing complex SPL (Splunk Processing Language) queries, creating dashboards, and transforming raw log data into actionable security alerts.
 
-### 🔹 Security+ | *CompTIA*
+### 🔹 Security+ | *CompTIA* (Soon...)
 * **Focus:** Core cybersecurity principles and industry best practices.
 * **Key Skills Validated:** Foundational network security, risk management, cryptography, and threat landscape awareness.
 
+[⬅️ Back to Main Portfolio](../README.md)
