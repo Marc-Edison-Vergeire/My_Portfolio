@@ -47,4 +47,3 @@ I am actively seeking opportunities to contribute to a collaborative security te
 
 * **LinkedIn:** https://www.linkedin.com/in/marc-edison-vergeire/
 * **Email:** vergeiremarcedison@gmail.com
-* 
