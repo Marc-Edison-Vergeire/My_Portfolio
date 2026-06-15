@@ -7,8 +7,8 @@ This section captures my hands-on experience investigating realistic alerts, ana
 ## 💻 Platforms & Training Environments
 
 ### 🔹 LetsDefend SOC Simulation Training
-* **Focus:** Blue-team investigations involving web application attacks, malware containment, and phishing analysis within a simulated SOC ticket system.
-* **Objective:** Developing tactical proficiency by operating within a realistic interface that mirrors true-to-life corporate alert triaging, log analysis, and incident containment procedures.
+* **Focus:** Unguided, blue-team investigations involving web application attacks, malware containment, and phishing analysis within a simulated SOC ticket system.
+* **Objective:** Developing tactical proficiency and independent problem-solving skills by operating within a realistic, unguided interface that mirrors true-to-life corporate alert triaging, log analysis, and incident containment procedures.
 
 ### 🔹 TryHackMe SOC Simulator Training
 * **Focus:** Blue-team investigations involving web application attacks, malware containment, and phishing analysis within a simulated SOC ticket system.
