@@ -32,14 +32,3 @@ Continuous learning is core to my philosophy as a defensive security professiona
 * **Focus:** Core cybersecurity principles and industry best practices.
 * **Key Skills Validated:** Foundational network security, risk management, cryptography, and threat landscape awareness.
 
----
-
-## 📂 Directory Contents
-
-Within this folder, you will find:
-1. **`Certificates/`** - PDF copies of my official certificate awards.
-2. **`Verification_Links.md`** - Credly badges and official vendor verification links for immediate authentication.
-
----
-
-[⬅️ Back to Main Portfolio](../README.md)
