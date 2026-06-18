@@ -516,6 +516,85 @@
 
 <br>
 <h3>G. Sysmon</h3>
+<p>Using the Windows 10 machine, I opened Internet Explorer to access Google to search <b>Microsoft Sysmon</b>.</p>
+<p><img width="568" height="469" alt="image" src="https://github.com/user-attachments/assets/648e8b6f-7287-42ce-93ae-88643a96cede" />
+</p>
+<p>Inside the Google website, I entered <b>Microsoft sysmon download</b> in the search bar.</p>
+<p><img width="903" height="387" alt="image" src="https://github.com/user-attachments/assets/86525b5c-e338-444d-b7c8-ac285cce2c00" />
+</p>
+<p>I selected the official website of Microsoft to download the app. </p>
+<p><img width="940" height="446" alt="image" src="https://github.com/user-attachments/assets/a1ff9aba-11f9-4322-a996-e352e5911c27" />
+</p>
+<p>I clicked on the link and automatically downloaded the file.</p>
+<p><img width="773" height="625" alt="image" src="https://github.com/user-attachments/assets/d8f00695-e71f-49c2-a303-ea818a5879fb" />
+</p>
+<p>After downloading the Sysmon app, I opened another browser for the module and typed: </p>
+
+    github.com/olafhatong/sysmon-modular/blob/master/sysmonconfig.xml
+    
+<p><img width="975" height="262" alt="image" src="https://github.com/user-attachments/assets/7e5fc92e-2495-4739-b155-df92f22dedd3" />
+</p>
+<p>After being directed to the website, I selected the <b>raw</b>button and right-clicked the page to download it by selecting the <b>Save as</b>. I changed the name to <b>sysmonconfig</b> and chose <b>xml</b> as the type of the file.</p>
+<p><img width="975" height="444" alt="image" src="https://github.com/user-attachments/assets/2e4fd378-9172-432a-aa80-ca6318c9919f" />
+</p>
+<p>I preferred to save in <b>Downloads</b>, renamed it to <b>sysmonconf</b> and I make sure that the file would be <b>xml</b>, and pressed the <b>Save</b> button.</p>
+<p><img width="764" height="584" alt="image" src="https://github.com/user-attachments/assets/1692dd19-0c7a-456e-837d-3cc05a13adee" />
+</p>
+<p>The next thing I did was to extract the <b>Sysmon</b> zip file and save it to the same folder, but housed in a new folder named <b>Sysmon</b>.</p>
+<p><img width="789" height="464" alt="image" src="https://github.com/user-attachments/assets/036328db-b6e7-452e-bee9-a21ed530242d" />
+</p>
+<p><img width="752" height="590" alt="image" src="https://github.com/user-attachments/assets/782bdf54-a201-48d4-a840-7de4badd37f7" />
+</p>
+<p><img width="975" height="330" alt="image" src="https://github.com/user-attachments/assets/f6301039-277a-48b4-9297-a6c31143850a" />
+</p>
+<p>Instead of executing the file after the extraction, I opened <b>Windows PowerShell (Admin)</b> instead.</p>
+<p><img width="712" height="699" alt="image" src="https://github.com/user-attachments/assets/6a2b3abd-a66d-4cbc-8a06-d1c2bf269eba" />
+</p>
+<p>I copied the extracted file's location and pasted it on the PowerShell command line, then pressed Enter. In the PowerShell CLI, it should show the current location.</p>
+<p><img width="975" height="441" alt="image" src="https://github.com/user-attachments/assets/9a5f9ba9-0519-4f14-b101-bbd7900f3562" />
+</p>
+<p><img width="805" height="197" alt="image" src="https://github.com/user-attachments/assets/ac506537-a674-4975-bbf5-272b53ae4515" />
+</p>
+<p><img width="860" height="226" alt="image" src="https://github.com/user-attachments/assets/ea29abcd-2c18-45f6-aab8-35cc67f69033" />
+</p>
+<p>I cut the <b>sysmonconf.xml</b> file and pasted in the same folder where the extracted files are located.</p>
+<p><img width="656" height="377" alt="image" src="https://github.com/user-attachments/assets/4a9c3a03-b0b2-4422-ad18-ef2f4160960f" />
+</p>
+<p>I opened the PowerShell CLI again then typed, <b>ls</b>  command to make sure everything are intact.</p>
+<p><img width="650" height="352" alt="image" src="https://github.com/user-attachments/assets/a769a0f2-0dd9-47cb-8cf9-aaa6948dc013" />
+</p>
+<p>Based on the result, there are a couple of executable files; thus, I chose and executed the <b>Sysmon64.exe</b> file in PowerShell.</p>
+<p><img width="601" height="337" alt="image" src="https://github.com/user-attachments/assets/56f71dea-cee4-4bab-a889-a74ab80656a6" />
+</p>
+<p>The result showed information on how to do installation and update, thus, I installed the <b>Sysmon64.exe</b> and <b>sysmonconfig.xml</b> by typing;</p>
+
+    .\Sysmon64.exe  -i  .\sysmonconfig.xml
+    
+<p><img width="975" height="682" alt="image" src="https://github.com/user-attachments/assets/98d30245-7c67-4e09-9756-e476abfc1257" />
+</p>
+<p><img width="827" height="252" alt="image" src="https://github.com/user-attachments/assets/6846ad7a-1c04-460c-9ea4-d0bdd23bd846" />
+</p>
+<p>It prompted to agree to the license of Sysmon Monitor and selected the <b>Agree</b> button, then let it load up.</p>
+<p><img width="975" height="842" alt="image" src="https://github.com/user-attachments/assets/b0890607-d2a9-4f0c-8868-f283bf5052af" />
+</p>
+<p><img width="802" height="344" alt="image" src="https://github.com/user-attachments/assets/a2fe4c47-d58f-4bd9-8d0d-2e1dfcf94432" />
+</p>
+<p>Now, I opened <b>Services</b> in Windows 10 if it successfully executed by typing <b>services</b> in search bar, then select the <b>Services App</b> result.</p>
+<p><img width="699" height="630" alt="image" src="https://github.com/user-attachments/assets/6e50b906-4fa2-4c66-8e56-f5236318ccac" />
+</p>
+<p>After I opened <b>Services</b> app, I located the <b>Sysmon </b> if it is installed in the said app. Luckily, <b>Sysmon </b>has been installed successfully.</p>
+<p><img width="975" height="723" alt="image" src="https://github.com/user-attachments/assets/1e61b78e-69dd-4cb0-8314-329def7fd1d3" />
+</p>
+<p<img width="975" height="648" alt="image" src="https://github.com/user-attachments/assets/48e861c6-9f68-46c6-a95b-5a10abea6e1b" />
+></p>
+<p>This time, I entered <b>Event Viewer</b> in the search bar to check if <b>Sysmon</b> installed and saved from there.</p>
+<p><img width="792" height="841" alt="image" src="https://github.com/user-attachments/assets/3805d84b-4ada-448e-9237-d0cde9fd9391" />
+</p>
+<p>Inside the <b>Event Viewer</b>, I dropped down the <b>Application and Services Logs</b>, selected <b>Microsoft</b>, selected <b>Windows</b>, then scrolled-down to check if the folder of <b>Sysmon</b> is there. So, the folder of the <b>Sysmon</b> is there and fully functional, which provides information or telemetry in real-time on the system.</p>
+<p><img width="922" height="434" alt="image" src="https://github.com/user-attachments/assets/c091ea9f-45b4-4f5c-9211-49306448f9aa" />
+</p>
+<p><img width="975" height="758" alt="image" src="https://github.com/user-attachments/assets/64109602-36bc-4acd-86eb-0b152e5a6b23" />
+</p>
 <p></p>
 
 
