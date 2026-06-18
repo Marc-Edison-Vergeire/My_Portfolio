@@ -200,7 +200,7 @@
 </p>
 <p><img width="771" height="569" alt="image" src="https://github.com/user-attachments/assets/834eb428-8e2d-4875-9dfb-6f6af5008998" />
 </p>
-<p>I selected <b>I don’t have a product key</b> since I don’t have any at all.</p>
+<p>I selected <b>I don’t have a product key</b> since I don’t have any at all</b>.</p>
 <p><img width="796" height="596" alt="image" src="https://github.com/user-attachments/assets/1e69568b-5f1f-4df5-8194-b029d8126b92" />
 </p>
 <p>I selected the <b>Windows 10 Pro</b> and clicked on <b>Next</b> button.</p>
