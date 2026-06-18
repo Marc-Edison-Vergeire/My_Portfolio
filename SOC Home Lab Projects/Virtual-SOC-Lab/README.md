@@ -371,6 +371,37 @@
 
 <br>
 <h3>E. Wazuh (SIEM)</h3>
+<p>Before running the <b>Ubuntu Server</b> and <b>Kali Linux</b>, I tweaked the network connections for the three VMs, so that they communicate in the same network.</p>
+<p><img width="736" height="316" alt="image" src="https://github.com/user-attachments/assets/6c32d01d-9620-4244-ad93-00ed3bbfc986" />
+</p>
+<p>I selected the <b>Tools</b> and chose <b>Network</b>.</p>
+<p><img width="694" height="549" alt="image" src="https://github.com/user-attachments/assets/c40378a7-995b-4976-94f6-5ea814819b9e" />
+</p>
+<p>First, I selected the <b>NAT Network</b> tab, changed the Name to <b>SOC-Home-Lab, then clicked on Apply button</b>. It provided an IP range of <b>10.0.2.0/24</b>.</p>
+<p><img width="835" height="448" alt="image" src="https://github.com/user-attachments/assets/67baa934-fccc-4270-907a-70e14ee038c8" />
+</p>
+<p>I changed the settings for each of the VMs. In the <b>Network</b>, I replaced the <b>NAT</b> with <b>NAT Network</b> and automatically selected the <b>SOC-Home-Lab, then pressed the <b>OK</b> button.</p>
+<p><img width="975" height="558" alt="image" src="https://github.com/user-attachments/assets/e6d6949f-55cf-4d56-816e-7406c4388c78" />
+</p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
 
 
 
