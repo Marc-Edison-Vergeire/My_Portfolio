@@ -361,7 +361,7 @@
 </p>
 <p><img width="862" height="329" alt="image" src="https://github.com/user-attachments/assets/5e1befb1-0491-4968-9e87-6ea0570fb476" />
 </p>
-<p>In order to update and upgrade the system, input a command;</p>
+<p>In order to update and upgrade the system, input the command;</p>
 
     sudo apt update && sudo apt upgrade -y
 <p><img width="862" height="121" alt="image" src="https://github.com/user-attachments/assets/b35ee34e-9035-41fe-b708-cac8f098b778" />
