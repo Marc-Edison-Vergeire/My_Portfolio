@@ -109,7 +109,20 @@
 <p><img width="572" height="456" alt="image" src="https://github.com/user-attachments/assets/ca068a30-48c1-4649-8a16-bf7c064d5f7d" />
 </p>
 <p>I leave it like that and selected <b>Next</b>.</p>
-<p></p>
+<p><img width="496" height="400" alt="image" src="https://github.com/user-attachments/assets/2bbabf6e-1cdf-4159-89f0-63cf4c346df7" />
+</p>
+<p>Lastly, I selected the <b>Install</b> to start the installation process, and I let it load up.</p>
+<p><img width="507" height="401" alt="image" src="https://github.com/user-attachments/assets/23932057-7926-465b-acd4-398de76cfcbe" />
+</p>
+<p><img width="535" height="425" alt="image" src="https://github.com/user-attachments/assets/9cfbcea3-0707-4b08-8a52-19b35b478401" />
+</p>
+<p>I selected <b>Finish</b> to start the program.</p>
+<p><img width="556" height="439" alt="image" src="https://github.com/user-attachments/assets/6326b0fa-4895-45ef-a5ce-34dc7993edc9" />
+</p>
+<p>I successfully installed the VirtualBox machine on my computer.</p>
+<p><img width="644" height="385" alt="image" src="https://github.com/user-attachments/assets/1d3ad328-7157-44f2-b305-ab56856a5866" />
+</p>
+
 
 
 
