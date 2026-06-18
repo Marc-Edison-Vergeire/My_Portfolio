@@ -370,7 +370,7 @@
 </p>
 
 <br>
-<h3>E. Wazuh</h3>
+<h3>E. Wazuh (SIEM)</h3>
 
 
 
