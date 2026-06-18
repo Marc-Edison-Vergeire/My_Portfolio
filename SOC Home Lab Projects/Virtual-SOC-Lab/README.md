@@ -238,6 +238,67 @@
 
 <br>
 <h3>C. Kali Linux</h3>
+<p>I opened <b>Google.com</b> and input “<b>kali linux iso download</b>” to direct me to its website.</p>
+<p><img width="975" height="448" alt="image" src="https://github.com/user-attachments/assets/a12b548d-29dc-4c24-9445-2508c5085cb8" />
+</p>
+<p>There are some results for <b>Kali Linux</b>, thus, I selected the first one.</p>
+<p><img width="814" height="419" alt="image" src="https://github.com/user-attachments/assets/430b57b3-58f0-476a-a6ac-36e86314f2dc" />
+</p>
+<p>Inside the Kali website, select the <b>Virtual Machines</b> on the right-side.</p>
+<p><img width="975" height="521" alt="image" src="https://github.com/user-attachments/assets/f0f235ba-a089-4e20-8b19-616977af298a" />
+</p>
+<p>Since I am using VirtualBox, I chose the VirtualBox option. It prompted me where to save the file, thus, I saved it in the folder where I saved the other files.</p>
+<p><img width="975" height="517" alt="image" src="https://github.com/user-attachments/assets/8a089efd-de1e-431e-8b65-c6f88d60f1b2" />
+</p>
+<p><img width="971" height="306" alt="image" src="https://github.com/user-attachments/assets/f5094818-d849-4dba-a4cb-c97fdc7766fc" />
+</p>
+<p>After I downloaded the file, I extracted the file in the same folder.</p>
+<p><img width="543" height="511" alt="image" src="https://github.com/user-attachments/assets/6a63a8fd-e6b9-42ba-932f-9cebfdfbf269" />
+</p>
+<p>After I extracted the WinRAR file, it provided two results. I double-clicked the blue one (which has <b>.vbox</b> extension).</p>
+<p><img width="583" height="408" alt="image" src="https://github.com/user-attachments/assets/d2e5efd8-a065-47d0-bd67-ad737149cfd8" />
+</p>
+<p><img width="754" height="766" alt="image" src="https://github.com/user-attachments/assets/5a912d61-2b40-41c4-8da8-57ab155b7fa0" />
+</p>
+<p>It automatically imported on the <b>VirtualBox</b> .</p>
+<p><img width="968" height="380" alt="image" src="https://github.com/user-attachments/assets/c7a392e6-c519-456d-a598-b089e921d0a0" />
+</p>
+<p>I scrolled down and found out that the <b>Username</b> and  <b>Password</b> is <b>Kali</b>.</p>
+<p><img width="562" height="387" alt="image" src="https://github.com/user-attachments/assets/1f17b1e7-4e11-4689-a8da-f62a7fd8ee8c" />
+</p>
+<p>I selected the <b>Start</b> button on top to run Kali.</p>
+<p><img width="653" height="393" alt="image" src="https://github.com/user-attachments/assets/b399155f-73bf-4a07-9c00-6d0528d78e9f" />
+</p>
+<p>I pressed <b>Enter</b> to start.</p>
+<p><img width="460" height="449" alt="image" src="https://github.com/user-attachments/assets/9bfe1139-3861-48ed-ad8a-cd61d69a7ba0" />
+</p>
+<p>It prompted for Username and Password, thus, I entered <b>kali</b> and selected the <b>Log In</b> button.</p>
+<p><img width="500" height="569" alt="image" src="https://github.com/user-attachments/assets/115d5a7a-bd87-4bc4-bc54-dc91f0bcb83c" />
+</p>
+<p><img width="726" height="404" alt="image" src="https://github.com/user-attachments/assets/1ec24ac0-0fce-46d6-a34e-583351255f87" />
+</p>
+<p>Inside the Kali desktop, I opened a terminal, entered a command, and pressed <b>Enter</b>;</p>
+    
+    sudo  apt update  &&  sudo apt upgrade  -y
+
+<p>It prompts to enter the password and that password is <b>kali</b>.</p>
+<p><img width="521" height="275" alt="image" src="https://github.com/user-attachments/assets/63771c75-38db-452e-8407-f421967cd3a7" />
+</p>
+<p><img width="809" height="276" alt="image" src="https://github.com/user-attachments/assets/96324a3e-0ccd-44dd-b126-65a8cfe74e5a" />
+</p>
+<p>After that, I rebooted Kali to finish the update.</p>
+<p><img width="921" height="439" alt="image" src="https://github.com/user-attachments/assets/90c832f6-4ac9-4783-9805-6308a8e37059" />
+</p>
+<p>After rebooting, I entered a command that would show me its details.</p>
+<p><img width="759" height="515" alt="image" src="https://github.com/user-attachments/assets/961fa5fb-35fa-4dfd-a5ef-7e7092c9f6cd" />
+</p>
+
+<br>
+<h3>D. Ubuntu Server</h3>
+<p></p>
+
+
+
 
 
 
