@@ -1,4 +1,4 @@
-<h1>Complete Virtual Cybersecurity Lab (SOC Home Lab)</h1>
+<img width="568" height="446" alt="image" src="https://github.com/user-attachments/assets/9f49487e-a88b-4e57-a68a-63c99252cbe4" /><h1>Complete Virtual Cybersecurity Lab (SOC Home Lab)</h1>
 <p><img width="950" height="531" alt="image" src="https://github.com/user-attachments/assets/bd6b6a12-26e3-4624-8f1a-194ac2b027b9" />
 </p>
 <p text-align="center"><i>Virtual Cybersecurity (SOC) Lab Network Topology</i></p>
@@ -96,12 +96,20 @@
 <p>I selected <b>Next</b> to start the pre-installation.</p>
 <p><img width="601" height="471" alt="image" src="https://github.com/user-attachments/assets/92be6de1-b088-47da-a9ba-7ccfd28d0033" />
 </p>
+<p>I selected the <b>I accept the terms of the license agreement</b> and press <b>Next</b>.</p>
+<p><img width="548" height="431" alt="image" src="https://github.com/user-attachments/assets/87bad6d5-c18b-407f-b94c-bcba477d214c" />
+</p>
+<p>I let it as it is and selected <b>Next</b> to continue.</p>
+<p><img width="568" height="446" alt="image" src="https://github.com/user-attachments/assets/95c4421d-0d31-4131-86c9-88de76a89990" />
+</p>
+<p>I leave it as it is and selected <b>Yes</b> to proceed.</p>
+<p><img width="554" height="436" alt="image" src="https://github.com/user-attachments/assets/c9bcae26-39a7-4219-996b-3ac6078545d2" />
+</p>
+<p>I selected <b>Yes</b> to continue.</p>
+<p><img width="572" height="456" alt="image" src="https://github.com/user-attachments/assets/ca068a30-48c1-4649-8a16-bf7c064d5f7d" />
+</p>
+<p>I leave it like that and selected <b>Next</b>.</p>
 <p></p>
-
-
-
-
-
 
 
 
