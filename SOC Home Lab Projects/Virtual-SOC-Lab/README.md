@@ -1,4 +1,4 @@
-<h1>Complete Virtual Cybersecurity Lab (SOC Home Lab)</h1>
+<img width="975" height="289" alt="image" src="https://github.com/user-attachments/assets/3c96d8f2-4e12-453b-a0ad-57837f936e55" /><h1>Complete Virtual Cybersecurity Lab (SOC Home Lab)</h1>
 <p><img width="950" height="531" alt="image" src="https://github.com/user-attachments/assets/bd6b6a12-26e3-4624-8f1a-194ac2b027b9" />
 </p>
 <p text-align="center"><i>Virtual Cybersecurity (SOC) Lab Network Topology</i></p>
@@ -66,7 +66,7 @@
 
 <br>
 <h2>Installation & Deployment Guide</h2>
-<h3>VirtualBox</h3>
+<h3>A. VirtualBox</h3>
 <p>I chose the vendor VirtualBox as the virtual environment (preferably Sandbox Environment). First, I go to <b>Google.com</b> and type <b>download VirtualBox</b> or <b>VirtualBox download</b> in the search bar, then press <b>Enter</b>.</p>
 <p><img width="665" height="279" alt="image" src="https://github.com/user-attachments/assets/4c9f23bf-e650-4a28-b70d-fc636c642216" />
 </p>
@@ -122,6 +122,70 @@
 <p>I successfully installed the VirtualBox machine on my computer.</p>
 <p><img width="644" height="385" alt="image" src="https://github.com/user-attachments/assets/1d3ad328-7157-44f2-b305-ab56856a5866" />
 </p>
+
+<br>
+<h3>B. Windows 10 Pro</h3>
+<p>I installed <b>Windows 10</b> as the target or victim machine. To start the process, first, I opened <b>Google.com</b> and typed <b>Microsoft windows 10 download</b> to search for the legitimate Microsoft platform.</p>
+<p><img width="804" height="337" alt="image" src="https://github.com/user-attachments/assets/0b948be4-9ab7-4bd6-9c2f-401bc60c23a7" />
+</p>
+<p>Google provided me with some results, and I chose the first one and selected it.</p>
+<p><img width="652" height="484" alt="image" src="https://github.com/user-attachments/assets/9ddc54d3-c050-4bc3-bdeb-e62f11bd27a9" />
+</p>
+<p>I chose the <b>Download Now</b> button to download the Windows 10 installation media.</p>
+<p><img width="700" height="351" alt="image" src="https://github.com/user-attachments/assets/033539a5-1026-4213-813d-51a4388305a8" />
+</p>
+<p>After that, it prompted me where to save the file; thus, I selected the same folder where I saved the previous file.</p>
+<p><img width="669" height="488" alt="image" src="https://github.com/user-attachments/assets/72fbdafe-4e99-4a85-82e9-6688a8fe870a" />
+</p>
+<p><img width="613" height="314" alt="image" src="https://github.com/user-attachments/assets/1e6e7aca-1e77-4615-98ff-0c6df7259b52" />
+</p>
+<p>After I downloaded the file, I verified the file using the <b>VirusTotal</b> platform to check if it is free from malware.</p>
+<p><img width="771" height="356" alt="image" src="https://github.com/user-attachments/assets/33ed161c-28bf-4322-9219-f03d4f364f82" />
+</p>
+<p>Since the file is legit and clean, I simply opened the downloaded file, so that I can download the ISO file for VirtualBox.</p>
+<p><img width="685" height="434" alt="image" src="https://github.com/user-attachments/assets/b42963eb-1594-4863-b5aa-3e056942fba1" />
+</p>
+<p>I selected the <b>Accept</b> button to accept the license terms.</p>
+<p><img width="650" height="579" alt="image" src="https://github.com/user-attachments/assets/51bfe390-9217-4f50-8a03-40a6130f0dc8" />
+</p>
+<p>I selected the second one in order to create installation media, such as an ISO file. After that, I selected <b>Next</b> to continue.</p>
+<p><img width="599" height="531" alt="image" src="https://github.com/user-attachments/assets/16aa2566-4868-435a-9bce-b1562cbed294" />
+</p>
+<p>I leave it as it is and selected <b>Next</b> to proceed.</p>
+<p><img width="672" height="596" alt="image" src="https://github.com/user-attachments/assets/4e8beb70-66d3-48ce-8ee4-733754ce7f71" />
+</p>
+<p>I selected the <b>ISO file</b> radio button and selected the <b>Next</b> button to continue.</p>
+<p><img width="602" height="524" alt="image" src="https://github.com/user-attachments/assets/81b9d69c-f31a-4441-9107-9a0a4412c58e" />
+</p>
+<p>It prompted me where to save the file, so I still chose the dedicated folder where I saved the other files for VirtualBox.</p>
+<p><img width="703" height="444" alt="image" src="https://github.com/user-attachments/assets/15020d18-8b68-425c-9969-cb18402f3c61" />
+</p>
+<p>I let it download the ISO file and did not interrupt while the process was ongoing.</p>
+<p><img width="975" height="289" alt="image" src="https://github.com/user-attachments/assets/ff4055de-768a-4dcd-96c9-e546a0b1beea" />
+</p>
+<p><img width="975" height="290" alt="image" src="https://github.com/user-attachments/assets/4ccd06bc-9abe-43dc-ab22-c3281a552221" />
+</p>
+<p>I selected the <b>Finish</b> button to complete the download</p>
+<p><img width="604" height="531" alt="image" src="https://github.com/user-attachments/assets/d567b8ac-f13e-42d8-8ffb-de8fd91b98fb" />
+</p>
+<p><img width="975" height="287" alt="image" src="https://github.com/user-attachments/assets/de23d718-34d6-4eba-a15c-cf924a5f82f3" />
+</p>
+<p>The Windows 10 ISO file is now inside the folder and ready to ingest in VirtualBox.</p>
+<p><img width="728" height="298" alt="image" src="https://github.com/user-attachments/assets/91dad945-b267-4ac1-af05-6fe96f17af68" />
+</p>
+<p>I opened the VirtualBox again and selected <b>New</b> to ingest the Windows 10 ISO file.</p>
+<p><img width="676" height="481" alt="image" src="https://github.com/user-attachments/assets/a70f0ba9-1680-442f-bd66-0f280258413a" />
+</p>
+<p>In VM Name, I entered <b>Win_10</b> as the name for Windows 10. I selected the drop-down to locate the ISO image file of Windows 10.</p>
+<p><img width="742" height="522" alt="image" src="https://github.com/user-attachments/assets/15156880-5103-48ef-b35b-7786c69d7e1c" />
+</p>
+<img width="721" height="507" alt="image" src="https://github.com/user-attachments/assets/d8829e09-e037-4b86-8811-8ee66ba2e13f" />
+
+
+
+
+
+
 
 
 
