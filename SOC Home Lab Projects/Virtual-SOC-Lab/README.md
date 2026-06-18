@@ -383,24 +383,101 @@
 <p>I changed the settings for each of the VMs. In the <b>Network</b>, I replaced the <b>NAT</b> with <b>NAT Network</b> and automatically selected the <b>SOC-Home-Lab, then pressed the <b>OK</b> button.</p>
 <p><img width="975" height="558" alt="image" src="https://github.com/user-attachments/assets/e6d6949f-55cf-4d56-816e-7406c4388c78" />
 </p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
+<p>I opened <b>Ubuntu Server</b> to start the installation of <b>Wazuh</b>.</p>
+<p><img width="724" height="507" alt="image" src="https://github.com/user-attachments/assets/cd974bb9-d6b5-452f-b0dc-f7f04685bf2a" />
+</p>
+<p>While <b>Ubuntu Server</b> is running, I opened Google to look for <b>Wazuh</b> installation, thus, I typed in its search bar <b>wazuh siem</b>.</p>
+<p><img width="799" height="393" alt="image" src="https://github.com/user-attachments/assets/2da0ce0e-bbec-4be8-baf4-65bcdf8b56be" />
+</p>
+<p>Google provided me some results, and I selected the official website of <b>Wazuh</b>.</p>
+<p><img width="933" height="344" alt="image" src="https://github.com/user-attachments/assets/7e9afcb8-07a8-496d-bd70-e606c24503ca" />
+</p>
+<p>Inside Wazuh's website, I clicked on <b>Install Wazuh</b> button.</p>
+<p><img width="975" height="455" alt="image" src="https://github.com/user-attachments/assets/de591e32-0bd6-4636-b900-b36740004ab3" />
+</p>
+<p>I scrolled down and selected the <b>Quickstart</b> button.</p>
+<p><img width="975" height="229" alt="image" src="https://github.com/user-attachments/assets/f2d73b0f-c135-4d3b-97ee-2738e2216c43" />
+</p>
+<p>After that, it provided me a command to input in Ubuntu Server's CLI and run the said command, which is the;</p>
+
+      curl -sO https://packages.wazuh.com/4.14/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
+
+<p><img width="975" height="304" alt="image" src="https://github.com/user-attachments/assets/061b1a0b-8b18-4512-b36b-2887173e3acb" />
+</p>
+<p><img width="975" height="169" alt="image" src="https://github.com/user-attachments/assets/277d1742-3d2b-4c35-8358-6aec0ce07dd4" />
+</p>
+<p>After installation, it provided me with <b>User</b> and <b>Password</b> credentials.</p>
+<p><img width="1011" height="203" alt="image" src="https://github.com/user-attachments/assets/5daa1651-1753-4d8a-ace4-749007d5576d" />
+</p>
+<p>It also provided me with the URL to input inside the browser, but I need to replace the <b><wazuh-dashboard-ip></b>.</p>
+
+    ip addr  OR  ip a
+
+<p><img width="975" height="202" alt="image" src="https://github.com/user-attachments/assets/1e63b125-28af-4c0e-b13b-4eba60341678" />
+</p>
+<p>I typed the  <b>ip a</b>  command to know what the IP address would be for the Wazuh dashboard. Alternatively, I typed  <b>ip addr</b>, which gave me the same result. </p>
+<p><img width="975" height="619" alt="image" src="https://github.com/user-attachments/assets/e022eab0-b583-46df-b0a5-bfc20fe56fb5" />
+</p>
+<p>Before I start running Wazuh, I entered several commands that needed to run it seamlessly, such as: </p>
+
+    sudo  systemctl  stop  wazuh-dashboard  wazuh-manager  wazuh-index
+
+<p>After that, I start them back up one by one, waiting 10-15 seconds between each command;</p>
+
+    sudo  systemctl  start  wazuh-indexer
+    sudo  systemctl  start  wazuh-manager
+    sudo  systemctl  start  wazuh-dashboard
+    
+<p><img width="946" height="147" alt="image" src="https://github.com/user-attachments/assets/438e55fc-6ca8-4e57-85ef-472a82d91c68" />
+</p>
+<p>Now, I verified the API daemon is active by checking if the manager and backend API are running properly using the command:</p>
+
+    sudo  systemctl  status  wazuh-manager
+    
+<p>Since it says <b>active (running)</b>, tail the API log file to make sure there are no internal credentials or structural errors blocking the link by typing:</p>
+
+    sudo  tail  -n  20  /var/ossec/logs/api.log
+    
+<p><img width="780" height="467" alt="image" src="https://github.com/user-attachments/assets/69912a94-6a4d-41fa-841b-8ed8494d2749" />
+</p>
+<p><b>Wazuh</b> Wazuh is highly resource-intensive. My Ubuntu VM has <b>6 GB</b> of RAM allocated, the API daemon will crash silently under an <b>Out of Memory (OOM)</b> exception. I cleared the RAM cache immediately using:</p>
+
+      sudo  sync;  echo  3  |  sudo  tee  /proc/sys/vm/drop_caches
+      
+<p>Lastly, I also checked how much RAM is consumed and remaining by typing:</p>
+
+    free -h
+<p>
+</p>
+<p> For me to open the dashboard, I launched a <b>Kali Linux</b> machine where I can use <b>Mozilla Firefox</b> for the internet and input the URL with the IP to test if it will launch the <b>Wazuh Dashboard</b>. I preferred to use Kali Linux because it consumes less RAM than running Wazuh in Windows 10; however, Wazuh can run in Windows 10 as well.</p>
+<p><img width="975" height="463" alt="image" src="https://github.com/user-attachments/assets/c9a9cee7-8f6d-4c00-b3f0-c07bac3016dd" />
+
+</p>
+<p><img width="540" height="340" alt="image" src="https://github.com/user-attachments/assets/ab2b551f-6c5d-42df-940d-134d6bf3762a" />
+
+</p>
+<p><img width="702" height="409" alt="image" src="https://github.com/user-attachments/assets/e6e91b60-da49-4f38-a4bd-f83211e2d547" />
+</p>
+<p><img width="765" height="239" alt="image" src="https://github.com/user-attachments/assets/4e040e19-c256-438e-abe0-54c627b9d3d7" />
+</p>
+<p>I entered the credentials given from the Ubuntu Server earlier and selected <b>Log In</b> and let it load up.</p>
+<p><img width="426" height="359" alt="image" src="https://github.com/user-attachments/assets/36206c4d-64f0-4e9e-90e7-81187df990cc" />
+</p>
+<p><img width="601" height="354" alt="image" src="https://github.com/user-attachments/assets/90eb6575-9fe5-4abe-be94-ff959ae7805f" />
+</p>
+<p><img width="975" height="502" alt="image" src="https://github.com/user-attachments/assets/c45f5302-bf3a-4a48-8975-e5b11167e06e" />
+</p>
+<p> If I shut down the VMs, both <b>Kali Linux</b> (where I opened the Wazuh dashboard) and <b>Ubuntu Server</b> (to start running Wazuh), and want to run Wazuh again, I will type this command to see if the services are running their own:</p>
+
+    sudo systemctl status wazuh-manager wazuh-indexer wazuh-dashboard
+    
+<p>If I see <b>active (running)</b> in green for all three, I can immediately type the HTTPS URL into the Kali Linux browser.</p>
+<p>If in case the status command shows that the services are <b>inactive</b> or <b>stopped</b>, I would run this command on my Ubuntu Server to force them to start:</p>
+
+    sudo systemctl start wazuh-indexer wazuh-manager wazuh-dashboard
+    
+<br>
+<h3>F. Deploying Wazuh Agents on Windows Endpoints</h3>
 <p></p>
 
 
