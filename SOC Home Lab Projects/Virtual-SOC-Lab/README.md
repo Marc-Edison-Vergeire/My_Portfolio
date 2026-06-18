@@ -341,7 +341,7 @@
 <p>I checked the <b>FILE SYSTEM SUMMARY</b> if everything are correct.</p>
 <p><img width="661" height="506" alt="image" src="https://github.com/user-attachments/assets/c0698ea2-8cab-4412-85ae-85664dd96ca4" />
 </p>
-<p>For <b>Profile Configuration, I input all as <b>ubuntu-server</b> with <b>kali</b> as the password.</p>
+<p>For <b>Profile Configuration</b>, I input all as <b>ubuntu-server</b> with <b>kali</b> as the password.</p>
 <p>I skipped upgrading to <b>Ubuntu Pro</b> and moved on.</p>
 <p><img width="975" height="210" alt="image" src="https://github.com/user-attachments/assets/406a1cff-52ab-4ddf-a0d5-e185b678bd34" />
 </p>
