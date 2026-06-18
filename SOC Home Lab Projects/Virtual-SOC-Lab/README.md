@@ -1,4 +1,4 @@
-<img width="568" height="446" alt="image" src="https://github.com/user-attachments/assets/9f49487e-a88b-4e57-a68a-63c99252cbe4" /><h1>Complete Virtual Cybersecurity Lab (SOC Home Lab)</h1>
+<h1>Complete Virtual Cybersecurity Lab (SOC Home Lab)</h1>
 <p><img width="950" height="531" alt="image" src="https://github.com/user-attachments/assets/bd6b6a12-26e3-4624-8f1a-194ac2b027b9" />
 </p>
 <p text-align="center"><i>Virtual Cybersecurity (SOC) Lab Network Topology</i></p>
