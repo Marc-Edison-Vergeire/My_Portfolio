@@ -361,7 +361,7 @@
 </p>
 <p><img width="862" height="329" alt="image" src="https://github.com/user-attachments/assets/5e1befb1-0491-4968-9e87-6ea0570fb476" />
 </p>
-<p>In order to update and upgrade the system, input the command;</p>
+<p>In order to update and upgrade the system, input the command: </p>
 
     sudo apt update && sudo apt upgrade -y
 <p><img width="862" height="121" alt="image" src="https://github.com/user-attachments/assets/b35ee34e-9035-41fe-b708-cac8f098b778" />
@@ -370,7 +370,7 @@
 </p>
 
 <br>
-<h3>E. Wazuh (SIEM)</h3>
+<h3>E. Wazuh (SIEM) </h3>
 <p>Before running the <b>Ubuntu Server</b> and <b>Kali Linux</b>, I tweaked the network connections for the three VMs, so that they communicate in the same network.</p>
 <p><img width="736" height="316" alt="image" src="https://github.com/user-attachments/assets/6c32d01d-9620-4244-ad93-00ed3bbfc986" />
 </p>
@@ -478,6 +478,44 @@
     
 <br>
 <h3>F. Deploying Wazuh Agents on Windows Endpoints</h3>
+<p>I let Ubuntu Server with Wazuh up and running to check if the Wazuh Agent would run successfully using the graphical user interface (GUI), which I need to download. I opened the Windows 10 machine and used Internet Explorer to download the agent.</p>
+<p><img width="752" height="602" alt="image" src="https://github.com/user-attachments/assets/58dacc18-469a-4862-b148-69d97b360a54" />
+</p>
+<p>In the Internet Explorer's browser, I input <b>Google.com</b>. On Google's website, I entered <b>wazuh agent gui</b>.</p>
+<p><img width="975" height="411" alt="image" src="https://github.com/user-attachments/assets/7b73adbe-b464-42f8-ab7e-621eef23e2a3" />
+</p>
+<p>I selected the official website, which leads me to its platform.</p>
+<p><img width="975" height="340" alt="image" src="https://github.com/user-attachments/assets/f360aadb-345e-4c55-be27-f53b1c49fe69" />
+</p>
+<p>Inside Wazuh's website, there are two choices, <b>CLI</b> or <b>GUI</b>. I chose the GUI tab, then downloaded the installer using the provided link.</p>
+<p><img width="525" height="369" alt="image" src="https://github.com/user-attachments/assets/53946e6e-fea7-42cf-b139-cfea908237aa" />
+</p>
+<p>It prompted me to start the installation process and follow along.</p>
+<p><img width="517" height="369" alt="image" src="https://github.com/user-attachments/assets/6377834a-dccf-40ae-8b43-4c1249634c63" />
+</p>
+<p>I ticked the box before pressing the <b>Finish</b> button, so that the Wazuh Agent app runs.</p>
+<p><img width="522" height="370" alt="image" src="https://github.com/user-attachments/assets/f750fc2e-4245-4dc5-9a2c-2ff7e2d20eb7" />
+</p>
+<p>I input Wazuh's IP address and pressed <b>Save</b> button.</p>
+<p><img width="825" height="520" alt="image" src="https://github.com/user-attachments/assets/7032e6d9-bdfd-4e60-b9f4-d729fbcd83e8" />
+</p>
+<p>I clicked the <b>Manage</b> button on top and selected <b>Start</b> to start the Wazuh Agent to communicate back to its dashboard. After that, I pressed the <b>OK</b> button.</p>
+<p><img width="975" height="587" alt="image" src="https://github.com/user-attachments/assets/9b49c12a-77b8-43cb-9465-ef685505a2c7" />
+</p>
+<p><img width="968" height="591" alt="image" src="https://github.com/user-attachments/assets/e17a5757-5400-4e88-a360-629eadedb82c" />
+</p>
+<p>Going back to the Wazuh Dashboard and refreshing, the Wazuh Agent successfully installed and did its job, and registered the Windows 10 machine in the dashboard.</p>
+<p><img width="975" height="693" alt="image" src="https://github.com/user-attachments/assets/ac103e72-30f8-4fac-9c7b-fa468413a97d" />
+</p>
+<p>In the <b>Agent’s Summary</b> section, I selected the <b>Active</b>, and it led me to more information about Windows 10’s system in real-time.</p>
+<p><img width="975" height="476" alt="image" src="https://github.com/user-attachments/assets/1b09eac0-fa3a-4c1a-ad0e-b7cd5c9615c0" />
+</p>
+<p>Based on the result, I clicked on the <b>Operating system</b> at the bottom and showed more specific information.</p>
+<p><img width="706" height="501" alt="image" src="https://github.com/user-attachments/assets/7856480f-65f2-4327-89ac-7c57f58a904d" />
+</p>
+
+<br>
+<h3>G. Sysmon</h3>
 <p></p>
 
 
