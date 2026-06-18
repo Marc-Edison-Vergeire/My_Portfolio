@@ -236,6 +236,9 @@
 <p><img width="714" height="539" alt="image" src="https://github.com/user-attachments/assets/8bedc995-acdc-474e-b93e-8e21770a0f62" />
 </p>
 
+<br>
+<h3>C. Kali Linux</h3>
+
 
 
 
