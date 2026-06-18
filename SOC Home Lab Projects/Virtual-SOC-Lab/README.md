@@ -295,10 +295,82 @@
 
 <br>
 <h3>D. Ubuntu Server</h3>
-<p></p>
+<p>I opened the internet and typed <b>Google.com</b> in the browser. After that, I typed <b>ubuntu server download</b>.</p>
+<p><img width="889" height="405" alt="image" src="https://github.com/user-attachments/assets/bc14ec2f-ee71-4b2a-afa1-d2e7db1da514" />
+</p>
+<p>Google provided me some results, but I chose and selected the official <b>Ubuntu</b> website.</p>
+<p><img width="808" height="365" alt="image" src="https://github.com/user-attachments/assets/16bf7f83-33e8-4e54-9e1a-7c9775cb7c77" />
+</p>
+<p>Inside the <b>Ubuntu</b> platfrom, I clicked on the <b>Download</b> button. It prompted me where to save the file, thus, I chose where the other files intended for virtual machines are located.</p>
+<p><img width="706" height="375" alt="image" src="https://github.com/user-attachments/assets/2260884e-53b7-4fdf-84e4-924a43ef6068" />
+</p>
+<p><img width="690" height="388" alt="image" src="https://github.com/user-attachments/assets/80a76eaf-54d6-4f8b-9f69-80e1c2e873b0" />
+</p>
+<p>I opened the VirtualBox and selected the <b>New</b> button on top. I entered <b>ubuntu-server as the VM Name, and selected the drop-down for ISO Image to find where the file is located</b>.</p>
+<p><img width="792" height="278" alt="image" src="https://github.com/user-attachments/assets/666a1004-8e0a-4039-bf0e-b3b0f3c86b85" />
+</p>
+<p>I selected <b>6 GB</b> for the RAM or Base Memory with <b>2 Cores</b> for CPUs.</p>
+<p><img width="794" height="242" alt="image" src="https://github.com/user-attachments/assets/2ec1bcf3-2d06-4e86-8701-339c6b4071a9" />
+</p>
+<p>I put <b>80 GB</b> for its Hard Disk Size, which I think is more than enough to run it.</p>
+<p><img width="975" height="262" alt="image" src="https://github.com/user-attachments/assets/6395f3f0-f211-4663-a098-2cb3d1a59650" />
+</p>
+<p>I ran the <b>ubuntu-server</b> to start the installation process.</p>
+<p><img width="653" height="358" alt="image" src="https://github.com/user-attachments/assets/72423a70-cd10-46d8-8452-9c16a372bd70" />
+</p>
+<p>I chose <b>English</b> as the language.</p>
+<p><img width="654" height="400" alt="image" src="https://github.com/user-attachments/assets/c71f1b49-1eed-48de-9edf-25bbafc7d66e" />
+</p>
+<p>I let <b>English</b> for <b>Identify English</b>.</p>
+<p><img width="975" height="238" alt="image" src="https://github.com/user-attachments/assets/93833ab6-c1a9-49bb-bea0-7ab2b9de0621" />
+</p>
+<p>I selected the <b>Ubuntu Server</b> and pressed Enter.</p>
+<p><img width="733" height="454" alt="image" src="https://github.com/user-attachments/assets/078fbb06-092f-4bd1-b3f3-0cbb63c7a3aa" />
+</p>
+<p>I leave as it is and pressed Enter.</p>
+<p><img width="975" height="218" alt="image" src="https://github.com/user-attachments/assets/adafc5d9-2d09-43c7-a4a5-5c292ba1e3f9" />
+</p>
+<p>I did not input any <b>Proxy address</b> and pressed Enter, then let it load up.</p>
+<p><img width="975" height="154" alt="image" src="https://github.com/user-attachments/assets/9e8c9699-eaf8-4a93-a0f9-ae6ceacae721" />
+</p>
+<p><img width="974" height="228" alt="image" src="https://github.com/user-attachments/assets/d3f436ad-7cbd-414d-ab86-bb8caf76463a" />
+</p>
+<p>For storage configuration, I leave it as it is and press Enter to continue.</p>
+<p><img width="975" height="390" alt="image" src="https://github.com/user-attachments/assets/c6066c6a-2295-4107-b1af-1ca4e5a03eb2" />
+</p>
+<p>I checked the <b>FILE SYSTEM SUMMARY</b> if everything are correct.</p>
+<p><img width="661" height="506" alt="image" src="https://github.com/user-attachments/assets/c0698ea2-8cab-4412-85ae-85664dd96ca4" />
+</p>
+<p>For <b>Profile Configuration, I input all as <b>ubuntu-server</b> with <b>kali</b> as the password.</p>
+<p>I skipped upgrading to <b>Ubuntu Pro</b> and moved on.</p>
+<p><img width="975" height="210" alt="image" src="https://github.com/user-attachments/assets/406a1cff-52ab-4ddf-a0d5-e185b678bd34" />
+</p>
+<p>I selected <b>Install OpenSSH server</b> and proceed.</p>
+<p>I skipped everything and scrolled down, then selected <b>Done</b> to start to install.</p>
+<p><img width="975" height="331" alt="image" src="https://github.com/user-attachments/assets/59b1e715-43ad-4554-82c6-c0fd089226cc" />
+</p>
+<p><img width="800" height="601" alt="image" src="https://github.com/user-attachments/assets/32d625a1-b424-4401-9ead-24df9fee5cb0" />
+</p>
+<p>After the installation, I rebooted it.</p>
+<p><img width="711" height="717" alt="image" src="https://github.com/user-attachments/assets/4c42d01b-786f-4ed8-8057-2d4839aa77c3" />
+</p>
+<p>After the system rebooted, I typed a command in order to identify the OS release;</p>
+            
+    more /etc/os-release
+<p><img width="754" height="767" alt="image" src="https://github.com/user-attachments/assets/998c8b05-a512-4f81-8c60-e07bdad3250c" />
+</p>
+<p><img width="862" height="329" alt="image" src="https://github.com/user-attachments/assets/5e1befb1-0491-4968-9e87-6ea0570fb476" />
+</p>
+<p>In order to update and upgrade the system, input a command;</p>
 
+    sudo apt update && sudo apt upgrade -y
+<p><img width="862" height="121" alt="image" src="https://github.com/user-attachments/assets/b35ee34e-9035-41fe-b708-cac8f098b778" />
+</p>
+<p><img width="767" height="296" alt="image" src="https://github.com/user-attachments/assets/f06223e0-b1a8-4cc0-997d-1a2430959f56" />
+</p>
 
-
+<br>
+<h3>E. Wazuh</h3>
 
 
 
