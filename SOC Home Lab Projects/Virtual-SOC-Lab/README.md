@@ -179,16 +179,61 @@
 <p>In VM Name, I entered <b>Win_10</b> as the name for Windows 10. I selected the drop-down to locate the ISO image file of Windows 10.</p>
 <p><img width="742" height="522" alt="image" src="https://github.com/user-attachments/assets/15156880-5103-48ef-b35b-7786c69d7e1c" />
 </p>
-<img width="721" height="507" alt="image" src="https://github.com/user-attachments/assets/d8829e09-e037-4b86-8811-8ee66ba2e13f" />
 
-
-
-
-
-
-
-
-
+<p><img width="721" height="507" alt="image" src="https://github.com/user-attachments/assets/d8829e09-e037-4b86-8811-8ee66ba2e13f" /></p>
+<p><img width="600" height="576" alt="image" src="https://github.com/user-attachments/assets/a5e0ee64-205e-40b2-bbe1-d225447acd3b" />
+</p>
+<p><img width="771" height="367" alt="image" src="https://github.com/user-attachments/assets/16b4105d-2d39-427a-bdbf-adef48e0b034" />
+</p>
+<p>I selected <b>6 GB</b> as the Base Memory. After that, I selected <b>Next</b>.</p>
+<p><img width="975" height="356" alt="image" src="https://github.com/user-attachments/assets/f6b9903a-f7d9-42b0-b4d4-7e58f17f3806" />
+</p>
+<p>I leave it <b>50 GB</b> as the Hard Disk File Size and selected <b>Finish</b>.</p>
+<p><img width="975" height="363" alt="image" src="https://github.com/user-attachments/assets/88922015-dc82-4f27-b6b2-cce9e22f3657" />
+</p>
+<p>After that, the <b>Windows 10</b> machine appeared on the left pane of VirtualBox. I ran the program by selecting the <b>Start</b> button on top to start the installation of Windows 10.</p>
+<p><img width="756" height="407" alt="image" src="https://github.com/user-attachments/assets/a96c24fa-e9b3-48a7-99eb-9b1bcbbd031f" />
+</p>
+<p>I leave everything as it is and selected the <b>Install</b> button.</p>
+<p><img width="771" height="575" alt="image" src="https://github.com/user-attachments/assets/ab9b3a65-4b81-4eba-a17e-a10221cf6ef1" />
+</p>
+<p><img width="771" height="569" alt="image" src="https://github.com/user-attachments/assets/834eb428-8e2d-4875-9dfb-6f6af5008998" />
+</p>
+<p>I selected <b>I don’t have a product key</b> since I don’t have any at all.</p>
+<p><img width="796" height="596" alt="image" src="https://github.com/user-attachments/assets/1e69568b-5f1f-4df5-8194-b029d8126b92" />
+</p>
+<p>I selected the <b>Windows 10 Pro</b> and clicked on <b>Next</b> button.</p>
+<p><img width="796" height="596" alt="image" src="https://github.com/user-attachments/assets/20d36cb1-9c12-4d82-8481-c9f74c3b6436" />
+</p>
+<p>I ticked the <b>I accept the license terms and selected the <b>Next</b> button.</p>
+<p><img width="800" height="596" alt="image" src="https://github.com/user-attachments/assets/9a262a66-1c19-489b-a664-b9e0c2b69290" />
+</p>
+<p>I selected the <b>Custom Install Windows only</b> to continue the process.</p>
+<p><img width="790" height="415" alt="image" src="https://github.com/user-attachments/assets/ebe42f7e-9dd4-4841-8799-aa22e64137a6" />
+</p>
+<p>I leave everything as it is and selected the <b>Next</b> button to start the installation.</p>
+<p><img width="796" height="596" alt="image" src="https://github.com/user-attachments/assets/7dd8fd43-0d3c-4b88-9d43-f38dfa3a005d" />
+</p>
+<p><img width="532" height="475" alt="image" src="https://github.com/user-attachments/assets/0a8a6468-e8f1-4f56-b84c-b04418b122f3" />
+</p>
+<p>I leave as it is and selected <b>Yes</b> button.</p>
+<p><img width="814" height="574" alt="image" src="https://github.com/user-attachments/assets/c110ea7f-1226-4e27-b990-4c4e5ff79f08" />
+</p>
+<p>I leave as it is and selected <b>Yes</b> button.</p>
+<p><img width="796" height="585" alt="image" src="https://github.com/user-attachments/assets/f1b64e9e-44ed-4e3d-987a-a1a5b22d3f0e" />
+</p>
+<p>I selected <b>Skip</b> button with this one.</p>
+<p><img width="868" height="581" alt="image" src="https://github.com/user-attachments/assets/8d85e22f-acb1-4a66-916c-676db372d5ca" />
+</p>
+<p>I entered <b>Win_10</b> as the name of the PC and selected the <b>Next</b> button.</p>
+<p><img width="762" height="571" alt="image" src="https://github.com/user-attachments/assets/87a1b8c0-ff2f-400c-921d-04149e945eca" />
+</p>
+<p>I didn’t input any password for easy access and selected the <b>Next</b> button instead.</p>
+<p><img width="837" height="574" alt="image" src="https://github.com/user-attachments/assets/97857e55-2802-4d75-adaa-573eab239806" />
+</p>
+<p>The <b>Windows 10 Pro</b> machine is successfully installed. Later, I will be turning off all the security, which includes the Windows Defender and its anti-virus, so that I can start attacking this machine using the <b>Kali Linux</b> machine.</p>
+<p><img width="714" height="539" alt="image" src="https://github.com/user-attachments/assets/8bedc995-acdc-474e-b93e-8e21770a0f62" />
+</p>
 
 
 
