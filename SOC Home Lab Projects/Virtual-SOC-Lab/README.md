@@ -206,7 +206,7 @@
 <p>I selected the <b>Windows 10 Pro</b> and clicked on <b>Next</b> button.</p>
 <p><img width="796" height="596" alt="image" src="https://github.com/user-attachments/assets/20d36cb1-9c12-4d82-8481-c9f74c3b6436" />
 </p>
-<p>I ticked the <b>I accept the license terms and selected the <b>Next</b> button.</p>
+<p>I ticked the <b>I accept the license terms and selected the Next</b> button.</p>
 <p><img width="800" height="596" alt="image" src="https://github.com/user-attachments/assets/9a262a66-1c19-489b-a664-b9e0c2b69290" />
 </p>
 <p>I selected the <b>Custom Install Windows only</b> to continue the process.</p>
