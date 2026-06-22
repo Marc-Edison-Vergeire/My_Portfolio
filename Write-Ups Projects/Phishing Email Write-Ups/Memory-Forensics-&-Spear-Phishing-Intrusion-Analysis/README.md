@@ -1,4 +1,4 @@
-<h1>Memory Forensics & Spear Phishing Intrusion Analysis</h1>
+<img width="752" height="717" alt="image" src="https://github.com/user-attachments/assets/cf5da310-ff4a-4609-b6cf-ef5359825db3" /><h1>Memory Forensics & Spear Phishing Intrusion Analysis</h1>
 
 <br>
 <h2>Executive Summary</h2>
@@ -162,29 +162,29 @@
   <ul>
     <li>Phishing: Spear-phishing Attachment (T1566.001) </li>
   </ul>
-  <li><b>Execution</b></li>
+  <br><li><b>Execution</b></li>
   <ul>
     <li>Command and Scripting Interpreter: Visual Basic (<b>T1059.005</b>)</li>
-     <br><li>Exploitation for Client Execution (<b>T1203</b>)</li>
+     <li>Exploitation for Client Execution (<b>T1203</b>)</li>
   </ul>
-  <li><b>Persistence</b></li>
+  <br><li><b>Persistence</b></li>
   <ul>
     <li>Scheduled Task/Job: Scheduled Task (<b>T1053.005</b>)</li>
   </ul>
-  <li><b>Defense Evasion</b></li>
+  <br><li><b>Defense Evasion</b></li>
   <ul>
     <li>Obfuscated Files or Information (<b>T1027</b>)</li>
      <br><li>Masquerading: Match Legitimate Name or Location (<b>T1036.005</b>)</li>
   </ul>
-  <li><b>Discovery</b></li>
+  <br><li><b>Discovery</b></li>
   <ul>
     <li>System Information Discovery (<b>T1082</b>)</li>
      <br><li>File and Directory Discovery (<b>T1083</b>)</li>
   </ul>
-  <li><b>Command and Control</b></li>
+  <br><li><b>Command and Control</b></li>
   <ul>
     <li>Application Layer Protocol: Web Protocols (<b>T1071.001</b>)</li>
-     <br><li>Encrypted Channel (<b>T1573</b>)</li>
+    <li>Encrypted Channel (<b>T1573</b>)</li>
   </ul>
 </ul>
 </u>
