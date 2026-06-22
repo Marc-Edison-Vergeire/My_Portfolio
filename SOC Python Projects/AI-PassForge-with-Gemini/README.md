@@ -66,7 +66,7 @@
 
 <p><i>(Once activated, your terminal shell prompt prefix will visually change to show (<b>gemini-env</b>), verifying that all subsequent Python packages remain completely isolated within this directory).</i></p>
 
-,br>
+<br>
 <h4>5. Install the Google GenAI SDK</h4>
 <p>Execute the Python dependency manager inside the active virtual session to pull the official cloud AI communication SDK package:</p>
 
@@ -98,9 +98,10 @@
     ⚠️ [SECURITY WARNING]: Industry standards recommend at least 12+ characters for optimal security.
 <p>This dynamic warning trains employees on proper security habits. Most importantly, generating high-entropy keys locally keeps sensitive cleartext data within the company perimeter, protecting it from external interception.</p>
 
+<br>
 <h2>How This Project Helps the SOC Analyst</h2>
 <p>For a <b>Security Operations Center (SOC) Analyst</b> or <b>Incident Responder</b> working under high pressure, this utility speeds up containment and hardening workflows. During an active incident phase, an analyst must quickly cycle compromised administrative credentials across various infrastructure elements—such as firewall interfaces, database connections, and SIEM logging collectors. Instead of wasting valuable time clicking through graphic interfaces or filling out manual terminal prompts, the analyst can pass conversational commands to the script to create unique, high-entropy keys instantly.</p>
 <p>It also accelerates lab provisioning. When setting up multi-OS virtual home labs to test security tools like Wazuh managers, Ubuntu servers, and Active Directory endpoints, analysts can spin up randomized credentials on the fly.</p>
-<p>Finally, the tool demonstrates advanced secure coding practices to engineering leaders, proving that an analyst can leverage cutting-edge artificial intelligence while strictly maintaining local cryptographic data isolation.</p>
+<p>Finally, the tool demonstrates advanced secure coding practices to engineering leaders, proving that an analyst can leverage cutting-edge Artificial Intelligence while strictly maintaining local cryptographic data isolation.</p>
 
 
