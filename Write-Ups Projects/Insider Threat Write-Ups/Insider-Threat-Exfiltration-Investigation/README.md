@@ -19,19 +19,19 @@ Although initial inspection of James's confiscated machine yielded no immediate 
 <h2>Skills Learned</h2>
 <ul>
   <li><b>Dead-Box Forensics & Registry Hive Parsing: </b>Proficient in the offline extraction, processing, and analytical interpretation of isolated Windows Registry hives without relying on live-system dependencies.</li>
-  <li><b>Adversary Persistence Tracking & SAM Analysis: </b>Advanced capability in auditing local Security Account Manager (<b>SAM</b>) structures to uncover privilege escalation, identify hidden administrative backdoors, and correlate Relative Identifiers (<b>RID</b>s) with unauthorized account creation.</li>
-  <li><b>User Activity Reconstruction via System Artifacts: </b>Expertise in interrogating forensic key structures—including <b>RecentDocs</b>, <b>UserAssist</b>, and <b>WordWheelQuery</b>—to calculate program execution counts, determine application focus times, and establish proof of target file access.</li>
-  <li><b>Network Artifact Attribution: </b>Competent in mapping host identifiers and isolating historical network footprints by extracting DHCP interfaces, network adapter parameters, and historical connection states directly from underlying system keys.</li>
-  <li><b>Adversarial Timeline Development: </b>Skilled in converting disparate, low-level registry timestamps into a cohesive, legally defensible chronological timeline that maps an insider threat's end-to-end execution chain.</li>
-  <li><b>Forensic Tool Utility: </b>Mastery of specialized open-source and industry-standard forensic triage utilities, specifically Eric Zimmerman's <b>Registry Explorer</b>, to conduct rapid, deep-dive artifact hunting.</li>
+  <br><li><b>Adversary Persistence Tracking & SAM Analysis: </b>Advanced capability in auditing local Security Account Manager (<b>SAM</b>) structures to uncover privilege escalation, identify hidden administrative backdoors, and correlate Relative Identifiers (<b>RID</b>s) with unauthorized account creation.</li>
+   <br><li><b>User Activity Reconstruction via System Artifacts: </b>Expertise in interrogating forensic key structures—including <b>RecentDocs</b>, <b>UserAssist</b>, and <b>WordWheelQuery</b>—to calculate program execution counts, determine application focus times, and establish proof of target file access.</li>
+   <br><li><b>Network Artifact Attribution: </b>Competent in mapping host identifiers and isolating historical network footprints by extracting DHCP interfaces, network adapter parameters, and historical connection states directly from underlying system keys.</li>
+   <br><li><b>Adversarial Timeline Development: </b>Skilled in converting disparate, low-level registry timestamps into a cohesive, legally defensible chronological timeline that maps an insider threat's end-to-end execution chain.</li>
+   <br><li><b>Forensic Tool Utility: </b>Mastery of specialized open-source and industry-standard forensic triage utilities, specifically Eric Zimmerman's <b>Registry Explorer</b>, to conduct rapid, deep-dive artifact hunting.</li>
 </ul>
 
 <br>
 <h2>Tools Utilized</h2>
 <ul>
   <li><b>Eric Zimmerman's Registry Explorer (GUI): </b>Leveraged as the primary forensic powerhouse to parse, search, and navigate raw, offline registry hives while automatically processing associated transaction logs to ensure data completeness.</li>
-  <li><b>Built-in Hex Viewer & Data Interpreter: </b>Utilized directly within the Registry Explorer architecture to decode raw binary payloads, translate <b>ROT13</b>-encoded application strings, and interpret complex Windows 64-bit FILETIME timestamps.</li>
-  <li><b>Registry Explorer Bookmark Architecture: </b>Employed to systematically isolate, group, and tag critical forensic keys (such as <b>UserAssist</b> and <b>RecentDocs</b>), accelerating the triage process and streamlining timeline generation.</li>
+   <br><li><b>Built-in Hex Viewer & Data Interpreter: </b>Utilized directly within the Registry Explorer architecture to decode raw binary payloads, translate <b>ROT13</b>-encoded application strings, and interpret complex Windows 64-bit FILETIME timestamps.</li>
+   <br><li><b>Registry Explorer Bookmark Architecture: </b>Employed to systematically isolate, group, and tag critical forensic keys (such as <b>UserAssist</b> and <b>RecentDocs</b>), accelerating the triage process and streamlining timeline generation.</li>
 </ul>
 
 <br>
@@ -39,13 +39,13 @@ Although initial inspection of James's confiscated machine yielded no immediate 
 <p>The forensic package delivered for analysis was divided into two distinct logical directories on the analyst workstation, isolating the raw evidence from the court-accepted tools required for deep-dive parsing:</p>
 <ul>
   <li><b>EZ Tools Directory: </b>Comprised a specialized suite of Eric Zimmerman's forensic utilities, selected to ensure structural integrity and execution logging while parsing raw binary configurations.</li>
-  <li><b>Artifacts Directory:</b>
+   <br><li><b>Artifacts Directory:</b>
   <ul>
     <li><b>SYSTEM Hive Asset: </b>Extracted to reconstruct underlying hardware environments, verify the host identity, map active interfaces, and track historical network interface metrics.</li>
-    <li><b>SECURITY Hive Asset: </b>Maintained to evaluate local machine-level security structures, system-wide licensing parameters, and macro-level defensive configurations.</li>
-    <li><b>SOFTWARE Hive Asset: </b>Interrogated to identify local application footprints, verify the installation parameters of unauthorized tools, and audit system-wide application configurations.</li>
-    <li><b>SAM Hive Asset: </b>Analyzed to map local security account structures, determine creation timestamps for default groups, and uncover hidden administrative accounts or backdoor Relative Identifiers (<b>RID</b>s).</li>
-    <li><b>NTUSER.DAT Hive Asset:</b>Exploited to reconstruct user-specific behaviors, capture individual file interactions (<b>RecentDocs</b>), track console inputs (<b>RunMRU</b>), and extract application focus times via user execution telemetry.</li>
+     <br><li><b>SECURITY Hive Asset: </b>Maintained to evaluate local machine-level security structures, system-wide licensing parameters, and macro-level defensive configurations.</li>
+     <br><li><b>SOFTWARE Hive Asset: </b>Interrogated to identify local application footprints, verify the installation parameters of unauthorized tools, and audit system-wide application configurations.</li>
+     <br><li><b>SAM Hive Asset: </b>Analyzed to map local security account structures, determine creation timestamps for default groups, and uncover hidden administrative accounts or backdoor Relative Identifiers (<b>RID</b>s).</li>
+     <br><li><b>NTUSER.DAT Hive Asset:</b>Exploited to reconstruct user-specific behaviors, capture individual file interactions (<b>RecentDocs</b>), track console inputs (<b>RunMRU</b>), and extract application focus times via user execution telemetry.</li>
     <li><b>UsrClass.dat Hive Asset: </b>Extracted to support user-level context by parsing Shellbags and parsing execution artifacts related to unique user interaction and local folder configurations.</li>
   </ul>
   </li>
@@ -155,25 +155,25 @@ Although initial inspection of James's confiscated machine yielded no immediate 
 <h2>MITRE ATT&CK</h2>
 <ul>
   <li><b>Valid Accounts (T1078): </b>Exploited authorized IT administrator privileges to access sensitive corporate assets and perform unauthorized maintenance on the target laptop.</li>
-  <li><b>Create Account: Local Account (T1136.001):</b> Generated a hidden local administrative account within the Security Account Manager (<b>SAM</b>) hive to secure persistent access to the network.</li>
-  <li><b>Abuse Elevation Control Mechanism (T1548): </b>Manipulated system permissions and utilized the newly created local administrative backdoor (<b>RID 1013</b>) to bypass standard corporate security controls.</li>
-  <li><b>Hide Artifacts (T1564): </b>Attempted to conceal the presence of unauthorized utility applications and circumvent local network auditing by routing traffic through a commercial VPN.</li>
-  <li><b>Data from Local System (T1119): </b>Located, targeted, and directly accessed proprietary data files (<b>secret-recipe.pdf</b>) stored locally on the compromised corporate machine.</li>
-  <li><b>Exfiltration Over Alternative Physical Medium (T1011): </b>Staged and exfiltrated highly guarded intellectual property from the primary device to an unauthorized secondary asset.</li>
+   <br><li><b>Create Account: Local Account (T1136.001):</b> Generated a hidden local administrative account within the Security Account Manager (<b>SAM</b>) hive to secure persistent access to the network.</li>
+   <br><li><b>Abuse Elevation Control Mechanism (T1548): </b>Manipulated system permissions and utilized the newly created local administrative backdoor (<b>RID 1013</b>) to bypass standard corporate security controls.</li>
+   <br><li><b>Hide Artifacts (T1564): </b>Attempted to conceal the presence of unauthorized utility applications and circumvent local network auditing by routing traffic through a commercial VPN.</li>
+   <br><li><b>Data from Local System (T1119): </b>Located, targeted, and directly accessed proprietary data files (<b>secret-recipe.pdf</b>) stored locally on the compromised corporate machine.</li>
+   <br><li><b>Exfiltration Over Alternative Physical Medium (T1011): </b>Staged and exfiltrated highly guarded intellectual property from the primary device to an unauthorized secondary asset.</li>
 </ul>
 
 <br>
 <h2>Indicators of Compromised (IoCs)</h2>
 <ul>
   <li><b>Host Endpoint Attribution: </b>System configuration identifiers mapped explicitly to host computer name <b>JAMES</b>.</li>
-  <li><b>Network Interface Footprint: </b>Last active DHCP network assignment mapped to internal IPv4 address <b>172.31.2.197</b>.</li>
-  <li><b>Persistence Backdoor Account: </b>Unauthorized local user account named <b>bdoor</b> provisioned with Relative Identifier <b>RID 1013</b>.</li>
-  <li><b>Target Data Compromise: </b>System-tracked user interactions with sensitive target files named <b>secret-recipe.pdf</b> and <b>secret-code.txt</b>.</li>
-  <li><b>Network Obfuscation Utility: </b>Execution profile of <b>ProtonVPN</b> capturing an active application focus time of 343 seconds.</li>
-  <li><b>Interface Enumeration Command: </b>Local console execution trace of the utility string <b>pnputil /enum-interfaces</b>.</li>
-  <li><b>Unauthorized Monitoring Tools: </b>System execution footprint capturing the installation and usage of the network sniffer <b> Wireshark </b>.</li>
-  <li><b>Targeted Search Footprint:</b> File Explorer query strings identifying active attempts to locate and deploy the network utility <b>netcat</b>.</li>
-  <li><b>Staged Directory Path: </b>Unsanctioned file system indexing executing directly out of the directory path <b>C:\Users\Administrator\Downloads\tools\Everything\Everything.exe</b>.</li>
+   <br><li><b>Network Interface Footprint: </b>Last active DHCP network assignment mapped to internal IPv4 address <b>172.31.2.197</b>.</li>
+   <br><li><b>Persistence Backdoor Account: </b>Unauthorized local user account named <b>bdoor</b> provisioned with Relative Identifier <b>RID 1013</b>.</li>
+   <br><li><b>Target Data Compromise: </b>System-tracked user interactions with sensitive target files named <b>secret-recipe.pdf</b> and <b>secret-code.txt</b>.</li>
+   <br><li><b>Network Obfuscation Utility: </b>Execution profile of <b>ProtonVPN</b> capturing an active application focus time of 343 seconds.</li>
+   <br><li><b>Interface Enumeration Command: </b>Local console execution trace of the utility string <b>pnputil /enum-interfaces</b>.</li>
+   <br><li><b>Unauthorized Monitoring Tools: </b>System execution footprint capturing the installation and usage of the network sniffer <b> Wireshark </b>.</li>
+   <br><li><b>Targeted Search Footprint:</b> File Explorer query strings identifying active attempts to locate and deploy the network utility <b>netcat</b>.</li>
+   <br><li><b>Staged Directory Path: </b>Unsanctioned file system indexing executing directly out of the directory path <b>C:\Users\Administrator\Downloads\tools\Everything\Everything.exe</b>.</li>
 </ul>
 
 <br>
