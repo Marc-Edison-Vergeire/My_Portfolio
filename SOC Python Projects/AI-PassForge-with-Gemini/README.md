@@ -1,6 +1,7 @@
 <h1>PassForge-AI with Gemini</h1>
 <br>
-<p><img width="896" height="277" alt="image" src="https://github.com/user-attachments/assets/f9c234b5-5187-4e77-9a94-a674f0c348bd" />
+<p><img width="726" height="155" alt="image" src="https://github.com/user-attachments/assets/435171bd-cc6c-4abb-9af0-fad70abf0374" />
+
 </p>
 <br>
 <h2>Executable Preview</h2>
@@ -75,7 +76,7 @@
 <h4>6. Execute Your Script</h4>
 <p>Launch the upgraded, AI-integrated password generator wrapper to begin production operation:</p>
 
-    python3 ai-pass-gen.py
+    python3 passforge-ai.py
 
 <br>
 <h3>⚠️ Quick Tips for Future Sessions ⚠️</h3>
@@ -84,7 +85,7 @@
   
      cd ~/Downloads
      source gemini-env/bin/activate
-     python3 ai-pass-gen.py
+     python3 passforge-ai.py
   <br><li><b>Exiting the Sandbox:</b> When your tasks conclude, and you need to pivot your terminal back to standard global operating system instructions, drop out of the environment stack cleanly by running:</li>
 
     deactivate
