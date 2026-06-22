@@ -73,7 +73,22 @@
 
     python3 ai-pass-gen.py
 
+<br>
+<h3>Quick Tips for Future Sessions</h3>
+<ul>
+  <li><b>Resuming Lab Work:</b> When closing or restarting your Kali Linux Virtual Machine, you do not need to rerun the installation steps. Simply move to your workspace and re-activate the virtual sandbox:</li>
   
+     cd ~/Downloads
+     source gemini-env/bin/activate
+     python3 ai-pass-gen.py
+
+  <br><li><b>Exiting the Sandbox:</b> When your tasks conclude and you need to pivot your terminal back to standard global operating system instructions, drop out of the environment stack cleanly by running:</li>
+
+    deactivate
+  <li><b></b></li>
+  <li><b></b></li>
+  <li><b></b></li>
+</ul>
 
 
 
