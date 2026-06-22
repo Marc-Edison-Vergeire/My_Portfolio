@@ -18,27 +18,27 @@
 <h2>Skills Learned</h2>
 <ul>
   <li><b>Advanced Volatile Memory Forensics: </b>Gained hands-on experience utilizing memory analysis tools to parse volatile memory dumps, reconstruct process injection techniques, and isolate hidden or unlinked malicious structures.</li>
-  <li><b>Process Tree Hierarchy Reconstruction: </b>Mastered the capability to map process execution to pinpoint parent-child relationships and identify unauthorized execution paths.</li>
-  <li><b>C2 Infrastructure Identification: </b>Refined techniques for extracting network artifacts from system memory to pinpoint active Command and Control (C2) domains, remote IP addresses, and unique beaconing profiles utilized by advanced persistent threats.</li>
-  <li><b>Host-Based Persistence Tracking: </b>Enhanced the ability to hunt for and identify defensive evasion and persistence mechanisms within endpoint environments, with a direct focus on locating and analyzing unauthorized Scheduled Tasks.</li>
-  <li><b>Incident Response & Impact Assessment: </b>Cultivated the core blue-team methodologies required to fully assess host compromise, validate complex Indicators of Compromise (IoCs), and formulate actionable containment strategies like network isolation and credential revocation.</li>
+   <br><li><b>Process Tree Hierarchy Reconstruction: </b>Mastered the capability to map process execution to pinpoint parent-child relationships and identify unauthorized execution paths.</li>
+   <br><li><b>C2 Infrastructure Identification: </b>Refined techniques for extracting network artifacts from system memory to pinpoint active Command and Control (C2) domains, remote IP addresses, and unique beaconing profiles utilized by advanced persistent threats.</li>
+   <br><li><b>Host-Based Persistence Tracking: </b>Enhanced the ability to hunt for and identify defensive evasion and persistence mechanisms within endpoint environments, with a direct focus on locating and analyzing unauthorized Scheduled Tasks.</li>
+   <br><li><b>Incident Response & Impact Assessment: </b>Cultivated the core blue-team methodologies required to fully assess host compromise, validate complex Indicators of Compromise (IoCs), and formulate actionable containment strategies like network isolation and credential revocation.</li>
 </ul>
 
 <br>
 <h2>Tools Utilized</h2>
 <ul>
   <li><b>Volatility:</b> An open-source advanced memory forensics framework used to analyze and extract critical digital artifacts, trace anomalous process trees, and uncover hidden implants from volatile memory (RAM) samples.</li>
-  <li><b>Olevba: </b>A specialized script-analysis tool utilized to automatically parse, extract, and analyze embedded Visual Basic for Applications (VBA) macros within the weaponized Microsoft Office document to decode the initial execution payload.</li>
-  <li><b>Evolution Mail: </b>A Linux-based email client and information management framework utilized to safely inspect raw email headers, body content, and attached artifacts to isolate the initial spear-phishing vector without risking accidental execution.</li>
-  <li><b>Virustotal: </b>A cloud-based threat intelligence platform used to aggregate scanning data from dozens of antivirus engines and datasets to validate extracted file hashes, cross-reference external C2 IP addresses, and identify known advanced persistent threat (APT) campaign indicators.</li>
+   <br><li><b>Olevba: </b>A specialized script-analysis tool utilized to automatically parse, extract, and analyze embedded Visual Basic for Applications (VBA) macros within the weaponized Microsoft Office document to decode the initial execution payload.</li>
+   <br><li><b>Evolution Mail: </b>A Linux-based email client and information management framework utilized to safely inspect raw email headers, body content, and attached artifacts to isolate the initial spear-phishing vector without risking accidental execution.</li>
+   <br><li><b>Virustotal: </b>A cloud-based threat intelligence platform used to aggregate scanning data from dozens of antivirus engines and datasets to validate extracted file hashes, cross-reference external C2 IP addresses, and identify known advanced persistent threat (APT) campaign indicators.</li>
 </ul>
 
 <br>
 <h2>Artifacts Analyzed</h2>
 <ul>
   <li><b>Resume - Application for Junior IT Analyst Role[.]eml (Phishing Email): </b>A copy of the raw phishing email used to target the Human Resources department. It was inspected to extract sender transport headers, source IP addresses, and the specific delivery context used by the adversary.</li>
-  <li><b>Resume_WesleyTaylor[.]doc (Weaponized Resume Attachment): </b>The malicious resume submitted by the threat actor, which contained the embedded, deobfuscated VBA macro code responsible for initiating the first-stage download and executing the initial workstation compromise.</li>
-  <li><b>WKSTN-2961[.]raw (Volatile Memory Dump): </b>A complete, raw memory capture of the victim's workstation acquired immediately following the alert. This artifact served as the primary source for memory forensics, allowing the extraction of active network connections, process trees, and in-memory implants.</li>
+   <br><li><b>Resume_WesleyTaylor[.]doc (Weaponized Resume Attachment): </b>The malicious resume submitted by the threat actor, which contained the embedded, deobfuscated VBA macro code responsible for initiating the first-stage download and executing the initial workstation compromise.</li>
+   <br><li><b>WKSTN-2961[.]raw (Volatile Memory Dump): </b>A complete, raw memory capture of the victim's workstation acquired immediately following the alert. This artifact served as the primary source for memory forensics, allowing the extraction of active network connections, process trees, and in-memory implants.</li>
 </ul>
 
 <br>
@@ -164,7 +164,7 @@
   <li><b>Execution</b></li>
   <ul>
     <li>Command and Scripting Interpreter: Visual Basic (<b>T1059.005</b>)</li>
-    <li>Exploitation for Client Execution (<b>T1203</b>)</li>
+     <br><li>Exploitation for Client Execution (<b>T1203</b>)</li>
   </ul>
   <li><b>Persistence</b></li>
   <ul>
@@ -173,17 +173,17 @@
   <li><b>Defense Evasion</b></li>
   <ul>
     <li>Obfuscated Files or Information (<b>T1027</b>)</li>
-    <li>Masquerading: Match Legitimate Name or Location (<b>T1036.005</b>)</li>
+     <br><li>Masquerading: Match Legitimate Name or Location (<b>T1036.005</b>)</li>
   </ul>
   <li><b>Discovery</b></li>
   <ul>
     <li>System Information Discovery (<b>T1082</b>)</li>
-    <li>File and Directory Discovery (<b>T1083</b>)</li>
+     <br><li>File and Directory Discovery (<b>T1083</b>)</li>
   </ul>
   <li><b>Command and Control</b></li>
   <ul>
     <li>Application Layer Protocol: Web Protocols (<b>T1071.001</b>)</li>
-    <li>Encrypted Channel (<b>T1573</b>)</li>
+     <br><li>Encrypted Channel (<b>T1573</b>)</li>
   </ul>
 </ul>
 </u>
@@ -192,15 +192,15 @@
 <h3>Indicators of Compromise (IoCs)</h3>
 <ul>
   <li><b>Attacker Email Address:</b>   westaylor23@outlook[.]com</li>
-  <li><b>Target Email Address: </b>maxine[.]beck@quicklogisticsorg[.]onmicrosoft[.]com</li>
-  <li><b>First-Stage Weaponized Attachment: </b>Resume_WesleyTaylor[.]doc</li>
-  <li><b>Stage-2 Script Payload URL: </b>https[:]//files[.]boogeymanisback[.]lol/aa2a9c53cbb80416d3b47d85538d9971/update[.]png</li>
-  <li><b>Stage-2 Script File Path: </b>C[:]\ProgramData\update[.]js</li>
-  <li><b>Stage-3 Binary Payload URL: </b>https[:]//files[.]boogeymanisback[.]lol/aa2a9c53cbb80416d3b47d85538d9971/update[.]exe</li>
-  <li><b>Malicious Backdoor File Path: </b>C[:]\Windows\Tasks\updater[.]exe</li>
-  <li><b>Command and Control (C2) Socket Configuration: </b>128[.]199[.]95[.]189[:]8080</li>
-  <li><b>Unauthorized Execution Engine (Process ID 4260): </b>wscript[.]exe</li>
-  <li><b>Active Implant Process Tree Target (Process ID 6216): </b>updater[.]exe</li>
+   <br><li><b>Target Email Address: </b>maxine[.]beck@quicklogisticsorg[.]onmicrosoft[.]com</li>
+   <br><li><b>First-Stage Weaponized Attachment: </b>Resume_WesleyTaylor[.]doc</li>
+   <br><li><b>Stage-2 Script Payload URL: </b>https[:]//files[.]boogeymanisback[.]lol/aa2a9c53cbb80416d3b47d85538d9971/update[.]png</li>
+   <br><li><b>Stage-2 Script File Path: </b>C[:]\ProgramData\update[.]js</li>
+   <br><li><b>Stage-3 Binary Payload URL: </b>https[:]//files[.]boogeymanisback[.]lol/aa2a9c53cbb80416d3b47d85538d9971/update[.]exe</li>
+   <br><li><b>Malicious Backdoor File Path: </b>C[:]\Windows\Tasks\updater[.]exe</li>
+   <br><li><b>Command and Control (C2) Socket Configuration: </b>128[.]199[.]95[.]189[:]8080</li>
+   <br><li><b>Unauthorized Execution Engine (Process ID 4260): </b>wscript[.]exe</li>
+   <br><li><b>Active Implant Process Tree Target (Process ID 6216): </b>updater[.]exe</li>
 </ul>
 
 <br>
@@ -212,7 +212,7 @@
 <h3>Recommendations</h3>
 <p>To effectively mitigate the risk of future spear-phishing intrusions and harden our endpoint defenses against sophisticated persistent threats, it is highly recommended that the organization implement immediate technical controls and architectural enhancements. </p>
 <p>First, the security team should deploy strict application control policies to disable or severely restrict administrative script interpreters, specifically preventing <b>wscript.exe</b> from executing untrusted scripts out of non-standard, user-writable directories such as <b>C:\ProgramData</b> and <b>C:\Users\Public</b>. </p>
-<p>Second, endpoint monitoring configurations must be updated within the Endpoint Detection and Response (EDR) and SIEM systems to establish real-time behavioral alerts for anomalous parent-child process relationships—such as Microsoft Word spawning scripting hosts or network utilities—and to flags any unauthorized creations or modifications of Scheduled Tasks via <b>schtasks.exe</b>. </p>
+<p>Second, endpoint monitoring configurations must be updated within the Endpoint Detection and Response (EDR) and SIEM systems to establish real-time behavioral alerts for anomalous parent-child process relationships—such as Microsoft Word spawning scripting hosts or network utilities—and to flag any unauthorized creations or modifications of Scheduled Tasks via <b>schtasks.exe</b>. </p>
 <p>Finally, the organization should enhance email security gateways by implementing robust attachment sandboxing and enforcing Domain-based Message Authentication, Reporting, and Conformance (DMARC) policies, alongside providing regular, targeted threat-awareness training for high-risk departments like Human Resources to ensure suspicious external applications are flagged before execution.</p>
 
 <br>
