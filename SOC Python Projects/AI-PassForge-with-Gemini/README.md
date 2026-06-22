@@ -36,16 +36,21 @@
 
 <br>
 <h3>Installation Setup</h3>
-<ol>
-  <li><b>Google Gemini API Key Acquisition</b></li>
+<h4>1. Google Gemini API Key Acquisition</h4>
   <p>You must first acquire an operational <b>API Key</b> from the <b>Google Gemini Developer</b> portal. Once obtained, open your local <b>passforge-ai.py</b> script, locate the dedicated configuration block, and replace the placeholder text with your real key:</p>
-  <li><b></b></li>
-  <li><b></b></li>
-  <li><b></b></li>
-  <li><b></b></li>
-  <li><b></b></li>
-  <li><b></b></li>
-</ol>
+
+    # =========================================================================
+    # 🔑 ENTERPRISE API CONFIGURATION
+    # =========================================================================
+    GEMINI_API_KEY = "YOUR_ACQUIRED_API_KEY_HERE"
+    # =========================================================================
+ 
+<h4>2. Update the System Packages</h4>
+<p>Synchronize the local package repository index to ensure system references are fresh, and install the native Python package manager and isolated virtual environment creator tools:</p>
+
+    sudo apt update && sudo apt install python3-pip python3-venv -y
+
+
 
 
 
