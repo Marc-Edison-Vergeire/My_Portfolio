@@ -2,7 +2,8 @@
 
 <br>
 <h2>Executive Summary</h2>
-<p>An advanced persistent threat (APT) incident was successfully detected and analyzed involving a targeted spear-phishing attack that resulted in host compromise and deep-system persistence. The intrusion began when an internal employee executed a malicious Microsoft Word document weaponized with an embedded Visual Basic for Applications (VBA) macro, which initiated an out-of-band network request to an external Command and Control (C2) infrastructure to download a secondary payload. Comprehensive memory forensics and artifact analysis revealed that the initial  <b>.exe</b>  file  process spawned an anomalous in-memory implant that maintained active beaconing back to the adversary's server. To ensure long-term persistence across system reboots, the malware automatically registered an unauthorized Scheduled Task on the endpoint, positioning the threat actor for potential lateral movement and domain escalation.</p>
+<p>An advanced persistent threat (APT) incident was successfully detected and analyzed involving a targeted spear-phishing attack that resulted in host compromise and deep-system persistence. The intrusion began when an internal employee executed a malicious Microsoft Word document weaponized with an embedded Visual Basic for Applications (VBA) macro, which initiated an out-of-band network request to an external Command and Control (C2) infrastructure to download a secondary payload.</p>
+<p>Comprehensive memory forensics and artifact analysis revealed that the initial  <b>.exe</b>  file  process spawned an anomalous in-memory implant that maintained active beaconing back to the adversary's server. To ensure long-term persistence across system reboots, the malware automatically registered an unauthorized Scheduled Task on the endpoint, positioning the threat actor for potential lateral movement and domain escalation.</p>
 
 <br>
 <h2>Objective</h2>
