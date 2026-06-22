@@ -25,7 +25,17 @@
 <p>AI PassForge mitigates this risk entirely by using the AI strictly as a logic processor, relying on local system-level hardware entropy via a <b>Cryptographically Secure Pseudo-Random Number Generator (CSPRNG)</b> for actual execution. This allows personnel to paste raw security directives or compliance statements straight into the prompt, automatically enforcing corporate guidelines without configuration errors.</p>
 <p>Furthermore, because the core cryptographic processes run locally, the application eliminates the data harvesting and supply chain risks associated with public, web-based generation tools.</p>
 
+<br>
+<h2>Step-by-Step Guide</h2>
+<h3>Pre-requisites</h3>
+<ul>
+  <li><b>Operating System:</b> Linux Environment (Fully optimized and tested on Kali Linux CLI)</li>
+  <li><b>Runtime Core:</b> Python 3.12+ environment</li>
+  <li><b>Access Control:</b> A valid API Key from Google AI Studio</li>
+</ul>
 
+<br>
+<h3>Installation Setup</h3>
 
 
 
