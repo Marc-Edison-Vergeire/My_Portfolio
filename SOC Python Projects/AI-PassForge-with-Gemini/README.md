@@ -16,7 +16,14 @@
 
 <br>
 <h2>Objective</h2>
-<p></p>
+<p>The core technical objective of this project is to build an isolated, automated interface that bridges the gap between complex human communication and local secure key generation. By leveraging the <b>Google Gemini API (gemini-2.5-flash)</b>, the script evaluates natural language input, handles context, and extracts necessary properties into a structured JSON configuration block containing length and character-pool constraints. </p>
+<p>Once parsed, this configuration profile automatically drives a localized generation pipeline backed by Python’s native <b>secrets</b> module. This design focuses heavily on zero-trust software architecture. It prevents common large language model security risks—such as pattern bias, predictability, and cloud leakage—by keeping the cryptographic operations entirely on-box.</p>
+
+<br>
+<h2>Organizational Value</h2>
+<p>From an organization-wide governance perspective, this tool delivers immediate defensive value by standardizing corporate password policies directly inside terminal execution layers. <b>Large Language Models (LLM)</b> are pattern-matching engines that lack true mathematical entropy, meaning passwords generated directly by an AI can exhibit structural biases that threat actors can easily brute-force or predict.</p>
+<p>AI PassForge mitigates this risk entirely by using the AI strictly as a logic processor, relying on local system-level hardware entropy via a <b>Cryptographically Secure Pseudo-Random Number Generator (CSPRNG)</b> for actual execution. This allows personnel to paste raw security directives or compliance statements straight into the prompt, automatically enforcing corporate guidelines without configuration errors.</p>
+<p>Furthermore, because the core cryptographic processes run locally, the application eliminates the data harvesting and supply chain risks associated with public, web-based generation tools.</p>
 
 
 
