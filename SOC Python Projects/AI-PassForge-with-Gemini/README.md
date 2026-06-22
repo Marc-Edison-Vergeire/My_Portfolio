@@ -6,7 +6,7 @@
 <br>
 <h2>Executable Preview</h2>
 <p>When running <b>PassForge-AI with Gemini</b>, the application seamlessly converts fluid human phrasing into deterministic parameter constraints. Below is a live terminal execution preview demonstrating context-aware interpretation and localized, secure generation:</p>
-<img width="646" height="577" alt="image" src="https://github.com/user-attachments/assets/fd31d07f-008e-4e9c-a9f7-116bc747a9f1" />
+<img width="747" height="637" alt="image" src="https://github.com/user-attachments/assets/86c43fab-99a8-487a-ad4f-85b70ffa95e1" />
 
 </p>
 
