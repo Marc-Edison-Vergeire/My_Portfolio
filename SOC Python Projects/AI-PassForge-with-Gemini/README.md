@@ -36,7 +36,16 @@
 
 <br>
 <h3>Installation Setup</h3>
-
+<ol>
+  <li><b>Google Gemini API Key Acquisition</b></li>
+  <p>You must first acquire an operational <b>API Key</b> from the <b>Google Gemini Developer</b> portal. Once obtained, open your local <b>passforge-ai.py</b> script, locate the dedicated configuration block, and replace the placeholder text with your real key:</p>
+  <li><b></b></li>
+  <li><b></b></li>
+  <li><b></b></li>
+  <li><b></b></li>
+  <li><b></b></li>
+  <li><b></b></li>
+</ol>
 
 
 
