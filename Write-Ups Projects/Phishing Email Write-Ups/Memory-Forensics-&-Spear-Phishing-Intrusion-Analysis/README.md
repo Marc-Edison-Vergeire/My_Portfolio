@@ -1,4 +1,4 @@
-<img width="752" height="717" alt="image" src="https://github.com/user-attachments/assets/cf5da310-ff4a-4609-b6cf-ef5359825db3" /><h1>Memory Forensics & Spear Phishing Intrusion Analysis</h1>
+<h1>Memory Forensics & Spear Phishing Intrusion Analysis</h1>
 
 <br>
 <h2>Executive Summary</h2>
