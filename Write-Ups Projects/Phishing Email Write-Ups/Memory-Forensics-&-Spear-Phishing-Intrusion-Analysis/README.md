@@ -174,12 +174,12 @@
   <br><li><b>Defense Evasion</b></li>
   <ul>
     <li>Obfuscated Files or Information (<b>T1027</b>)</li>
-     <br><li>Masquerading: Match Legitimate Name or Location (<b>T1036.005</b>)</li>
+    <li>Masquerading: Match Legitimate Name or Location (<b>T1036.005</b>)</li>
   </ul>
   <br><li><b>Discovery</b></li>
   <ul>
     <li>System Information Discovery (<b>T1082</b>)</li>
-     <br><li>File and Directory Discovery (<b>T1083</b>)</li>
+    <li>File and Directory Discovery (<b>T1083</b>)</li>
   </ul>
   <br><li><b>Command and Control</b></li>
   <ul>
