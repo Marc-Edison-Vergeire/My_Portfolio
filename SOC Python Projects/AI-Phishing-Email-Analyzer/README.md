@@ -51,7 +51,11 @@
     cd ~/Downloads
 
 <br>
-<h4>4. Build and Initialize an Isolated Virtual Environment</h4>
+<h4>4. Prepare the Email Material (<i>>email_to_analyze.txt</i)</h4>
+<p>The triage engine is designed to parse raw email infrastructure data directly out of a companion text asset. In your email client (e.g., Gmail), click on the vertical three dots in the upper-right corner of the target email panel, select "<b>Show original</b>", and click "<b>Copy to clipboard</b>". Create a new file named <i>email_to_analyze.txt</i> inside the same folder as your script (<b>~/Downloads/</b>), paste the raw content inside, and save it.</p>
+
+<br>
+<h4>5. Build and Initialize an Isolated Virtual Environment</h4>
 <p>Kali Linux enforces <b>PEP 668 (Externally Managed Environments)</b> as a defensive control to prevent third-party library conflicts from breaking system penetration testing tools. Securely bypass this constraint by spinning up a sandboxed environment named <b>>gemini-env</b and activating it:</p>
 
     python3 -m venv gemini-env
@@ -60,12 +64,12 @@
 <p><i>(Once activated, your terminal shell prompt prefix will visually change to show (<b>gemini-env</b>), verifying that all subsequent Python packages remain completely isolated within this directory).</i></p>
 
 <br>
-<h4>5. Install the Google GenAI SDK</h4>
+<h4>6. Install the Google GenAI SDK</h4>
 <p>Execute the Python dependency manager inside the active virtual session to pull the official cloud AI communication SDK package:</p>
 
     pip install google-genai
 <br>
-<h4>6. Execute Your Script</h4>
+<h4>7. Execute Your Script</h4>
 <p>Launch the upgraded, AI-integrated password generator wrapper to begin production operation:</p>
 
     python3 ai-email-analyzer.py
