@@ -28,7 +28,7 @@
 </ul>
 
 <h3>Installation Setup</h3>
-<h4>1. Google Gemini API Key Acquisition</h4>
+<h4>1. Google Gemini and VirusTotal API Key Acquisition</h4>
   <p>You must first acquire an operational <b>API Key</b> from the <b>Google Gemini Developer</b> portal. Once obtained, open your local <b>ai-email-analyzer.py</b> script, locate the dedicated configuration block, and replace the placeholder text with your real key:</p>
 
     # =========================================================================
