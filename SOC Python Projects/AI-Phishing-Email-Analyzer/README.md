@@ -77,7 +77,7 @@
 <br>
 <h3>⚠️ Quick Tips for Future Sessions ⚠️</h3>
 <ul>
-  <li><b>Resuming Lab Work:</b> When closing or restarting your Kali Linux Virtual Machine, you do not need to rerun the installation steps. Simply move to your workspace and re-activate the virtual sandbox:</li>
+  <li><b>Resuming Lab Work:</b> When closing or restarting your Kali Linux Virtual Machine, you do not need to rerun the installation steps. Simply move to your workspace, paste your new target email text into email_to_analyze.txt, and re-activate the virtual sandbox:</li>
   
      cd ~/Downloads
      source gemini-env/bin/activate
