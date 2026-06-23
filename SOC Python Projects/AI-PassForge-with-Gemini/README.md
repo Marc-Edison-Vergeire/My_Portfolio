@@ -90,7 +90,8 @@
 
     deactivate
 
-  <br><li><b>Fix the Virtual Environment & Run the Script</b>: Since you are inside <b>~/Downloads/</b>, let's initialize and activate the virtual environment right inside this directory to keep everything perfectly contained.</li> Run these exact commands in your terminal:
+  <br><li><b>Fix the Virtual Environment & Run the Script</b>: Since you are inside <b>~/Downloads/</b>, let's initialize and activate the virtual environment right inside this directory to keep everything perfectly contained.</li> 
+  <br>Run these exact commands in your terminal:
 
     # 1. Create the isolated virtual environment inside this folder
     python3 -m venv gemini-env
