@@ -26,7 +26,7 @@ from email import message_from_string
 # Paste your key within the quotation marks below. 
 # If left blank "", the engine will skip the check gracefully without crashing.
 # =========================================================================
-VIRUSTOTAL_API_KEY = "API KEY HERE FROM YOUR VIRUSTOTAL"
+VIRUSTOTAL_API_KEY = "f4786ae4d1cf33e451d040b9441d9a7682ca83ec69efb6d4f5cd6d2372fbf1a9"
 # =========================================================================
 
 def check_virustotal(url, api_key):
