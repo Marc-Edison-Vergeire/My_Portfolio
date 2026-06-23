@@ -51,7 +51,7 @@
     cd ~/Downloads
 
 <br>
-<h4>4. Prepare the Email Material (<i>>email_to_analyze.txt</i)</h4>
+<h4>4. Prepare the Email Material (<i>email_to_analyze.txt</i)</h4>
 <p>The triage engine is designed to parse raw email infrastructure data directly out of a companion text asset. In your email client (e.g., Gmail), click on the vertical three dots in the upper-right corner of the target email panel, select "<b>Show original</b>", and click "<b>Copy to clipboard</b>". Create a new file named <i>email_to_analyze.txt</i> inside the same folder as your script (<b>~/Downloads/</b>), paste the raw content inside, and save it.</p>
 
 <br>
