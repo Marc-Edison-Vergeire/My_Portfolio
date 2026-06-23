@@ -89,6 +89,21 @@
   <br><li><b>Exiting the Sandbox:</b> When your tasks conclude, and you need to pivot your terminal back to standard global operating system instructions, drop out of the environment stack cleanly by running:</li>
 
     deactivate
+
+  <br><li><b>Fix the Virtual Environment & Run the Script</b>: Since you are inside <b>~/Downloads/</b>, let's initialize and activate the virtual environment right inside this directory to keep everything perfectly contained.</li> 
+  <br>Run these exact commands in your terminal:
+
+    # 1. Create the isolated virtual environment inside this folder
+    python3 -m venv gemini-env
+
+    # 2. Activate it (Notice your prompt will change to include "(gemini-env)")
+    source gemini-env/bin/activate
+
+    # 3. Install the official Google GenAI SDK inside your active sandbox
+    pip install google-genai
+
+    # 4. Now execute your script safely
+    python3 passforge-ai.py
 </ul>
 
 <br>
