@@ -24,7 +24,7 @@
 <ul>
   <li><b>Operating System:</b> Linux Environment (Fully optimized and tested on Kali Linux CLI)</li>
   <li><b>Runtime Core:</b> Python 3.12+ environment</li>
-  <li><b>Access Control:</b> A valid API Key from Google AI Studio</li>
+  <li><b>Access Control:</b> A valid API Key from Google AI Studio and VirusTotal</li>
 </ul>
 
 <h3>Installation Setup</h3>
