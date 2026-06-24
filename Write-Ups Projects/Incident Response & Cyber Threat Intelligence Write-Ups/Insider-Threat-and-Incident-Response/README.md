@@ -85,6 +85,12 @@
 <br>
 <h3>Phase 4: LOLBin Exploitation and Payload Retrieval</h3>
 <p>To identify how the external payload entered the environment, the scope was focused entirely on HR hosts. A query was constructed to analyze the <b>CommandLine</b> field using statistical rare-value filtering, isolating unique command strings that deviated from standard business operations.</p>
+<p><img width="808" height="722" alt="image" src="https://github.com/user-attachments/assets/158d00d5-99f7-4ed4-8416-bc94caa2ba74" />
+</p>
+<p><img width="975" height="449" alt="image" src="https://github.com/user-attachments/assets/49a8d208-fe56-4af1-a3b0-fb89208d1432" />
+</p>
+<p><img width="877" height="452" alt="image" src="https://github.com/user-attachments/assets/c92f900f-30b5-4ff3-a85a-4263ff53c8ba" />
+</p>
 <p>This analysis targeted the user <b>haroon</b>. The data revealed that the threat actor abused a native <b> Windows Living-off-the-Land Binary (LOLBin)</b> — <b>certutil.exe</b> — to bypass traditional application whitelisting and network perimeters.</p>
 <p>On <b>March 4, 2022</b>, the compromised host executed the following command to reach out to the internet, retrieve a payload from a text-hosting platform, and write it to disk:</p>
 
@@ -92,12 +98,9 @@
 
 <ul>
   <li><b>Abused Binary:</b> <i>certutil.exe</i> (utilizing the <i>-urlcache</i> flag to download remote files).</li>
-  <li><b></b></li>
-  <li><b></b></li>
+  <li><b>Command and Control (C2) Infrastructure:</b> <i>[https://controlc.com/e4d11035](https://controlc.com/e4d11035)</i></li>
+  <li><b>Dropped Payload:</b> <i>benign.exe</i> (staged locally during the post-exploitation phase).</li>
 </ul>
-
-<p></p>
-<p></p>
 
 
 
