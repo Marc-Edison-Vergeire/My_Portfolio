@@ -111,7 +111,36 @@
 </p>
 </ul>
 
+<br>
+<h2>MITRE ATT&CK Mapping</h2>
+<ul>
+  <li><b>T1078.002 (Valid Accounts: Domain Accounts):</b> Misuse of legitimate user credentials (<i>Chris.fort</i>, <i>haroon</i>) to execute commands.</li>
+  <li><b>T1036.003 (Masquerading: Rename System Utilities):</b> Creation of the typosquatted imposter account <i>Amel1a</i> to evade visual security audits.</li>
+  <li><b>T1053.005 (Scheduled Task/Job: Scheduled Task):</b> Execution of <i>schtasks</i> by a compromised HR account to ensure persistence.</li>
+  <li><b>T1105 (Ingress Tool Transfer):</b> Abuse of <i>certutil.exe</i> to pull down the external benign.exe executable from a public hosting site.</li>
+</ul>
 
+<br>
+<h2>Indicators of Compromise (IoC)</h2>
+<ul>
+  <li><b>Unsolicited Network Connection:</b> <i>(https://controlc.com/e4d11035)</i> (External C2 node / Payload hosting URL)</li>
+  <li><b>Malicious Filename:</b> <i>benign.exe</i> (Staged executable)</li>
+  <li><b>Imposter Account:</b> <i>Amel1a</i> (Deceptive username string)</li>
+</ul>
+
+<br>
+<h2>Lessons Learned</h2>
+<p>This incident highlights the critical security risk associated with unchecked administrative tools on standard employee endpoints. Standard corporate users, particularly within non-technical business units like Human Resources, have no operational requirement to execute administrative binaries like <b> certutil.exe</b> for web requests or <b>schtasks.exe</b> for persistence modification.</p>
+<p>Furthermore, this case demonstrates that relying solely on automated IDS alerts is insufficient; proactive threat hunting and routine identity auditing are required to catch subtle, human-readable anomalies like typosquatted usernames before they escalate into full-scale breaches.</p>
+
+<br>
+<h2>Recommendations</h2>
+<ol>
+  <li><b>Enforce LOLBin Restrictions:</b> Implement application control policies (such as AppLocker or Windows Defender Application Control) to block standard user accounts from executing high-risk binaries like <b>certutil.exe</b> with network communication flags.</li>
+  <li><b>Implement Attack Surface Reduction (ASR) Rules:</b> Configure Windows ASR rules to block process creations originating from unauthorized scheduled tasks or unauthorized command paths executed by non-administrative users.</li>
+  <li><b>Deploy Identity Monitoring Alerts:</b> Establish automated SIEM alerts within Splunk that instantly flag lookalike or homoglyph user accounts that do not strictly match Active Directory records.</li>
+  <li><b>Network-Level Restrictive Egress Filtering:</b> Restrict internal endpoints from reaching out to public text-sharing, paste-bin, or unvetted file-sharing domains (<b>controlc.com</b>, <b>pastebin.com</b>) via corporate firewalls or secure web gateways.</li>
+</ol>
 
 
 
