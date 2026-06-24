@@ -93,7 +93,7 @@
 </p>
 <p><img width="745" height="534" alt="image" src="https://github.com/user-attachments/assets/59df53aa-b24e-4fe0-af6a-57e166e09d1f" />
 </p>
-<p><img width="745" height="534" alt="image" src="https://github.com/user-attachments/assets/45fd6ee9-a823-41c7-8e4a-9c787873e322" />
+<p><img width="902" height="490" alt="image" src="https://github.com/user-attachments/assets/dd1911bd-1c53-4a24-8617-d5c4129e1d34" />
 </p>
 <p>This analysis targeted the user <b>haroon</b>. The data revealed that the threat actor abused a native <b> Windows Living-off-the-Land Binary (LOLBin)</b> — <b>certutil.exe</b> — to bypass traditional application whitelisting and network perimeters.</p>
 <p>On <b>March 4, 2022</b>, the compromised host executed the following command to reach out to the internet, retrieve a payload from a text-hosting platform, and write it to disk:</p>
