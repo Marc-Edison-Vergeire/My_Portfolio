@@ -1,4 +1,4 @@
-<img width="745" height="534" alt="image" src="https://github.com/user-attachments/assets/0bb6f367-f21b-4b54-a987-6b87f03f92c5" /><h1>Insider Threat & LOLBin Analysis: Incident Response Investigation via Splunk</h1>
+<h1>Insider Threat & LOLBin Analysis: Incident Response Investigation via Splunk</h1>
 
 <br>
 <h2>Executive Summary</h2>
