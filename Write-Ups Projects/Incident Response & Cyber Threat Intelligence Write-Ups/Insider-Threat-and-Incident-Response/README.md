@@ -103,12 +103,10 @@
 <p><img width="902" height="490" alt="image" src="https://github.com/user-attachments/assets/d9143261-72bd-4976-9a77-ab28af2066c7" />
 </p>
 <ul>
-  <li><b>Abused Binary:</b> <i>certutil.exe</i> (utilizing the <i>-urlcache</i> flag to download remote files).</li>
-  <li><b>Command and Control (C2) Infrastructure:</b> <i>[https://controlc.com/e4d11035](https://controlc.com/e4d11035)</i></li>
-  <p><img width="902" height="490" alt="image" src="https://github.com/user-attachments/assets/a33fb1e7-e328-4f19-b535-9a223921348f" />
+  <br><li><b>Abused Binary:</b> <i>certutil.exe</i> (utilizing the <i>-urlcache</i> flag to download remote files).</li>
 </p>
-  <li><b>Dropped Payload:</b> <i>benign.exe</i> (staged locally during the post-exploitation phase).</li>
-  <li>Investigated the third-party site, <b>https://controlc.com/e4d11035</b> (which is the URL that the infected host connected to), and analyzed the pattern of the suspicious file downloaded from the C2 server malicious content.</li>
+  <br><li><b>Dropped Payload:</b> <i>benign.exe</i> (staged locally during the post-exploitation phase).</li>
+  <br><li><b>Command and Control (C2) Infrastructure:</b> Investigated the third-party site, <b>https://controlc.com/e4d11035</b> (which is the URL that the infected host connected to), and analyzed the pattern of the suspicious file downloaded from the C2 server for malicious content.</li>
   <p><img width="842" height="502" alt="image" src="https://github.com/user-attachments/assets/b1b7ca57-dd0b-4708-9e5a-3f744c105745" />
 </p>
 </ul>
