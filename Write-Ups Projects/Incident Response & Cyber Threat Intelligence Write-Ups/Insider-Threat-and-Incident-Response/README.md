@@ -34,6 +34,34 @@
   <li><b>Splunk Enterprise:</b> Centralized log analysis, statistical aggregation, and event correlation.</li>
 </ul>
 
+<br>
+<h2>Artifacts</h2>
+<ul>
+  <li><b>Windows Security Event Logs:</b> Event ID 4688 (Process Creation).</li>
+  <li><b>Command Line Arguments:</b> Extracted strings from the <b>CommandLine</b> field detailing attacker execution.</li>
+</ul>
+
+<br>
+<h2>Findings</h2>
+<h3>Phase 1: Ingestion and Baseline Analysis</h3>
+<p>The investigation initiated with the ingestion of the <b>win_eventlogs</b> index to establish a baseline of process creation events.</p>
+
+    index=win_eventlogs
+
+<p>Because the incident was reported to have occurred within <b>March 2022</b>, the time picker was restricted to a static range from <b>March 1, 2022</b>, to <b>March 31, 2022</b>. This initial query returned a total volume of <b>13,959 events</b>, creating the baseline dataset for deeper analysis.</p>
+
+<p><img width="802" height="539" alt="image" src="https://github.com/user-attachments/assets/53aa4b68-bec5-4b72-9c47-34128b5ef062" />
+</p>
+<p><img width="807" height="677" alt="image" src="https://github.com/user-attachments/assets/8a817dea-d7e7-4044-881d-fe2ebf078aa9" />
+</p>
+<p><img width="726" height="495" alt="image" src="https://github.com/user-attachments/assets/f3a668ca-0a06-4cc1-a7bf-0b079caa31ea" />
+</p>
+<p><img width="696" height="446" alt="image" src="https://github.com/user-attachments/assets/d0b849bd-310a-4f78-8a47-50a83d305fac" />
+</p>
+
+<br>
+<h3>Phase 2: Identity Analysis & Imposter Detection</h3>
+
 
 
 
