@@ -139,7 +139,7 @@
   <li><b>Enforce LOLBin Restrictions:</b> Implement application control policies (such as AppLocker or Windows Defender Application Control) to block standard user accounts from executing high-risk binaries like <b>certutil.exe</b> with network communication flags.</li>
    <br><li><b>Implement Attack Surface Reduction (ASR) Rules:</b> Configure Windows ASR rules to block process creations originating from unauthorized scheduled tasks or unauthorized command paths executed by non-administrative users.</li>
    <br><li><b>Deploy Identity Monitoring Alerts:</b> Establish automated SIEM alerts within Splunk that instantly flag lookalike or homoglyph user accounts that do not strictly match Active Directory records.</li>
- <li><b>Network-Level Restrictive Egress Filtering:</b> Restrict internal endpoints from reaching out to public text-sharing, paste-bin, or unvetted file-sharing domains (<b>controlc.com</b>, <b>pastebin.com</b>) via corporate firewalls or secure web gateways.</li>
+  <br><li><b>Network-Level Restrictive Egress Filtering:</b> Restrict internal endpoints from reaching out to public text-sharing, paste-bin, or unvetted file-sharing domains (<b>controlc.com</b>, <b>pastebin.com</b>) via corporate firewalls or secure web gateways.</li>
 </ol>
 
 <br>
