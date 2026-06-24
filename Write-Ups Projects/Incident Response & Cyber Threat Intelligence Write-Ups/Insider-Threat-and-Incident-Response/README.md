@@ -142,6 +142,9 @@
   <li><b>Network-Level Restrictive Egress Filtering:</b> Restrict internal endpoints from reaching out to public text-sharing, paste-bin, or unvetted file-sharing domains (<b>controlc.com</b>, <b>pastebin.com</b>) via corporate firewalls or secure web gateways.</li>
 </ol>
 
+<br>
+<h2>References & Acknowledgement</h2>
+<p>This incident response case study was conducted using the <b>Benign</b> educational environment provided by the <b>TryHackMe</b> platform. All enterprise <b>Windows Event Logs</b> analyzed throughout this report originate from their specialized defensive security training curriculum.</p> <p>This controlled, host-centric simulation was completed to validate advanced threat hunting capabilities, refine complex log correlation methodologies within <b>Splunk</b>, and sharpen the practical skills necessary to detect, isolate, and remediate sophisticated adversary campaigns within enterprise production environments.</p>
 
 
 
