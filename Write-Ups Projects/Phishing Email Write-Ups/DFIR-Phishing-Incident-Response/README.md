@@ -7,10 +7,10 @@
 		This incident response case study documents the end-to-end investigation of a targeted phishing campaign that led to the compromise of a finance workstation within a logistics enterprise.
 	</p>
 	<p>
-		The attack initiated via a sophisticated email lure utilizing typosquatted infrastructure to deliver a weaponized Windows shortcut (<b>.lnk</b>) file. Upon execution, the payload initiated a hidden PowerShell download cradle to establish command-and-control (C2) communication. Host log analysis revealed that the adversary successfully engaged in defense evasion by deploying a masqueraded database utility (<b>sq3.exe</b>) to harvest unencrypted user credentials from local Windows Sticky Notes.
+		The attack initiated via a sophisticated email lure utilizing typosquatted infrastructure to deliver a weaponized Windows shortcut (<b>.lnk</b>) file. Upon execution, the payload initiated a hidden PowerShell download cradle to establish command-and-control (C2) communication. Host log analysis revealed that the adversary successfully engaged in defense evasion by deploying a masqueraded database utility (<b>sq3[.]exe</b>) to harvest unencrypted user credentials from local Windows Sticky Notes.
 	</p>
 	<p>
-		Furthermore, the attacker located an enterprise password vault (<b>protected_data.kdbx</b>) and exfiltrated the sensitive asset using hex-encoded DNS tunneling. By cross-correlating endpoint JSON logs with network packet captures, the complete intrusion timeline was reconstructed, the C2 server infrastructure was mapped, and the exfiltrated password database was forensically recovered and decrypted.
+		Furthermore, the attacker located an enterprise password vault (<b>protected_data[.]kdbx</b>) and exfiltrated the sensitive asset using hex-encoded DNS tunneling. By cross-correlating endpoint JSON logs with network packet captures, the complete intrusion timeline was reconstructed, the C2 server infrastructure was mapped, and the exfiltrated password database was forensically recovered and decrypted.
 	</p>
 
 <br>
@@ -77,7 +77,7 @@
 				Based on the email content, I took note of the email address used to send the phishing email and that is<b><u> agriffin@bpakcaging[.]xyz</u></b>. Aside from that, I noticed that there’s also a typosquatting, which is a red flag already to me. Instead of using the word, “<u>packaging</u>”, the attacker used a misspelled word, and that is “<u>pakcaging</u>”, which serves as a primary indicator of deceptive infrastructure.
 				</p>
 			<p>
-				After that, I downloaded the <b>Invoice.zip</b> and extract using the terminal or command-line interface (CLI), at the same time, input the password, which is the <b>Invoice2023!</b> that has been provided inside the email content. After the file unzipped, it appeared as <b>Invoice_20230103.lnk</b>.
+				After that, I downloaded the <b>Invoice.zip</b> and extract using the terminal or command-line interface (CLI), at the same time, input the password, which is the <b>Invoice2023!</b> that has been provided inside the email content. After the file unzipped, it appeared as <b>Invoice_20230103[.]lnk</b>.
 			</p>
 			<p>
 			<img width="975" height="403" alt="image" src="https://github.com/user-attachments/assets/92c3fec1-612c-4952-a846-ecc2eafa652e" />

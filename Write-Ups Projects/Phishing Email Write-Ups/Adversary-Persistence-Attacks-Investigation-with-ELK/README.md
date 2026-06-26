@@ -40,7 +40,7 @@
    <br><li><b>review.dat: </b>A malicious payload dropped into the user's local Temp directory using <b>xcopy.exe</b>, serving as the primary dropper executed via <b>rundll32.exe</b>.</li>
    <br><li><b>Scheduled Task ("Review"): </b>A persistence mechanism established by the adversary using PowerShell to ensure continuous access to the compromised endpoint.</li>
    <br><li><b>Malicious External IP & C2 Infrastructure: </b>Outbound network connections over port 80 initiated by the malicious payload to establish a command-and-control communication channel.</li>
-   <br><li><b>fodhelper.exe Execution Logs: </b>System artifacts indicating a User Account Control (UAC) bypass, allowing the threat actor to silently elevate their privileges to local administrator.</li>
+   <br><li><b>fodhelper[.]exe Execution Logs: </b>System artifacts indicating a User Account Control (UAC) bypass, allowing the threat actor to silently elevate their privileges to local administrator.</li>
    <br><li><b>Mimikatz Binary & Credential Dumps: </b>Artifacts demonstrating the retrieval and execution of credential-dumping tools to harvest local hashes for further network exploitation.</li>
 </ul>
 
@@ -125,7 +125,7 @@ I opened the Elastic and presumed that the incident occurred between <b>August 2
 </p>
 <p>Lastly, after dumping the hashes, the attacker attempted to download another remote file to execute ransomware. Based on my investigation, I entered “<b>*ransom* AND user.name: Administrator</b>” and found out that the link used by the attacker to download the ransomware binary is:</p>
 
-        http://ff.sillytechninja.io/ransomboogey.exe
+        http://ff[.].sillytechninja[.]io/ransomboogey[.]exe
 
 <p><img width="975" height="351" alt="image" src="https://github.com/user-attachments/assets/26aeaec7-92ae-431e-b47b-b2ca59c04993" />
 </p>
