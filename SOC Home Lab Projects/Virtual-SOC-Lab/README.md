@@ -423,8 +423,41 @@
 
     nano ossec.conf
 <p><img width="832" height="92" alt="image" src="https://github.com/user-attachments/assets/5ac97a49-725c-4012-a6e7-2068deeebf77" /></p>
-<p>
+<p><img width="742" height="760" alt="image" src="https://github.com/user-attachments/assets/f3f86370-775d-444d-8823-0fd7eaf668e7" />
 </p>
+
+<li>Let's change the <b><i>logall</i></b> and <b><i>logall_json</i></b>, from <b><i>no</i></b> into <b><i>yes</i></b>. Save it by holding the CTRL+X, press Y to save, and press Enter.</li>
+<p><img width="615" height="382" alt="image" src="https://github.com/user-attachments/assets/235ba3e7-3547-4885-bc2c-9155139e2083" />
+</p>
+
+<li>After that, restart the manager by typing:</li>
+
+    systemctl restart wazuh-manager.service
+
+<li>The next thing to do is to modify the <b>filebeat configuration</b>. We need to change the directory to <b><i>/etc/filebeat/</i></b>.</li>
+
+    cd /etc/filebeat
+<p><img width="497" height="40" alt="image" src="https://github.com/user-attachments/assets/eb39d735-8816-4c86-b719-1bb62ba1341f" /></p>
+
+<li>Open the <b><i>/etc/filebeat/</i></b> by typing:</li>
+
+    ls -la
+<p><img width="567" height="186" alt="image" src="https://github.com/user-attachments/assets/7d8596ab-89dc-4961-a439-62e574abe216" /></p>
+
+<li>Now, open the <b><i>filebeat.yml</i></b></li>
+
+    nano filebeat.yml
+<p><img width="652" height="52" alt="image" src="https://github.com/user-attachments/assets/1b08784f-bc2b-4271-945e-7f1b78b54dd1" /></p>
+<p><img width="580" height="720" alt="image" src="https://github.com/user-attachments/assets/3c182765-d532-4096-8f78-da46e4922bf4" />
+</p>
+
+<li>Change the <b><i>archives</i></b> from <b><i>false</i></b> into <b><i>true</i></b>. Save it by holding CTRL+X, press Y to save, and press Enter.</li>
+<p><img width="412" height="127" alt="image" src="https://github.com/user-attachments/assets/53a160da-c812-49fc-999f-86d2fe2a1cda" />
+</p>
+
+<li>Restart the <b>Filebeat service</b> by typing:</li>
+
+    systemctl restart filebeat.service
 </ul>
 
 
