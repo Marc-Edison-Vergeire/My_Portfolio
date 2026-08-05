@@ -404,7 +404,27 @@
 <p>Wazuh archive is used to automatically store all security events and logs received by the Wazuh server, regardless of whether they trigger an alert or trip a specific rule. It essentially allows Wazuh to monitor and capture all the telemetry that we throw at it.</p>
 <h4>Procedures:</h4>
 <ul>
-  <li></li>
+  <li>We want to configure the <b><i>ossec.conf</i></b> file.</li>
+  <li>In order to find that file, it is located under the <b><i>/var/ossec</i></b> directory</li>
+
+      sudo ls -la /var/ossec
+  <p><img width="819" height="397" alt="image" src="https://github.com/user-attachments/assets/5b946534-e7a5-40a2-b7fa-178ac8e98cf2" /></p>
+
+ <li>Let's change into root privileges</li>
+
+     sudo su -
+
+  <li>Let's open the <b><i>/var/ossec/etc</i></b> and we should see the file <b><i>ossec.conf</i></b></li>
+  
+    cd /var/ossec/etc
+  <p><img width="907" height="90" alt="image" src="https://github.com/user-attachments/assets/0c29df53-ca60-48d3-9782-ae8dc6573782" /></p>
+
+<li>This time, let's open the <b><i>ossec.conf</i></b> file.</li>
+
+    nano ossec.conf
+<p><img width="832" height="92" alt="image" src="https://github.com/user-attachments/assets/5ac97a49-725c-4012-a6e7-2068deeebf77" /></p>
+<p>
+</p>
 </ul>
 
 
