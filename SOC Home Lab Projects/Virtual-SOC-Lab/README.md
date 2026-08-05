@@ -458,6 +458,46 @@
 <li>Restart the <b>Filebeat service</b> by typing:</li>
 
     systemctl restart filebeat.service
+
+<p><img width="587" height="50" alt="image" src="https://github.com/user-attachments/assets/9252845d-0a9d-4086-b292-554a67e6f0d2" /></p>
+
+<li>Now, go back to the Wazuh dashboard and head over to the hamburger icon, scroll down to select <b><i>Dashboard Management</i></b>, then select <b><i>Index patterns</i></b>.</li>
+<p><img width="660" height="406" alt="image" src="https://github.com/user-attachments/assets/ab066f37-af97-42d1-b1f2-d424e34fb637" /></p>
+<p><img width="448" height="771" alt="image" src="https://github.com/user-attachments/assets/fb197700-0511-4e5b-aa4f-ea50903b5c6d" />
+</p>
+<p><img width="954" height="287" alt="image" src="https://github.com/user-attachments/assets/b6473007-9e74-4a4d-93ce-f01d68e8e043" />
+</p>
+
+<li>Inside the <b>Index patterns</b>, select the <b><i>Create index pattern</i></b> button.</li>
+<p><img width="955" height="187" alt="image" src="https://github.com/user-attachments/assets/bac14b7a-3c6e-400c-a829-f601ae952f2c" />
+</p>
+
+<li>Inside <b><i>Create index pattern</i></b>, type in the search bar, <b><i>wazuh-archives</i></b>. We should see the <b><i>wazuh-archives</i></b> result at the bottom. After that, press the <b>Next step</b> button</li>
+<p><img width="937" height="497" alt="image" src="https://github.com/user-attachments/assets/7ac39bde-5fbd-4726-ab68-d354121e79c8" />
+</p>
+
+<li>On the <b><i>Time field</i></b>, dropdown and select <b><i>timestamp</i></b>, and select the <b><i>Create index pattern</i></b> button.</li>
+<p><img width="952" height="547" alt="image" src="https://github.com/user-attachments/assets/3cc80c29-5255-4a83-88e1-93b23e9f2e2e" /></p>
+<p><img width="960" height="760" alt="image" src="https://github.com/user-attachments/assets/19cc2f87-e2d2-4e93-a134-becec519295b" />
+</p>
+
+<li>Go back to hamburger icon, select <b>Discover</b>, select <b>Explore</b>, select the dropdown and we should see the <b><i>wazuh-archives</i></b>.</li>
+<p><img width="960" height="189" alt="image" src="https://github.com/user-attachments/assets/ef9231d8-895d-4ae4-912a-0c1f3c5ecacc" />
+</p>
+<p><img width="522" height="437" alt="image" src="https://github.com/user-attachments/assets/13caddb9-17ed-413d-8a31-559cdbd7c436" />
+</p>
+<p><img width="957" height="277" alt="image" src="https://github.com/user-attachments/assets/8cada3e2-f8a9-41a5-a58a-d08845eb4435" />
+</p>
+<p><img width="947" height="741" alt="image" src="https://github.com/user-attachments/assets/45d40d30-611f-4f00-8bbd-8f16ed4292d3" />
+</p>
+
+<li>Lastly, head over to the <b>Wazuh</b> server, select the <b>Machine</b> tab, select <b><i>Take Snapshot...</i></b>, rename it of your choice, and press the <b>OK</b> button. The description is optional.</li>
+<p><img width="605" height="347" alt="image" src="https://github.com/user-attachments/assets/8d936543-821a-4f8f-8725-81e822206ca7" />
+<p><img width="496" height="447" alt="image" src="https://github.com/user-attachments/assets/88e732c8-1260-414f-8854-72e98cc30872" />
+</p>
+</p>
+
+
 </ul>
 
 
