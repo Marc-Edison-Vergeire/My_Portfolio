@@ -370,11 +370,13 @@
 </p>
 
 <br>
+<br>
 <p><b>NOTE #1:</b>  If you wanted to move from a regular user into root privileges, type:</p>
 
     sudo su -
 <p><img width="975" height="97" alt="image" src="https://github.com/user-attachments/assets/888d5bc7-9df4-4f08-a317-a1e817c528f3" /></p>
 
+<br>
 <br>
 <p><b>NOTE #2:</b> If you forgot your password or wanted to know about the credentials of the Ubuntu Server (which you will be using to access Wazuh), type the command:</p>
 
@@ -395,6 +397,18 @@
 
     sudo  cat  wazuh-passwords.txt
 <p><img width="747" height="507" alt="image" src="https://github.com/user-attachments/assets/efaf72d6-e18c-49bf-8174-4422cc755005" /></p>
+
+<br>
+<br>
+<p><b>Note #3:</b> By default, Wazuh only indexes events that trigger security alerts to save disk space. Enabling the archive feature provides a complete, unmodified history of your environment's log data.</p>
+<p>Wazuh archive is used to automatically store all security events and logs received by the Wazuh server, regardless of whether they trigger an alert or trip a specific rule. It essentially allows Wazuh to monitor and capture all the telemetry that we throw at it.</p>
+<h4>Procedures:</h4>
+<ul>
+  <li></li>
+</ul>
+
+
+
 
 <br>
 <h3>E. Wazuh (SIEM) </h3>
