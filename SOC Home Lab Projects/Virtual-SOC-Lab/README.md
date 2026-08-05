@@ -370,6 +370,33 @@
 </p>
 
 <br>
+<p><b>NOTE #1:</b>  If you wanted to move from a regular user into root privileges, type:</p>
+
+    sudo su -
+<p><img width="975" height="97" alt="image" src="https://github.com/user-attachments/assets/888d5bc7-9df4-4f08-a317-a1e817c528f3" /></p>
+
+<br>
+<p><b>NOTE #2:</b> If you forgot your password or wanted to know about the credentials of the Ubuntu Server (which you will be using to access Wazuh), type the command:</p>
+
+    ls
+<p><img width="750" height="84" alt="image" src="https://github.com/user-attachments/assets/e3c4b517-a600-49d8-a0de-fb63ccf93cb3" /></p>
+
+<p>In order to extract the <b><i>wazuh-install-files.tar</i></b>  file, type the command:</p>
+
+    sudo tar -xf wazuh-install-files.tar
+<p><img width="884" height="71" alt="image" src="https://github.com/user-attachments/assets/04b22d74-91c5-41de-8bb6-142b41e92440" /></p>
+
+<p>Open the  <b><i>wazuh-install-files</i></b>  by typing:</p>
+
+    cat  wazuh-install-files
+<p><img width="975" height="131" alt="image" src="https://github.com/user-attachments/assets/4aa519af-3c91-482b-9acb-66b150b32d12" /></p>
+
+<p>Now, open the  <b><i>wazuh-passwords.txt</i></b>  by typing:</p>
+
+    sudo  cat  wazuh-passwords.txt
+<p><img width="747" height="507" alt="image" src="https://github.com/user-attachments/assets/efaf72d6-e18c-49bf-8174-4422cc755005" /></p>
+
+<br>
 <h3>E. Wazuh (SIEM) </h3>
 <p>Before running the <b>Ubuntu Server</b> and <b>Kali Linux</b>, I tweaked the network connections for the three VMs, so that they communicate in the same network.</p>
 <p><img width="736" height="316" alt="image" src="https://github.com/user-attachments/assets/6c32d01d-9620-4244-ad93-00ed3bbfc986" />
