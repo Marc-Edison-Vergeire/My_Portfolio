@@ -410,23 +410,23 @@
       sudo ls -la /var/ossec
   <p><img width="819" height="397" alt="image" src="https://github.com/user-attachments/assets/5b946534-e7a5-40a2-b7fa-178ac8e98cf2" /></p>
 
- <li>Let's change into root privileges</li>
+ <li>I changed into root privileges</li>
 
      sudo su -
 
-  <li>Let's open the <b><i>/var/ossec/etc</i></b> and I should see the file <b><i>ossec.conf</i></b></li>
+  <li>I opened the <b><i>/var/ossec/etc</i></b> and I should see the file <b><i>ossec.conf</i></b></li>
   
     cd /var/ossec/etc
   <p><img width="907" height="90" alt="image" src="https://github.com/user-attachments/assets/0c29df53-ca60-48d3-9782-ae8dc6573782" /></p>
 
-<li>This time, let's open the <b><i>ossec.conf</i></b> file.</li>
+<li>This time, I opened the <b><i>ossec.conf</i></b> file.</li>
 
     nano ossec.conf
 <p><img width="832" height="92" alt="image" src="https://github.com/user-attachments/assets/5ac97a49-725c-4012-a6e7-2068deeebf77" /></p>
 <p><img width="742" height="760" alt="image" src="https://github.com/user-attachments/assets/f3f86370-775d-444d-8823-0fd7eaf668e7" />
 </p>
 
-<li>Let's change the <b><i>logall</i></b> and <b><i>logall_json</i></b>, from <b><i>no</i></b> into <b><i>yes</i></b>. Save it by holding the CTRL+X, press Y to save, and press Enter.</li>
+<li>I changed the <b><i>logall</i></b> and <b><i>logall_json</i></b>, from <b><i>no</i></b> into <b><i>yes</i></b>. Save it by holding the CTRL+X, press Y to save, and press Enter.</li>
 <p><img width="615" height="382" alt="image" src="https://github.com/user-attachments/assets/235ba3e7-3547-4885-bc2c-9155139e2083" />
 </p>
 
