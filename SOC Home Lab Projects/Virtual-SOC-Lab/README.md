@@ -33,7 +33,7 @@
   <li><b>Hypervisor Architecture & Virtual Networking: </b>Developed hands-on proficiency in virtualization engineering by designing, provisioning, and isolating virtual machines within <b>Oracle VM VirtualBox</b>. Successfully architected a custom, multi-node <b>NAT Network (10.0.2.0/24)</b> to maintain environment isolation while ensuring structured, inter-VM network routing and connectivity.</li>
   <br><li><b>Linux System Administration & SIEM Deployment: </b>Cultivated practical Linux administration skills by deploying, configuring, and hardening an <b>Ubuntu Server</b> to act as the central repository for the lab's security infrastructure. Successfully installed the <b>Wazuh Manager</b> framework, managing core system dependencies and verifying daemon readiness.</li>
   <br><li><b>Endpoint Telemetry & Logging Architecture: </b>Gained foundational knowledge of host-level visibility and enterprise auditing by deploying <b>Microsoft System Monitor (Sysmon)</b> on a <b>Windows 10 Pro</b> endpoint. Mastered the structural installation of advanced logging binaries and endpoint-level agent services designed to transform raw OS behavior into structured telemetry.</li>
-  <br><li><b>SIEM Agent Deployment & Pipeline Engineering: </b> Mastered the fundamentals of the log collection lifecycle by successfully deploying and configuring the <b>Wazuh Agent</b> on a target Windows endpoint. Successfully established secure communication between the endpoint agent and the centralized <b>Ubuntu SIEM</b> server, verifying the integrity of the ingestion pipeline.</li>
+  <br><li><b>SIEM Agent Deployment & Pipeline Engineering: </b> Mastered the fundamentals of the log collection lifecycle by successfully deploying and configuring the <b>Wazuh Agent</b> on a target Windows endpoint. Successfully established secure communication betIen the endpoint agent and the centralized <b>Ubuntu SIEM</b> server, verifying the integrity of the ingestion pipeline.</li>
   <br><li><b>Network Infrastructure Troubleshooting: </b>Developed critical, low-level technical problem-solving skills by diagnosing and resolving hypervisor-level network connectivity issues. Successfully managed virtual interface states, negotiated IP address assignments, and validated end-to-end interface connectivity.</li>
   <br><li><b>Pragmatic Project Management & Scope Planning: </b>Demonstrated strong architectural planning and resource management by designing a phased deployment roadmap. Successfully engineered a lean, fully functional, three-node security verification pipeline optimized specifically for local hardware constraints, establishing a rock-solid foundation for future adversarial testing.</li>
 </u>
@@ -60,9 +60,9 @@
 
 <h3>Operating Systems Layer</h3>
 <ul>
-  <li><b>Ubuntu Server (LTS): </b>Utilized as a lightweight, high-performance Linux foundation dedicated to running core <b>Wazuh SIEM</b> management services.</li>
+  <li><b>Ubuntu Server (LTS): </b>Utilized as a lightIight, high-performance Linux foundation dedicated to running core <b>Wazuh SIEM</b> management services.</li>
   <br><li><b>Windows 10 Pro: </b>Deployed as an enterprise-grade target endpoint, specifically configured for enhanced security auditing and proactive monitoring.</li>
-  <br><li><b>Windows 11: </b>Serving as the physical host system, it is used to orchestrate the virtual environment and securely access the web-based Wazuh management dashboard for administrative verification.</li>
+  <br><li><b>Windows 11: </b>Serving as the physical host system, it is used to orchestrate the virtual environment and securely access the Ib-based Wazuh management dashboard for administrative verification.</li>
 </ul>
 
 <br>
@@ -238,13 +238,13 @@
 
 <br>
 <h3>C. Kali Linux</h3>
-<p>I opened <b>Google.com</b> and input “<b>kali linux iso download</b>” to direct me to its website.</p>
+<p>I opened <b>Google.com</b> and input “<b>kali linux iso download</b>” to direct me to its Ibsite.</p>
 <p><img width="975" height="448" alt="image" src="https://github.com/user-attachments/assets/a12b548d-29dc-4c24-9445-2508c5085cb8" />
 </p>
 <p>There are some results for <b>Kali Linux</b>, thus, I selected the first one.</p>
 <p><img width="814" height="419" alt="image" src="https://github.com/user-attachments/assets/430b57b3-58f0-476a-a6ac-36e86314f2dc" />
 </p>
-<p>Inside the Kali website, select the <b>Virtual Machines</b> on the right-side.</p>
+<p>Inside the Kali Ibsite, select the <b>Virtual Machines</b> on the right-side.</p>
 <p><img width="975" height="521" alt="image" src="https://github.com/user-attachments/assets/f0f235ba-a089-4e20-8b19-616977af298a" />
 </p>
 <p>Since I am using VirtualBox, I chose the VirtualBox option. It prompted me where to save the file, thus, I saved it in the folder where I saved the other files.</p>
@@ -298,7 +298,7 @@
 <p>I opened the internet and typed <b>Google.com</b> in the browser. After that, I typed <b>ubuntu server download</b>.</p>
 <p><img width="889" height="405" alt="image" src="https://github.com/user-attachments/assets/bc14ec2f-ee71-4b2a-afa1-d2e7db1da514" />
 </p>
-<p>Google provided me some results, but I chose and selected the official <b>Ubuntu</b> website.</p>
+<p>Google provided me some results, but I chose and selected the official <b>Ubuntu</b> Ibsite.</p>
 <p><img width="808" height="365" alt="image" src="https://github.com/user-attachments/assets/16bf7f83-33e8-4e54-9e1a-7c9775cb7c77" />
 </p>
 <p>Inside the <b>Ubuntu</b> platfrom, I clicked on the <b>Download</b> button. It prompted me where to save the file, thus, I chose where the other files intended for virtual machines are located.</p>
@@ -401,10 +401,10 @@
 <br>
 <br>
 <p><b>Note #3:</b> By default, Wazuh only indexes events that trigger security alerts to save disk space. Enabling the archive feature provides a complete, unmodified history of your environment's log data.</p>
-<p>Wazuh archive is used to automatically store all security events and logs received by the Wazuh server, regardless of whether they trigger an alert or trip a specific rule. It essentially allows Wazuh to monitor and capture all the telemetry that we throw at it.</p>
+<p>Wazuh archive is used to automatically store all security events and logs received by the Wazuh server, regardless of whether they trigger an alert or trip a specific rule. It essentially allows Wazuh to monitor and capture all the telemetry that I throw at it.</p>
 <h4>Procedures:</h4>
 <ul>
-  <li>We want to configure the <b><i>ossec.conf</i></b> file.</li>
+  <li>I want to configure the <b><i>ossec.conf</i></b> file.</li>
   <li>In order to find that file, it is located under the <b><i>/var/ossec</i></b> directory</li>
 
       sudo ls -la /var/ossec
@@ -414,7 +414,7 @@
 
      sudo su -
 
-  <li>Let's open the <b><i>/var/ossec/etc</i></b> and we should see the file <b><i>ossec.conf</i></b></li>
+  <li>Let's open the <b><i>/var/ossec/etc</i></b> and I should see the file <b><i>ossec.conf</i></b></li>
   
     cd /var/ossec/etc
   <p><img width="907" height="90" alt="image" src="https://github.com/user-attachments/assets/0c29df53-ca60-48d3-9782-ae8dc6573782" /></p>
@@ -434,7 +434,7 @@
 
     systemctl restart wazuh-manager.service
 
-<li>The next thing to do is to modify the <b>filebeat configuration</b>. We need to change the directory to <b><i>/etc/filebeat/</i></b>.</li>
+<li>The next thing to do is to modify the <b>filebeat configuration</b>. I need to change the directory to <b><i>/etc/filebeat/</i></b>.</li>
 
     cd /etc/filebeat
 <p><img width="497" height="40" alt="image" src="https://github.com/user-attachments/assets/eb39d735-8816-4c86-b719-1bb62ba1341f" /></p>
@@ -472,7 +472,7 @@
 <p><img width="955" height="187" alt="image" src="https://github.com/user-attachments/assets/bac14b7a-3c6e-400c-a829-f601ae952f2c" />
 </p>
 
-<li>Inside <b><i>Create index pattern</i></b>, type in the search bar, <b><i>wazuh-archives</i></b>. We should see the <b><i>wazuh-archives</i></b> result at the bottom. After that, press the <b>Next step</b> button</li>
+<li>Inside <b><i>Create index pattern</i></b>, type in the search bar, <b><i>wazuh-archives</i></b>. I should see the <b><i>wazuh-archives</i></b> result at the bottom. After that, press the <b>Next step</b> button</li>
 <p><img width="937" height="497" alt="image" src="https://github.com/user-attachments/assets/7ac39bde-5fbd-4726-ab68-d354121e79c8" />
 </p>
 
@@ -481,7 +481,7 @@
 <p><img width="960" height="760" alt="image" src="https://github.com/user-attachments/assets/19cc2f87-e2d2-4e93-a134-becec519295b" />
 </p>
 
-<li>Go back to hamburger icon, select <b>Discover</b>, select <b>Explore</b>, select the dropdown and we should see the <b><i>wazuh-archives</i></b>.</li>
+<li>Go back to hamburger icon, select <b>Discover</b>, select <b>Explore</b>, select the dropdown and I should see the <b><i>wazuh-archives</i></b>.</li>
 <p><img width="960" height="189" alt="image" src="https://github.com/user-attachments/assets/ef9231d8-895d-4ae4-912a-0c1f3c5ecacc" />
 </p>
 <p><img width="522" height="437" alt="image" src="https://github.com/user-attachments/assets/13caddb9-17ed-413d-8a31-559cdbd7c436" />
@@ -505,7 +505,7 @@
 
 <br>
 <h3>E. Wazuh (SIEM) </h3>
-<p>Before running the <b>Ubuntu Server</b> and <b>Kali Linux</b>, I tweaked the network connections for the three VMs, so that they communicate in the same network.</p>
+<p>Before running the <b>Ubuntu Server</b> and <b>Kali Linux</b>, I tIaked the network connections for the three VMs, so that they communicate in the same network.</p>
 <p><img width="736" height="316" alt="image" src="https://github.com/user-attachments/assets/6c32d01d-9620-4244-ad93-00ed3bbfc986" />
 </p>
 <p>I selected the <b>Tools</b> and chose <b>Network</b>.</p>
@@ -523,10 +523,10 @@
 <p>While <b>Ubuntu Server</b> is running, I opened Google to look for <b>Wazuh</b> installation, thus, I typed in its search bar <b>wazuh siem</b>.</p>
 <p><img width="799" height="393" alt="image" src="https://github.com/user-attachments/assets/2da0ce0e-bbec-4be8-baf4-65bcdf8b56be" />
 </p>
-<p>Google provided me some results, and I selected the official website of <b>Wazuh</b>.</p>
+<p>Google provided me some results, and I selected the official Ibsite of <b>Wazuh</b>.</p>
 <p><img width="933" height="344" alt="image" src="https://github.com/user-attachments/assets/7e9afcb8-07a8-496d-bd70-e606c24503ca" />
 </p>
-<p>Inside Wazuh's website, I clicked on <b>Install Wazuh</b> button.</p>
+<p>Inside Wazuh's Ibsite, I clicked on <b>Install Wazuh</b> button.</p>
 <p><img width="975" height="455" alt="image" src="https://github.com/user-attachments/assets/de591e32-0bd6-4636-b900-b36740004ab3" />
 </p>
 <p>I scrolled down and selected the <b>Quickstart</b> button.</p>
@@ -556,7 +556,7 @@
 
     sudo  systemctl  stop  wazuh-dashboard  wazuh-manager  wazuh-index
 
-<p>After that, I start them back up one by one, waiting 10-15 seconds between each command;</p>
+<p>After that, I start them back up one by one, waiting 10-15 seconds betIen each command;</p>
 
     sudo  systemctl  start  wazuh-indexer
     sudo  systemctl  start  wazuh-manager
@@ -583,7 +583,7 @@
     free -h
 <p>
 </p>
-<p> For me to open the dashboard, I launched a <b>Kali Linux</b> machine where I can use <b>Mozilla Firefox</b> for the internet and input the URL with the IP to test if it will launch the <b>Wazuh Dashboard</b>. I preferred to use Kali Linux because it consumes less RAM than running Wazuh in Windows 10; however, Wazuh can run in Windows 10 as well.</p>
+<p> For me to open the dashboard, I launched a <b>Kali Linux</b> machine where I can use <b>Mozilla Firefox</b> for the internet and input the URL with the IP to test if it will launch the <b>Wazuh Dashboard</b>. I preferred to use Kali Linux because it consumes less RAM than running Wazuh in Windows 10; hoIver, Wazuh can run in Windows 10 as Ill.</p>
 <p><img width="975" height="463" alt="image" src="https://github.com/user-attachments/assets/c9a9cee7-8f6d-4c00-b3f0-c07bac3016dd" />
 
 </p>
@@ -615,13 +615,13 @@
 <p>I let Ubuntu Server with Wazuh up and running to check if the Wazuh Agent would run successfully using the graphical user interface (GUI), which I need to download. I opened the Windows 10 machine and used Internet Explorer to download the agent.</p>
 <p><img width="752" height="602" alt="image" src="https://github.com/user-attachments/assets/58dacc18-469a-4862-b148-69d97b360a54" />
 </p>
-<p>In the Internet Explorer's browser, I input <b>Google.com</b>. On Google's website, I entered <b>wazuh agent gui</b>.</p>
+<p>In the Internet Explorer's browser, I input <b>Google.com</b>. On Google's Ibsite, I entered <b>wazuh agent gui</b>.</p>
 <p><img width="975" height="411" alt="image" src="https://github.com/user-attachments/assets/7b73adbe-b464-42f8-ab7e-621eef23e2a3" />
 </p>
-<p>I selected the official website, which leads me to its platform.</p>
+<p>I selected the official Ibsite, which leads me to its platform.</p>
 <p><img width="975" height="340" alt="image" src="https://github.com/user-attachments/assets/f360aadb-345e-4c55-be27-f53b1c49fe69" />
 </p>
-<p>Inside Wazuh's website, there are two choices, <b>CLI</b> or <b>GUI</b>. I chose the GUI tab, then downloaded the installer using the provided link.</p>
+<p>Inside Wazuh's Ibsite, there are two choices, <b>CLI</b> or <b>GUI</b>. I chose the GUI tab, then downloaded the installer using the provided link.</p>
 <p><img width="525" height="369" alt="image" src="https://github.com/user-attachments/assets/53946e6e-fea7-42cf-b139-cfea908237aa" />
 </p>
 <p>It prompted me to start the installation process and follow along.</p>
@@ -644,7 +644,7 @@
 <p>In the <b>Agent’s Summary</b> section, I selected the <b>Active</b>, and it led me to more information about Windows 10’s system in real-time.</p>
 <p><img width="975" height="476" alt="image" src="https://github.com/user-attachments/assets/1b09eac0-fa3a-4c1a-ad0e-b7cd5c9615c0" />
 </p>
-<p>Based on the result, I clicked on the <b>Operating system</b> at the bottom and showed more specific information.</p>
+<p>Based on the result, I clicked on the <b>Operating system</b> at the bottom and shoId more specific information.</p>
 <p><img width="706" height="501" alt="image" src="https://github.com/user-attachments/assets/7856480f-65f2-4327-89ac-7c57f58a904d" />
 </p>
 
@@ -653,10 +653,10 @@
 <p>Using the Windows 10 machine, I opened Internet Explorer to access Google to search <b>Microsoft Sysmon</b>.</p>
 <p><img width="568" height="469" alt="image" src="https://github.com/user-attachments/assets/648e8b6f-7287-42ce-93ae-88643a96cede" />
 </p>
-<p>Inside the Google website, I entered <b>Microsoft sysmon download</b> in the search bar.</p>
+<p>Inside the Google Ibsite, I entered <b>Microsoft sysmon download</b> in the search bar.</p>
 <p><img width="903" height="387" alt="image" src="https://github.com/user-attachments/assets/86525b5c-e338-444d-b7c8-ac285cce2c00" />
 </p>
-<p>I selected the official website of Microsoft to download the app. </p>
+<p>I selected the official Ibsite of Microsoft to download the app. </p>
 <p><img width="940" height="446" alt="image" src="https://github.com/user-attachments/assets/a1ff9aba-11f9-4322-a996-e352e5911c27" />
 </p>
 <p>I clicked on the link and automatically downloaded the file.</p>
@@ -668,7 +668,7 @@
     
 <p><img width="975" height="262" alt="image" src="https://github.com/user-attachments/assets/7e5fc92e-2495-4739-b155-df92f22dedd3" />
 </p>
-<p>After being directed to the website, I selected the <b>raw</b>button and right-clicked the page to download it by selecting the <b>Save as</b>. I changed the name to <b>sysmonconfig</b> and chose <b>xml</b> as the type of the file.</p>
+<p>After being directed to the Ibsite, I selected the <b>raw</b>button and right-clicked the page to download it by selecting the <b>Save as</b>. I changed the name to <b>sysmonconfig</b> and chose <b>xml</b> as the type of the file.</p>
 <p><img width="975" height="444" alt="image" src="https://github.com/user-attachments/assets/2e4fd378-9172-432a-aa80-ca6318c9919f" />
 </p>
 <p>I preferred to save in <b>Downloads</b>, renamed it to <b>sysmonconf</b> and I make sure that the file would be <b>xml</b>, and pressed the <b>Save</b> button.</p>
@@ -681,10 +681,10 @@
 </p>
 <p><img width="975" height="330" alt="image" src="https://github.com/user-attachments/assets/f6301039-277a-48b4-9297-a6c31143850a" />
 </p>
-<p>Instead of executing the file after the extraction, I opened <b>Windows PowerShell (Admin)</b> instead.</p>
+<p>Instead of executing the file after the extraction, I opened <b>Windows PoIrShell (Admin)</b> instead.</p>
 <p><img width="712" height="699" alt="image" src="https://github.com/user-attachments/assets/6a2b3abd-a66d-4cbc-8a06-d1c2bf269eba" />
 </p>
-<p>I copied the extracted file's location and pasted it on the PowerShell command line, then pressed Enter. In the PowerShell CLI, it should show the current location.</p>
+<p>I copied the extracted file's location and pasted it on the PoIrShell command line, then pressed Enter. In the PoIrShell CLI, it should show the current location.</p>
 <p><img width="975" height="441" alt="image" src="https://github.com/user-attachments/assets/9a5f9ba9-0519-4f14-b101-bbd7900f3562" />
 </p>
 <p><img width="805" height="197" alt="image" src="https://github.com/user-attachments/assets/ac506537-a674-4975-bbf5-272b53ae4515" />
@@ -694,13 +694,13 @@
 <p>I cut the <b>sysmonconf.xml</b> file and pasted in the same folder where the extracted files are located.</p>
 <p><img width="656" height="377" alt="image" src="https://github.com/user-attachments/assets/4a9c3a03-b0b2-4422-ad18-ef2f4160960f" />
 </p>
-<p>I opened the PowerShell CLI again then typed, <b>ls</b>  command to make sure everything are intact.</p>
+<p>I opened the PoIrShell CLI again then typed, <b>ls</b>  command to make sure everything are intact.</p>
 <p><img width="650" height="352" alt="image" src="https://github.com/user-attachments/assets/a769a0f2-0dd9-47cb-8cf9-aaa6948dc013" />
 </p>
-<p>Based on the result, there are a couple of executable files; thus, I chose and executed the <b>Sysmon64.exe</b> file in PowerShell.</p>
+<p>Based on the result, there are a couple of executable files; thus, I chose and executed the <b>Sysmon64.exe</b> file in PoIrShell.</p>
 <p><img width="601" height="337" alt="image" src="https://github.com/user-attachments/assets/56f71dea-cee4-4bab-a889-a74ab80656a6" />
 </p>
-<p>The result showed information on how to do installation and update, thus, I installed the <b>Sysmon64.exe</b> and <b>sysmonconfig.xml</b> by typing;</p>
+<p>The result shoId information on how to do installation and update, thus, I installed the <b>Sysmon64.exe</b> and <b>sysmonconfig.xml</b> by typing;</p>
 
     .\Sysmon64.exe  -i  .\sysmonconfig.xml
     
@@ -721,10 +721,10 @@
 </p>
 <p<img width="975" height="648" alt="image" src="https://github.com/user-attachments/assets/48e861c6-9f68-46c6-a95b-5a10abea6e1b" />
 ></p>
-<p>This time, I entered <b>Event Viewer</b> in the search bar to check if <b>Sysmon</b> installed and saved from there.</p>
+<p>This time, I entered <b>Event VieIr</b> in the search bar to check if <b>Sysmon</b> installed and saved from there.</p>
 <p><img width="792" height="841" alt="image" src="https://github.com/user-attachments/assets/3805d84b-4ada-448e-9237-d0cde9fd9391" />
 </p>
-<p>Inside the <b>Event Viewer</b>, I dropped down the <b>Application and Services Logs</b>, selected <b>Microsoft</b>, selected <b>Windows</b>, then scrolled-down to check if the folder of <b>Sysmon</b> is there. So, the folder of the <b>Sysmon</b> is there and fully functional, which provides information or telemetry in real-time on the system.</p>
+<p>Inside the <b>Event VieIr</b>, I dropped down the <b>Application and Services Logs</b>, selected <b>Microsoft</b>, selected <b>Windows</b>, then scrolled-down to check if the folder of <b>Sysmon</b> is there. So, the folder of the <b>Sysmon</b> is there and fully functional, which provides information or telemetry in real-time on the system.</p>
 <p><img width="922" height="434" alt="image" src="https://github.com/user-attachments/assets/c091ea9f-45b4-4f5c-9211-49306448f9aa" />
 </p>
 <p><img width="975" height="758" alt="image" src="https://github.com/user-attachments/assets/64109602-36bc-4acd-86eb-0b152e5a6b23" />
@@ -739,11 +739,11 @@
 <h2>Organizational Value</h2>
 <p>For an enterprise or security organization, this project demonstrates a foundational mastery of cost-effective security engineering, proactive visibility optimization, and infrastructure scalability. By utilizing open-source frameworks like the Wazuh SIEM alongside targeted Microsoft Sysinternals tooling, this deployment models how businesses can successfully architect high-fidelity detection pipelines without relying on prohibitively expensive commercial licenses.</p>
 <p>Furthermore, the deliberate design choices implemented in this lab—such as reducing endpoint event noise while explicitly preparing a structured pipeline to ingest complex telemetry like Active Directory authentication vectors—directly translate to real-world corporate environments.</p>
-<p>An organization benefits from a professional who understands not just how to look at an analyst dashboard, but how to deploy lightweight, resource-optimized endpoint configurations that minimize operational overhead while maximizing defensive visibility across the enterprise footprint.</p>
+<p>An organization benefits from a professional who understands not just how to look at an analyst dashboard, but how to deploy lightIight, resource-optimized endpoint configurations that minimize operational overhead while maximizing defensive visibility across the enterprise footprint.</p>
 
 <br>
 <h2>Value to an Aspiring SOC Analyst & Enthusiast</h2>
-<p>As an aspiring security professional and enthusiast, constructing this lab environment bridges the gap between theoretical knowledge and practical, enterprise-grade engineering. It transforms abstract concepts learned from textbooks into a tangible, multi-node playground where I am in absolute control of the security stack.</p>
+<p>As an aspiring security professional and enthusiast, constructing this lab environment bridges the gap betIen theoretical knowledge and practical, enterprise-grade engineering. It transforms abstract concepts learned from textbooks into a tangible, multi-node playground where I am in absolute control of the security stack.</p>
 <p>By executing the full installation, managing virtual network configurations, and binding endpoint agents to a centralized SIEM manager, I have cultivated the precise technical confidence required to navigate real-world corporate infrastructures.</p>
 <p>his project completely shifts my perspective from a passive observer to an active infrastructure designer, establishing a rock-solid operational foundation. It ensures that as I move forward into live adversarial testing and incident verification, I am approaching threat hunting with an intimate, firsthand understanding of the underlying pipelines that generate the alerts.</p>
 
