@@ -729,7 +729,7 @@
 <p><img width="975" height="758" alt="image" src="https://github.com/user-attachments/assets/64109602-36bc-4acd-86eb-0b152e5a6b23" />
 </p>
 
-
+<br>
 <h3>H. Wazuh Agent & Sysmon Connection</h3>
 <p>On the left pane, the <b>Available Fields</b>, i selected the <b>agent.name</b>, and selected <b>Windows 10</b>.</p>
 <p><img width="890" height="437" alt="image" src="https://github.com/user-attachments/assets/76c8b95b-82fb-4d1d-8868-e4eaf37212a5" />
@@ -741,7 +741,72 @@
 <p>I typed in the search bar for <b>Sysmon</b> but it shows no result. I found <b>397 hits</b>, but that is coming from our Sysmon service, rather than events generating from Sysmon</p>
 <p><img width="965" height="640" alt="image" src="https://github.com/user-attachments/assets/62fb6bb9-805c-4e77-ab57-c813a60b1a46" />
 </p>
+<p>I don’t see any events sourced from Sysmon yet; it’s because, in Wazuh and even in any other SIEM, I need to configure its settings to instruct the agent to push Sysmon data.</p>
 <p><img width="975" height="288" alt="image" src="https://github.com/user-attachments/assets/4e8ffd19-b531-4a54-b124-de9c923d8b41" />
+</p>
+<p>I opened Notepad and selected the <i>Run as administrator</i>.</p>
+<p><img width="600" height="495" alt="image" src="https://github.com/user-attachments/assets/289987e2-f772-449c-bf4c-bc166334503c" />
+</p>
+<p>I selected <b>File</b> and chose <b>Open.</b> The reason for this is to find the Wazuh agent configuration settings.</p>
+<p><img width="554" height="284" alt="image" src="https://github.com/user-attachments/assets/c3242038-6596-4d85-ab3b-9b3c5f4d5da8" />
+</p>
+<p>I selected the <b>This PC</b> on the left pane and the <b>C:</b> drive.</p>
+<p><img width="726" height="414" alt="image" src="https://github.com/user-attachments/assets/a0a74c80-c6a8-4977-ab2b-88753c3abc0a" />
+</p>
+<p>I selected the <b>Program Files (x86)</b>.</p>
+<p><img width="740" height="446" alt="image" src="https://github.com/user-attachments/assets/3d3ff48a-f70d-4e16-90df-2772eb00b6bd" />
+</p>
+<p>I selected the <b>ossec-agent</b>.</p>
+<p><img width="744" height="450" alt="image" src="https://github.com/user-attachments/assets/79c480d5-f627-4547-8dfb-1b423c79b8ae" />
+</p>
+<p>Inside the ossec-agent folder, I selected <b>All Files</b> at the bottom right to show all results, in order to find the <b>ossec.conf</b> file and select it.</p>
+<p><img width="739" height="451" alt="image" src="https://github.com/user-attachments/assets/f1627357-0377-4a56-8783-28f1caf6acd6" />
+</p>
+<p><img width="740" height="457" alt="image" src="https://github.com/user-attachments/assets/aedd696e-56a9-436d-bcfa-3f14ddb20479" />
+</p>
+<p>And this is how the <b>ossec configuration</b> would look like.</p>
+<p><img width="975" height="513" alt="image" src="https://github.com/user-attachments/assets/6b5e2679-a337-4ddd-b650-f268fc0889ae" />
+</p>
+<p>Now, I copied the <b>Application</b> log file and pasted it next to it and replaced the word <b><i>Application</i></b> later on, in order to point to Sysmon.</p>
+<p><img width="975" height="771" alt="image" src="https://github.com/user-attachments/assets/b5ddaf8b-1cc5-43e5-9a6c-8d4980852ab0" />
+</p>
+<p><img width="975" height="812" alt="image" src="https://github.com/user-attachments/assets/5bb60127-877a-41ed-98af-441c7e7b2362" />
+</p>
+<p>Next, I opened <b>Event Viewer</b>, selected <b>Applications and Services Logs</b>, selected <b>Microsoft</b>, dropped down Windows, and scrolled down to find Sysmon.</p>
+<p><img width="975" height="534" alt="image" src="https://github.com/user-attachments/assets/b3032e5f-bf13-4d7f-9f37-a8541a9a9a2e" />
+</p>
+<p><img width="975" height="684" alt="image" src="https://github.com/user-attachments/assets/ec210255-9e71-4b5d-b369-e70bf06ba912" />
+</p>
+<p><img width="975" height="680" alt="image" src="https://github.com/user-attachments/assets/6a087a38-49a8-4477-b4b7-c1f2fc4f253e" />
+</p>
+<p><img width="621" height="509" alt="image" src="https://github.com/user-attachments/assets/56b13c7b-7be7-47ac-9c30-45e9e996cd21" />
+</p>
+<p>After that, I dropped down <b>Sysmon</b>, and the <b>Operational</b> event log showed up. I right-clicked on it and selected <b>Properties.</b></p>
+<p><img width="975" height="589" alt="image" src="https://github.com/user-attachments/assets/7dba597d-b7e1-47d7-a203-a1170a54c140" />
+</p>
+<p><img width="700" height="652" alt="image" src="https://github.com/user-attachments/assets/4c2805c9-8937-4d4c-bf78-47a248b49ec7" />
+</p>
+<p>I copied the <i>Full Name</i> (<b>Microsoft-Windows-Sysmon/Operational</b>), pasted the copied log file into Notepad, then replaced <b><i>Operational</i></b> with <b><i>Microsoft-Windows-Sysmon/Operational</i></b>  and saved.</p>
+<p><img width="787" height="537" alt="image" src="https://github.com/user-attachments/assets/abc22c3a-d60a-4ad0-a96d-4a52701eb4de" />
+</p>
+<p><img width="789" height="414" alt="image" src="https://github.com/user-attachments/assets/95b3fd90-2610-4736-85f5-b3e93ee2f791" />
+</p>
+<p><img width="975" height="585" alt="image" src="https://github.com/user-attachments/assets/2abf58dc-7004-4246-a9da-ea6dcaa6f7bb" />
+</p>
+<p><img width="975" height="606" alt="image" src="https://github.com/user-attachments/assets/59d31bfc-c7f7-4504-9eb9-991e8b6ab586" />
+</p>
+<p><img width="872" height="421" alt="image" src="https://github.com/user-attachments/assets/1116d1a9-b4f2-4a15-bf1a-37a014cb97ec" />
+</p>
+<p>After that, I opened the <b>Services</b> and selected Wazuh, then restarted its service.</p>
+<p><img width="975" height="633" alt="image" src="https://github.com/user-attachments/assets/4150ec48-7669-4f49-b6ef-8cb188a43aa5" />
+</p>
+<p><img width="975" height="638" alt="image" src="https://github.com/user-attachments/assets/21d79fbd-3035-4d33-862e-5f7ddead4263" />
+</p>
+<p>Going back to the Wazuh dashboard, I restarted or refreshed it as well.</p>
+<p><img width="694" height="527" alt="image" src="https://github.com/user-attachments/assets/16a8e101-4a73-41e2-96e2-4af5fc0cb5af" />
+</p>
+<p>As you can see, there are <b>740 hits</b> now. Not only that, it is now sourcing from Sysmon because when I dropped down and expanded the <b>Event</b> and scrolled down, it shows up that it came from <b>Microsof-windows-Sysmon/Operational</b>.</p>
+<p><img width="950" height="471" alt="image" src="https://github.com/user-attachments/assets/21a18d0f-bcc1-4c57-b7e5-073aeafe09c7" />
 </p>
 
 
