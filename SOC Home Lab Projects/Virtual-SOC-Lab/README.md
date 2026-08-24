@@ -496,8 +496,6 @@
 <p><img width="496" height="447" alt="image" src="https://github.com/user-attachments/assets/88e732c8-1260-414f-8854-72e98cc30872" />
 </p>
 </p>
-
-
 </ul>
 
 
@@ -523,7 +521,7 @@
 <p>While <b>Ubuntu Server</b> is running, I opened Google to look for <b>Wazuh</b> installation, thus, I typed in its search bar <b>wazuh siem</b>.</p>
 <p><img width="799" height="393" alt="image" src="https://github.com/user-attachments/assets/2da0ce0e-bbec-4be8-baf4-65bcdf8b56be" />
 </p>
-<p>Google provided me some results, and I selected the official Ibsite of <b>Wazuh</b>.</p>
+<p>Google provided me with some results, and I selected the official website of <b>Wazuh</b>.</p>
 <p><img width="933" height="344" alt="image" src="https://github.com/user-attachments/assets/7e9afcb8-07a8-496d-bd70-e606c24503ca" />
 </p>
 <p>Inside Wazuh's Ibsite, I clicked on <b>Install Wazuh</b> button.</p>
@@ -532,7 +530,7 @@
 <p>I scrolled down and selected the <b>Quickstart</b> button.</p>
 <p><img width="975" height="229" alt="image" src="https://github.com/user-attachments/assets/f2d73b0f-c135-4d3b-97ee-2738e2216c43" />
 </p>
-<p>After that, it provided me a command to input in Ubuntu Server's CLI and run the said command, which is the;</p>
+<p>After that, it provided me with a command to input in Ubuntu Server's CLI and run the said command, which is the;</p>
 
       curl -sO https://packages.wazuh.com/4.14/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
 
@@ -543,7 +541,7 @@
 <p>After installation, it provided me with <b>User</b> and <b>Password</b> credentials.</p>
 <p><img width="1011" height="203" alt="image" src="https://github.com/user-attachments/assets/5daa1651-1753-4d8a-ace4-749007d5576d" />
 </p>
-<p>It also provided me with the URL to input inside the browser, but I need to replace the <b><wazuh-dashboard-ip></b>.</p>
+<p>It also provided me with the URL to input into the browser, but I need to replace the <b><wazuh-dashboard-ip></b>.</p>
 
     ip addr  OR  ip a
 
@@ -552,11 +550,11 @@
 <p>I typed the  <b>ip a</b>  command to know what the IP address would be for the Wazuh dashboard. Alternatively, I typed  <b>ip addr</b>, which gave me the same result. </p>
 <p><img width="975" height="619" alt="image" src="https://github.com/user-attachments/assets/e022eab0-b583-46df-b0a5-bfc20fe56fb5" />
 </p>
-<p>Before I start running Wazuh, I entered several commands that needed to run it seamlessly, such as: </p>
+<p>Before I started running Wazuh, I entered several commands that needed to run it seamlessly, such as: </p>
 
     sudo  systemctl  stop  wazuh-dashboard  wazuh-manager  wazuh-index
 
-<p>After that, I start them back up one by one, waiting 10-15 seconds betIen each command;</p>
+<p>After that, I start them back up one by one, waiting 10-15 seconds between each command;</p>
 
     sudo  systemctl  start  wazuh-indexer
     sudo  systemctl  start  wazuh-manager
@@ -574,7 +572,7 @@
     
 <p><img width="780" height="467" alt="image" src="https://github.com/user-attachments/assets/69912a94-6a4d-41fa-841b-8ed8494d2749" />
 </p>
-<p><b>Wazuh</b> Wazuh is highly resource-intensive. My Ubuntu VM has <b>6 GB</b> of RAM allocated, the API daemon will crash silently under an <b>Out of Memory (OOM)</b> exception. I cleared the RAM cache immediately using:</p>
+<p><b>Wazuh</b> Wazuh is highly resource-intensive. My Ubuntu VM has <b>6 GB</b> of RAM allocated; the API daemon will crash silently under an <b>Out of Memory (OOM)</b> exception. I cleared the RAM cache immediately using:</p>
 
       sudo  sync;  echo  3  |  sudo  tee  /proc/sys/vm/drop_caches
       
@@ -583,7 +581,7 @@
     free -h
 <p>
 </p>
-<p> For me to open the dashboard, I launched a <b>Kali Linux</b> machine where I can use <b>Mozilla Firefox</b> for the internet and input the URL with the IP to test if it will launch the <b>Wazuh Dashboard</b>. I preferred to use Kali Linux because it consumes less RAM than running Wazuh in Windows 10; hoIver, Wazuh can run in Windows 10 as Ill.</p>
+<p> For me to open the dashboard, I launched a <b>Kali Linux</b> machine where I can use <b>Mozilla Firefox</b> for the internet and input the URL with the IP to test if it will launch the <b>Wazuh Dashboard</b>. I preferred to use Kali Linux because it consumes less RAM than running Wazuh in Windows 10; however, Wazuh can run in Windows 10 as well. </p>
 <p><img width="975" height="463" alt="image" src="https://github.com/user-attachments/assets/c9a9cee7-8f6d-4c00-b3f0-c07bac3016dd" />
 
 </p>
@@ -601,21 +599,21 @@
 </p>
 <p><img width="975" height="502" alt="image" src="https://github.com/user-attachments/assets/c45f5302-bf3a-4a48-8975-e5b11167e06e" />
 </p>
-<p> If I shut down the VMs, both <b>Kali Linux</b> (where I opened the Wazuh dashboard) and <b>Ubuntu Server</b> (to start running Wazuh), and want to run Wazuh again, I will type this command to see if the services are running their own:</p>
+<p> If I shut down the VMs, both <b>Kali Linux</b> (where I opened the Wazuh dashboard) and <b>Ubuntu Server</b> (to start running Wazuh), and want to run Wazuh again, I typed this command to see if the services are running on their own:</p>
 
     sudo systemctl status wazuh-manager wazuh-indexer wazuh-dashboard
     
 <p>If I see <b>active (running)</b> in green for all three, I can immediately type the HTTPS URL into the Kali Linux browser.</p>
-<p>If in case the status command shows that the services are <b>inactive</b> or <b>stopped</b>, I would run this command on my Ubuntu Server to force them to start:</p>
+<p>If the status command shows that the services are <b>inactive</b> or <b>stopped</b>, I would run this command on my Ubuntu Server to force them to start:</p>
 
     sudo systemctl start wazuh-indexer wazuh-manager wazuh-dashboard
     
 <br>
 <h3>F. Deploying Wazuh Agents on Windows Endpoints</h3>
-<p>I let Ubuntu Server with Wazuh up and running to check if the Wazuh Agent would run successfully using the graphical user interface (GUI), which I need to download. I opened the Windows 10 machine and used Internet Explorer to download the agent.</p>
+<p>I let Ubuntu Server with Wazuh up and running to check if the Wazuh Agent would run successfully using the graphical user interface (GUI), which I needed to download. I opened the Windows 10 machine and used Internet Explorer to download the agent.</p>
 <p><img width="752" height="602" alt="image" src="https://github.com/user-attachments/assets/58dacc18-469a-4862-b148-69d97b360a54" />
 </p>
-<p>In the Internet Explorer's browser, I input <b>Google.com</b>. On Google's Ibsite, I entered <b>wazuh agent gui</b>.</p>
+<p>In the Internet Explorer's browser, I input <b>Google.com</b>. On Google's website, I entered <b>wazuh agent gui</b>.</p>
 <p><img width="975" height="411" alt="image" src="https://github.com/user-attachments/assets/7b73adbe-b464-42f8-ab7e-621eef23e2a3" />
 </p>
 <p>I selected the official Ibsite, which leads me to its platform.</p>
@@ -633,7 +631,7 @@
 <p>I input Wazuh's IP address and pressed <b>Save</b> button.</p>
 <p><img width="825" height="520" alt="image" src="https://github.com/user-attachments/assets/7032e6d9-bdfd-4e60-b9f4-d729fbcd83e8" />
 </p>
-<p>I clicked the <b>Manage</b> button on top and selected <b>Start</b> to start the Wazuh Agent to communicate back to its dashboard. After that, I pressed the <b>OK</b> button.</p>
+<p>I clicked the <b>Manage</b> button at the top and selected <b>Start</b> to start the Wazuh Agent to communicate back to its dashboard. After that, I pressed the <b>OK</b> button.</p>
 <p><img width="975" height="587" alt="image" src="https://github.com/user-attachments/assets/9b49c12a-77b8-43cb-9465-ef685505a2c7" />
 </p>
 <p><img width="968" height="591" alt="image" src="https://github.com/user-attachments/assets/e17a5757-5400-4e88-a360-629eadedb82c" />
@@ -641,10 +639,10 @@
 <p>Going back to the Wazuh Dashboard and refreshing, the Wazuh Agent successfully installed and did its job, and registered the Windows 10 machine in the dashboard.</p>
 <p><img width="975" height="693" alt="image" src="https://github.com/user-attachments/assets/ac103e72-30f8-4fac-9c7b-fa468413a97d" />
 </p>
-<p>In the <b>Agent’s Summary</b> section, I selected the <b>Active</b>, and it led me to more information about Windows 10’s system in real-time.</p>
+<p>In the <b>Agent’s Summary</b> section, I selected <b>Active</b>, and it led me to more information about Windows 10’s system in real-time.</p>
 <p><img width="975" height="476" alt="image" src="https://github.com/user-attachments/assets/1b09eac0-fa3a-4c1a-ad0e-b7cd5c9615c0" />
 </p>
-<p>Based on the result, I clicked on the <b>Operating system</b> at the bottom and shoId more specific information.</p>
+<p>Based on the result, I clicked on the <b>Operating system</b> at the bottom and showed more specific information.</p>
 <p><img width="706" height="501" alt="image" src="https://github.com/user-attachments/assets/7856480f-65f2-4327-89ac-7c57f58a904d" />
 </p>
 
@@ -668,7 +666,7 @@
     
 <p><img width="975" height="262" alt="image" src="https://github.com/user-attachments/assets/7e5fc92e-2495-4739-b155-df92f22dedd3" />
 </p>
-<p>After being directed to the Ibsite, I selected the <b>raw</b>button and right-clicked the page to download it by selecting the <b>Save as</b>. I changed the name to <b>sysmonconfig</b> and chose <b>xml</b> as the type of the file.</p>
+<p>After being directed to the website, I selected the <b>raw</b>button and right-clicked the page to download it by selecting <b>Save as</b>. I changed the name to <b>sysmonconfig</b> and chose <b>xml</b> as the type of the file.</p>
 <p><img width="975" height="444" alt="image" src="https://github.com/user-attachments/assets/2e4fd378-9172-432a-aa80-ca6318c9919f" />
 </p>
 <p>I preferred to save in <b>Downloads</b>, renamed it to <b>sysmonconf</b> and I make sure that the file would be <b>xml</b>, and pressed the <b>Save</b> button.</p>
@@ -681,10 +679,10 @@
 </p>
 <p><img width="975" height="330" alt="image" src="https://github.com/user-attachments/assets/f6301039-277a-48b4-9297-a6c31143850a" />
 </p>
-<p>Instead of executing the file after the extraction, I opened <b>Windows PoIrShell (Admin)</b> instead.</p>
+<p>Instead of executing the file after the extraction, I opened <b>Windows PowerShell (Admin)</b> instead.</p>
 <p><img width="712" height="699" alt="image" src="https://github.com/user-attachments/assets/6a2b3abd-a66d-4cbc-8a06-d1c2bf269eba" />
 </p>
-<p>I copied the extracted file's location and pasted it on the PoIrShell command line, then pressed Enter. In the PoIrShell CLI, it should show the current location.</p>
+<p>I copied the extracted file's location and pasted it on the PowerShell command line, then pressed Enter. In the PowerShell CLI, it should show the current location.</p>
 <p><img width="975" height="441" alt="image" src="https://github.com/user-attachments/assets/9a5f9ba9-0519-4f14-b101-bbd7900f3562" />
 </p>
 <p><img width="805" height="197" alt="image" src="https://github.com/user-attachments/assets/ac506537-a674-4975-bbf5-272b53ae4515" />
@@ -700,7 +698,7 @@
 <p>Based on the result, there are a couple of executable files; thus, I chose and executed the <b>Sysmon64.exe</b> file in PoIrShell.</p>
 <p><img width="601" height="337" alt="image" src="https://github.com/user-attachments/assets/56f71dea-cee4-4bab-a889-a74ab80656a6" />
 </p>
-<p>The result shoId information on how to do installation and update, thus, I installed the <b>Sysmon64.exe</b> and <b>sysmonconfig.xml</b> by typing;</p>
+<p>The result should show information on how to do installation and update; thus, I installed the <b>Sysmon64.exe</b> and <b>sysmonconfig.xml</b> by typing: </p>
 
     .\Sysmon64.exe  -i  .\sysmonconfig.xml
     
@@ -708,7 +706,7 @@
 </p>
 <p><img width="827" height="252" alt="image" src="https://github.com/user-attachments/assets/6846ad7a-1c04-460c-9ea4-d0bdd23bd846" />
 </p>
-<p>It prompted to agree to the license of Sysmon Monitor and selected the <b>Agree</b> button, then let it load up.</p>
+<p>It prompted me to agree to the license of Sysmon Monitor and selected the <b>Agree</b> button, then let it load up.</p>
 <p><img width="975" height="842" alt="image" src="https://github.com/user-attachments/assets/b0890607-d2a9-4f0c-8868-f283bf5052af" />
 </p>
 <p><img width="802" height="344" alt="image" src="https://github.com/user-attachments/assets/a2fe4c47-d58f-4bd9-8d0d-2e1dfcf94432" />
@@ -724,7 +722,7 @@
 <p>This time, I entered <b>Event VieIr</b> in the search bar to check if <b>Sysmon</b> installed and saved from there.</p>
 <p><img width="792" height="841" alt="image" src="https://github.com/user-attachments/assets/3805d84b-4ada-448e-9237-d0cde9fd9391" />
 </p>
-<p>Inside the <b>Event VieIr</b>, I dropped down the <b>Application and Services Logs</b>, selected <b>Microsoft</b>, selected <b>Windows</b>, then scrolled-down to check if the folder of <b>Sysmon</b> is there. So, the folder of the <b>Sysmon</b> is there and fully functional, which provides information or telemetry in real-time on the system.</p>
+<p>Inside the <b>Event VieIr</b>, I dropped down the <b>Application and Services Logs</b>, selected <b>Microsoft</b>, selected <b>Windows</b>, then scrolled-down to check if the folder of <b>Sysmon</b> is there. So, the folder of <b>Sysmon</b> is there and fully functional, which provides information or telemetry in real-time on the system.</p>
 <p><img width="922" height="434" alt="image" src="https://github.com/user-attachments/assets/c091ea9f-45b4-4f5c-9211-49306448f9aa" />
 </p>
 <p><img width="975" height="758" alt="image" src="https://github.com/user-attachments/assets/64109602-36bc-4acd-86eb-0b152e5a6b23" />
@@ -739,13 +737,13 @@
 <h2>Organizational Value</h2>
 <p>For an enterprise or security organization, this project demonstrates a foundational mastery of cost-effective security engineering, proactive visibility optimization, and infrastructure scalability. By utilizing open-source frameworks like the Wazuh SIEM alongside targeted Microsoft Sysinternals tooling, this deployment models how businesses can successfully architect high-fidelity detection pipelines without relying on prohibitively expensive commercial licenses.</p>
 <p>Furthermore, the deliberate design choices implemented in this lab—such as reducing endpoint event noise while explicitly preparing a structured pipeline to ingest complex telemetry like Active Directory authentication vectors—directly translate to real-world corporate environments.</p>
-<p>An organization benefits from a professional who understands not just how to look at an analyst dashboard, but how to deploy lightIight, resource-optimized endpoint configurations that minimize operational overhead while maximizing defensive visibility across the enterprise footprint.</p>
+<p>An organization benefits from a professional who understands not just how to look at an analyst dashboard, but how to deploy lightweight, resource-optimized endpoint configurations that minimize operational overhead while maximizing defensive visibility across the enterprise footprint.</p>
 
 <br>
 <h2>Value to an Aspiring SOC Analyst & Enthusiast</h2>
-<p>As an aspiring security professional and enthusiast, constructing this lab environment bridges the gap betIen theoretical knowledge and practical, enterprise-grade engineering. It transforms abstract concepts learned from textbooks into a tangible, multi-node playground where I am in absolute control of the security stack.</p>
+<p>As an aspiring security professional and enthusiast, constructing this lab environment bridges the gap between theoretical knowledge and practical, enterprise-grade engineering. It transforms abstract concepts learned from textbooks into a tangible, multi-node playground where I am in absolute control of the security stack.</p>
 <p>By executing the full installation, managing virtual network configurations, and binding endpoint agents to a centralized SIEM manager, I have cultivated the precise technical confidence required to navigate real-world corporate infrastructures.</p>
-<p>his project completely shifts my perspective from a passive observer to an active infrastructure designer, establishing a rock-solid operational foundation. It ensures that as I move forward into live adversarial testing and incident verification, I am approaching threat hunting with an intimate, firsthand understanding of the underlying pipelines that generate the alerts.</p>
+< p> This project completely shifts my perspective from a passive observer to an active infrastructure designer, establishing a rock-solid operational foundation. It ensures that as I move forward into live adversarial testing and incident verification, I am approaching threat hunting with an intimate, firsthand understanding of the underlying pipelines that generate the alerts.</p>
 
 
 
