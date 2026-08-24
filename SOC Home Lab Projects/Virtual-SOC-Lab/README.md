@@ -815,9 +815,9 @@
 <p>In order to test and generate telemetry, I opened the command prompt on the Windows machine.</p>
 <p><img width="827" height="737" alt="image" src="https://github.com/user-attachments/assets/327b0f40-8bef-4b29-9ec9-bc44e5398713" />
 </p>
-<p>I added a user named “<b><i>TestUser</i></b>”  and the password  “<b></b>” by typing:</p>
+<p>I added a user named “<b><i>TestUser</i></b>”  and the password  “<b><i>pass123</i></b>” by typing:</p>
 
-    net user TestUser pass /add
+    net user TestUser pass123 /add
 <p><img width="502" height="237" alt="image" src="https://github.com/user-attachments/assets/1c1fb83b-afcb-4182-8939-3bfc80c8155f" />
 </p>
 
@@ -835,6 +835,68 @@
 
     net user TestUser /delete
 <p><img width="434" height="171" alt="image" src="https://github.com/user-attachments/assets/17834eac-c4fc-4185-8d8b-14cc5ee7f5a1" />
+</p>
+<p>By running all of these commands on the Windows VM, these should be tracked in the Wazuh dashboard.</p>
+<p><img width="975" height="440" alt="image" src="https://github.com/user-attachments/assets/9191c689-9494-49e4-8a7f-d49ebd81ed2a" />
+</p>
+<p>I changed the time by at least 15 minutes in order to cut the noise.</p>
+<p><img width="975" height="148" alt="image" src="https://github.com/user-attachments/assets/05b107ab-66d5-4310-87db-db662b2a014c" />
+</p>
+<p><img width="975" height="301" alt="image" src="https://github.com/user-attachments/assets/03fe1563-2d8f-40fe-a608-8a923ead4c8c" />
+</p>
+<p><img width="975" height="465" alt="image" src="https://github.com/user-attachments/assets/633009ab-6a1c-4d9c-a9cd-1fb4ea946cd7" />
+</p>
+<p>I expanded the first event.</p>
+<p><img width="972" height="365" alt="image" src="https://github.com/user-attachments/assets/d81bce04-d068-463f-959f-7de339861e18" />
+</p>
+<p>There is this Windows event ID “<b><i>4726</i></b>”. </p>
+<p><img width="712" height="387" alt="image" src="https://github.com/user-attachments/assets/f231bc79-2ec2-47ae-aa54-6ec17ffceb17" />
+</p>
+<p>I researched what does the Windows Event ID 4726 means. This means that “<i>A user account was deleted</i>”, which is the activity what I did from the Windows VM, deleting the new user.</p>
+<p><img width="975" height="291" alt="image" src="https://github.com/user-attachments/assets/6c981b4a-c90a-4243-88a6-488521b7c785" />
+</p>
+<p>I scrolled down for more information. Under the system message, it was indeed the new user was deleted. There are other information , such as the account name who made and delete the new user along with its Relative Identifier (RID), and the account name of the user itself with its Relative Identifier (RID) as well.</p>
+<p><img width="959" height="340" alt="image" src="https://github.com/user-attachments/assets/f4622d01-9114-493d-bdbb-33bfc39240ce" />
+</p>
+<p>Again, I researched online what the event ID is for a user account creation, which I will be using to search in Wazuh.</p>
+<p><img width="975" height="131" alt="image" src="https://github.com/user-attachments/assets/8ef3b708-eddf-483b-aa44-2d40e3fdd74d" />
+</p>
+<p>Using the information I found online, I typed the event ID 4720 on the search bar and found <b>84</b> hits.</p>
+<p><img width="975" height="172" alt="image" src="https://github.com/user-attachments/assets/24d7ea34-ba60-4760-a586-855433a160db" />
+</p>
+<p><img width="975" height="508" alt="image" src="https://github.com/user-attachments/assets/99589608-9b2c-4ba9-86ff-dd825df85b70" />
+</p>
+<p>Another way to find the 4720, which provides the same result, is to type the field name of the event ID in the search bar:</p>
+
+    data.win.system.eventID: 4720
+<p><img width="975" height="499" alt="image" src="https://github.com/user-attachments/assets/36552c5f-d2bf-493d-b51e-bb82bd409a5c" />
+</p>
+<p><img width="975" height="726" alt="image" src="https://github.com/user-attachments/assets/88a71890-d686-4ae1-9990-978635fda7b5" />
+</p>
+<p>Now, I locked the Windows machine for security reasons and to test, then logged in by entering the password, in order to generate event ID 4624 on Wazuh.</p>
+<p><img width="546" height="481" alt="image" src="https://github.com/user-attachments/assets/f0d397f1-ecaf-447d-ac08-e159e887d5ae" />
+</p>
+<p>On the search bar, I typed:</p>
+
+    data.win.system.eventID: 4624
+<p>
+</p>
+<p>It generated the list of event ID 4624 from logging in on a Windows machine. On the first result, I dropped down to look for the system’s message. </p>
+<p>
+</p>
+<p>Once found, the descriptions says, “An account was successfully logged on”, which means it successfully captured the logged in activity in real-time. There are other information that can be found if scrolled down.</p>
+<p>
+</p>
+<p>I noticed that there is this Logon Information section, which is Logon Type: 2. I researched online on what it means, and that is <b><i>Interactive</i></b>, basically means Logon locally from the Windows machine. As an aspiring SOC Analyst, the other Logon Type numbers are also essential to identify so that in the real world cases and are helpful reference to any type of activities that are or will occur.</p>
+<p>
+</p>
+<p>I identified the Windows event ID where I added the new user on the local group of administrators by researching online and found out that is event ID <b>4732.</b></p>
+<p>
+</p>
+<p>After that, I entered in the search bar by typing:</p>
+
+    data.win.system.eventID: 4732
+<p>
 </p>
 
 
