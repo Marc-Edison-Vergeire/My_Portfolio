@@ -607,7 +607,8 @@
 <p>If the status command shows that the services are <b>inactive</b> or <b>stopped</b>, I would run this command on my Ubuntu Server to force them to start:</p>
 
     sudo systemctl start wazuh-indexer wazuh-manager wazuh-dashboard
-    
+
+<br>   
 <br>
 <h3>F. Deploying Wazuh Agents on Windows Endpoints</h3>
 <p>I let Ubuntu Server with Wazuh up and running to check if the Wazuh Agent would run successfully using the graphical user interface (GUI), which I needed to download. I opened the Windows 10 machine and used Internet Explorer to download the agent.</p>
