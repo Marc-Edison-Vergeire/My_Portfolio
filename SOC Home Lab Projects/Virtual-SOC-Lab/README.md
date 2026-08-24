@@ -670,7 +670,7 @@
 <p>After being directed to the website, I selected the <b>raw</b>button and right-clicked the page to download it by selecting <b>Save as</b>. I changed the name to <b>sysmonconfig</b> and chose <b>xml</b> as the type of the file.</p>
 <p><img width="975" height="444" alt="image" src="https://github.com/user-attachments/assets/2e4fd378-9172-432a-aa80-ca6318c9919f" />
 </p>
-<p>I preferred to save in <b>Downloads</b>, renamed it to <b>sysmonconf</b> and I make sure that the file would be <b>xml</b>, and pressed the <b>Save</b> button.</p>
+<p>I preferred to save in <b>Downloads</b>, renamed it to <b>sysmonconfig</b> and I make sure that the file would be <b>xml</b>, and pressed the <b>Save</b> button.</p>
 <p><img width="764" height="584" alt="image" src="https://github.com/user-attachments/assets/1692dd19-0c7a-456e-837d-3cc05a13adee" />
 </p>
 <p>The next thing I did was to extract the <b>Sysmon</b> zip file and save it to the same folder, but housed in a new folder named <b>Sysmon</b>.</p>
@@ -683,14 +683,14 @@
 <p>Instead of executing the file after the extraction, I opened <b>Windows PowerShell (Admin)</b> instead.</p>
 <p><img width="712" height="699" alt="image" src="https://github.com/user-attachments/assets/6a2b3abd-a66d-4cbc-8a06-d1c2bf269eba" />
 </p>
-<p>I copied the extracted file's location and pasted it on the PowerShell command line, then pressed Enter. In the PowerShell CLI, it should show the current location.</p>
+<p>I copied the extracted file's location and pasted it into the PowerShell command line, then pressed Enter. In the PowerShell CLI, it should show the current location.</p>
 <p><img width="975" height="441" alt="image" src="https://github.com/user-attachments/assets/9a5f9ba9-0519-4f14-b101-bbd7900f3562" />
 </p>
 <p><img width="805" height="197" alt="image" src="https://github.com/user-attachments/assets/ac506537-a674-4975-bbf5-272b53ae4515" />
 </p>
 <p><img width="860" height="226" alt="image" src="https://github.com/user-attachments/assets/ea29abcd-2c18-45f6-aab8-35cc67f69033" />
 </p>
-<p>I cut the <b>sysmonconf.xml</b> file and pasted in the same folder where the extracted files are located.</p>
+<p>I cut the <b>sysmonconfig</b> file and pasted in the same folder where the extracted files are located.</p>
 <p><img width="656" height="377" alt="image" src="https://github.com/user-attachments/assets/4a9c3a03-b0b2-4422-ad18-ef2f4160960f" />
 </p>
 <p>I opened the PoIrShell CLI again then typed, <b>ls</b>  command to make sure everything are intact.</p>
@@ -730,7 +730,7 @@
 </p>
 
 
-<h3>F. Wazuh Agent & Sysmon Connection</h3>
+<h3>H. Wazuh Agent & Sysmon Connection</h3>
 <p>On the left pane, the <b>Available Fields</b>, i selected the <b>agent.name</b>, and selected <b>Windows 10</b>.</p>
 <p><img width="890" height="437" alt="image" src="https://github.com/user-attachments/assets/76c8b95b-82fb-4d1d-8868-e4eaf37212a5" />
 </p>
