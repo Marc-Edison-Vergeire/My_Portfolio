@@ -810,6 +810,37 @@
 </p>
 
 
+<br>
+<h3>I. Generate & Read Telemetry</h3>
+<p>In order to test and generate telemetry, I opened the command prompt on the Windows machine.</p>
+<p><img width="827" height="737" alt="image" src="https://github.com/user-attachments/assets/327b0f40-8bef-4b29-9ec9-bc44e5398713" />
+</p>
+<p>I added a user named “<b><i>TestUser</i></b>”  and the password  “<b></b>” by typing:</p>
+
+    net user TestUser pass /add
+<p><img width="502" height="237" alt="image" src="https://github.com/user-attachments/assets/1c1fb83b-afcb-4182-8939-3bfc80c8155f" />
+</p>
+
+<p>After that, I added the new user to the local group of administrators by typing:</p>
+
+    net  localgroup  administrators  TestUser  /add
+<p><img width="584" height="177" alt="image" src="https://github.com/user-attachments/assets/1e3e5a2a-147c-4a1a-b47d-cce09b8e07d9" />
+</p>
+<p>In order to check and see if the new user was added, I typed:</p>
+
+    net  localgroup  administrators
+<p><img width="802" height="312" alt="image" src="https://github.com/user-attachments/assets/7eb10343-02c1-42c0-88b3-925883e3e7cd" />
+</p>
+<p>To delete the new user for some reason, I typed:</p>
+
+    net user TestUser /delete
+<p><img width="434" height="171" alt="image" src="https://github.com/user-attachments/assets/17834eac-c4fc-4185-8d8b-14cc5ee7f5a1" />
+</p>
+
+
+
+
+
 
 
 
