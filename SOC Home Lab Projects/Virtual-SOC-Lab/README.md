@@ -728,6 +728,25 @@
 <p><img width="975" height="758" alt="image" src="https://github.com/user-attachments/assets/64109602-36bc-4acd-86eb-0b152e5a6b23" />
 </p>
 
+
+<h3>F. Wazuh Agent & Sysmon Connection</h3>
+<p>On the left pane, the <b>Available Fields</b>, i selected the <b>agent.name</b>, and selected <b>Windows 10</b>.</p>
+<p><img width="890" height="437" alt="image" src="https://github.com/user-attachments/assets/76c8b95b-82fb-4d1d-8868-e4eaf37212a5" />
+</p>
+<p><img width="715" height="325" alt="image" src="https://github.com/user-attachments/assets/5a2c13b4-0df6-4e5c-b020-df97db95477b" />
+</p>
+<p><img width="785" height="432" alt="image" src="https://github.com/user-attachments/assets/344eb7c1-4b4b-42c9-ab39-522d6fedf104" />
+</p>
+<p>I typed in the search bar for <b>Sysmon</b> but it shows no result. I found <b>397 hits</b>, but that is coming from our Sysmon service, rather than events generating from Sysmon</p>
+<p><img width="965" height="640" alt="image" src="https://github.com/user-attachments/assets/62fb6bb9-805c-4e77-ab57-c813a60b1a46" />
+</p>
+<p><img width="975" height="288" alt="image" src="https://github.com/user-attachments/assets/4e8ffd19-b531-4a54-b124-de9c923d8b41" />
+</p>
+
+
+
+
+
 <br>
 <h2>Lessons Learned</h2>
 <p>Engineering this infrastructure from the ground up highlighted the critical reality that elite defensive monitoring relies entirely on the precision of architecture and telemetry configuration rather than unlimited hardware resources. By navigating local physical resource constraints, I developed a deep practical understanding of the log ingestion lifecycle—specifically how to successfully bridge endpoints and central management utilities across an isolated network.</p>
