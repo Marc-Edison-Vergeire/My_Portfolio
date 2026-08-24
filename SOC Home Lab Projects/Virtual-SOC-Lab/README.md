@@ -876,27 +876,40 @@
 <p>Now, I locked the Windows machine for security reasons and to test, then logged in by entering the password, in order to generate event ID 4624 on Wazuh.</p>
 <p><img width="546" height="481" alt="image" src="https://github.com/user-attachments/assets/f0d397f1-ecaf-447d-ac08-e159e887d5ae" />
 </p>
-<p>On the search bar, I typed:</p>
+< p> In the search bar, I typed:</p>
 
     data.win.system.eventID: 4624
-<p>
+<p><img width="975" height="148" alt="image" src="https://github.com/user-attachments/assets/2c4beebb-7cc1-4f32-8a86-8620c03ff05f" />
 </p>
 <p>It generated the list of event ID 4624 from logging in on a Windows machine. On the first result, I dropped down to look for the system’s message. </p>
-<p>
+<p><img width="975" height="738" alt="image" src="https://github.com/user-attachments/assets/9c663f4b-37b7-4ebc-9446-4b8ac1aec1ef" />
 </p>
-<p>Once found, the descriptions says, “An account was successfully logged on”, which means it successfully captured the logged in activity in real-time. There are other information that can be found if scrolled down.</p>
-<p>
+<p>Once found, the description says, “<i>An account was successfully logged on</i>”, which means it successfully captured the logged-in activity in real-time. There are other information that can be found if scrolled down.</p>
+<p><img width="870" height="389" alt="image" src="https://github.com/user-attachments/assets/d64fd488-1481-44e7-bb3a-dfebdc8fbd19" />
 </p>
-<p>I noticed that there is this Logon Information section, which is Logon Type: 2. I researched online on what it means, and that is <b><i>Interactive</i></b>, basically means Logon locally from the Windows machine. As an aspiring SOC Analyst, the other Logon Type numbers are also essential to identify so that in the real world cases and are helpful reference to any type of activities that are or will occur.</p>
-<p>
+<p>I noticed that there is this Logon Information section, which is Logon Type: 2. I researched online what it means, and that is <b><i>Interactive</i></b>, which basically means logging on locally from the Windows machine. As an aspiring SOC Analyst, the other Logon Type numbers are also essential to identify so that in the real world cases and are helpful reference to any type of activities that are or will occur.</p>
+<p><img width="814" height="802" alt="image" src="https://github.com/user-attachments/assets/5c090629-604b-4813-b6b9-fcc0485b8c26" />
 </p>
-<p>I identified the Windows event ID where I added the new user on the local group of administrators by researching online and found out that is event ID <b>4732.</b></p>
-<p>
+<p>I identified the Windows event ID where I added the new user on the local group of administrators by researching online and found out that it is event ID <b>4732.</b></p>
+<p><img width="975" height="99" alt="image" src="https://github.com/user-attachments/assets/0ba4727b-5dfd-41d0-9a7f-f8618bbd2d7c" />
 </p>
-<p>After that, I entered in the search bar by typing:</p>
+<p>After that, I entered it in the search bar by typing:</p>
 
     data.win.system.eventID: 4732
-<p>
+<p><img width="975" height="640" alt="image" src="https://github.com/user-attachments/assets/c6d0a553-8a54-4b34-b363-fc0d035d868b" />
+</p>
+<p>On the first result, I scrolled down and looked for the system’s message, and its description says, “<i>A member was added to a security-enabled local group</i>”, which means that it captured the addition of the new user to the local group.</p>
+<p><img width="869" height="377" alt="image" src="https://github.com/user-attachments/assets/d5b46b91-19f9-4aa4-b490-39fc98fa97e3" />
+</p>
+<p>I noticed that the new user’s account name did not appear in the Member section; thus, I copied its Security ID and pasted on the search bar in order to search for it.</p>
+<p><img width="865" height="334" alt="image" src="https://github.com/user-attachments/assets/d02f7f1f-703a-440c-bf11-fb3eeb43c4e2" />
+</p>
+<p><img width="975" height="472" alt="image" src="https://github.com/user-attachments/assets/9403f657-0dc1-4d64-9852-098bad5b5c85" />
+</p>
+<p>I selected the first result, expanded, and scrolled it down. It confirmed that it is the target’s username or the new user’s account name.</p>
+<p><img width="971" height="404" alt="image" src="https://github.com/user-attachments/assets/fc1bc928-b9e3-463f-92aa-56b0dd21b2db" />
+</p>
+<p><img width="882" height="365" alt="image" src="https://github.com/user-attachments/assets/6b5483d4-b8cf-47de-9cb1-e3836db61f87" />
 </p>
 
 
