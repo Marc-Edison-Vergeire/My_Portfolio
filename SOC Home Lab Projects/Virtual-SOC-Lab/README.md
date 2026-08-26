@@ -418,7 +418,7 @@
 <p><img width="975" height="202" alt="image" src="https://github.com/user-attachments/assets/1e63b125-28af-4c0e-b13b-4eba60341678" />
 </p>
 <p>I typed the  <b>ip a</b>  command to know what the IP address would be for the Wazuh dashboard. Alternatively, I typed  <b>ip addr</b>, which gave me the same result. </p>
-<p><img width="975" height="619" alt="image" src="https://github.com/user-attachments/assets/e022eab0-b583-46df-b0a5-bfc20fe56fb5" />
+<p><img width="850" height="247" alt="image" src="https://github.com/user-attachments/assets/937e43d6-e9e0-481e-b2f1-74984c2e5451" />
 </p>
 <p>Before I started running Wazuh, I entered several commands that needed to run it seamlessly, such as: </p>
 
