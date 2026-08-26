@@ -433,7 +433,7 @@
 <p><img width="946" height="147" alt="image" src="https://github.com/user-attachments/assets/438e55fc-6ca8-4e57-85ef-472a82d91c68" />
 </p>
 
-<p>Or, you can simply do this instead:</p>
+<p>Or, simply this instead:</p>
 
     sudo systemctl start wazuh-indexer wazuh-manager wazuh-dashboard
     
