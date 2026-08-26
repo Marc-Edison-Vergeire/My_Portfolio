@@ -439,6 +439,8 @@
 <p><img width="762" height="57" alt="image" src="https://github.com/user-attachments/assets/471dd009-a1f8-4642-82b6-52e3f7cff075" />
 </p>
 
+
+
 <p>Now, I verified the API daemon is active by checking if the manager and backend API are running properly using the command:</p>
 
     sudo  systemctl  status  wazuh-manager
@@ -485,6 +487,7 @@
 
     sudo systemctl start wazuh-indexer wazuh-manager wazuh-dashboard
 
+<p>To exit from the status, simply press <b><i>q</i></b> key to exit</p>
 <br>
 <br>
 <p><b>NOTE #1:</b>  If you wanted to move from a regular user into root privileges, type:</p>
