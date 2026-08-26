@@ -429,9 +429,14 @@
     sudo  systemctl  start  wazuh-indexer
     sudo  systemctl  start  wazuh-manager
     sudo  systemctl  start  wazuh-dashboard
-    
+
 <p><img width="946" height="147" alt="image" src="https://github.com/user-attachments/assets/438e55fc-6ca8-4e57-85ef-472a82d91c68" />
 </p>
+
+<p>Or, you can simply do this instead:</p>
+
+    sudo systemctl start wazuh-indexer wazuh-manager wazuh-dashboard
+    
 <p>Now, I verified the API daemon is active by checking if the manager and backend API are running properly using the command:</p>
 
     sudo  systemctl  status  wazuh-manager
