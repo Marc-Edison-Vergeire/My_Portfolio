@@ -921,9 +921,56 @@
 <p><img width="882" height="365" alt="image" src="https://github.com/user-attachments/assets/6b5483d4-b8cf-47de-9cb1-e3836db61f87" />
 </p>
 
+<br>
+<br>
+<h3>J. Wazuh Custom Rules</h3>
+<p>Inside the Wazuh dashboard, I headed over to the hamburger icon in the upper-left corner.</p>
+<p><img width="975" height="392" alt="image" src="https://github.com/user-attachments/assets/1e1e95ed-d59b-45db-9b0a-24002b58adad" />
+</p>
+<p>After clicking the icon, I selected and expanded <b>Server management</b> and selected the <b><i>Rules</i></b>.</p>
+<p><img width="626" height="619" alt="image" src="https://github.com/user-attachments/assets/59280efa-15e9-43de-ae8a-0e6873d125de" />
+</p>
+<p>I selected the <b><i>wazuh-archive*</i></b> as the <b>Index pattern</b>. After that, I typed the <b><i>local_rules.xml</i></b> in the search bar and searched for it.</p>
+<p><img width="975" height="394" alt="image" src="https://github.com/user-attachments/assets/64cad516-0307-4332-81e7-e7b6dab951b6" />
+</p>
+<p>There are two ways to customize the <b><i>local_rules.xml</i></b>: either on the dashboard or on the <b>Ubuntu server</b> itself. If I use the Ubuntu server, I have to change the regular user first into a root user by typing: </p>
 
+    sudo su -
+<p><img width="659" height="121" alt="image" src="https://github.com/user-attachments/assets/2646a9a2-2c66-4de1-bd81-11a38ae590b1" />
+</p>
+<p>After becoming the root user, I have to locate the rules directory where the <b><i>local_rules.xml</i></b> is located by typing: </p>
 
+    cd /var/ossec/etc/rules
+<p><img width="615" height="181" alt="image" src="https://github.com/user-attachments/assets/15ba1b75-308d-4710-a25e-a1ab714cfab3" />
+</p>
+<p>After changing the directory and locating the XML file, I can modify the inside of the file and input the custom rules that I have prepared by typing: </p>
 
+    nano local_rules.xml
+<p><img width="975" height="605" alt="image" src="https://github.com/user-attachments/assets/bf046e9c-9b88-4365-91e2-8df207035c2b" />
+</p>
+<p>The only difference is that using this method, I have to type each rule one by one, which may take some time to finish. On the other hand, I preferred to use the dashboard instead because it’s easy and fast to input the desired custom rules, which, in the end, have the same results.</p>
+<p> I selected the <b><i>local_rules.xml</i></b> based from the result.</p>
+<p><img width="975" height="180" alt="image" src="https://github.com/user-attachments/assets/27efc6fc-fc95-47f6-bd1a-db2591d13380" />
+</p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
 
 
 
