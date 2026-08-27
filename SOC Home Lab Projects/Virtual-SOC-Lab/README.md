@@ -952,25 +952,17 @@
 <p> I selected the <b><i>local_rules.xml</i></b> based from the result.</p>
 <p><img width="975" height="180" alt="image" src="https://github.com/user-attachments/assets/27efc6fc-fc95-47f6-bd1a-db2591d13380" />
 </p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
+<p><img width="905" height="327" alt="image" src="https://github.com/user-attachments/assets/7a6bad0f-bd82-4ea6-924d-912e940c9c55" />
+</p>
+<p>After pasting the custom rules, I saved the file, then pressed reload to refresh and activate the rules</p>
+<p><img width="975" height="122" alt="image" src="https://github.com/user-attachments/assets/274c2cf7-74b0-4d4a-8596-916d20267cae" />
+</p>
+<p><img width="975" height="124" alt="image" src="https://github.com/user-attachments/assets/3c443353-9363-4a60-a845-00af08aaf50f" />
+</p>
+<p>I can also click the <b><i>Custom rules</i></b> button, where I can easily find the customized and newly added rules.</p>
+<p><img width="975" height="351" alt="image" src="https://github.com/user-attachments/assets/35f5ff39-3b32-4fdb-8cf5-a62769b61097" />
+</p>
+
 
 
 
