@@ -610,7 +610,20 @@
 <p><img width="947" height="741" alt="image" src="https://github.com/user-attachments/assets/45d40d30-611f-4f00-8bbd-8f16ed4292d3" />
 </p>
 
-<li>Lastly, head over to the <b>Wazuh</b> server, select the <b>Machine</b> tab, select <b><i>Take Snapshot...</i></b>, rename it of your choice, and press the <b>OK</b> button. The description is optional.</li>
+
+<p>On the <b>Wazuh server</b>, I increased the <b><i>timeout</i></b> by typing, <b><i>sudo su -</i></b> to change into root user and locate the <b><i>wazuh.yml</i></b> by typing:</p>
+
+    cd /usr/share/wazuh-dashboard/data/wazuh/config/
+    ls
+    nano wazuh.yml
+
+<p><img width="809" height="150" alt="image" src="https://github.com/user-attachments/assets/b2e7d946-4aa5-4776-a8e7-6d226cb02766" />
+</p>
+<p>After that, I modified the <b><i>timeout</i></b> limit from <b>20000ms</b> into <b>90000ms</b> and saved.</p>
+<p><img width="859" height="277" alt="image" src="https://github.com/user-attachments/assets/2dcd4eaa-3e05-49d2-932d-02444beef4bc" />
+</p>
+
+<li>Lastly, I selected the <b>Machine</b> tab, select <b><i>Take Snapshot...</i></b>, rename it of your choice, and press the <b>OK</b> button. The description is optional.</li>
 <p><img width="605" height="347" alt="image" src="https://github.com/user-attachments/assets/8d936543-821a-4f8f-8725-81e822206ca7" />
 <p><img width="496" height="447" alt="image" src="https://github.com/user-attachments/assets/88e732c8-1260-414f-8854-72e98cc30872" />
 </p>
