@@ -611,7 +611,7 @@
 </p>
 
 
-<p>On the <b>Wazuh server</b>, I increased the <b><i>timeout</i></b> by typing, <b><i>sudo su -</i></b> to change into root user and locate the <b><i>wazuh.yml</i></b> by typing:</p>
+<li>On the <b>Wazuh server</b>, I increased the <b><i>timeout</i></b> by typing, <b><i>sudo su -</i></b> to change into root user and locate the <b><i>wazuh.yml</i></b> by typing:</li>
 
     cd /usr/share/wazuh-dashboard/data/wazuh/config/
     ls
