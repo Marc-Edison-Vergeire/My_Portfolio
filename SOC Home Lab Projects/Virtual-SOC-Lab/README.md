@@ -977,8 +977,76 @@
 </p>
 
 
+<br>
+<br>
+<h3>K. Active Response</h3>
+<p>I configured the Active Response so that Wazuh can perform some automated actions. I headed over to Aazuh manager or ubuntu server and typed:</p>
 
+    sudo nano /var/ossec/etc/ossec.conf
 
+<p><img width="669" height="100" alt="image" src="https://github.com/user-attachments/assets/86db568e-434f-414a-a220-923de2be87f6" />
+</p>
+
+<p>After that, I scrolled down until I reached the <b><i>Active Response</i></b> section.</p>
+<p><img width="845" height="570" alt="image" src="https://github.com/user-attachments/assets/c6e94fb9-7b60-4de8-a7ad-2915aad8479d" />
+</p>
+
+<p>I removed the comments symbols from <b>active-response</b> and replaced the a<b><i>ctive-response options here</i></b> the following commands, such as:</p>
+<ul>
+	     <li> Disable: no</li>
+	     <li> Command: firewall-drop</li>
+	     <li> Location: local </li>
+	     <li> Rules ID: 100101 </li> (which is for the multiple failed login attempts)
+	</ul>
+
+<p><img width="715" height="372" alt="image" src="https://github.com/user-attachments/assets/a99c5f7a-1b5d-4186-aff3-96112d43aa61" />
+</p>
+<p><img width="665" height="314" alt="image" src="https://github.com/user-attachments/assets/96fb7e2f-2878-4d15-9838-8ca6ea4dc53b" />
+</p>
+<p><img width="975" height="188" alt="image" src="https://github.com/user-attachments/assets/48e16ba2-6413-49e5-b211-3bc57dcbccfa" />
+</p>
+<p><img width="975" height="302" alt="image" src="https://github.com/user-attachments/assets/e2edd5a6-daf1-468e-8cab-b7de3454d83e" />
+</p>
+<p><img width="975" height="277" alt="image" src="https://github.com/user-attachments/assets/726b9325-80fe-46ed-b08d-facf31963553" />
+</p>
+<p><img width="469" height="269" alt="image" src="https://github.com/user-attachments/assets/a83fe3fa-e00e-4662-a72d-9833d22b7f57" />
+</p>
+<p>After I saved it, I restarted the Wazuh manager by typing:</p>
+
+    sudo systemctl restart wazuh-manager.service
+<p><img width="771" height="87" alt="image" src="https://github.com/user-attachments/assets/237342b2-1604-4362-950c-e4f0769fb3ff" />
+</p>
+<p>I verified that it’s been activated by changing the user from regular user into root account by typing:</p>
+
+    sudo su -
+
+<p><img width="415" height="75" alt="image" src="https://github.com/user-attachments/assets/aaeee8a7-5dea-475d-af0d-733e771d5c16" />
+</p>
+
+<p>The binary of interest is in:</p>
+
+    /var/ossec/bin/agent_control -L
+
+<p><img width="582" height="146" alt="image" src="https://github.com/user-attachments/assets/92b5d256-aec7-48af-bdac-d8607f7f08ba" />
+</p>
+<p>To restore the connectivity, I moved from root account into regular user by typing <b>exit</b>, then typed:</p>
+
+    sudo iptables –L –n –line-numbers
+
+<p><img width="845" height="270" alt="image" src="https://github.com/user-attachments/assets/7353f14d-ebf7-4898-a0c7-68df837d68dc" />
+</p>
+
+<p>I removed the <b>target</b> and <b><i>source ip</i></b> by typing:</p>
+
+    sudo iptables –D INPUT 1
+    sudo iptables –D FORWARD 1
+
+<p>I verified that it’s all cleared by retyping the command:</p>
+
+    sudo iptables –L –n –line-numbers
+
+<p><img width="650" height="209" alt="image" src="https://github.com/user-attachments/assets/d747458a-d83a-453e-923a-a94482fd1e98" />
+</p>
 
 <br>
 <h2>Lessons Learned</h2>
