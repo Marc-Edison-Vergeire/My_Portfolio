@@ -8,7 +8,7 @@ Welcome to the documentation of my security operations home lab. Here, I documen
 
 ## 🛠️ Core Stack & Technologies Utilized
 
-* **Operating Systems:** Ubuntu Server (Wazuh SIEM), Windows 10 (Target Endpoint), Kali Linux (Attacker Platform).
+* **Operating Systems:** Windows Server 2016 (Target Endpoint), Ubuntu Server (Wazuh SIEM), Windows 10 (Target Endpoint), Kali Linux (Attacker Platform).
 * **Telemetry & Logging:** Sysmon (System Monitor), Windows Event Logs.
 * **SIEM Platforms:** Wazuh / Splunk / Elastic Stack (for centralized log ingestion, parsing, and alerting).
 
