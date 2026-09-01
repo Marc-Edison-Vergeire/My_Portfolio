@@ -91,7 +91,8 @@
 
 <p><b>Finding:</b> The Ubuntu Server was reachable from the Kali Linux machine, confirming basic network connectivity between the simulated attacker and target.</p>
 
-<p>INPUT 1ST IMAGE</p>
+<p><img width="653" height="347" alt="image" src="https://github.com/user-attachments/assets/d68be0d4-aed5-47cf-aa22-557ef0b4eaed" />
+</p>
 
 <br>
 <h3>Phase 2 — Network Reconnaissance</h3>
@@ -101,7 +102,8 @@
 
 <p><b>Finding:</b> TCP/22 was open, identifying SSH as an accessible attack surface on the Ubuntu Server.</p>
 
-<p>INPUT SECOND IMAGE HERE</p>
+<p><img width="657" height="465" alt="image" src="https://github.com/user-attachments/assets/0439d5ec-d81c-4d53-aa5f-b607e38ce382" />
+</p>
 
 <br>
 <h3>Phase 3 — SSH Brute-Force Attack Simulation</h3>
@@ -113,7 +115,8 @@
 
 <p><b>Finding:</b> Multiple failed SSH authentication attempts were successfully generated, creating the behavioral pattern associated with SSH brute-force/password-guessing activity.</p>
 
-<p>INSERT THIRD IMAGE HERE</p>
+<p><img width="652" height="340" alt="image" src="https://github.com/user-attachments/assets/b03aec97-01ea-4d14-93fe-edc131b61cda" />
+</p>
 
 <br>
 <h3>Phase 4 — SIEM Alert Detection</h3>
@@ -144,7 +147,8 @@
 
 <p><b>Finding:</b> Wazuh successfully detected the repeated SSH authentication failures using custom <b>Rule ID 100101</b>, demonstrating that the SIEM was capable of identifying the simulated brute-force behavior based on a defined detection threshold.</p>
 
-<p>INSERT FOURTH IMAGE HERE</p>
+<p><img width="692" height="295" alt="image" src="https://github.com/user-attachments/assets/00f72214-9882-4f16-aadb-812b652054a5" />
+</p>
 
 <br>
 <h3>Phase 5 — Alert Correlation and Active Response</h3>
@@ -154,7 +158,7 @@
 
 <p>The configured Active Response used the <b>firewall-drop</b> command with the execution location set to <b>local</b> and was associated with <b>Rule ID 100101</b>. This configuration instructs the Wazuh agent on the monitored endpoint to execute the firewall-based response locally when the associated detection rule is triggered.</p>
 
-<p>When Rule 100101 triggered, Wazuh invoked the configured firewall-drop Active Response locally. The purpose of this response was to initiate a firewall-based blocking action against the source IP associated with the detected SSH brute-force activity.</p>
+<p>When Rule 100101 was triggered, Wazuh invoked the configured firewall-drop Active Response locally. The purpose of this response was to initiate a firewall-based blocking action against the source IP associated with the detected SSH brute-force activity.</p>
 
 <p>The Active Response event was recorded at approximately <b>12:31 PM</b>, providing a timestamp that could be correlated with the corresponding security alert and authentication events.</p>
 
@@ -164,11 +168,14 @@
 
 <p>Finding: Wazuh successfully correlated the repeated authentication failures with <b>Rule ID 100101</b> and invoked the configured local <b>firewall-drop Active Response</b> , demonstrating an automated detection-and-response workflow.</p>
 
-<p>INSERT FIFTH IMAGE HERE</p>
+<p><img width="675" height="434" alt="image" src="https://github.com/user-attachments/assets/1e068d24-99e9-4281-bddb-69b2d3f334ea" />
+</p>
 
-<p>INSERT SIXTH IMAGE HERE</p>
+<p><img width="975" height="207" alt="image" src="https://github.com/user-attachments/assets/d86b3b50-0ede-46f2-b955-73b9b21937db" />
+</p>
 
-<p>INSERT SEVENTH IMAGE HERE</p>
+<p><img width="975" height="360" alt="image" src="https://github.com/user-attachments/assets/fd807b06-bfe7-4243-818c-b2b64a8a40a9" />
+</p>
 
 <br>
 <h3>Phase 6 — Source IP Identification and Investigation</h3>
@@ -187,9 +194,11 @@
 
 <p><b>Finding:</b> The source of the observed SSH authentication attack was identified as <b>10.0.2.3</b>, while the Wazuh agent on the Ubuntu Server supplied the authentication telemetry used to detect the repeated failed login activity.</p>
 
-<p>INSERT EIGHT IMAGE HERE</p>
+<p><img width="975" height="331" alt="image" src="https://github.com/user-attachments/assets/058f4d6a-3153-445a-b970-a4757368d940" />
+</p>
 
-<p>INSERT NINTH IMAGE HERE</p>
+<p><img width="975" height="478" alt="image" src="https://github.com/user-attachments/assets/b3bb8dd6-5f14-4601-b0c7-c59346a5ca65" />
+</p>
 
 <br>
 <h3>Phase 7 — Threat Hunting and Validation</h3>
@@ -209,9 +218,11 @@
 
 <p><b>Finding:</b> Threat Hunting corroborated the initial Wazuh alert investigation, while the Active Response event confirmed that the configured local firewall-drop response associated with Rule 100101 was invoked against the identified source.</p>
 
-<p>INSERT TENTH IMAGE HERE</p>
+<p><img width="771" height="345" alt="image" src="https://github.com/user-attachments/assets/642634bf-d6c7-4982-a414-b176c14e4df5" />
+</p>
 
-<p>INSERT ELEVENTH IMAGE HERE</p>
+<p><img width="975" height="165" alt="image" src="https://github.com/user-attachments/assets/aaabb547-196a-48bc-8b78-334db2deacb7" />
+</p>
 
 <br>
 <h3>Phase 8 — Final Assessment</h3>
