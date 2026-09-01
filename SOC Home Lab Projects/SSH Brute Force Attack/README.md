@@ -149,6 +149,8 @@
 
 <p><img width="692" height="295" alt="image" src="https://github.com/user-attachments/assets/00f72214-9882-4f16-aadb-812b652054a5" />
 </p>
+<p><img width="975" height="360" alt="image" src="https://github.com/user-attachments/assets/61088218-199c-49cd-b265-39383c985b84" />
+</p>
 
 <br>
 <h3>Phase 5 — Alert Correlation and Active Response</h3>
