@@ -13,7 +13,7 @@ This folder contains documentation, badges, and verification links for my profes
 
 ### 🏗️ SOC Home Lab Projects
 Here, I document the design, deployment, and configuration of my enterprise-grade home lab environments. This section showcases my system administration skills and my ability to build defensive infrastructure from scratch.
-* *Technologies utilized:* Windows 10, Windows Server 2016, Kali Linux, SIEM platforms (Splunk/Elastic), Sysmon.
+* *Technologies utilized:* Ubuntu Server, Windows 10, Windows Server 2016, Kali Linux, SIEM platforms (Wazuh/Splunk/Elastic), Sysmon.
 * *Focus:* Simulating enterprise networks to analyze attack vectors and generate actionable security telemetry.
 
 ### 🐍 SOC Python Projects
