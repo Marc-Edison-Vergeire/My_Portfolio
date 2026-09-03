@@ -14,7 +14,8 @@
 <p><img width="1024" height="669" alt="image" src="https://github.com/user-attachments/assets/27a57df1-be17-4c50-8e14-49ef8ab7736a" />
 <p><i>Basic Network Topology Layout</i></p>
 </p>
-<p>To replicate the daily workflows of a <b>SOC Analyst</b> under local hardware constraints, this lab features a targeted deployment of three core virtual machines within a custom network: a <b>Kali Linux</b> attacker platform, a <b>Windows 10 Pro</b> endpoint equipped with <b>Sysmon</b> telemetry, and a centralized <b>Ubuntu Server</b> hosting the <b>Wazuh SIEM</b>. While an enterprise-grade <b>Active Directory</b> infrastructure was intentionally omitted to optimize system performance, this environment successfully simulates end-to-end, real-world attack investigations, detection engineering, and live log monitoring.</p>
+<p>To replicate the daily workflows of a SOC Analyst under local hardware constraints, this lab features a targeted deployment of three core virtual machines within a custom <b>VirtualBox NAT network</b>: a <b>Kali Linux</b> attacker platform, a <b>Windows 10 Pro</b> endpoint equipped with <b>Sysmon</b> for detailed endpoint telemetry, and a centralized <b>Ubuntu Server</b> hosting the <b>Wazuh SIEM</b> and <b>Suricata IDS/IPS</b>. Suricata provides network-level traffic monitoring and intrusion detection, complementing the host-based visibility provided by Sysmon. Together, these components create an isolated environment capable of simulating realistic attacks, generating endpoint and network telemetry, and supporting end-to-end security investigations, detection engineering, alert analysis, and live log monitoring.</p>
+
 
 <br>
 <h2>Cyber Threat Simulation Scenario</h2>
