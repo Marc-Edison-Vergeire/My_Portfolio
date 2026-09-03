@@ -19,10 +19,16 @@
 
 <br>
 <h2>Cyber Threat Simulation Scenario</h2>
-<p>To simulate real-world enterprise threats within a controlled, resource-optimized framework, this architecture sets up a comprehensive environment modeling a cyber adversary attempting to compromise a critical corporate endpoint/s belonging to an employee.</p> 
-<p>Operating from an isolated platform represented by the <b>Kali Linux</b> instance (<b>10.0.2.3</b>), the lab is fully provisioned to support any multi-stage attack lifecycle targeting the <b>Windows 10 Pro</b> workstation (<b>10.0.2.15</b>)—including aggressive reconnaissance, unauthorized credential harvesting, network-level exploits, remote connection attacks like SSH and RDP brute-forcing, and et cetera.</p>
-<p>With the core engineering phase complete, this deployment stands fully operational and optimized for defensive validation. As future simulations trigger malicious executions or privilege escalation techniques, <b>Microsoft System Monitor (Sysmon)</b> remains active on the target machine to capture granular, low-level behavioral event logs. This high-fidelity telemetry pipeline is ready to securely stream logs to the centralized <b>Ubuntu Server</b> running the <b>Wazuh SIEM Manager (10.0.2.4)</b>, which is configured to parse, correlate, and surface raw events into real-time, actionable security alerts. </p>
-<p>The underlying network and collection pipeline are completely verified, rendering this <b>SOC Home Lab</b> perfectly primed for diverse adversarial testing, behavioral analysis, and live incident triage.</p>
+<p>To simulate real-world enterprise threats within a controlled, resource-optimized framework, this architecture sets up a comprehensive environment modeling a cyber adversary attempting to compromise a critical corporate endpoint/s belonging to an employee.</p>
+
+<p>Operating from an isolated platform represented by the <b>Kali Linux</b> instance (<b>10.0.2.3</b>), the lab is fully provisioned to support multi-stage attack scenarios targeting the <b>Windows 10 Pro</b> workstation (<b>10.0.2.15</b>)—including aggressive reconnaissance, unauthorized credential harvesting, network-level exploits, remote connection attacks such as SSH and RDP brute-forcing, and other adversarial techniques.</p>
+
+<p>With the core engineering phase complete, this deployment stands fully operational and optimized for defensive validation. As future simulations trigger malicious executions, suspicious network activity, or privilege escalation techniques, <b>Microsoft System Monitor (Sysmon)</b> remains active on the target machine to capture granular, low-level behavioral event logs. At the network level, <b>Suricata</b> operates on the centralized <b>Ubuntu Server</b> as an <b>IDS/IPS</b>, monitoring network traffic for suspicious patterns, intrusion attempts, and other malicious activity. This provides an additional layer of network-based visibility to complement the endpoint telemetry collected by Sysmon.</p>
+
+<p>This high-fidelity telemetry pipeline securely feeds endpoint and network security data into the centralized <b>Ubuntu Server</b> running the <b>Wazuh SIEM Manager (10.0.2.12)</b>. Wazuh is configured to parse, correlate, and surface security events from both <b>Sysmon</b> and <b>Suricata</b> into real-time, actionable security alerts, enabling centralized investigation across both host and network activity.</p>
+
+<p>The underlying network, endpoint monitoring, network intrusion detection, and centralized collection pipeline are completely verified, rendering this <b>SOC Home Lab</b> fully prepared for diverse adversarial testing, network and behavioral analysis, alert correlation, and live incident triage.</p>
+
 
 <br>
 <h2>Skills Learned</h2>
