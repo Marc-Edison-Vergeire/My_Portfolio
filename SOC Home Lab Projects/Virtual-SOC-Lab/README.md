@@ -33,12 +33,29 @@
 <br>
 <h2>Skills Learned</h2>
 <u>
-  <li><b>Hypervisor Architecture & Virtual Networking: </b>Developed hands-on proficiency in virtualization engineering by designing, provisioning, and isolating virtual machines within <b>Oracle VM VirtualBox</b>. Successfully architected a custom, multi-node <b>NAT Network (10.0.2.0/24)</b> to maintain environment isolation while ensuring structured, inter-VM network routing and connectivity.</li>
-  <br><li><b>Linux System Administration & SIEM Deployment: </b>Cultivated practical Linux administration skills by deploying, configuring, and hardening an <b>Ubuntu Server</b> to act as the central repository for the lab's security infrastructure. Successfully installed the <b>Wazuh Manager</b> framework, managing core system dependencies and verifying daemon readiness.</li>
-  <br><li><b>Endpoint Telemetry & Logging Architecture: </b>Gained foundational knowledge of host-level visibility and enterprise auditing by deploying <b>Microsoft System Monitor (Sysmon)</b> on a <b>Windows 10 Pro</b> endpoint. Mastered the structural installation of advanced logging binaries and endpoint-level agent services designed to transform raw OS behavior into structured telemetry.</li>
-  <br><li><b>SIEM Agent Deployment & Pipeline Engineering: </b> Mastered the fundamentals of the log collection lifecycle by successfully deploying and configuring the <b>Wazuh Agent</b> on a target Windows endpoint. Successfully established secure communication between the endpoint agent and the centralized <b>Ubuntu SIEM</b> server, verifying the integrity of the ingestion pipeline.</li>
-  <br><li><b>Network Infrastructure Troubleshooting: </b>Developed critical, low-level technical problem-solving skills by diagnosing and resolving hypervisor-level network connectivity issues. Successfully managed virtual interface states, negotiated IP address assignments, and validated end-to-end interface connectivity.</li>
-  <br><li><b>Pragmatic Project Management & Scope Planning: </b>Demonstrated strong architectural planning and resource management by designing a phased deployment roadmap. Successfully engineered a lean, fully functional, three-node security verification pipeline optimized specifically for local hardware constraints, establishing a rock-solid foundation for future adversarial testing.</li>
+ <li><b>Hypervisor Architecture & Virtual Networking: </b>Developed hands-on proficiency in virtualization engineering by designing, provisioning, and isolating virtual machines within <b>Oracle VM VirtualBox</b>. Successfully architected a custom, multi-node <b>NAT Network (10.0.2.0/24)</b> to maintain environment isolation while ensuring structured, inter-VM network routing and connectivity.</li>
+<br>
+
+<li><b>Linux System Administration & SIEM Deployment: </b>Cultivated practical Linux administration skills by deploying, configuring, and hardening an <b>Ubuntu Server</b> to act as the central repository for the lab's security infrastructure. Successfully installed and configured the <b>Wazuh Manager</b> and <b>Suricata</b>, managing core system dependencies, services, and security components while verifying daemon readiness.</li>
+<br>
+
+<li><b>Network Intrusion Detection & Traffic Analysis: </b>Gained practical experience with network security monitoring by deploying and configuring <b>Suricata IDS/IPS</b> on the centralized <b>Ubuntu Server</b>. Developed an understanding of network-based threat detection by monitoring traffic, generating intrusion alerts, analyzing network events, and using Suricata telemetry to identify suspicious or malicious activity within the lab environment.</li>
+<br>
+
+<li><b>Endpoint Telemetry & Logging Architecture: </b>Gained foundational knowledge of host-level visibility and enterprise auditing by deploying <b>Microsoft System Monitor (Sysmon)</b> on a <b>Windows 10 Pro</b> endpoint. Mastered the structural installation of advanced logging binaries and endpoint-level agent services designed to transform raw OS behavior into structured telemetry.</li>
+<br>
+
+<li><b>SIEM Agent Deployment & Pipeline Engineering: </b>Mastered the fundamentals of the log collection lifecycle by successfully deploying and configuring the <b>Wazuh Agent</b> on a target Windows endpoint. Successfully established secure communication between the endpoint agent and the centralized <b>Ubuntu SIEM</b> server, verifying the integrity of the ingestion pipeline and enabling centralized analysis of endpoint security events.</li>
+<br>
+
+<li><b>Security Telemetry Integration & Event Correlation: </b>Developed practical experience integrating multiple security telemetry sources by combining <b>Sysmon</b> endpoint events with <b>Suricata</b> network security alerts within the <b>Wazuh SIEM</b>. Gained hands-on understanding of correlating host-based and network-based indicators to improve visibility, detection accuracy, and incident investigation capabilities.</li>
+<br>
+
+<li><b>Network Infrastructure Troubleshooting: </b>Developed critical, low-level technical problem-solving skills by diagnosing and resolving hypervisor-level network connectivity issues. Successfully managed virtual interface states, negotiated IP address assignments, and validated end-to-end interface connectivity across the virtualized SOC environment.</li>
+<br>
+
+<li><b>Pragmatic Project Management & Scope Planning: </b>Demonstrated strong architectural planning and resource management by designing a lean, fully functional, three-node security monitoring pipeline optimized specifically for local hardware constraints. Successfully integrated <b>Kali Linux</b>, <b>Windows 10 Pro</b>, and <b>Ubuntu Server</b> with <b>Sysmon</b>, <b>Suricata</b>, and <b>Wazuh</b> to establish a practical foundation for adversarial testing, network monitoring, endpoint detection, and security analysis.</li>
+
 </u>
 
 <br>
