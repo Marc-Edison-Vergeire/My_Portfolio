@@ -77,7 +77,7 @@
 
 <h3>Adversarial & Simulation Layer</h3>
 <ul>
-  <li><b>Kali Linux: </b>Provisioned as a dedicated offensive security testing platform, fully equipped and strategically positioned within the network to simulate threat actor methodologies and execute controlled attack vectors against the Windows 10 Pro target.</li>
+  <li><b>Kali Linux: </b>Provisioned as a dedicated offensive security testing platform, fully equipped and strategically positioned within the network to simulate threat actor methodologies and execute controlled attack vectors against the Windows 10 Pro target & Ubuntu Server.</li>
 </ul>
 
 <h3>Operating Systems Layer</h3>
