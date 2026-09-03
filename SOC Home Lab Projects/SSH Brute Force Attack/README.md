@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h1>SOC/Blue Team Lab: End-to-End SSH Brute-Force Attack Detection, Investigation, Monitoring, and Incident Response Using Wazuh SIEM</h1>
 
 
