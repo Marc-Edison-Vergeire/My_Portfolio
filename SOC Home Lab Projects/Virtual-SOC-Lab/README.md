@@ -55,11 +55,11 @@
 <br>
 
 <li><b>Pragmatic Project Management & Scope Planning: </b>Demonstrated strong architectural planning and resource management by designing a lean, fully functional, three-node security monitoring pipeline optimized specifically for local hardware constraints. Successfully integrated <b>Kali Linux</b>, <b>Windows 10 Pro</b>, and <b>Ubuntu Server</b> with <b>Sysmon</b>, <b>Suricata</b>, and <b>Wazuh</b> to establish a practical foundation for adversarial testing, network monitoring, endpoint detection, and security analysis.</li>
-
 </u>
 
 <br>
 <h2>Tools & Technologies Utilized</h2>
+
 <h3>Infrastructure & Virtualization Layer</h3>
 <ul>
   <li><b>Oracle VM VirtualBox: </b>Utilized as a Type-2 hypervisor to host, configure, and isolate virtual machines within a secure sandbox environment.</li>
@@ -68,27 +68,31 @@
 
 <h3>Defensive & Telemetry Engineering Layer</h3>
 <ul>
-  <li><b>Wazuh SIEM (Open-Source): </b>Deployed on an Ubuntu Server backend to act as a centralized <b>Security Information and Event Management (SIEM)</b> and <b>Extended Detection and Response (XDR)</b> platform for log aggregation, normalization, and alert generation.</li>
-  <br><li><b>Wazuh Endpoint Agent: </b>Installed on the Windows target endpoint to establish a secure cryptographic channel that streams real-time local system telemetry directly to the Wazuh Manager.</li>
+  <li><b>Wazuh SIEM (Open-Source): </b>Deployed on an Ubuntu Server backend to act as a centralized <b>Security Information and Event Management (SIEM)</b> and <b>Extended Detection and Response (XDR)</b> platform for log aggregation, normalization, correlation, and alert generation.</li>
+  <br><li><b>Wazuh Endpoint Agent: </b>Installed on the Windows target endpoint to establish a secure communication channel that streams real-time local system telemetry directly to the Wazuh Manager.</li>
   <br><li><b>Microsoft System Monitor (Sysmon): </b>Integrated into the Windows host auditing subsystem to provide advanced endpoint visibility by generating high-fidelity event logs for process creation, network connections, and file modifications.</li>
+  <br><li><b>Suricata IDS/IPS: </b>Deployed on the Ubuntu Server to provide network-level intrusion detection and prevention capabilities. Configured to monitor network traffic, identify suspicious patterns and known attack signatures, and generate security alerts that complement the endpoint telemetry collected by Sysmon.</li>
+  <br><li><b>Security Telemetry Integration: </b>Integrated <b>Sysmon</b> endpoint telemetry and <b>Suricata</b> network security events with <b>Wazuh</b> to provide centralized visibility across both host-based and network-based activity, supporting event correlation, detection validation, and incident investigation.</li>
 </ul>
 
 <h3>Adversarial & Simulation Layer</h3>
 <ul>
-  <li><b>Kali Linux: </b>Provisioned as a dedicated offensive security testing platform, fully equipped and strategically positioned within the network to simulate threat actor methodologies and execute future exploitation vectors.</li>
+  <li><b>Kali Linux: </b>Provisioned as a dedicated offensive security testing platform, fully equipped and strategically positioned within the network to simulate threat actor methodologies and execute controlled attack vectors against the Windows 10 Pro target.</li>
 </ul>
 
 <h3>Operating Systems Layer</h3>
 <ul>
-  <li><b>Ubuntu Server (LTS): </b>Utilized as a lightIight, high-performance Linux foundation dedicated to running core <b>Wazuh SIEM</b> management services.</li>
-  <br><li><b>Windows 10 Pro: </b>Deployed as an enterprise-grade target endpoint, specifically configured for enhanced security auditing and proactive monitoring.</li>
-  <br><li><b>Windows 11: </b>Serving as the physical host system, it is used to orchestrate the virtual environment and securely access the Ib-based Wazuh management dashboard for administrative verification.</li>
+  <li><b>Ubuntu Server (LTS): </b>Utilized as a lightweight, high-performance Linux foundation dedicated to running the core <b>Wazuh SIEM</b> management services and <b>Suricata IDS/IPS</b> for centralized security monitoring and network traffic analysis.</li>
+  <br><li><b>Windows 10 Pro: </b>Deployed as the enterprise-style target endpoint, specifically configured with <b>Sysmon</b> and the <b>Wazuh Agent</b> for enhanced security auditing, endpoint telemetry, and proactive monitoring.</li>
+  <br><li><b>Windows 11: </b>Serving as the physical host system, it is used to orchestrate the virtual environment and securely access the Wazuh management dashboard for administrative verification and security monitoring.</li>
 </ul>
+
+
 
 <br>
 <h2>Installation & Deployment Guide</h2>
 <h3>A. VirtualBox</h3>
-<p>I chose the vendor VirtualBox as the virtual environment (preferably Sandbox Environment). First, I go to <b>Google.com</b> and type <b>download VirtualBox</b> or <b>VirtualBox download</b> in the search bar, then press <b>Enter</b>.</p>
+<p>I chose the vendor VirtualBox as the virtual environment (preferably a sandbox environment). First, I go to <b>Google.com</b> and type <b>download VirtualBox</b> or <b>VirtualBox download</b> in the search bar, then press <b>Enter</b>.</p>
 <p><img width="665" height="279" alt="image" src="https://github.com/user-attachments/assets/4c9f23bf-e650-4a28-b70d-fc636c642216" />
 </p>
 <p>Google provided different results, but I selected the first one.</p>
