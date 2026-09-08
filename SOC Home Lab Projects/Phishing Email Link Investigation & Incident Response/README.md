@@ -105,7 +105,7 @@
 <p><img width="626" height="477" alt="image" src="https://github.com/user-attachments/assets/2a02a51a-5831-439c-9cd6-8f96de177b23" />
 </p>
 <p>More skilled threat actors may use additional techniques to make the shortened URL appear more legitimate. One example is <b>MaskPhish</b>, which can be used to modify the appearance of a URL. However, for this demonstration, I used the shortened payload link and incorporated it into the crafted phishing email.</p>
-<p><img width="969" height="557" alt="image" src="https://github.com/user-attachments/assets/ece85af3-8079-4e9b-ba2b-56b3788436e1" />
+<p><img width="768" height="446" alt="image" src="https://github.com/user-attachments/assets/4109ca34-2c5d-4a5a-9aba-86f6c990a3d4" />
 </p>
 <p>This resulted in the final phishing email, which was designed to appear as genuine and convincing as possible in an attempt to persuade the recipient, <b>victimjohn[.]windows10@gmail[.]com</b>, to click the link. To make the demonstration more realistic, I also used a VPN to simulate an attempt by the threat actor to conceal the originating network location.</p>
 <p><img width="975" height="777" alt="image" src="https://github.com/user-attachments/assets/10a061ce-faa4-4411-9b94-54c1bd66a4bf" />
