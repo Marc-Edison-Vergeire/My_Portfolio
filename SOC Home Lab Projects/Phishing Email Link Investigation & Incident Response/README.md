@@ -335,11 +335,6 @@
 </ul>
 
 <br>
-<h2>Investigation Timeline</h2>
-<p></p>
-
-
-<br>
 <h2>Lessons Learned</h2>
 <p>This incident demonstrated that effective phishing detection requires a combination of technical analysis, user awareness, and a structured incident-response process rather than reliance on a single security control. One of the key lessons learned was that SPF, DKIM, and DMARC passing results do not automatically confirm that an email is legitimate, particularly when attackers can use legitimate email services or compromised infrastructure. Careful examination of the sender address, typosquatting indicators, email content, hyperlinks, URL reputation, redirect behavior, and the final destination was essential in identifying the phishing attempt.</p>
 <p>The investigation also highlighted the importance of security-awareness training, as the user's knowledge of phishing and social-engineering techniques prevented the submission of legitimate credentials and allowed the incident to be reported promptly. Furthermore, conducting URL and malware analysis within an isolated environment reduced the risk of exposure while allowing the suspicious behavior to be safely examined. Finally, the incident reinforced the importance of timely containment, indicator blocking, user notification, escalation, documentation, and continuous monitoring. Overall, the exercise demonstrated that a strong cybersecurity defense depends on multiple layers of protection working together, with both technical controls and informed users playing critical roles in preventing credential theft and limiting the potential impact of phishing attacks.</p>
