@@ -113,38 +113,59 @@
 
 <br>
 <h3>Target/Victim Perspective</h3>
-<p>On the target or victim's end, <b>John D. Victim</b>, a company employee, received the email on his Windows 10 workstation. He opened an unusual email claiming that his Microsoft account was about to expire due to inactivity and required immediate attention because of the urgency of the situation. The email also provided a specific deadline of <b>October 21, 2026</b>.</p>
+<p>On the target or victim's end, <b>John D. Victim</b>, a company employee, received the email on his Windows 10 workstation. He opened an unusual email claiming that his Microsoft account was about to expire due to inactivity and required immediate attention because of the urgency of the situation. The email also provided a specific deadline of <b>November 21, 2026</b>.</p>
 <p>John regularly uses his Microsoft account for work-related activities. Fortunately, the company conducts monthly security-awareness training covering topics such as phishing emails, social engineering, and other cybersecurity threats.</p>
 <p>As a result of this training, John became suspicious of the email and asked me to investigate it. This is where I, acting as a SOC Analyst, became involved. I began investigating and verifying the contents of the email to determine whether it was a phishing attempt or a legitimate communication.</p>
 <p>Since John did not click the link provided in the email, I was able to safely conduct the investigation using multiple online tools and resources before reaching a conclusion.</p>
 <p>At approximately <b>9:35 AM on September 7, 2026</b>, John received the email in his Gmail inbox. The subject line was:</p>
+        
         "!! Microsoft account unusual sign-in activity"
 <p>John opened the email because he was concerned about the urgent nature of the message and wanted to understand why immediate action was required.</p>
+<p><img width="975" height="105" alt="image" src="https://github.com/user-attachments/assets/5d33f017-8e54-465a-8ef5-ad91cce96d15" />
+</p>
 
 
 <br>
 <h3>Phase 1: Sender Investigation</h3>
 <p>Upon investigation, the sender appeared to be Microsoft Teams, with the following email address:</p>
+        
         support[.]microsorft@gmail[.]com
 <p>Several issues were immediately identified.</p>
 <p>The sender's email address was a significant red flag because it appeared to impersonate Microsoft while using a Gmail domain. In addition, the word "<b><i>microsorft</i></b>" was misspelled and should have been "<b><i>microsoft</i></b>."</p>
 <p>This is an example of a <b>typosquatting technique</b>, in which an attacker uses a domain name, email address, or other identifier that closely resembles a legitimate one in an attempt to deceive the recipient.</p>
 <p>A legitimate Microsoft communication would not normally be expected to originate from a random Gmail address. Therefore, the sender's address provided an important indication that the email was potentially malicious.</p>
+<p><img width="634" height="402" alt="image" src="https://github.com/user-attachments/assets/c9602610-13ca-4179-a400-f2096b2a3a13" />
+</p>
 <p>I then opened the original message and examined the complete contents of the email.</p>
-
-
+<p><img width="902" height="315" alt="image" src="https://github.com/user-attachments/assets/d2aed9d8-6fcc-4876-a08f-cf8f66d52cad" />
+</p>
 
 <br>
 <h3>Phase 2: Email Authentication Investigation</h3>
 <p>Although the <b>SPF</b>, <b>DKIM</b>, and <b>DMARC</b> checks displayed in Gmail indicated <b>PASS</b>, I continued the investigation rather than considering the email legitimate solely based on these results.</p>
 <p>I investigated the sender's email address using several online email-verification and checking services.</p>
+<p><img width="784" height="595" alt="image" src="https://github.com/user-attachments/assets/ac3b331e-f746-4202-ae85-2f1a03892d41" />
+</p>
 <p>Based on the information gathered from these tools and resources, the sender's email address presented several inconsistencies and could not be reliably associated with a legitimate Microsoft platform.</p>
+<p><img width="975" height="407" alt="image" src="https://github.com/user-attachments/assets/d95052b2-ded8-4c6c-be19-7a3c3001ca9a" />
+</p>
+<p><img width="915" height="434" alt="image" src="https://github.com/user-attachments/assets/360f097c-381d-4749-9273-fd1576fe0076" />
+</p>
+<p><img width="815" height="940" alt="image" src="https://github.com/user-attachments/assets/432cac95-e00c-47a6-b49e-1327a55f2c65" />
+</p>
+<p><img width="975" height="469" alt="image" src="https://github.com/user-attachments/assets/de7b66df-c1ea-43c4-98b7-a3ebd1ac9989" />
+</p>
+<p><img width="896" height="337" alt="image" src="https://github.com/user-attachments/assets/b82275b9-38b4-4f91-bc53-8713316766c7" />
+</p>
+<p><img width="746" height="421" alt="image" src="https://github.com/user-attachments/assets/dcb93dfc-b2d6-4206-8024-7ed8b5ac9a0a" />
+</p>
 <p>Therefore, the authentication results alone were not sufficient to establish that the email was legitimate.</p>
 
 
 <br>
 <h3>Phase 3: Sender IP Investigation</h3>
 <p>I then investigated the sender's IP address:</p>
+        
         209[.]85[.]220[.]41
 <p>I used several security and threat-intelligence platforms to investigate the IP address and its associated activity.</p>
 <p>On <b>VirusTotal</b>, the IP address itself did not initially appear to be blacklisted. However, after conducting further investigation within the platform, I found that three detected files had communicated with the IP address. This indicated an association with potentially malicious activity, even though the IP address itself was not directly classified as malicious.</p>
