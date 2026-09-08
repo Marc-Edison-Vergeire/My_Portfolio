@@ -53,8 +53,8 @@
     <li><b>IPLocation: </b>IP geolocation analysis</li>
     <li><b>Robtex: </b>IP, DNS, and network intelligence</li>
     <li><b>AbuseIPDB: </b>IP reputation and abuse investigation</li>
-    <li></li><b>WhatIsMyIP: </b>IP and geolocation analysis</li>
-    <li></li><b>WhatIsMyIPAddress: </b>IP information lookup</li>
+    <li><b>WhatIsMyIP: </b>IP and geolocation analysis</li>
+    <li><b>WhatIsMyIPAddress: </b>IP information lookup</li>
     <li><b>MXToolbox: </b>Email header and DNS analysis</li>
     <li><b>Google Admin Toolbox: </b>Email header analysis</li>
     <li><b>Kali Linux: </b>Security testing and investigation environment</li>
