@@ -813,12 +813,12 @@
 <p>And this is how the <b>ossec configuration</b> would look like.</p>
 <p><img width="975" height="513" alt="image" src="https://github.com/user-attachments/assets/6b5e2679-a337-4ddd-b650-f268fc0889ae" />
 </p>
-<p>Now, I copied the <b>Application</b> log file and pasted it next to it and replaced the word <b><i>Application</i></b> later on, in order to point to Sysmon.</p>
+<p>Now, I copied the <b>Application</b> log file, pasted it next to it, and later replaced the word <b><i>Application</i></b> later on to point to Sysmon.</p>
 <p><img width="975" height="771" alt="image" src="https://github.com/user-attachments/assets/b5ddaf8b-1cc5-43e5-9a6c-8d4980852ab0" />
 </p>
 <p><img width="975" height="812" alt="image" src="https://github.com/user-attachments/assets/5bb60127-877a-41ed-98af-441c7e7b2362" />
 </p>
-<p>Next, I opened <b>Event Viewer</b>, selected <b>Applications and Services Logs</b>, selected <b>Microsoft</b>, dropped down Windows, and scrolled down to find Sysmon.</p>
+<p>Next, I opened <b>Event Viewer</b>, selected <b>Applications and Services Logs</b>, selected <b>Microsoft</b>, dropped down to Windows, and scrolled down to find Sysmon.</p>
 <p><img width="975" height="534" alt="image" src="https://github.com/user-attachments/assets/b3032e5f-bf13-4d7f-9f37-a8541a9a9a2e" />
 </p>
 <p><img width="975" height="684" alt="image" src="https://github.com/user-attachments/assets/ec210255-9e71-4b5d-b369-e70bf06ba912" />
@@ -851,7 +851,7 @@
 <p>Going back to the Wazuh dashboard, I restarted or refreshed it as well.</p>
 <p><img width="694" height="527" alt="image" src="https://github.com/user-attachments/assets/16a8e101-4a73-41e2-96e2-4af5fc0cb5af" />
 </p>
-<p>As you can see, there are <b>740 hits</b> now. Not only that, it is now sourcing from Sysmon because when I dropped down and expanded the <b>Event</b> and scrolled down, it shows up that it came from <b>Microsof-windows-Sysmon/Operational</b>.</p>
+<p>As you can see, there are <b>740 hits</b> now. Not only that, it is now sourcing from Sysmon because when I dropped down and expanded the <b>Event</b> and scrolled down, it shows that it came from <b>Microsof-windows-Sysmon/Operational</b>.</p>
 <p><img width="950" height="471" alt="image" src="https://github.com/user-attachments/assets/21a18d0f-bcc1-4c57-b7e5-073aeafe09c7" />
 </p>
 
@@ -898,16 +898,16 @@
 <p>There is this Windows event ID “<b><i>4726</i></b>”. </p>
 <p><img width="712" height="387" alt="image" src="https://github.com/user-attachments/assets/f231bc79-2ec2-47ae-aa54-6ec17ffceb17" />
 </p>
-<p>I researched what does the Windows Event ID 4726 means. This means that “<i>A user account was deleted</i>”, which is the activity what I did from the Windows VM, deleting the new user.</p>
+<p>I researched what the Windows Event ID 4726 means. This means that “<i>A user account was deleted</i>”, which is the activity what I did from the Windows VM, deleting the new user.</p>
 <p><img width="975" height="291" alt="image" src="https://github.com/user-attachments/assets/6c981b4a-c90a-4243-88a6-488521b7c785" />
 </p>
-<p>I scrolled down for more information. Under the system message, it was indeed the new user was deleted. There are other information , such as the account name who made and delete the new user along with its Relative Identifier (RID), and the account name of the user itself with its Relative Identifier (RID) as well.</p>
+<p>I scrolled down for more information. Under the system message, it indeed shows that the new user was deleted. There is other information, such as the account name who made and deleted the new user along with its Relative Identifier (RID), and the account name of the user itself with its Relative Identifier (RID) as well.</p>
 <p><img width="959" height="340" alt="image" src="https://github.com/user-attachments/assets/f4622d01-9114-493d-bdbb-33bfc39240ce" />
 </p>
-<p>Again, I researched online what the event ID is for a user account creation, which I will be using to search in Wazuh.</p>
+<p>Again, I researched online what the event ID is for user account creation, which I will be using to search in Wazuh.</p>
 <p><img width="975" height="131" alt="image" src="https://github.com/user-attachments/assets/8ef3b708-eddf-483b-aa44-2d40e3fdd74d" />
 </p>
-<p>Using the information I found online, I typed the event ID 4720 on the search bar and found <b>84</b> hits.</p>
+<p>Using the information I found online, I typed the event ID 4720 into the search bar and found <b>84</b> hits.</p>
 <p><img width="975" height="172" alt="image" src="https://github.com/user-attachments/assets/24d7ea34-ba60-4760-a586-855433a160db" />
 </p>
 <p><img width="975" height="508" alt="image" src="https://github.com/user-attachments/assets/99589608-9b2c-4ba9-86ff-dd825df85b70" />
@@ -919,7 +919,7 @@
 </p>
 <p><img width="975" height="726" alt="image" src="https://github.com/user-attachments/assets/88a71890-d686-4ae1-9990-978635fda7b5" />
 </p>
-<p>Now, I locked the Windows machine for security reasons and to test, then logged in by entering the password, in order to generate event ID 4624 on Wazuh.</p>
+<p>Now, I locked the Windows machine for security reasons and to test, then logged in by entering the password in order to generate event ID 4624 on Wazuh.</p>
 <p><img width="546" height="481" alt="image" src="https://github.com/user-attachments/assets/f0d397f1-ecaf-447d-ac08-e159e887d5ae" />
 </p>
 < p> In the search bar, I typed:</p>
@@ -933,10 +933,10 @@
 <p>Once found, the description says, “<i>An account was successfully logged on</i>”, which means it successfully captured the logged-in activity in real-time. There are other information that can be found if scrolled down.</p>
 <p><img width="870" height="389" alt="image" src="https://github.com/user-attachments/assets/d64fd488-1481-44e7-bb3a-dfebdc8fbd19" />
 </p>
-<p>I noticed that there is this Logon Information section, which is Logon Type: 2. I researched online what it means, and that is <b><i>Interactive</i></b>, which basically means logging on locally from the Windows machine. As an aspiring SOC Analyst, the other Logon Type numbers are also essential to identify so that in the real world cases and are helpful reference to any type of activities that are or will occur.</p>
+<p>I noticed that there is this Logon Information section, which is Logon Type: 2. I researched online what it means, and that is <b><i>Interactive</i></b>, which basically means logging on locally from the Windows machine. As an aspiring SOC Analyst, it's also essential to identify the other Logon Type numbers in real-world cases, and they're a helpful reference for any activity that is or will occur.</p>
 <p><img width="814" height="802" alt="image" src="https://github.com/user-attachments/assets/5c090629-604b-4813-b6b9-fcc0485b8c26" />
 </p>
-<p>I identified the Windows event ID where I added the new user on the local group of administrators by researching online and found out that it is event ID <b>4732.</b></p>
+<p>I identified the Windows event ID for adding a new user to the local Administrators group by researching online and found out that it is event ID <b>4732</b></p>
 <p><img width="975" height="99" alt="image" src="https://github.com/user-attachments/assets/0ba4727b-5dfd-41d0-9a7f-f8618bbd2d7c" />
 </p>
 <p>After that, I entered it in the search bar by typing:</p>
@@ -944,7 +944,7 @@
     data.win.system.eventID: 4732
 <p><img width="975" height="640" alt="image" src="https://github.com/user-attachments/assets/c6d0a553-8a54-4b34-b363-fc0d035d868b" />
 </p>
-<p>On the first result, I scrolled down and looked for the system’s message, and its description says, “<i>A member was added to a security-enabled local group</i>”, which means that it captured the addition of the new user to the local group.</p>
+< p> In the first result, I scrolled down and looked for the system’s message, and its description says, “<i>A member was added to a security-enabled local group</i>”, which means that it captured the addition of the new user to the local group.</p>
 <p><img width="869" height="377" alt="image" src="https://github.com/user-attachments/assets/d5b46b91-19f9-4aa4-b490-39fc98fa97e3" />
 </p>
 <p>I noticed that the new user’s account name did not appear in the Member section; thus, I copied its Security ID and pasted on the search bar in order to search for it.</p>
@@ -952,7 +952,7 @@
 </p>
 <p><img width="975" height="472" alt="image" src="https://github.com/user-attachments/assets/9403f657-0dc1-4d64-9852-098bad5b5c85" />
 </p>
-<p>I selected the first result, expanded, and scrolled it down. It confirmed that it is the target’s username or the new user’s account name.</p>
+<p>I selected the first result, expanded it, and scrolled down. It confirmed that it is the target’s username or the new user’s account name.</p>
 <p><img width="971" height="404" alt="image" src="https://github.com/user-attachments/assets/fc1bc928-b9e3-463f-92aa-56b0dd21b2db" />
 </p>
 <p><img width="882" height="365" alt="image" src="https://github.com/user-attachments/assets/6b5483d4-b8cf-47de-9cb1-e3836db61f87" />
@@ -980,7 +980,7 @@
     cd /var/ossec/etc/rules
 <p><img width="615" height="181" alt="image" src="https://github.com/user-attachments/assets/15ba1b75-308d-4710-a25e-a1ab714cfab3" />
 </p>
-<p>After changing the directory and locating the XML file, I can modify the inside of the file and input the custom rules that I have prepared by typing: </p>
+<p>After changing the directory and locating the XML file, I can modify the contents of the file and input the custom rules that I have prepared by typing: </p>
 
     nano local_rules.xml
 <p><img width="975" height="605" alt="image" src="https://github.com/user-attachments/assets/bf046e9c-9b88-4365-91e2-8df207035c2b" />
@@ -1040,7 +1040,7 @@
     sudo systemctl restart wazuh-manager.service
 <p><img width="771" height="87" alt="image" src="https://github.com/user-attachments/assets/237342b2-1604-4362-950c-e4f0769fb3ff" />
 </p>
-<p>I verified that it’s been activated by changing the user from regular user into root account by typing:</p>
+<p>I verified that it’s been activated by changing the user from a regular user to a root account by typing:</p>
 
     sudo su -
 
@@ -1053,7 +1053,7 @@
 
 <p><img width="582" height="146" alt="image" src="https://github.com/user-attachments/assets/92b5d256-aec7-48af-bdac-d8607f7f08ba" />
 </p>
-<p>To restore the connectivity, I moved from root account into regular user by typing <b>exit</b>, then typed:</p>
+<p>To restore connectivity, I moved from the root account to a regular user by typing <b>exit</b>, then typed:</p>
 
     sudo iptables –L –n –line-numbers
 
@@ -1070,6 +1070,100 @@
     sudo iptables –L –n –line-numbers
 
 <p><img width="650" height="209" alt="image" src="https://github.com/user-attachments/assets/d747458a-d83a-453e-923a-a94482fd1e98" />
+</p>
+
+<br>
+<h3>L. Installing Suricata in Ubuntu Server</h3>
+<p>I moved from a regular user to the root account in Suricata to install Suricata smoothly by entering the following commands:</p>
+
+	sudo su -
+	sudo add-apt-repository ppa:oisf/suricata-stable
+<p><img width="734" height="240" alt="image" src="https://github.com/user-attachments/assets/0410deeb-ae5e-4400-937e-9219c2d0ec51" />
+</p>
+
+<p>After that, I follow up by updating the system by typing:</p>
+
+	sudo apt-get update
+<p><img width="877" height="194" alt="image" src="https://github.com/user-attachments/assets/34240e66-cecc-42ac-a73a-7d8609c78ab7" />
+</p>
+
+<p>Now, I installed Suricata on the Ubuntu Server by typing:</p>
+
+	sudo apt-get install suricata -y
+<p><img width="559" height="107" alt="image" src="https://github.com/user-attachments/assets/3c5582a4-d8af-45c3-b639-288820dff83d" />
+</p>
+
+<p>After the installation, I changed the directory to:</p>
+
+	cd /etc/suricata/
+	ls
+<p><img width="745" height="77" alt="image" src="https://github.com/user-attachments/assets/438cb239-6634-4fc1-9eb8-eedce9a8d20f" />
+</p>
+
+<p>It does not have any folder for the <b>rules</b>, thus, I created one, where I can store and extract the Suricata rules, by typing:</p>
+
+	mkdir rules
+	ls
+<p><img width="801" height="89" alt="image" src="https://github.com/user-attachments/assets/95022bbf-20ab-4610-9ad3-e2e25c20fc19" />
+</p>
+
+<p>To download, I typed:</p>
+
+	cd /tmp/ && curl -LO https://rules.emergingthreats.net/open/suricata-6.0.8/emerging.rules.tar.gz
+<p><img width="975" height="91" alt="image" src="https://github.com/user-attachments/assets/b9c9a869-13bf-4cbc-8baa-925c14b62346" />
+</p>
+
+<p>Followed by:</p>
+
+	sudo tar -xvzf emerging.rules.tar.gz && sudo mv rules/*.rules /etc/suricata/rules/
+	cd /etc/suricata/rules
+	ls
+<p><img width="975" height="183" alt="image" src="https://github.com/user-attachments/assets/9b20e773-e34f-4c14-a2bb-093ec78d4814" />
+</p>
+
+<p>I typed the last command:</p>
+
+	sudo chmod 640 /etc/suricata/rules/*.rules
+<p><img width="884" height="64" alt="image" src="https://github.com/user-attachments/assets/b277162a-837f-4f46-a92b-8ae66104163a" />
+</p>
+
+<p><b>NOTE:</b> The <b>ifconfig</b> wasn't installed yet on Ubuntu Server; thus, I installed it to identify the network interface by typing:</p>
+
+	ifconfig
+<p><img width="871" height="426" alt="image" src="https://github.com/user-attachments/assets/fe321a07-7e04-4630-8afe-5737153478f9" />
+</p>
+
+<p>I modified the Suricata settings in the <b><i>/etc/suricata/suricata.yaml</i></b> file and set the following variables by typing:</p>
+
+	cd /etc/suricata/
+	ls
+	nano suricata.yaml
+<p><img width="827" height="107" alt="image" src="https://github.com/user-attachments/assets/7a32a2a1-98cf-499d-a05f-9dddca45af68" />
+</p>
+<p><img width="765" height="546" alt="image" src="https://github.com/user-attachments/assets/a5717c0d-f3e4-49b3-aca8-8191323883c3" />
+</p>
+
+<p>Inside the text editor, I looked for <b>af-packet</b> and replaced the interface by typing <b>enp0s3</b>.</p>
+<p><img width="877" height="184" alt="image" src="https://github.com/user-attachments/assets/1fd44eab-98c7-4e4f-9e5b-3648a1b0b92d" />
+</p>
+
+<p>I replaced the <b><i>HOME_NET</i></b> address with the Ubuntu Server's IP address, disabled the first <b><i>EXTERNAL_NET</i></b>, and enabled the second <b><i>EXTERNAL_NET</i></b>.</p>
+<p><img width="640" height="240" alt="image" src="https://github.com/user-attachments/assets/e8520447-c440-4b8b-95d4-d277ff9fc700" />
+</p>
+<p><img width="640" height="242" alt="image" src="https://github.com/user-attachments/assets/a0fd430e-bfe2-4d35-afbf-4079d1c9faae" />
+</p>
+
+<p>I replaced <b><i>/var/lib/suricatarules</i></b> into <b><i>/etc/suricata/rules</i></b>, and <b><i>suricata.rules</i></b> into <b><i>"*.rules"</i></b>.</p>
+<p><img width="465" height="119" alt="image" src="https://github.com/user-attachments/assets/148329e3-8c50-48f7-9872-69c8d0681ac8" />
+</p>
+<p><img width="427" height="109" alt="image" src="https://github.com/user-attachments/assets/31714879-aa97-411d-869b-a7e3f5d84b13" />
+</p>
+
+<p>I pressed <b>CTRL+X</b>, pressed <b>Y</b> for yes, and pressed <b>Enter</b> to save the file. After that, I restarted and checked the Suricata status by typing:</p>
+
+	sudo systemctl restart suricata
+	sudo systemctl status suricata
+<p><img width="975" height="349" alt="image" src="https://github.com/user-attachments/assets/147fd47c-b781-42f6-aa81-a8b8f33a856d" />
 </p>
 
 <br>
