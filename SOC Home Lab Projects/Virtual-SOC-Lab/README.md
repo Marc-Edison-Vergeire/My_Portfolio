@@ -1159,7 +1159,7 @@
 <p><img width="640" height="242" alt="image" src="https://github.com/user-attachments/assets/a0fd430e-bfe2-4d35-afbf-4079d1c9faae" />
 </p>
 
-<p>I replaced <b><i>/var/lib/suricatarules</i></b> into <b><i>/etc/suricata/rules</i></b>, and <b><i>suricata.rules</i></b> into <b><i>"*.rules"</i></b>.</p>
+<p>I replaced <b><i>/var/lib/suricata/rules</i></b> into <b><i>/etc/suricata/rules</i></b>, and <b><i>suricata.rules</i></b> into <b><i>"*.rules"</i></b>.</p>
 <p><img width="465" height="119" alt="image" src="https://github.com/user-attachments/assets/148329e3-8c50-48f7-9872-69c8d0681ac8" />
 </p>
 <p><img width="427" height="109" alt="image" src="https://github.com/user-attachments/assets/31714879-aa97-411d-869b-a7e3f5d84b13" />
@@ -1182,7 +1182,7 @@
 <p><img width="645" height="244" alt="image" src="https://github.com/user-attachments/assets/3703b3d9-7c17-422f-b531-51b45c35e65f" />
 </p>
 
-<p>Inside the <b><ossec_config></b> at the very bottom, I typed and added the following commands:</p>
+<p>Inside the <b><i>ossec_config</i>/b> at the very bottom, I typed and added the following commands:</p>
 
 	<localfile>
 	  <log_format>syslog</log_format>
