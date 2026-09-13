@@ -1182,7 +1182,7 @@
 <p><img width="645" height="244" alt="image" src="https://github.com/user-attachments/assets/3703b3d9-7c17-422f-b531-51b45c35e65f" />
 </p>
 
-<p>Inside the <b><i>ossec_config</i>/b> at the very bottom, I typed and added the following commands:</p>
+<p>Inside the ossec configuration at the very bottom, I typed and added the following commands:</p>
 
 	<localfile>
 	  <log_format>syslog</log_format>
