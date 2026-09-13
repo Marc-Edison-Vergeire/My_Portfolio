@@ -1127,7 +1127,13 @@
 <p><img width="884" height="64" alt="image" src="https://github.com/user-attachments/assets/b277162a-837f-4f46-a92b-8ae66104163a" />
 </p>
 
-<p><b>NOTE:</b> The <b>ifconfig</b> wasn't installed yet on Ubuntu Server; thus, I installed it to identify the network interface by typing:</p>
+<p><b>NOTE:</b> The <b>ifconfig</b> command wasn't installed yet on Ubuntu Server; thus, I installed the network tools in order to identify the network interface by typing:</p>
+
+	sudo apt install net-tools
+<p><img width="777" height="121" alt="image" src="https://github.com/user-attachments/assets/9b9c5b57-baff-4901-b13b-46939c2c4fc6" />
+</p>
+
+<p>I identified the network interface by typing:</p>
 
 	ifconfig
 <p><img width="871" height="426" alt="image" src="https://github.com/user-attachments/assets/fe321a07-7e04-4630-8afe-5737153478f9" />
@@ -1165,6 +1171,39 @@
 	sudo systemctl status suricata
 <p><img width="975" height="349" alt="image" src="https://github.com/user-attachments/assets/147fd47c-b781-42f6-aa81-a8b8f33a856d" />
 </p>
+
+<p>In order to call the JSON file, I typed:</p>
+
+	cd /var/ossec/etc/
+	ls
+	nano ossec.conf
+<p><img width="975" height="89" alt="image" src="https://github.com/user-attachments/assets/c1401b7c-a51d-4d9e-a1bd-fb27188dd73a" />
+</p>
+<p><img width="645" height="244" alt="image" src="https://github.com/user-attachments/assets/3703b3d9-7c17-422f-b531-51b45c35e65f" />
+</p>
+
+<p>Inside the <b><ossec_config></b> at the very bottom, I typed and added the following commands:</p>
+
+	<localfile>
+	  <log_format>syslog</log_format>
+	  <location>/var/log/kern.log</location>
+	</localfile>
+
+	<localfile>
+	  <log_format>json</log_format>
+	  <location>/var/log/suricata/eve.json</location>
+	</localfile>
+
+<p><img width="637" height="584" alt="image" src="https://github.com/user-attachments/assets/fee69b19-2dc3-4231-b5d1-47b0ce44220b" />
+</p>
+
+<p>In order to take effect, I restarted and checked the status of the agent by typing:</p>
+
+	sudo systemctl restart wazuh-agent
+	sudo systemctl status wazuh-agent
+<p><img width="975" height="503" alt="image" src="https://github.com/user-attachments/assets/047ef78a-344f-4503-9910-320cc42a85b9" />
+</p>
+
 
 <br>
 <h2>Lessons Learned</h2>
