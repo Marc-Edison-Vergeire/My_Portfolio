@@ -446,6 +446,7 @@
 </p>
 <p>Before I started running Wazuh, I entered several commands that needed to run it seamlessly, such as: </p>
 
+	sudo apt daemon-reload
     sudo  systemctl  stop  wazuh-dashboard  wazuh-manager  wazuh-index
 
 <p>After that, I start them back up one by one, waiting 10-15 seconds between each command;</p>
@@ -484,7 +485,7 @@
     free -h
 <p>
 </p>
-<p> For me to open the dashboard, I launched a <b>Kali Linux</b> machine where I can use <b>Mozilla Firefox</b> for the internet and input the URL with the IP to test if it will launch the <b>Wazuh Dashboard</b>. I preferred to use Kali Linux because it consumes less RAM than running Wazuh in Windows 10; however, Wazuh can run in Windows 10 as well. </p>
+<p> For me to open the dashboard, I launched a <b>Kali Linux</b> machine where I can use <b>Mozilla Firefox</b> for the internet and input the URL with the IP to test if it will launch the <b>Wazuh Dashboard</b>. I prefer to use Kali Linux because it consumes less RAM than running Wazuh in Windows 10; however, Wazuh can run in Windows 10 as well. </p>
 <p><img width="975" height="463" alt="image" src="https://github.com/user-attachments/assets/c9a9cee7-8f6d-4c00-b3f0-c07bac3016dd" />
 
 </p>
@@ -521,15 +522,16 @@
 
 <br>
 <br>
-<p><b>NOTE #2:</b> If you forgot your password or wanted to know about the credentials of the Ubuntu Server (which you will be using to access Wazuh), type the command:</p>
+<p><b>NOTE #2:</b> If you forgot your password or want to know about the credentials of the Ubuntu Server (which you will be using to access Wazuh), type the command:</p>
 
     ls
 <p><img width="750" height="84" alt="image" src="https://github.com/user-attachments/assets/e3c4b517-a600-49d8-a0de-fb63ccf93cb3" /></p>
 
 <p>In order to extract the <b><i>wazuh-install-files.tar</i></b>  file, type the command:</p>
 
-    sudo tar -xf wazuh-install-files.tar
-<p><img width="884" height="71" alt="image" src="https://github.com/user-attachments/assets/04b22d74-91c5-41de-8bb6-142b41e92440" /></p>
+    sudo tar -O -xvf wazuh-install-files.tar wazuh-install-files/wazuh-passwords.txt
+<p><img width="821" height="47" alt="image" src="https://github.com/user-attachments/assets/7dff003b-baf0-4ac2-b173-0553f60c9b02" />
+</p>
 
 <p>Open the  <b><i>wazuh-install-files</i></b>  by typing:</p>
 
