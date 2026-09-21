@@ -308,6 +308,9 @@
 
     Continuous security monitoring
 
+<p><img width="619" height="251" alt="image" src="https://github.com/user-attachments/assets/f8f26243-3203-42ed-b76c-820b78670f3a" />
+</p>
+
 <p>These preventive and responsive measures can help minimize the impact of similar attacks in the future and reduce the risk of significant damage to the organization's systems and reputation.</p>
 <p><b>Objective:</b> Strengthen the organization's security posture and improve its ability to detect and respond to future attacks.</p>
 
