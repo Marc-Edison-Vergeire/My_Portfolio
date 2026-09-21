@@ -329,13 +329,13 @@
 <h3>Indicators of Compromise (IoC)</h3>
 <ul>
     <li><b>Source IP: </b>10[.]0[.]2[.]15</li>
-    <li><b>Target IP:</b>10[.]0[.]2[.]6</li>
-    <li><b>Target Port:</b>TCP/22</li>
-    <li><b>Service:</b> SSH</li>
-    <li><b>Username:</b> ubuntu-server</li>
+    <li><b>Target IP: </b>10[.]0[.]2[.]6</li>
+    <li><b>Target Port: </b>TCP/22</li>
+    <li><b>Service: </b> SSH</li>
+    <li><b>Username: </b> ubuntu-server</li>
     <li><b>Compromised/identified password: </b>kali</li>
     <li><b>Detection Rules: </b>5503, 5551, 100101, 651</li>
-    <li><b>Network:</b></li>
+    <li><b>Network:</b> 10.0.2.0/24</li>
 </ul>
 <p><b>Security note: </b>The password is included here because this is a controlled lab case study. It should be redacted from a production incident report.</p>
 
