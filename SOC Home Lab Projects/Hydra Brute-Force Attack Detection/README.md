@@ -308,7 +308,7 @@
 
     Continuous security monitoring
 
-<p><img width="619" height="251" alt="image" src="https://github.com/user-attachments/assets/f8f26243-3203-42ed-b76c-820b78670f3a" />
+<p><img width="619" height="143" alt="image" src="https://github.com/user-attachments/assets/6a9fdcb6-fdbf-492b-b965-083037b67da1" />
 </p>
 
 <p>These preventive and responsive measures can help minimize the impact of similar attacks in the future and reduce the risk of significant damage to the organization's systems and reputation.</p>
