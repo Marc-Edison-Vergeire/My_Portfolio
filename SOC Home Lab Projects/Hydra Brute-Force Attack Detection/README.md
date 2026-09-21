@@ -86,11 +86,11 @@
 <p><img width="675" height="300" alt="image" src="https://github.com/user-attachments/assets/9b372405-3d41-4858-913a-231cf65eb165" />
 </p>
 
-<p>The scan identifies port 22/TCP as open, with SSH running as the associated service.</p>
+<p>The scan identifies port 22/TCP is open, with SSH running as the associated service.</p>
 <p><b>Objective:</b> Determine whether the target is reachable and identify accessible services that could potentially be targeted.</p>
 
 <br>
-<h3>Phase 2 — Credential Access / Brute-Force Atta</h3>
+<h3>Phase 2 — Credential Access / Brute-Force Attack</h3>
 <p>After discovering that SSH is available on port 22, the attacker attempts to obtain the target's credentials using Hydra. The attacker executes:</p>
 
     hydra -l Ubuntu-server -P /usr/share/wordlists/rockme.txt
