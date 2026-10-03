@@ -42,7 +42,7 @@
 <li><b>Network Intrusion Detection & Traffic Analysis: </b>Gained practical experience with network security monitoring by deploying and configuring <b>Suricata IDS/IPS</b> on the centralized <b>Ubuntu Server</b>. Developed an understanding of network-based threat detection by monitoring traffic, generating intrusion alerts, analyzing network events, and using Suricata telemetry to identify suspicious or malicious activity within the lab environment.</li>
 <br>
 
-<li><b>Endpoint Telemetry & Logging Architecture: </b>Gained foundational knowledge of host-level visibility and enterprise auditing by deploying <b>Microsoft System Monitor (Sysmon)</b> on a <b>Windows 10 Pro</b> endpoint. Mastered the structural installation of advanced logging binaries and endpoint-level agent services designed to transform raw OS behavior into structured telemetry.</li>
+<li><b>Endpoint Telemetry & Logging Architecture: </b>Gained foundational knowledge of host-level visibility and enterprise auditing by deploying <b>Microsoft System Monitor (Sysmon)</b> on a <b>Windows 10 Pro</b> endpoint. Mastered the structured installation of advanced logging binaries and endpoint-level agent services designed to transform raw OS behavior into structured telemetry.</li>
 <br>
 
 <li><b>SIEM Agent Deployment & Pipeline Engineering: </b>Mastered the fundamentals of the log collection lifecycle by successfully deploying and configuring the <b>Wazuh Agent</b> on a target Windows endpoint. Successfully established secure communication between the endpoint agent and the centralized <b>Ubuntu SIEM</b> server, verifying the integrity of the ingestion pipeline and enabling centralized analysis of endpoint security events.</li>
@@ -101,7 +101,7 @@
 <p>On the <b>VirtualBox</b> platform, it provided two different choices. I chose the box on the left side and selected the <b>Windows hosts</b>, since I am using Windows OS.</p>
 <p><img width="829" height="381" alt="image" src="https://github.com/user-attachments/assets/260a1e46-871a-4be1-a0ce-3ed9452746d6" />
 </p>
-<p>After selecting the <b>Windows hosts</b>, it automatically download the application. I created a specific folder intended or dedicated only for virtual machine apps, images, and other files that are needed for this home lab setup.</p>
+<p>After selecting the <b>Windows hosts</b>, it automatically download the application. I created a specific folder intended and dedicated only for virtual machine apps, images, and other files that are needed for this home lab setup.</p>
 <p><img width="558" height="392" alt="image" src="https://github.com/user-attachments/assets/d0f1118d-df8f-48be-bd9d-ec3e95dca1e0" />
 </p>
 <p>After the download, I opened another browser for <b>VirusTotal.com</b> and uploaded the <b>VirtualBox</b> file, because it acts as a critical safety check to confirm the file is legitimate and free of malware. Another reason is that it prevents accidental system infections, verifies file integrity and authenticity, and catches tampered downloads.</p>
@@ -112,10 +112,10 @@
 <p><b>VirusTotal</b> checked and verifying the file.</p>
 <p><img width="562" height="397" alt="image" src="https://github.com/user-attachments/assets/aaa25a2a-c65a-4fd1-b748-1eeb81ac6e66" />
 </p>
-<p>Based on the result, the file or installer is safe and not flagged with any anti-virus vendors; thus, I confidently installed it on my computer.</p>
+<p>Based on the result, the file or installer is safe and not flagged by any antivirus vendors; thus, I confidently installed it on my computer.</p>
 <p><img width="743" height="451" alt="image" src="https://github.com/user-attachments/assets/ac870845-259d-4ce1-a9af-59a1eb927831" />
 </p>
-<p>I opened the folder where the installer was saved, and right-click then select <b>Open</b> to run the file.</p>
+<p>I opened the folder where the installer was saved, and right-clicked, then selected <b>Open</b> to run the file.</p>
 <p><img width="728" height="438" alt="image" src="https://github.com/user-attachments/assets/52aa07ed-b646-4b10-92db-123cd7db8882" />
 </p>
 <p>I selected <b>Next</b> to start the pre-installation.</p>
@@ -136,7 +136,7 @@
 <p>I leave it like that and selected <b>Next</b>.</p>
 <p><img width="496" height="400" alt="image" src="https://github.com/user-attachments/assets/2bbabf6e-1cdf-4159-89f0-63cf4c346df7" />
 </p>
-<p>Lastly, I selected the <b>Install</b> to start the installation process, and I let it load up.</p>
+<p>Lastly, I selected the <b>Install</b> button to start the installation process, and I let it load up.</p>
 <p><img width="507" height="401" alt="image" src="https://github.com/user-attachments/assets/23932057-7926-465b-acd4-398de76cfcbe" />
 </p>
 <p><img width="535" height="425" alt="image" src="https://github.com/user-attachments/assets/9cfbcea3-0707-4b08-8a52-19b35b478401" />
@@ -167,7 +167,7 @@
 <p>After I downloaded the file, I verified the file using the <b>VirusTotal</b> platform to check if it is free from malware.</p>
 <p><img width="771" height="356" alt="image" src="https://github.com/user-attachments/assets/33ed161c-28bf-4322-9219-f03d4f364f82" />
 </p>
-<p>Since the file is legit and clean, I simply opened the downloaded file, so that I can download the ISO file for VirtualBox.</p>
+<p>Since the file is legit and clean, I simply opened the downloaded file so that I could download the ISO file for VirtualBox.</p>
 <p><img width="685" height="434" alt="image" src="https://github.com/user-attachments/assets/b42963eb-1594-4863-b5aa-3e056942fba1" />
 </p>
 <p>I selected the <b>Accept</b> button to accept the license terms.</p>
@@ -185,7 +185,7 @@
 <p>It prompted me where to save the file, so I still chose the dedicated folder where I saved the other files for VirtualBox.</p>
 <p><img width="703" height="444" alt="image" src="https://github.com/user-attachments/assets/15020d18-8b68-425c-9969-cb18402f3c61" />
 </p>
-<p>I let it download the ISO file and did not interrupt while the process was ongoing.</p>
+<p>I let it download the ISO file and did not interrupt it while the process was ongoing.</p>
 <p><img width="975" height="289" alt="image" src="https://github.com/user-attachments/assets/ff4055de-768a-4dcd-96c9-e546a0b1beea" />
 </p>
 <p><img width="975" height="290" alt="image" src="https://github.com/user-attachments/assets/4ccd06bc-9abe-43dc-ab22-c3281a552221" />
@@ -195,7 +195,7 @@
 </p>
 <p><img width="975" height="287" alt="image" src="https://github.com/user-attachments/assets/de23d718-34d6-4eba-a15c-cf924a5f82f3" />
 </p>
-<p>The Windows 10 ISO file is now inside the folder and ready to ingest in VirtualBox.</p>
+<p>The Windows 10 ISO file is now inside the folder and ready to be ingested in VirtualBox.</p>
 <p><img width="728" height="298" alt="image" src="https://github.com/user-attachments/assets/91dad945-b267-4ac1-af05-6fe96f17af68" />
 </p>
 <p>I opened the VirtualBox again and selected <b>New</b> to ingest the Windows 10 ISO file.</p>
@@ -216,7 +216,7 @@
 <p>I leave it <b>50 GB</b> as the Hard Disk File Size and selected <b>Finish</b>.</p>
 <p><img width="975" height="363" alt="image" src="https://github.com/user-attachments/assets/88922015-dc82-4f27-b6b2-cce9e22f3657" />
 </p>
-<p>After that, the <b>Windows 10</b> machine appeared on the left pane of VirtualBox. I ran the program by selecting the <b>Start</b> button on top to start the installation of Windows 10.</p>
+<p>After that, the <b>Windows 10</b> machine appeared on the left pane of VirtualBox. I ran the program by selecting the <b>Start</b> button at the top to start the installation of Windows 10.</p>
 <p><img width="756" height="407" alt="image" src="https://github.com/user-attachments/assets/a96c24fa-e9b3-48a7-99eb-9b1bcbbd031f" />
 </p>
 <p>I leave everything as it is and selected the <b>Install</b> button.</p>
@@ -256,7 +256,7 @@
 <p>I didn’t input any password for easy access and selected the <b>Next</b> button instead.</p>
 <p><img width="837" height="574" alt="image" src="https://github.com/user-attachments/assets/97857e55-2802-4d75-adaa-573eab239806" />
 </p>
-<p>The <b>Windows 10 Pro</b> machine is successfully installed. Later, I will be turning off all the security, which includes the Windows Defender and its anti-virus, so that I can start attacking this machine using the <b>Kali Linux</b> machine.</p>
+<p>The <b>Windows 10 Pro</b> machine is successfully installed. Later, I will be turning off all the security, which includes Windows Defender and its antivirus, so that I can start attacking this machine using the <b>Kali Linux</b> machine.</p>
 <p><img width="714" height="539" alt="image" src="https://github.com/user-attachments/assets/8bedc995-acdc-474e-b93e-8e21770a0f62" />
 </p>
 
@@ -271,15 +271,15 @@
 <p>Inside the Kali Ibsite, select the <b>Virtual Machines</b> on the right-side.</p>
 <p><img width="975" height="521" alt="image" src="https://github.com/user-attachments/assets/f0f235ba-a089-4e20-8b19-616977af298a" />
 </p>
-<p>Since I am using VirtualBox, I chose the VirtualBox option. It prompted me where to save the file, thus, I saved it in the folder where I saved the other files.</p>
+<p>Since I am using VirtualBox, I chose the VirtualBox option. It prompted me where to save the file; thus, I saved it in the folder where I saved the other files.</p>
 <p><img width="975" height="517" alt="image" src="https://github.com/user-attachments/assets/8a089efd-de1e-431e-8b65-c6f88d60f1b2" />
 </p>
 <p><img width="971" height="306" alt="image" src="https://github.com/user-attachments/assets/f5094818-d849-4dba-a4cb-c97fdc7766fc" />
 </p>
-<p>After I downloaded the file, I extracted the file in the same folder.</p>
+<p>After I downloaded the file, I extracted it in the same folder.</p>
 <p><img width="543" height="511" alt="image" src="https://github.com/user-attachments/assets/6a63a8fd-e6b9-42ba-932f-9cebfdfbf269" />
 </p>
-<p>After I extracted the WinRAR file, it provided two results. I double-clicked the blue one (which has <b>.vbox</b> extension).</p>
+<p>After I extracted the WinRAR file, it provided two results. I double-clicked the blue one (which has a <b>.vbox</b> extension).</p>
 <p><img width="583" height="408" alt="image" src="https://github.com/user-attachments/assets/d2e5efd8-a065-47d0-bd67-ad737149cfd8" />
 </p>
 <p><img width="754" height="766" alt="image" src="https://github.com/user-attachments/assets/5a912d61-2b40-41c4-8da8-57ab155b7fa0" />
@@ -296,12 +296,12 @@
 <p>I pressed <b>Enter</b> to start.</p>
 <p><img width="460" height="449" alt="image" src="https://github.com/user-attachments/assets/9bfe1139-3861-48ed-ad8a-cd61d69a7ba0" />
 </p>
-<p>It prompted for Username and Password, thus, I entered <b>kali</b> and selected the <b>Log In</b> button.</p>
+<p>It prompted for Username and Password; thus, I entered <b>kali</b> and selected the <b>Log In</b> button.</p>
 <p><img width="500" height="569" alt="image" src="https://github.com/user-attachments/assets/115d5a7a-bd87-4bc4-bc54-dc91f0bcb83c" />
 </p>
 <p><img width="726" height="404" alt="image" src="https://github.com/user-attachments/assets/1ec24ac0-0fce-46d6-a34e-583351255f87" />
 </p>
-<p>Inside the Kali desktop, I opened a terminal, entered a command, and pressed <b>Enter</b>;</p>
+<p>Inside the Kali desktop, I opened a terminal, entered a command, and pressed <b>Enter</b>. </p>
     
     sudo  apt update  &&  sudo apt upgrade  -y
 
@@ -322,10 +322,10 @@
 <p>I opened the internet and typed <b>Google.com</b> in the browser. After that, I typed <b>ubuntu server download</b>.</p>
 <p><img width="889" height="405" alt="image" src="https://github.com/user-attachments/assets/bc14ec2f-ee71-4b2a-afa1-d2e7db1da514" />
 </p>
-<p>Google provided me some results, but I chose and selected the official <b>Ubuntu</b> Ibsite.</p>
+<p>Google provided me with some results, but I chose and selected the official <b>Ubuntu</b> website.</p>
 <p><img width="808" height="365" alt="image" src="https://github.com/user-attachments/assets/16bf7f83-33e8-4e54-9e1a-7c9775cb7c77" />
 </p>
-<p>Inside the <b>Ubuntu</b> platfrom, I clicked on the <b>Download</b> button. It prompted me where to save the file, thus, I chose where the other files intended for virtual machines are located.</p>
+<p>Inside the <b>Ubuntu</b> platfrom, I clicked on the <b>Download</b> button. It prompted me where to save the file; thus, I chose where the other files intended for virtual machines are located.</p>
 <p><img width="706" height="375" alt="image" src="https://github.com/user-attachments/assets/2260884e-53b7-4fdf-84e4-924a43ef6068" />
 </p>
 <p><img width="690" height="388" alt="image" src="https://github.com/user-attachments/assets/80a76eaf-54d6-4f8b-9f69-80e1c2e873b0" />
@@ -378,14 +378,14 @@
 <p>After the installation, I rebooted it.</p>
 <p><img width="711" height="717" alt="image" src="https://github.com/user-attachments/assets/4c42d01b-786f-4ed8-8057-2d4839aa77c3" />
 </p>
-<p>After the system rebooted, I typed a command in order to identify the OS release;</p>
+<p>After the system rebooted, I typed a command to identify the OS release: </p>
             
     more /etc/os-release
 <p><img width="754" height="767" alt="image" src="https://github.com/user-attachments/assets/998c8b05-a512-4f81-8c60-e07bdad3250c" />
 </p>
 <p><img width="862" height="329" alt="image" src="https://github.com/user-attachments/assets/5e1befb1-0491-4968-9e87-6ea0570fb476" />
 </p>
-<p>In order to update and upgrade the system, input the command: </p>
+<p> To update and upgrade the system, input the command: </p>
 
     sudo apt update && sudo apt upgrade -y
 <p><img width="862" height="121" alt="image" src="https://github.com/user-attachments/assets/b35ee34e-9035-41fe-b708-cac8f098b778" />
@@ -397,7 +397,7 @@
 <br>
 <br>
 <h3>E. Wazuh (SIEM) </h3>
-<p>Before running the <b>Ubuntu Server</b> and <b>Kali Linux</b>, I tIaked the network connections for the three VMs, so that they communicate in the same network.</p>
+<p>Before running the <b>Ubuntu Server</b> and <b>Kali Linux</b>, I set up the network connections for the three VMs so that they communicate on the same network.</p>
 <p><img width="736" height="316" alt="image" src="https://github.com/user-attachments/assets/6c32d01d-9620-4244-ad93-00ed3bbfc986" />
 </p>
 <p>I selected the <b>Tools</b> and chose <b>Network</b>.</p>
@@ -424,7 +424,7 @@
 <p>I scrolled down and selected the <b>Quickstart</b> button.</p>
 <p><img width="975" height="229" alt="image" src="https://github.com/user-attachments/assets/f2d73b0f-c135-4d3b-97ee-2738e2216c43" />
 </p>
-<p>After that, it provided me with a command to input in Ubuntu Server's CLI and run the said command, which is the;</p>
+<p>After that, it provided me with a command to input in Ubuntu Server's CLI and run the said command, which is: </p>
 
       curl -sO https://packages.wazuh.com/4.14/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
 
@@ -470,7 +470,7 @@
 
     sudo  systemctl  status  wazuh-manager
     
-<p>Since it says <b>active (running)</b>, tail the API log file to make sure there are no internal credentials or structural errors blocking the link by typing:</p>
+<p>Since it says <b>active (running)</b>, tail the API log file to make sure no internal credentials or structural errors are blocking the link by typing:</p>
 
     sudo  tail  -n  20  /var/ossec/logs/api.log
     
@@ -515,14 +515,14 @@
 <p>To exit from the status, simply press <b><i>q</i></b> key to exit</p>
 <br>
 <br>
-<p><b>NOTE #1:</b>  If you wanted to move from a regular user into root privileges, type:</p>
+<p><b>NOTE #1:</b>  If you want to move from a regular user into root privileges, type:</p>
 
     sudo su -
 <p><img width="975" height="97" alt="image" src="https://github.com/user-attachments/assets/888d5bc7-9df4-4f08-a317-a1e817c528f3" /></p>
 
 <br>
 <br>
-<p><b>NOTE #2:</b> If you forgot your password or want to know about the credentials of the Ubuntu Server (which you will be using to access Wazuh), type the command:</p>
+<p><b>NOTE #2:</b> If you forgot your password or want to know the credentials for the Ubuntu Server (which you will be using to access Wazuh), type the command:</p>
 
     ls
 <p><img width="750" height="84" alt="image" src="https://github.com/user-attachments/assets/e3c4b517-a600-49d8-a0de-fb63ccf93cb3" /></p>
@@ -550,7 +550,7 @@
 <h4>Procedures:</h4>
 <ul>
   <li>I want to configure the <b><i>ossec.conf</i></b> file.</li>
-  <li>In order to find that file, it is located under the <b><i>/var/ossec</i></b> directory</li>
+  <li> To find that file, it is located under the <b><i>/var/ossec</i></b> directory</li>
 
       sudo ls -la /var/ossec
   <p><img width="819" height="397" alt="image" src="https://github.com/user-attachments/assets/5b946534-e7a5-40a2-b7fa-178ac8e98cf2" /></p>
@@ -659,13 +659,13 @@
 <br>   
 <br>
 <h3>F. Deploying Wazuh Agents on Windows Endpoints</h3>
-<p>I let Ubuntu Server with Wazuh up and running to check if the Wazuh Agent would run successfully using the graphical user interface (GUI), which I needed to download. I opened the Windows 10 machine and used Internet Explorer to download the agent.</p>
+<p>I had Ubuntu Server with Wazuh up and running to check if the Wazuh Agent would run successfully using the graphical user interface (GUI), which I needed to download. I opened the Windows 10 machine and used Internet Explorer to download the agent.</p>
 <p><img width="752" height="602" alt="image" src="https://github.com/user-attachments/assets/58dacc18-469a-4862-b148-69d97b360a54" />
 </p>
 <p>In the Internet Explorer's browser, I input <b>Google.com</b>. On Google's website, I entered <b>wazuh agent gui</b>.</p>
 <p><img width="975" height="411" alt="image" src="https://github.com/user-attachments/assets/7b73adbe-b464-42f8-ab7e-621eef23e2a3" />
 </p>
-<p>I selected the official Ibsite, which leads me to its platform.</p>
+<p>I selected the official website, which leads me to its platform.</p>
 <p><img width="975" height="340" alt="image" src="https://github.com/user-attachments/assets/f360aadb-345e-4c55-be27-f53b1c49fe69" />
 </p>
 <p>Inside Wazuh's Ibsite, there are two choices, <b>CLI</b> or <b>GUI</b>. I chose the GUI tab, then downloaded the installer using the provided link.</p>
@@ -685,25 +685,25 @@
 </p>
 <p><img width="968" height="591" alt="image" src="https://github.com/user-attachments/assets/e17a5757-5400-4e88-a360-629eadedb82c" />
 </p>
-<p>Going back to the Wazuh Dashboard and refreshing, the Wazuh Agent successfully installed and did its job, and registered the Windows 10 machine in the dashboard.</p>
+<p>Going back to the Wazuh Dashboard and refreshing, the Wazuh Agent successfully installed, did its job, and registered the Windows 10 machine in the dashboard.</p>
 <p><img width="975" height="693" alt="image" src="https://github.com/user-attachments/assets/ac103e72-30f8-4fac-9c7b-fa468413a97d" />
 </p>
-<p>In the <b>Agent’s Summary</b> section, I selected <b>Active</b>, and it led me to more information about Windows 10’s system in real-time.</p>
+<p>In the <b>Agent’s Summary</b> section, I selected <b>Active</b>, and it led me to more information about Windows 10’s system in real time.</p>
 <p><img width="975" height="476" alt="image" src="https://github.com/user-attachments/assets/1b09eac0-fa3a-4c1a-ad0e-b7cd5c9615c0" />
 </p>
-<p>Based on the result, I clicked on the <b>Operating system</b> at the bottom and showed more specific information.</p>
+<p>Based on the result, I clicked on the <b>Operating system</b> at the bottom, which showed more specific information.</p>
 <p><img width="706" height="501" alt="image" src="https://github.com/user-attachments/assets/7856480f-65f2-4327-89ac-7c57f58a904d" />
 </p>
 
 <br>
 <h3>G. Sysmon</h3>
-<p>Using the Windows 10 machine, I opened Internet Explorer to access Google to search <b>Microsoft Sysmon</b>.</p>
+<p>Using the Windows 10 machine, I opened Internet Explorer to access Google and search for <b>Microsoft Sysmon</b>.</p>
 <p><img width="568" height="469" alt="image" src="https://github.com/user-attachments/assets/648e8b6f-7287-42ce-93ae-88643a96cede" />
 </p>
 <p>Inside the Google Ibsite, I entered <b>Microsoft sysmon download</b> in the search bar.</p>
 <p><img width="903" height="387" alt="image" src="https://github.com/user-attachments/assets/86525b5c-e338-444d-b7c8-ac285cce2c00" />
 </p>
-<p>I selected the official Ibsite of Microsoft to download the app. </p>
+<p>I selected the official website of Microsoft to download the app. </p>
 <p><img width="940" height="446" alt="image" src="https://github.com/user-attachments/assets/a1ff9aba-11f9-4322-a996-e352e5911c27" />
 </p>
 <p>I clicked on the link and automatically downloaded the file.</p>
@@ -738,16 +738,16 @@
 </p>
 <p><img width="860" height="226" alt="image" src="https://github.com/user-attachments/assets/ea29abcd-2c18-45f6-aab8-35cc67f69033" />
 </p>
-<p>I cut the <b>sysmonconfig</b> file and pasted in the same folder where the extracted files are located.</p>
+<p>I cut the <b>sysmonconfig</b> file and pasted it in the same folder where the extracted files are located.</p>
 <p><img width="656" height="377" alt="image" src="https://github.com/user-attachments/assets/4a9c3a03-b0b2-4422-ad18-ef2f4160960f" />
 </p>
 <p>I opened the PoIrShell CLI again then typed, <b>ls</b>  command to make sure everything are intact.</p>
 <p><img width="650" height="352" alt="image" src="https://github.com/user-attachments/assets/a769a0f2-0dd9-47cb-8cf9-aaa6948dc013" />
 </p>
-<p>Based on the result, there are a couple of executable files; thus, I chose and executed the <b>Sysmon64.exe</b> file in PoIrShell.</p>
+<p>Based on the result, there are a couple of executable files; thus, I chose and executed the <b>Sysmon64.exe</b> file in PowerShell.</p>
 <p><img width="601" height="337" alt="image" src="https://github.com/user-attachments/assets/56f71dea-cee4-4bab-a889-a74ab80656a6" />
 </p>
-<p>The result should show information on how to do installation and update; thus, I installed the <b>Sysmon64.exe</b> and <b>sysmonconfig.xml</b> by typing: </p>
+<p>The result should show information on how to install and update; thus, I installed the <b>Sysmon64.exe</b> and <b>sysmonconfig.xml</b> by typing: </p>
 
     .\Sysmon64.exe  -i  .\sysmonconfig.xml
     
@@ -755,7 +755,7 @@
 </p>
 <p><img width="827" height="252" alt="image" src="https://github.com/user-attachments/assets/6846ad7a-1c04-460c-9ea4-d0bdd23bd846" />
 </p>
-<p>It prompted me to agree to the license of Sysmon Monitor and selected the <b>Agree</b> button, then let it load up.</p>
+<p>It prompted me to agree to the Sysmon Monitor license and selected the <b>Agree</b> button, then let it load up.</p>
 <p><img width="975" height="842" alt="image" src="https://github.com/user-attachments/assets/b0890607-d2a9-4f0c-8868-f283bf5052af" />
 </p>
 <p><img width="802" height="344" alt="image" src="https://github.com/user-attachments/assets/a2fe4c47-d58f-4bd9-8d0d-2e1dfcf94432" />
@@ -771,7 +771,7 @@
 <p>This time, I entered <b>Event VieIr</b> in the search bar to check if <b>Sysmon</b> installed and saved from there.</p>
 <p><img width="792" height="841" alt="image" src="https://github.com/user-attachments/assets/3805d84b-4ada-448e-9237-d0cde9fd9391" />
 </p>
-<p>Inside the <b>Event VieIr</b>, I dropped down the <b>Application and Services Logs</b>, selected <b>Microsoft</b>, selected <b>Windows</b>, then scrolled-down to check if the folder of <b>Sysmon</b> is there. So, the folder of <b>Sysmon</b> is there and fully functional, which provides information or telemetry in real-time on the system.</p>
+<p>Inside the <b>Event VieIr</b>, I dropped down the <b>Application and Services Logs</b>, selected <b>Microsoft</b>, selected <b>Windows</b>, then scrolled-down to check if the folder of <b>Sysmon</b> is there. So, the folder of <b>Sysmon</b> is there and fully functional, which provides information or telemetry in real time on the system.</p>
 <p><img width="922" height="434" alt="image" src="https://github.com/user-attachments/assets/c091ea9f-45b4-4f5c-9211-49306448f9aa" />
 </p>
 <p><img width="975" height="758" alt="image" src="https://github.com/user-attachments/assets/64109602-36bc-4acd-86eb-0b152e5a6b23" />
@@ -834,7 +834,7 @@
 </p>
 <p><img width="700" height="652" alt="image" src="https://github.com/user-attachments/assets/4c2805c9-8937-4d4c-bf78-47a248b49ec7" />
 </p>
-<p>I copied the <i>Full Name</i> (<b>Microsoft-Windows-Sysmon/Operational</b>), pasted the copied log file into Notepad, then replaced <b><i>Operational</i></b> with <b><i>Microsoft-Windows-Sysmon/Operational</i></b>  and saved.</p>
+<p>I copied the <i>Full Name</i> (<b>Microsoft-Windows-Sysmon/Operational</b>), pasted the copied log file into Notepad, then replaced <b><i>Operational</i></b> with <b><i>Microsoft-Windows-Sysmon/Operational</i></b>,  and saved.</p>
 <p><img width="787" height="537" alt="image" src="https://github.com/user-attachments/assets/abc22c3a-d60a-4ad0-a96d-4a52701eb4de" />
 </p>
 <p><img width="789" height="414" alt="image" src="https://github.com/user-attachments/assets/95b3fd90-2610-4736-85f5-b3e93ee2f791" />
@@ -860,7 +860,7 @@
 
 <br>
 <h3>I. Generate & Read Telemetry</h3>
-<p>In order to test and generate telemetry, I opened the command prompt on the Windows machine.</p>
+<p>In order to test and generate telemetry, I opened the Command Prompt on the Windows machine.</p>
 <p><img width="827" height="737" alt="image" src="https://github.com/user-attachments/assets/327b0f40-8bef-4b29-9ec9-bc44e5398713" />
 </p>
 <p>I added a user named “<b><i>TestUser</i></b>”  and the password  “<b><i>pass123</i></b>” by typing:</p>
@@ -887,7 +887,7 @@
 <p>By running all of these commands on the Windows VM, these should be tracked in the Wazuh dashboard.</p>
 <p><img width="975" height="440" alt="image" src="https://github.com/user-attachments/assets/9191c689-9494-49e4-8a7f-d49ebd81ed2a" />
 </p>
-<p>I changed the time by at least 15 minutes in order to cut the noise.</p>
+<p>I changed the time by at least 15 minutes to cut the noise.</p>
 <p><img width="975" height="148" alt="image" src="https://github.com/user-attachments/assets/05b107ab-66d5-4310-87db-db662b2a014c" />
 </p>
 <p><img width="975" height="301" alt="image" src="https://github.com/user-attachments/assets/03fe1563-2d8f-40fe-a608-8a923ead4c8c" />
@@ -900,7 +900,7 @@
 <p>There is this Windows event ID “<b><i>4726</i></b>”. </p>
 <p><img width="712" height="387" alt="image" src="https://github.com/user-attachments/assets/f231bc79-2ec2-47ae-aa54-6ec17ffceb17" />
 </p>
-<p>I researched what the Windows Event ID 4726 means. This means that “<i>A user account was deleted</i>”, which is the activity what I did from the Windows VM, deleting the new user.</p>
+<p>I researched what the Windows Event ID 4726 means. This means that “<i>A user account was deleted</i>”, which is the activity I did from the Windows VM, deleting the new user.</p>
 <p><img width="975" height="291" alt="image" src="https://github.com/user-attachments/assets/6c981b4a-c90a-4243-88a6-488521b7c785" />
 </p>
 <p>I scrolled down for more information. Under the system message, it indeed shows that the new user was deleted. There is other information, such as the account name who made and deleted the new user along with its Relative Identifier (RID), and the account name of the user itself with its Relative Identifier (RID) as well.</p>
@@ -929,10 +929,10 @@
     data.win.system.eventID: 4624
 <p><img width="975" height="148" alt="image" src="https://github.com/user-attachments/assets/2c4beebb-7cc1-4f32-8a86-8620c03ff05f" />
 </p>
-<p>It generated the list of event ID 4624 from logging in on a Windows machine. On the first result, I dropped down to look for the system’s message. </p>
+<p>It generated the list of event ID 4624 from logging in on a Windows machine. On the first result, I dropped down to look for the system message. </p>
 <p><img width="975" height="738" alt="image" src="https://github.com/user-attachments/assets/9c663f4b-37b7-4ebc-9446-4b8ac1aec1ef" />
 </p>
-<p>Once found, the description says, “<i>An account was successfully logged on</i>”, which means it successfully captured the logged-in activity in real-time. There are other information that can be found if scrolled down.</p>
+<p>Once found, the description says, “<i>An account was successfully logged on</i>”, which means it successfully captured the logged-in activity in real time. There are other information that can be found if scrolled down.</p>
 <p><img width="870" height="389" alt="image" src="https://github.com/user-attachments/assets/d64fd488-1481-44e7-bb3a-dfebdc8fbd19" />
 </p>
 <p>I noticed that there is this Logon Information section, which is Logon Type: 2. I researched online what it means, and that is <b><i>Interactive</i></b>, which basically means logging on locally from the Windows machine. As an aspiring SOC Analyst, it's also essential to identify the other Logon Type numbers in real-world cases, and they're a helpful reference for any activity that is or will occur.</p>
@@ -969,7 +969,7 @@
 <p>After clicking the icon, I selected and expanded <b>Server management</b> and selected the <b><i>Rules</i></b>.</p>
 <p><img width="626" height="619" alt="image" src="https://github.com/user-attachments/assets/59280efa-15e9-43de-ae8a-0e6873d125de" />
 </p>
-<p>I selected the <b><i>wazuh-archive*</i></b> as the <b>Index pattern</b>. After that, I typed the <b><i>local_rules.xml</i></b> in the search bar and searched for it.</p>
+<p>I selected the <b><i>wazuh-archive*</i></b> as the <b>Index pattern</b>. After that, I typed <b><i>local_rules.xml</i></b> in the search bar and searched for it.</p>
 <p><img width="975" height="394" alt="image" src="https://github.com/user-attachments/assets/64cad516-0307-4332-81e7-e7b6dab951b6" />
 </p>
 <p>There are two ways to customize the <b><i>local_rules.xml</i></b>: either on the dashboard or on the <b>Ubuntu server</b> itself. If I use the Ubuntu server, I have to change the regular user first into a root user by typing: </p>
@@ -1006,7 +1006,7 @@
 <br>
 <br>
 <h3>K. Active Response</h3>
-<p>I configured the Active Response so that Wazuh can perform some automated actions. I headed over to Aazuh manager or ubuntu server and typed:</p>
+<p>I configured the Active Response so that Wazuh can perform some automated actions. I headed over to the Wazuh manager or Ubuntu server and typed:</p>
 
     sudo nano /var/ossec/etc/ossec.conf
 
@@ -1075,7 +1075,7 @@
 </p>
 
 <br>
-<h3>L. Installing Suricata in Ubuntu Server</h3>
+<h3>L. Installing Suricata on Ubuntu Server</h3>
 <p>I moved from a regular user to the root account in Suricata to install Suricata smoothly by entering the following commands:</p>
 
 	sudo su -
@@ -1102,7 +1102,7 @@
 <p><img width="745" height="77" alt="image" src="https://github.com/user-attachments/assets/438cb239-6634-4fc1-9eb8-eedce9a8d20f" />
 </p>
 
-<p>It does not have any folder for the <b>rules</b>, thus, I created one, where I can store and extract the Suricata rules, by typing:</p>
+<p>It does not have any folder for the <b>rules</b>; thus, I created one where I can store and extract the Suricata rules by typing:</p>
 
 	mkdir rules
 	ls
@@ -1129,7 +1129,7 @@
 <p><img width="884" height="64" alt="image" src="https://github.com/user-attachments/assets/b277162a-837f-4f46-a92b-8ae66104163a" />
 </p>
 
-<p><b>NOTE:</b> The <b>ifconfig</b> command wasn't installed yet on Ubuntu Server; thus, I installed the network tools in order to identify the network interface by typing:</p>
+<p><b>NOTE:</b> The <b>ifconfig</b> command wasn't installed yet on Ubuntu Server; thus, I installed the network tools to identify the network interface by typing:</p>
 
 	sudo apt install net-tools
 <p><img width="777" height="121" alt="image" src="https://github.com/user-attachments/assets/9b9c5b57-baff-4901-b13b-46939c2c4fc6" />
@@ -1174,7 +1174,7 @@
 <p><img width="975" height="349" alt="image" src="https://github.com/user-attachments/assets/147fd47c-b781-42f6-aa81-a8b8f33a856d" />
 </p>
 
-<p>In order to call the JSON file, I typed:</p>
+<p> To call the JSON file, I typed:</p>
 
 	cd /var/ossec/etc/
 	ls
@@ -1199,7 +1199,7 @@
 <p><img width="637" height="584" alt="image" src="https://github.com/user-attachments/assets/fee69b19-2dc3-4231-b5d1-47b0ce44220b" />
 </p>
 
-<p>In order to take effect, I restarted and checked the status of the agent by typing:</p>
+<p> To take effect, I restarted and checked the status of the agent by typing:</p>
 
 	sudo systemctl restart wazuh-agent
 	sudo systemctl status wazuh-agent
@@ -1222,7 +1222,7 @@
 <h2>Value to an Aspiring SOC Analyst & Enthusiast</h2>
 <p>As an aspiring security professional and enthusiast, constructing this lab environment bridges the gap between theoretical knowledge and practical, enterprise-grade engineering. It transforms abstract concepts learned from textbooks into a tangible, multi-node playground where I am in absolute control of the security stack.</p>
 <p>By executing the full installation, managing virtual network configurations, and binding endpoint agents to a centralized SIEM manager, I have cultivated the precise technical confidence required to navigate real-world corporate infrastructures.</p>
-< p> This project completely shifts my perspective from a passive observer to an active infrastructure designer, establishing a rock-solid operational foundation. It ensures that as I move forward into live adversarial testing and incident verification, I am approaching threat hunting with an intimate, firsthand understanding of the underlying pipelines that generate the alerts.</p>
+<p> This project completely shifts my perspective from a passive observer to an active infrastructure designer, establishing a rock-solid operational foundation. It ensures that as I move forward into live adversarial testing and incident verification, I am approaching threat hunting with an intimate, firsthand understanding of the underlying pipelines that generate the alerts.</p>
 
 
 
