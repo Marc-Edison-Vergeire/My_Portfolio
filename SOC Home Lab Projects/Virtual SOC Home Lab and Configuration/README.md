@@ -1250,7 +1250,7 @@
 <p><img width="975" height="79" alt="image" src="https://github.com/user-attachments/assets/39a40e37-399b-4b08-95db-4eaa7272bf11" />
 </p>
 
-<p>Inside the dashboard, it did not automatically make the Ubuntu Server's agent appear; thus, I reloaded the page.</p>
+<p>Inside the dashboard, it did not automatically make the Ubuntu Server agent appear; thus, I reloaded the page.</p>
 
 <p><img width="975" height="189" alt="image" src="https://github.com/user-attachments/assets/61e29c1e-5b9e-4c5c-bc27-bd4717e49797" />
 </p>
@@ -1260,12 +1260,80 @@
 <p><img width="975" height="339" alt="image" src="https://github.com/user-attachments/assets/38e0147e-6d26-469a-a8ba-042e96bf0eac" />
 </p>
 
-<p>I selected the Ubuntu Server's agent (<b>UbuntuServer-Agent</b>) in order to see the Ubuntu Server's system details.</p>
+<p>I selected the Ubuntu Server agent (<b>UbuntuServer-Agent</b>) in order to see the Ubuntu Server's system details.</p>
 
 <p><img width="975" height="282" alt="image" src="https://github.com/user-attachments/assets/84740a2d-0589-4dba-aace-1879f7bce8b2" />
 </p>
 
 <p><img width="975" height="354" alt="image" src="https://github.com/user-attachments/assets/3ef7e40a-e297-4b82-a470-9288c7c8e120" />
+</p>
+
+<br>
+<h3>N. Adding VirusTotal on Wazuh Dashboard</h3>
+<p>To integrate <b>VirusTotal</b> with <b>Wazuh</b>, I configured the Wazuh server to forward file integrity hashes to the VirusTotal <b>API</b>. This allows Wazuh to generate security alerts automatically if a monitored file matches known malware signatures.</p>
+
+<p>The first thing I did was to log in to the <b>VirusTotal Platform</b>, click on the profile icon in the top-right corner, and select <b>API Key</b>.</p>
+
+<p><img width="975" height="150" alt="image" src="https://github.com/user-attachments/assets/6f649b53-2196-4135-b54b-d104d7be65c7" />
+</p>
+
+<p>I copied the unique <b>Public API Key</b>.</p>
+
+<p><img width="975" height="143" alt="image" src="https://github.com/user-attachments/assets/6ad71b9c-5501-463d-9315-b489b528cc40" />
+</p>
+
+<p>I headed over to the Wazuh server and opened it as a root or sudo user by typing:</p>
+
+    sudo su -
+
+<p><img width="677" height="151" alt="image" src="https://github.com/user-attachments/assets/5042ff2f-75a4-44c9-a243-ec777354840d" />
+</p>
+
+<p>I opened the Wazuh configuration file so that I could integrate VirusTotal by typing:</p>
+
+    sudo nano /var/ossec/etc/ossec.conf
+
+<p><img width="659" height="171" alt="image" src="https://github.com/user-attachments/assets/6fdb67b8-0d47-4221-a3a8-0eb997d771c3" />
+</p>
+
+<p><img width="740" height="562" alt="image" src="https://github.com/user-attachments/assets/b0ed5870-9b1e-413f-a0e6-7080f5ba2ddc" />
+</p>
+
+<p>I scrolled down to the bottom of the file and pasted the <b>integration</b> block, right before the closing <b><i>/ossec_config</i></b> tag, entered the VirusTotal API Key, saved, then exited the text editor.</p>
+
+<p><img width="559" height="245" alt="image" src="https://github.com/user-attachments/assets/cdbb3bff-2f46-4bd4-8075-7f52f240f591" />
+</p>
+
+<p>I restarted the Wazuh manager service to apply the configuration changes by typing:</p>
+
+    sudo systemctl restart wazuh-manager
+
+<p><img width="664" height="164" alt="image" src="https://github.com/user-attachments/assets/a406ef15-4a1c-4062-b091-c0264f9069e6" />
+</p>
+
+<p>For VirusTotal to analyze a file, I configured the Wazuh agent to monitor specific directories using the <b>File Integrity Monitoring (FIM)</b>. I opened the <b>Notepad</b> app in Administrator, opened a file inside the <b>ossec-agent</b> to locate <b>ossec.conf</b>.</p>
+
+<p><img width="940" height="496" alt="image" src="https://github.com/user-attachments/assets/b4e1279f-6827-4de1-a559-e0133e823794" />
+</p>
+
+<p><img width="309" height="325" alt="image" src="https://github.com/user-attachments/assets/0d70ffd1-59f0-4007-86f5-ebc72ef716a2" />
+</p>
+
+<p><img width="525" height="315" alt="image" src="https://github.com/user-attachments/assets/3259bc03-6154-4515-8392-8c72d2454b68" />
+</p>
+
+<p>Under the <b>syscheck</b> of <b><i>(File Integrity Monitoring)</i></b>, I added a directory path that I wanted to monitor in real time by typing the command:</p>
+
+    <directories check_all="yes" report_changes="yes" realtime="yes">C:\Users\Administrator\Downloads</directories>
+
+<p><img width="975" height="224" alt="image" src="https://github.com/user-attachments/assets/1c7568ed-05e0-4d82-a88f-726d558b4579" />
+</p>
+
+<p>Lastly, I restarted the Wazuh agent to activate and begin real-time scanning by typing:</p>
+
+    sudo systemctl restart wazuh-agent
+
+<p><img width="701" height="159" alt="image" src="https://github.com/user-attachments/assets/beaba160-c530-48d8-a160-a504249f75d4" />
 </p>
 
 
