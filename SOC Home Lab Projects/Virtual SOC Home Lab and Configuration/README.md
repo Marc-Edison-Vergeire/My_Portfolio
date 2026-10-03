@@ -972,7 +972,7 @@
 <p>I selected the <b><i>wazuh-archive*</i></b> as the <b>Index pattern</b>. After that, I typed <b><i>local_rules.xml</i></b> in the search bar and searched for it.</p>
 <p><img width="975" height="394" alt="image" src="https://github.com/user-attachments/assets/64cad516-0307-4332-81e7-e7b6dab951b6" />
 </p>
-<p>There are two ways to customize the <b><i>local_rules.xml</i></b>: either on the dashboard or on the <b>Ubuntu server</b> itself. If I use the Ubuntu server, I have to change the regular user first into a root user by typing: </p>
+<p>There are two ways to customize the <b><i>local_rules.xml</i></b>: either on the dashboard or on the <b>Ubuntu server</b> itself. If I use the Ubuntu server, I have to change the regular user into a root user first by typing: </p>
 
     sudo su -
 <p><img width="659" height="121" alt="image" src="https://github.com/user-attachments/assets/2646a9a2-2c66-4de1-bd81-11a38ae590b1" />
@@ -1204,6 +1204,68 @@
 	sudo systemctl restart wazuh-agent
 	sudo systemctl status wazuh-agent
 <p><img width="975" height="503" alt="image" src="https://github.com/user-attachments/assets/047ef78a-344f-4503-9910-320cc42a85b9" />
+</p>
+
+<br>
+<h3>M. Installing Ubuntu Server with Agent</h3>
+<p>Inside the Wazuh dashboard, I selected the <b>Deploy new agent</b>.</p>
+
+<p><img width="975" height="154" alt="image" src="https://github.com/user-attachments/assets/2ac06f3a-9689-4249-8ab1-f0739dc3add1" />
+</p>
+
+<p>I selected the <b>DEB amd64</b>.</p>
+
+<p><img width="975" height="196" alt="image" src="https://github.com/user-attachments/assets/b1ecdb29-2445-4de3-a338-7ece3d18aab4" />
+</p>
+
+<p>I input the IP address (<b>10.0.2.11</b>) of the Wazuh manager,  assigned an agent name (<b>UbuntuServer-Agent</b>), and selected <b>default as an existing groups</b>.</p>
+
+<p><img width="975" height="645" alt="image" src="https://github.com/user-attachments/assets/8c14dd92-658a-4e54-abdb-ff500a0e2997" />
+</p>
+
+<p>I copied the given commands to download and install the agent on the Ubuntu Server:</p>
+
+    wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.14.7-1_amd64.deb && sudo WAZUH_MANAGER='10.0.2.11' WAZUH_AGENT_GROUP='default' WAZUH_AGENT_NAME='UbuntuServer-Agent' dpkg -1 ./wazuh-agent_4.14.7-1_amd64.deb
+
+<p><img width="975" height="132" alt="image" src="https://github.com/user-attachments/assets/1d1b3213-1a7c-4838-88e8-54bcf7642e68" />
+</p>
+
+<p><img width="975" height="223" alt="image" src="https://github.com/user-attachments/assets/db590210-1611-49f3-8aff-681e2b1b3350" />
+</p>
+
+<p>After the installation, I started the agent and finalized the setup using the following commands:</p>
+
+    sudo systemctl daemon-reload
+    sudo systemctl enable wazuh-agent
+    sudo systemctl start wazuh-agent
+
+<p><img width="975" height="134" alt="image" src="https://github.com/user-attachments/assets/89fd8bd1-f6c9-4200-a1c6-a9b5d593c582" />
+</p>
+
+<p><img width="571" height="90" alt="image" src="https://github.com/user-attachments/assets/d42d23ee-3cd9-4c23-b347-f88e467bd504" />
+</p>
+
+<p>I clicked on <b>Back to agent list</b> to go back to the Wazuh dashboard.</p>
+
+<p><img width="975" height="79" alt="image" src="https://github.com/user-attachments/assets/39a40e37-399b-4b08-95db-4eaa7272bf11" />
+</p>
+
+<p>Inside the dashboard, it did not automatically make the Ubuntu Server's agent appear; thus, I reloaded the page.</p>
+
+<p><img width="975" height="189" alt="image" src="https://github.com/user-attachments/assets/61e29c1e-5b9e-4c5c-bc27-bd4717e49797" />
+</p>
+
+<p>After reloading the page, it finally appeared and registered on the Wazuh dashboard, and it may appear only if Ubuntu Server is running.</p>
+
+<p><img width="975" height="339" alt="image" src="https://github.com/user-attachments/assets/38e0147e-6d26-469a-a8ba-042e96bf0eac" />
+</p>
+
+<p>I selected the Ubuntu Server's agent (<b>UbuntuServer-Agent</b>) in order to see the Ubuntu Server's system details.</p>
+
+<p><img width="975" height="282" alt="image" src="https://github.com/user-attachments/assets/84740a2d-0589-4dba-aace-1879f7bce8b2" />
+</p>
+
+<p><img width="975" height="354" alt="image" src="https://github.com/user-attachments/assets/3ef7e40a-e297-4b82-a470-9288c7c8e120" />
 </p>
 
 
