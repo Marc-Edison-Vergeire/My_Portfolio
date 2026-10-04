@@ -70,23 +70,48 @@
 
     /var/ossec/etc/ossec.conf
 
+<p><img width="702" height="59" alt="image" src="https://github.com/user-attachments/assets/470d047d-5fba-46a9-a949-6ea4c2fd02bf" />
+</p>
+
 <p>The following Syscheck configuration was added:</p>
 
     <directories check_all="yes" report_changes="yes" realtime="yes">/root</directories>
+
+<p><img width="876" height="331" alt="image" src="https://github.com/user-attachments/assets/81915493-8ba6-46d9-aa29-6732e964a113" />
+</p>
 
 <p>The Wazuh agent then restarted:</p>
 
     sudo systemctl restart wazuh-agent
 
+<p><img width="684" height="75" alt="image" src="https://github.com/user-attachments/assets/9ea80336-a86b-489f-8e42-dfde65526afc" />
+</p>
+
 <p>This configuration enables comprehensive integrity checks, text-file change reporting, and real-time monitoring of the /root directory. Wazuh documents these attributes as separate FIM capabilities, with realtime providing continuous Linux directory monitoring.</p>
 
+<p><img width="527" height="70" alt="image" src="https://github.com/user-attachments/assets/f60b08a8-d277-4418-b403-78dd06b8d204" />
+</p>
+
 <h3>Detection Result</h3>
+
 <p>A controlled file-creation test was performed within the monitored /root directory. Wazuh detected the filesystem change and generated <b>Rule ID 100211</b>.</p>
 <p>The alert was reviewed through:</p>
 
     Wazuh Dashboard → Threat Hunting → Events → Ubuntu Server Agent
 
+<p><img width="975" height="213" alt="image" src="https://github.com/user-attachments/assets/63d1a401-151c-4dca-8c66-287a9fa876f6" />
+</p>
+<p><img width="975" height="107" alt="image" src="https://github.com/user-attachments/assets/25887677-8bab-4cab-854a-a9143b682392" />
+</p>
+<p><img width="975" height="67" alt="image" src="https://github.com/user-attachments/assets/51be93bb-5b52-4472-9718-df9cbd656c30" />
+</p>
+<p><img width="975" height="262" alt="image" src="https://github.com/user-attachments/assets/9add433e-bfd3-416f-840e-aabf5fe3de8c" />
+</p>
+
 <p>The event's <b>full_log</b> confirmed that a new file was detected under the monitored <b>/root</b> directory in real time.</p>
+
+<p><img width="942" height="707" alt="image" src="https://github.com/user-attachments/assets/ffdbb63d-84e7-476f-99f3-165aa847b5dd" />
+</p>
 
 <h3>Technical Validation Note</h3>
 <p>The original lab notes state that <b>/etc/profile</b> was renamed to <b>/etc/profile2</b> while the configured FIM path was <b>/root</b>. These are different filesystem locations. Therefore, for a technically rigorous portfolio demonstration, the test should create, modify, or rename a file inside <b>/root</b> when <b>/root</b> is the configured monitoring scope.</p>
