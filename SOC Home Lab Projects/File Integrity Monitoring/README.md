@@ -5,7 +5,7 @@
 <p><b>Role: </b>Security Operations Center (SOC) Analyst / Blue Team Analyst</p>
 <p><b>Environment:</b> Ubuntu Linux | Wazuh Agent | Wazuh Manager/Dashboard | Syscheck/FIM</p>
 <p><b>Attack:</b> Simulated unauthorized file creation within a monitored directory</p>
-<p><b>Target: </b>Ubuntu Linux endpoint and monitored filesystem (/root) directory</p>
+<p><b>Target: </b>Ubuntu Linux endpoint and monitored filesystem (<b>/root</b>) directory</p>
 <p><b>Attacker: </b>Simulated privileged user / authorized lab operator</p>
 <p><b>Target Service: </b>Wazuh File Integrity Monitoring (FIM / Syscheck)</p>
 <p><b>Detection:</b> Wazuh FIM detected the new file and generated alert Rule ID 100211</p>
@@ -15,7 +15,7 @@
 
 <br>
 <h2>Executive Summary</h2>
-<p>This case study demonstrates the implementation and validation of <b>Wazuh File Integrity Monitoring (FIM)</b> on an Ubuntu Linux server to detect unauthorized filesystem changes in real time. Wazuh was configured to monitor the /root directory with comprehensive integrity checks, change reporting, and real-time monitoring. Following configuration and agent restart, a controlled file-creation test generated a FIM alert that was investigated through <b>Wazuh Dashboard</b> → <b>Threat Hunting</b> → <b>Events</b>. The investigation confirmed that Wazuh successfully identified the filesystem change and generated <b>Rule ID 100211</b>, demonstrating effective endpoint-level detection and security-event visibility. Wazuh supports real-time monitoring, file-integrity checks, and change reporting through its Syscheck/FIM module.</p>
+<p>This case study demonstrates the implementation and validation of <b>Wazuh File Integrity Monitoring (FIM)</b> on an Ubuntu Linux server to detect unauthorized filesystem changes in real time. Wazuh was configured to monitor the <b>/root</b> directory with comprehensive integrity checks, change reporting, and real-time monitoring. Following configuration and agent restart, a controlled file-creation test generated a FIM alert that was investigated through <b>Wazuh Dashboard</b> → <b>Threat Hunting</b> → <b>Events</b>. The investigation confirmed that Wazuh successfully identified the filesystem change and generated <b>Rule ID 100211</b>, demonstrating effective endpoint-level detection and security-event visibility. Wazuh supports real-time monitoring, file-integrity checks, and change reporting through its Syscheck/FIM module.</p>
 
 <br>
 <h2>Objective</h2>
@@ -94,7 +94,7 @@
 
 <h3>Detection Result</h3>
 
-<p>A controlled file-creation test was performed within the monitored /root directory. Wazuh detected the filesystem change and generated <b>Rule ID 100211</b>.</p>
+<p>A controlled file-creation test was performed within the monitored <b>/root</b> directory. Wazuh detected the filesystem change and generated <b>Rule ID 100211</b>.</p>
 <p>The alert was reviewed through:</p>
 
     Wazuh Dashboard → Threat Hunting → Events → Ubuntu Server Agent
