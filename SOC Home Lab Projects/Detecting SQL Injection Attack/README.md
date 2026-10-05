@@ -14,7 +14,7 @@
 <br>
 <h2>Executive Summary</h2>
 <p>A controlled SQL injection attack simulation was conducted against an Apache2 web server hosted on Ubuntu to validate the effectiveness of Wazuh-based detection, investigation, and automated response capabilities. The simulated attacker, originating from <b>10.0.2.15</b>, submitted a crafted HTTP GET request containing a SQL query against the target server at <b>10.0.2.6</b>. Apache access logs were monitored by the Wazuh agent, resulting in a security alert that identified the activity as SQL injection-related.</p>
-<p>Investigation of the alert confirmed the source IP, HTTP request, payload, and detection rule. An Active Response mechanism was subsequently configured to automatically invoke <b>firewall-drop</b> and block the offending IP for 10 minutes. A second test validated that the detection and containment workflow operated as intended. Because the requested application endpoint returned <b>404 Not Found</b>, there was no evidence of successful application or database exploitation; the exercise primarily <b>validated detection, triage, and automated containment</b>.</p>
+<p> The investigation confirmed the source IP, HTTP request, payload, and detection rule. An Active Response mechanism was subsequently configured to automatically invoke <b>firewall-drop</b> and block the offending IP for 10 minutes. A second test validated that the detection and containment workflow operated as intended. Because the requested application endpoint returned <b>404 Not Found</b>, there was no evidence of successful application or database exploitation; the exercise primarily <b>validated detection, triage, and automated containment</b>.</p>
 
 <br>
 <h2>Objective</h2>
@@ -77,17 +77,32 @@
 
     sudo apt update && sudo apt upgrade –y
 
-    sudo ap install apache2
+<p><img width="670" height="90" alt="image" src="https://github.com/user-attachments/assets/03a6ac4b-e738-4f72-9d22-86a1f5a93314" />
+</p>
+
+    sudo apt install apache2
+
+<p><img width="975" height="276" alt="image" src="https://github.com/user-attachments/assets/14d7b266-8f66-48f5-b78f-e12b230d89cd" />
+</p>
 
 <p>After that, I checked the status of Apache2 to verify that it was running and active.</p> 
+
+<p><img width="975" height="347" alt="image" src="https://github.com/user-attachments/assets/f05b7fe7-44ec-4751-a407-3c249ad948e6" />
+</p>
 
 <p>To confirm that Apache2 was working properly, I opened a browser and entered the Ubuntu server's IP address:</p>
 
     http://10.0.2.6
 
+<p><img width="975" height="302" alt="image" src="https://github.com/user-attachments/assets/32fb9a09-791a-492d-a46f-9f953cbd1120" />
+</p>
+
 <p>I then started configuring the Wazuh agent by navigating to <b>/var/ossec/etc/ossec.conf</b> and entering the following command:</p>
 
     sudo nano /var/ossec/etc/ossec.conf
+
+<p><img width="675" height="94" alt="image" src="https://github.com/user-attachments/assets/fc9c357c-32d7-47cc-8ab9-1de206e06a97" />
+</p>
 
 <p>I inserted the following lines into the Wazuh agent configuration file. This configuration allows the Wazuh agent to monitor the Apache access logs:</p>
 
@@ -98,31 +113,66 @@
       </localfile>
     </ossec_config>
 
+<p><img width="606" height="287" alt="image" src="https://github.com/user-attachments/assets/bd2853da-3b3f-400f-bc04-5a908302131f" />
+</p>
+
 <p>For the changes to take effect, I restarted the Wazuh agent by entering:</p>
 
     sudo systemctl restart wazuh-agent
 
-<p>For the attack emulation using Kali Linux on October 4, 2026, at 1:00 AM, I entered the following command:</p>
+<p><img width="602" height="87" alt="image" src="https://github.com/user-attachments/assets/55fef352-a6a3-4832-8d27-639311f2f0f2" />
+</p>
+
+<p>For the attack emulation using Kali Linux on <b>October 4, 2026</b>, at <b>1:00 AM</b>, I entered the following command:</p>
 
     curl –XGET http://(UBUNTU_IP)/users/?id=SELECT+*+FROM+users;
 
+<p><img width="975" height="243" alt="image" src="https://github.com/user-attachments/assets/924145ad-ca6e-4b09-926a-0f2ad66e06c3" />
+</p>
+
 <p>The result showed <i>404 Not Found</i> because there was no active database on the Ubuntu server.</p>
+
+<p><img width="946" height="295" alt="image" src="https://github.com/user-attachments/assets/61dd9699-f9d5-4767-bc94-48e0d8b5a953" />
+</p>
 
 <p>I then opened the Wazuh dashboard and selected the Wazuh agent.</p>
 
+<p><img width="975" height="120" alt="image" src="https://github.com/user-attachments/assets/6f846372-7d2e-4ad5-a742-0e9290c8d17a" />
+</p>
+<p><img width="975" height="103" alt="image" src="https://github.com/user-attachments/assets/64f413e6-a4eb-4582-98a7-522a7275258d" />
+</p>
+
 <p>In the upper-left corner, I selected the <b>Threat Hunting</b> link.</p>
 
-<p>I selected the <b>Events</b> tab, where I observed the triggered alert from October 4, 2026, at 1:07 AM, indicating that an SQL injection attempt had been detected.</p>
+<p><img width="975" height="85" alt="image" src="https://github.com/user-attachments/assets/92b12250-5de2-4b38-bec7-45408119f286" />
+</p>
 
-<p>I opened <b>Document Details</b> to view additional information about the attack, including the attacker's IP address (10.0.2.15), the curl command that was used, and the rule ID (33103).</p>
+<p>I selected the <b>Events</b> tab, where I observed the triggered alert from <b>October 4, 2026</b>, at <b>1:07 AM</b>, indicating that an SQL injection attempt had been detected.</p>
+
+<p><img width="974" height="265" alt="image" src="https://github.com/user-attachments/assets/b3da5c6e-6f45-4f44-a28e-77b40f0b58fb" />
+</p>
+
+<p>I opened <b>Document Details</b> to view additional information about the attack, including the attacker's IP address (<b>10.0.2.15</b>), the curl command that was used, and the rule ID (<b>33103</b>).</p>
+
+<p><img width="780" height="600" alt="image" src="https://github.com/user-attachments/assets/72df7f53-e8d9-4890-b5ae-8170cbeef32d" />
+</p>
 
 <p>I then configured Active Response for the SQL injection detection so that the adversary's IP address would be automatically banned and blocked. I opened the hamburger menu and selected <b>Rules</b> from the left pane.</p>
 
+<p><img width="582" height="677" alt="image" src="https://github.com/user-attachments/assets/494c25b5-402d-40ac-82be-2f7978e0e53b" />
+</p>
+
 <p>I searched for <b>SQL injection</b> in the search bar and selected the first result.</p>
+
+<p><img width="975" height="238" alt="image" src="https://github.com/user-attachments/assets/cdcaf92a-c6c4-47a2-bc2c-83a5aa4b912b" />
+</p>
 
 <p>I then created a separate Active Response configuration for the SQL injection rule and opened the Wazuh server configuration file by entering:</p>
 
     sudo nano /var/ossec/etc/ossec.conf
+
+<p><img width="634" height="84" alt="image" src="https://github.com/user-attachments/assets/4020c9b1-2fc9-47f9-81e3-4cd72d6b5333" />
+</p>
 
 <p>I configured the system to ban the IP address for 10 minutes when an SQL injection attempt was detected. I inserted the following configuration:</p>
 
@@ -134,21 +184,41 @@
       <timeout>600</timeout>
     </active-response>
 
+<p><img width="565" height="427" alt="image" src="https://github.com/user-attachments/assets/ef88ac12-7d21-4dd9-87d4-57d5a7326fda" />
+</p>
+
 <p>I restarted the Wazuh manager for the changes to take effect by entering:</p>
 
     sudo systemctl restart wazuh-manager
+
+<p><img width="617" height="71" alt="image" src="https://github.com/user-attachments/assets/b2ff519b-a16d-4bb8-935f-c495befa3b6a" />
+</p>
 
 <p>To test the configuration again, I returned to Kali Linux and sent another request using curl. The request does not cause any actual damage; it simply attempts to retrieve all entries from the <i>users</i> table. I entered the following command:</p>   
 
     curl –XGET http://10.0.2.6/users/?id=SELECT+*+FROM+users;
 
+<p><img width="671" height="201" alt="image" src="https://github.com/user-attachments/assets/cc2fcc8e-7be4-4416-97bf-c06f48508452" />
+</p>
+
 <p>I received the same <i>404 Not Found</i> result, which means that the requested path does not exist on the server.</p>
+
+<p><img width="921" height="301" alt="image" src="https://github.com/user-attachments/assets/5c174e97-02bb-419a-a339-443e47154a25" />
+</p>
 
 <p>After returning to the Wazuh dashboard, I confirmed that Wazuh successfully detected the attack and blocked the adversary's IP address, preventing it from continuing to perform SQL injection attempts.</p>
 
+<p><img width="975" height="287" alt="image" src="https://github.com/user-attachments/assets/dbf85eeb-41c8-46d8-bb33-5f854140a86e" />
+</p>
+
 <p>I opened the <b>Inspect</b> view to examine additional details about the attack. The details showed the adversary's IP address, the parameter and command that were used, the rule ID, the <b>firewall_drop</b> action, and confirmation that the adversary's IP address had been blocked.</p>
 
-
+<p><img width="975" height="701" alt="image" src="https://github.com/user-attachments/assets/1afe0891-6f73-4980-aca0-fc5db3de3dcc" />
+</p>
+<p><img width="975" height="702" alt="image" src="https://github.com/user-attachments/assets/8a75e798-a825-42f3-9964-3483111d1c73" />
+</p>
+<p><img width="975" height="205" alt="image" src="https://github.com/user-attachments/assets/df8d1b28-eb23-4dd4-bb8e-4b7ffd0ea1fd" />
+</p>
 
 
 <br>
