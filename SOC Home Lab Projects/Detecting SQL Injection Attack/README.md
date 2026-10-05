@@ -178,7 +178,7 @@
 
     <active-response>
       <disabled>no</disabled>
-      <command>firewall_drop</command>
+      <command>firewall-drop</command>
       <location>local</location>
       <rules_id>100101</rules_id>
       <timeout>600</timeout>
@@ -211,7 +211,7 @@
 <p><img width="975" height="287" alt="image" src="https://github.com/user-attachments/assets/dbf85eeb-41c8-46d8-bb33-5f854140a86e" />
 </p>
 
-<p>I opened the <b>Inspect</b> view to examine additional details about the attack. The details showed the adversary's IP address, the parameter and command that were used, the rule ID, the <b>firewall_drop</b> action, and confirmation that the adversary's IP address had been blocked.</p>
+<p>I opened the <b>Inspect</b> view to examine additional details about the attack. The details showed the adversary's IP address, the parameter and command that were used, the rule ID, the <b>firewall-drop</b> action, and confirmation that the adversary's IP address had been blocked.</p>
 
 <p><img width="975" height="701" alt="image" src="https://github.com/user-attachments/assets/1afe0891-6f73-4980-aca0-fc5db3de3dcc" />
 </p>
@@ -242,7 +242,7 @@
     <li><b>SQL payload: </b>SELECT * FROM users</li>
     <li><b>HTTP response:</b> 404 Not Found</li>
     <li><b>Wazuh Rule ID:</b> 33103</li>
-    <li><b>Response mechanism:</b> firewall_drop</li>
+    <li><b>Response mechanism:</b> firewall-drop</li>
     <li><b>Block duration:</b> 600 seconds</li>
 </ul>
 
@@ -256,7 +256,7 @@
     <li><b>01:07 — Triage:</b> Analyst reviewed the Wazuh event.</li>
     <li><b>01:07 — Investigation:</b> Source IP, request, payload, and rule information were examined.</li>
     <li><b>Post-detection — Response engineering:</b> Wazuh Active Response was configured.</li>
-    <li><b>Post-configuration — Containment:</b> <b>firewall_drop</b> was configured for a 600-second block.</li>
+    <li><b>Post-configuration — Containment:</b> <b>firewall-drop</b> was configured for a 600-second block.</li>
     <li><b>Validation — Attack replay:</b> The SQL injection request was sent again.</li>
     <li><b>Validation — Response confirmed:</b> Wazuh detected the activity and initiated IP blocking.</li>
 </ul>
