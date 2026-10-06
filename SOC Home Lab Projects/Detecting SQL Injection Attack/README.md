@@ -85,7 +85,9 @@
 <p><img width="975" height="276" alt="image" src="https://github.com/user-attachments/assets/14d7b266-8f66-48f5-b78f-e12b230d89cd" />
 </p>
 
-<p>After that, I checked the status of Apache2 to verify that it was running and active.</p> 
+<p>After that, I checked the status of Apache2 to verify that it was running and active by typing:</p> 
+
+    sudo systemctl status apache2
 
 <p><img width="975" height="347" alt="image" src="https://github.com/user-attachments/assets/f05b7fe7-44ec-4751-a407-3c249ad948e6" />
 </p>
