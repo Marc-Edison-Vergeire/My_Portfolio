@@ -60,7 +60,7 @@
 <h2>Artifacts</h2>
 <ul>
     <li>Wazuh security alert</li>
-    <li>Wazuh Rule ID <b>33103</b></li>
+    <li>Wazuh Rule ID <b>31103</b></li>
     <li>(Attacker) Source IP <b>10.0.2.15</b></li>
     <li>(Target) Destination IP <b>10.0.2.6</b></li>
     <li>SQL injection HTTP request</li>
