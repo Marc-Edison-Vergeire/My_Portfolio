@@ -154,7 +154,7 @@
 <p><img width="974" height="265" alt="image" src="https://github.com/user-attachments/assets/b3da5c6e-6f45-4f44-a28e-77b40f0b58fb" />
 </p>
 
-<p>I opened <b>Document Details</b> to view additional information about the attack, including the attacker's IP address (<b>10.0.2.15</b>), the curl command that was used, and the rule ID (<b>33103</b>).</p>
+<p>I opened <b>Document Details</b> to view additional information about the attack, including the attacker's IP address (<b>10.0.2.15</b>), the curl command that was used, and the rule ID (<b>31103</b>).</p>
 
 <p><img width="780" height="600" alt="image" src="https://github.com/user-attachments/assets/72df7f53-e8d9-4890-b5ae-8170cbeef32d" />
 </p>
@@ -182,7 +182,7 @@
       <disabled>no</disabled>
       <command>firewall-drop</command>
       <location>local</location>
-      <rules_id>33103</rules_id>
+      <rules_id>31103</rules_id>
       <timeout>600</timeout>
     </active-response>
 
@@ -243,7 +243,7 @@
     <li><b>Suspicious parameter:</b> id</li>
     <li><b>SQL payload: </b>SELECT * FROM users</li>
     <li><b>HTTP response:</b> 404 Not Found</li>
-    <li><b>Wazuh Rule ID:</b> 33103</li>
+    <li><b>Wazuh Rule ID:</b> 31103</li>
     <li><b>Response mechanism:</b> firewall-drop</li>
     <li><b>Block duration:</b> 600 seconds</li>
 </ul>
